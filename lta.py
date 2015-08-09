@@ -1,4 +1,5 @@
 __author__ = 'Jiang'
+#Class to extract busstop/bus json data from LTA API
 import json
 import time
 import urllib

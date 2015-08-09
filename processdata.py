@@ -2,7 +2,8 @@ __author__ = 'Jiang'
 import json
 import unicodedata
 from geopy.distance import vincenty
-# To process busstop/mall/mrt station/taxi stop information
+# Class to process busstop/mall/mrt station/taxi stop information
+# All information should been extract from LTA and saved to file
 #
 class processdata(object):
     filename='BusStopDetails'
