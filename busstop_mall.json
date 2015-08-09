@@ -1,0 +1,746 @@
+{
+    "112 Katong": [
+        "1.305293", 
+        "103.905142", 
+        "428802", 
+        "112 East Coast Road", 
+        "112katong.com.sg", 
+        "6636 2112"
+    ], 
+    "313@Somerset": [
+        "1.301133", 
+        "103.838514", 
+        "238895", 
+        "313 Orchard Rd", 
+        "313somerset.com.sg", 
+        ""
+    ], 
+    "AMK Hub": [
+        "1.369525", 
+        "103.848452", 
+        "569933", 
+        "53 Ang Mo Kio Avenue 3", 
+        "amkhub.com.sg", 
+        "6753 9000"
+    ], 
+    "Alexandra Retail Centre": [
+        "1.273652", 
+        "103.801539", 
+        "119963", 
+        "460 Alexandra Rd", 
+        "arc4u.com.sg", 
+        "6377 0592"
+    ], 
+    "Anchorpoint": [
+        "1.288834", 
+        "103.805128", 
+        "159953", 
+        "370 Alexandra Road", 
+        "fraserscentrepointmalls.com", 
+        "6475 2257"
+    ], 
+    "Bedok Mall": [
+        "1.324867", 
+        "103.929205", 
+        "467360", 
+        "311 New Upper Changi Rd", 
+        "bedokmall.com.sg", 
+        "6702 5120"
+    ], 
+    "Bedok Point": [
+        "1.324964", 
+        "103.932355", 
+        "467350", 
+        "Bedok Central", 
+        "bedokpoint.com.sg", 
+        "6481 1353"
+    ], 
+    "Big Box": [
+        "1.331858", 
+        "103.74473", 
+        "608521", 
+        "1 Venture Ave", 
+        "bigbox.com.sg", 
+        "6801 6688"
+    ], 
+    "Boon Lay Shopping Centre": [
+        "1.346394", 
+        "103.712429", 
+        "640221", 
+        "221 Boon Lay P1", 
+        "", 
+        "6264 0920"
+    ], 
+    "Bugis Cube": [
+        "1.298166", 
+        "103.855553", 
+        "408936", 
+        "470 North Bridge Rd", 
+        "bugiscube.com", 
+        "6589 8494"
+    ], 
+    "Bugis Junction": [
+        "1.299427", 
+        "103.855552", 
+        "188021", 
+        "200 Victoria St", 
+        "bugisjunction-mall.com.sg", 
+        "6557 6557"
+    ], 
+    "Bugis+": [
+        "1.299679", 
+        "103.854291", 
+        "188067", 
+        "201 Victoria St", 
+        "bugis-plus.com.sg", 
+        "6634 6810"
+    ], 
+    "Bukit Panjang Plaza": [
+        "1.379987", 
+        "103.764354", 
+        "677743", 
+        "1 Jelebu Road", 
+        "bukitpanjangplaza.com.sg", 
+        "6314 6388"
+    ], 
+    "Causeway Point": [
+        "1.436092", 
+        "103.786087", 
+        "", 
+        "woodlands Square", 
+        "fraserscentrepointmalls.com", 
+        ""
+    ], 
+    "Century Square": [
+        "1.352457", 
+        "103.943795", 
+        "529509", 
+        "2 Tampines Central 5 #05-27", 
+        "centurysquare.com.sg", 
+        "6789 6261"
+    ], 
+    "Change Alley (Singapore)": [
+        "1.284032", 
+        "103.85212", 
+        "49318", 
+        "", 
+        "", 
+        "6438 4620"
+    ], 
+    "Changi City Point": [
+        "1.334052", 
+        "103.963831", 
+        "486038", 
+        "5 Changi Business Park Central 1", 
+        "", 
+        "6511 1088"
+    ], 
+    "Chinatown Point": [
+        "1.285329", 
+        "103.844868", 
+        "59413", 
+        "133 New Bridge Rd", 
+        "chinatownpoint.com.sg", 
+        "6702 0114"
+    ], 
+    "City Square Mall": [
+        "1.311425", 
+        "103.856661", 
+        "208539", 
+        "180 Kitchener Rd", 
+        "citysquaremall.com.sg", 
+        "6595 6595"
+    ], 
+    "Compass Point": [
+        "1.392268", 
+        "103.894972", 
+        "545078", 
+        "1 Sengkang Square", 
+        "fraserscentrepointmalls.com", 
+        "6881 2707"
+    ], 
+    "East Point Mall": [
+        "1.342796", 
+        "103.953077", 
+        "528833", 
+        "3 Simei Street 6", 
+        "fraserscentrepointmalls.com", 
+        "6587 7200"
+    ], 
+    "Great World City": [
+        "1.293502", 
+        "103.831998", 
+        "237994", 
+        "1 Kim Seng Promenade", 
+        "greatworldcity.com.sg", 
+        "6737 3855"
+    ], 
+    "Greenwich V": [
+        "1.387451", 
+        "103.869647", 
+        "", 
+        "", 
+        "greenwichv.com.sg", 
+        ""
+    ], 
+    "HarbourFront Centre": [
+        "1.264478", 
+        "103.820141", 
+        "99253", 
+        "1 Maritime Square", 
+        "harbourfrontcentre.com", 
+        "6377 6311"
+    ], 
+    "Heartland Mall": [
+        "1.359568", 
+        "103.885277", 
+        "530205", 
+        "205 Hougang Street 21", 
+        "", 
+        ""
+    ], 
+    "Hougang 1": [
+        "1.375769", 
+        "103.87949", 
+        "538692", 
+        "1 Hougang Street 91", 
+        "hougang1.com.sg", 
+        "6593 3257"
+    ], 
+    "Hougang Mall": [
+        "1.372459", 
+        "103.893821", 
+        "538766", 
+        "90 Hougang Ave 10", 
+        "hougangmall.com.sg", 
+        "6488 9617"
+    ], 
+    "IMM": [
+        "1.334825", 
+        "103.746911", 
+        "609601", 
+        "2 Jurong East Street 21", 
+        "imm.sg", 
+        "6665 8268"
+    ], 
+    "ION Orchard": [
+        "1.303501", 
+        "103.832235", 
+        "238801", 
+        "2 Orchard Turn", 
+        "ionorchard.com", 
+        "6238 8228"
+    ], 
+    "JCube": [
+        "1.333402", 
+        "103.740101", 
+        "609731", 
+        "2 Jurong East Central 1", 
+        "j-cube.com.sg", 
+        "6684 2153"
+    ], 
+    "Jem": [
+        "1.333249", 
+        "103.743392", 
+        "608549", 
+        "50 Jurong Gateway Road", 
+        "jem.sg", 
+        "6225 5536"
+    ], 
+    "Junction 10": [
+        "1.38066", 
+        "103.759985", 
+        "677899", 
+        "1 Woodlands Rd", 
+        "junction10.com.sg", 
+        "6892 5310"
+    ], 
+    "Junction 8": [
+        "1.350707", 
+        "103.848667", 
+        "579837", 
+        "9 Bishan P1", 
+        "junction8.com.sg", 
+        "6354 2955"
+    ], 
+    "Jurong Point Shopping Mall": [
+        "1.339793", 
+        "103.706577", 
+        "648886", 
+        "1 Jurong West Central 2 #03-07", 
+        "jurongpoint.com.sg", 
+        "6792 5662"
+    ], 
+    "Kallang Leisure Park": [
+        "1.302203", 
+        "103.876485", 
+        "397693", 
+        "5 Stadium Walk", 
+        "leisurepark.com.sg", 
+        "6242 1220"
+    ], 
+    "Kallang Wave Mall": [
+        "1.303232", 
+        "103.872931", 
+        "397628", 
+        "1 Stadium Place", 
+        "thekallangwave.sg", 
+        "6702 5168"
+    ], 
+    "Katong V": [
+        "1.303813", 
+        "103.902903", 
+        "428751", 
+        "30 E Coast Rd", 
+        "", 
+        "6593 3327"
+    ], 
+    "Liang Court": [
+        "1.291649", 
+        "103.844632", 
+        "179030", 
+        "177 River Valley Rd", 
+        "liangcourt.com.sg", 
+        "6336 7184"
+    ], 
+    "Limbang Shopping Centre": [
+        "1.392056", 
+        "103.743086", 
+        "680534", 
+        "533 Choa Chu Kang Street 51", 
+        "", 
+        "6314 3307"
+    ], 
+    "Lot One Shoppers' Mall": [
+        "1.385285", 
+        "103.744905", 
+        "689812", 
+        "21 Choa Chu Kang Ave 4", 
+        "lotone.com.sg", 
+        "6314 6200"
+    ], 
+    "Marina Bay Link Mall": [
+        "1.27984", 
+        "103.854043", 
+        "", 
+        "", 
+        "", 
+        ""
+    ], 
+    "Marina Square": [
+        "1.291628", 
+        "103.85756", 
+        "39594", 
+        "6 Raffles Blvd", 
+        "marinasquare.com.sg", 
+        "6339 8787"
+    ], 
+    "Millenia Walk": [
+        "1.292762", 
+        "103.858104", 
+        "39596", 
+        "9 Raffles Boulevard", 
+        "milleniawalk.com", 
+        "6883 1122"
+    ], 
+    "Mustafa Centre": [
+        "1.310281", 
+        "103.855287", 
+        "207704", 
+        "145 Syed Alwi Rd", 
+        "mustafa.com.sg", 
+        "6295 5855"
+    ], 
+    "Nex": [
+        "1.350799", 
+        "103.872224", 
+        "556083", 
+        "23 Serangoon Central", 
+        "nex.com.sg", 
+        "6416 6366"
+    ], 
+    "Ngee Ann City": [
+        "1.302675", 
+        "103.834734", 
+        "238873", 
+        "391 Orchard Rd", 
+        "ngeeanncity.com.sg", 
+        "6506 0460"
+    ], 
+    "Northpoint Shopping Centre": [
+        "1.429439", 
+        "103.835846", 
+        "769098", 
+        "930 Yishun Ave 2", 
+        "", 
+        "6754 2300"
+    ], 
+    "Novena Square": [
+        "1.320051", 
+        "103.843744", 
+        "307683", 
+        "238 Thomson Road", 
+        "", 
+        "6358 0700"
+    ], 
+    "One KM": [
+        "1.314968", 
+        "103.894607", 
+        "437157", 
+        "11 Tanjong Katong Road", 
+        "onekm.com.sg", 
+        "6702 3610"
+    ], 
+    "Orchard Central": [
+        "1.300659", 
+        "103.839759", 
+        "238896", 
+        "181 Orchard Rd", 
+        "orchardcentral.com.sg", 
+        "6238 1051"
+    ], 
+    "Orchard Gateway": [
+        "1.300984", 
+        "103.839646", 
+        "238858", 
+        "277 Orchard Rd #04-19", 
+        "orchardgateway.sg", 
+        "6513 4633"
+    ], 
+    "POMO": [
+        "1.300177", 
+        "103.849407", 
+        "188306", 
+        "1 Selegie Rd", 
+        "pomo.com.sg", 
+        "6339 4253"
+    ], 
+    "Parkway Parade": [
+        "1.300941", 
+        "103.905773", 
+        "449269", 
+        "80 Marine Parade Rd", 
+        "parkwayparade.com.sg", 
+        "6344 1242"
+    ], 
+    "Paya Lebar Square": [
+        "1.318727", 
+        "103.892285", 
+        "", 
+        "60 Paya Lebar Rd ", 
+        "payalebarsquare.sg", 
+        ""
+    ], 
+    "Pearl Centre": [
+        "1.281423", 
+        "103.840531", 
+        "59812", 
+        "100 Eu Tong Sen St", 
+        "", 
+        ""
+    ], 
+    "People's Park Centre": [
+        "1.28597", 
+        "103.844133", 
+        "58357", 
+        "101 Upper Cross St", 
+        "peoplesparkcentre.com", 
+        "6589 8494"
+    ], 
+    "People's Park Complex": [
+        "1.284239", 
+        "103.842623", 
+        "59108", 
+        "1 Park Rd", 
+        "peoplesparkcomplex.com", 
+        "6589 8494"
+    ], 
+    "Pioneer Mall": [
+        "1.341687", 
+        "103.696792", 
+        "641638", 
+        "638A Jurong West Street 61", 
+        "", 
+        "6795 6380"
+    ], 
+    "Plaza Singapura": [
+        "1.300832", 
+        "103.845059", 
+        "238839", 
+        "68 Orchard Rd", 
+        "plazasingapura.com.sg", 
+        "6332 9298"
+    ], 
+    "Queensway Shopping Centre": [
+        "1.287574", 
+        "103.803339", 
+        "149053", 
+        "", 
+        "queenswayshoppingcentre.com", 
+        ""
+    ], 
+    "Raffles City": [
+        "1.293852", 
+        "103.852945", 
+        "179103", 
+        "252 North Bridge Road", 
+        "rafflescity.com.sg", 
+        "6338 7766"
+    ], 
+    "Rivervale Mall": [
+        "1.392007", 
+        "103.904328", 
+        "545082", 
+        "11 Rivervale Crescent", 
+        "rivervalemall.com.sg", 
+        "6788 8370"
+    ], 
+    "Rivervale Plaza": [
+        "1.385727", 
+        "103.901841", 
+        "540118", 
+        "Blk 118 Rivervale Dr", 
+        "", 
+        ""
+    ], 
+    "Rochester Mall": [
+        "1.305275", 
+        "103.788392", 
+        "138639", 
+        "35 Rochester Park", 
+        "rochestermall.com.sg", 
+        "6570 3966"
+    ], 
+    "Sembawang Shopping Centre": [
+        "1.441818", 
+        "103.824864", 
+        "758459", 
+        "604 Sembawang Rd", 
+        "sembawangsc.com.sg", 
+        "6757 8000"
+    ], 
+    "Serangoon Plaza": [
+        "1.310894", 
+        "103.855105", 
+        "218108", 
+        "320 Serangoon Rd", 
+        "", 
+        "6295 5855"
+    ], 
+    "Sim Lim Square": [
+        "1.303101", 
+        "103.853017", 
+        "188504", 
+        "1 Rochor Canal Rd", 
+        "simlimsquare.com.sg", 
+        "6338 3859"
+    ], 
+    "Square 2": [
+        "1.320812", 
+        "103.844204", 
+        "307506", 
+        "10 Sinaran Dr", 
+        "square2.com.sg", 
+        "6397 2288"
+    ], 
+    "Star Vista": [
+        "1.306959", 
+        "103.788247", 
+        "138617", 
+        "1 Vista Exchange Green", 
+        "thestarvista.com", 
+        "6694 3111"
+    ], 
+    "Sun Plaza": [
+        "1.448252", 
+        "103.819491", 
+        "757713", 
+        "30 Sembawang Dr", 
+        "", 
+        "6752 0359"
+    ], 
+    "Suntec City": [
+        "1.295358", 
+        "103.859516", 
+        "38983", 
+        "3 Temasek Boulevard", 
+        "sunteccity.com.sg", 
+        "6822 1537"
+    ], 
+    "Tampines 1": [
+        "1.354255", 
+        "103.945097", 
+        "529536", 
+        "10 Tampines Central 1", 
+        "tampines1.com.sg", 
+        "6572 5500"
+    ], 
+    "Tampines Mall": [
+        "1.352525", 
+        "103.944862", 
+        "529510", 
+        "4 Tampines Central 5", 
+        "tampinesmall.com.sg", 
+        "6788 8370"
+    ], 
+    "Tanglin Mall": [
+        "1.304936", 
+        "103.823861", 
+        "247933", 
+        "163 Tanglin Rd", 
+        "tanglinmall.com.sg", 
+        "6736 4922"
+    ], 
+    "Tanglin Shopping Centre": [
+        "1.306309", 
+        "103.82699", 
+        "247909", 
+        "19 Tanglin Rd", 
+        "tanglinsc.com", 
+        "6737 0849"
+    ], 
+    "Tekka Centre": [
+        "1.306278", 
+        "103.850654", 
+        "", 
+        "Bukit Timah Rd", 
+        "", 
+        ""
+    ], 
+    "The Centrepoint": [
+        "1.302011", 
+        "103.839805", 
+        "238843", 
+        "176 Orchard Rd", 
+        "fraserscentrepointmalls.com", 
+        "6737 9000"
+    ], 
+    "The Clementi Mall": [
+        "1.314958", 
+        "103.764226", 
+        "129588", 
+        "3155 Commonwealth Ave W", 
+        "", 
+        ""
+    ], 
+    "The Rail Mall": [
+        "1.359621", 
+        "103.767835", 
+        "678040", 
+        "380 Upper Bukit Timah Rd", 
+        "", 
+        ""
+    ], 
+    "The Seletar Mall": [
+        "1.391192", 
+        "103.876196", 
+        "797653", 
+        "33 Sengkang W Avenue", 
+        "theseletarmall.com", 
+        "6341 6252"
+    ], 
+    "The Verge": [
+        "1.305248", 
+        "103.851517", 
+        "218227", 
+        "2 Serangoon Rd", 
+        "", 
+        "6307 6761"
+    ], 
+    "Thomson Plaza": [
+        "1.35464", 
+        "103.83092", 
+        "574408", 
+        "301 Upper Thomson Rd", 
+        "thomsonplaza.com.sg", 
+        "6454 9133"
+    ], 
+    "Tiong Bahru Plaza": [
+        "1.286445", 
+        "103.826906", 
+        "168732", 
+        "298 Tiong Bahru Rd #07-01/02", 
+        "tiongbahruplaza.com", 
+        "6276 4686"
+    ], 
+    "Upper Serangoon Shopping Centre": [
+        "1.353535", 
+        "103.878792", 
+        "", 
+        "", 
+        "", 
+        ""
+    ], 
+    "VivoCity": [
+        "1.264355", 
+        "103.822308", 
+        "98585", 
+        "1 Harbourfront Walk", 
+        "vivocity.com.sg", 
+        "6377 6870"
+    ], 
+    "Waterway Point": [
+        "1.405321", 
+        "103.902071", 
+        "", 
+        "69 Punggol Central", 
+        "waterwaypoint.com", 
+        "6589 8494"
+    ], 
+    "West Mall": [
+        "1.349823", 
+        "103.749195", 
+        "658713", 
+        "1 Bukit Batok Central Link", 
+        "westmall.com.sg", 
+        "6898 9281"
+    ], 
+    "Westgate": [
+        "1.33432", 
+        "103.742815", 
+        "608532", 
+        "3 Gateway Dr", 
+        "westgate.com.sg", 
+        "6908 3737"
+    ], 
+    "Wheelock Place": [
+        "1.304655", 
+        "103.830757", 
+        "238880", 
+        "501 Orchard Rd", 
+        "wheelockplace.com", 
+        ""
+    ], 
+    "Wisma Atria": [
+        "1.303816", 
+        "103.833118", 
+        "238877", 
+        "435 Orchard Rd", 
+        "wismaonline.com", 
+        "6235 2103"
+    ], 
+    "Yew Tee Point": [
+        "1.397197", 
+        "103.746686", 
+        "689578", 
+        "21 Choa Chu Kang North 6", 
+        "yewteepoint.com", 
+        "6465 1986"
+    ], 
+    "hillv2": [
+        "1.363271", 
+        "103.764481", 
+        "667979", 
+        "4 Hillview Rise", 
+        "hillv2.com.sg", 
+        ""
+    ], 
+    "myVillage": [
+        "1.365135", 
+        "103.865194", 
+        "556679", 
+        "1 Maju Ave", 
+        "myvillage.sg", 
+        "6634 2288"
+    ]
+}
