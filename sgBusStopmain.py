@@ -1,11 +1,25 @@
 __author__ = 'Jiang'
-from lta import lta
-from process import processdata
+from lta import *
+from processdata import *
+# from process import processdata
 from geopy.distance import vincenty
 import json
-#busstop=lta('smrtbusservice')
-#jsonObj=busstop.GetDataFromLta('0')
-#with open('test.json','w') as outputfile:
+
+# busstop=lta('smrtbusservice')
+# busstop=lta('sbsbusservice')
+# busstop=lta('smrtbusroute')
+# busstop=lta('sbsbusroute')
+# busstop=lta('busstop')
+# busstop.readDataFromLTA()
+# test=processdata().readbusstopdynamic()
+test=processdata().readbusstopstatic()
+# print test
+
+
+# with open('data\smrtbusroute.json') as datafile:
+#     data=json.load(datafile)
+# jsonObj=busstop.GetDataFromLta('100')
+# with open('test.json','w') as outputfile:
 #    json.dump(jsonObj,outputfile,sort_keys=True,indent=4,ensure_ascii=False)
 # test=processdata('BusStopDetails')
 # print 'mall'
