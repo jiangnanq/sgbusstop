@@ -238,7 +238,3 @@ class processdata:
         with open("data\\mall.json","w") as fp:
             json.dump(malldict,fp)
         return malldict
-
-
-
-
