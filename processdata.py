@@ -1,23 +1,11 @@
-__author__ = 'Jiang'
+__author__ = 'Nanqing'
 import json
 import unicodedata
 from geopy.distance import vincenty
 import xlrd
-# Class to process busstop/mall/mrt station/taxi stop information
-# All information should been extract from LTA and saved to file
+# Class to process busstop/mall/mrt station information
+# All information should been extract from LTA and saved to file in the data directory
 class processdata:
-    filename='BusStopDetails'
-    busstoplist={}
-    malllist={}
-    mrtlist={}
-    taxistoplist={}
-    # def __init__(self,filename):
-    #     self.filename=filename
-    #     # self.readDataFromJson()
-    #     # print 'busstoplist:',len(self.busstoplist.keys())
-    #     #print 'malllist:',len(self.malllist.keys())
-    #     #print 'mrtlist:',len(self.mrtlist.keys())
-    #     #print 'taxistoplist:',len(self.taxistoplist.keys())
     def readF(self,filename):
         #read json file
         with open(filename) as datafile:
@@ -37,7 +25,6 @@ class processdata:
         busstopsraw=self.readF('data\\busstopStatic.json')["features"]
         busstops={}
         for abusstop in busstopsraw:
-            # print abusstop['properties']['BUS_STOP_N']
             busstopnumber=abusstop['properties']['BUS_STOP_N']
             busroofnumber=abusstop['properties']['BUS_ROOF_N']
             buslocation=abusstop['properties']['LOC_DESC']
@@ -156,7 +143,6 @@ class processdata:
         # read MRT station information from excel file
         fname='inputdata\\MRT.xlsx'
         xl_workbook=xlrd.open_workbook(fname)
-        sheet_names=xl_workbook.sheet_names()
         xl_sheet=xl_workbook.sheet_by_index(0)
         num_cols=xl_sheet.ncols
         mrt=[]
@@ -205,7 +191,6 @@ class processdata:
         # read MRT station information from excel file
         fname='inputdata\\Shopping Mall.xlsx'
         xl_workbook=xlrd.open_workbook(fname)
-        sheet_names=xl_workbook.sheet_names()
         xl_sheet=xl_workbook.sheet_by_index(0)
         num_cols=xl_sheet.ncols
         mrt=[]
@@ -254,50 +239,6 @@ class processdata:
             json.dump(malldict,fp)
         return malldict
 
-    # def readDataFromJson(self)    :
-    #     self.busstoplist= self.readF('BusStopDetails.json')
-    #     self.malllist=self.readF('mall.json')
-    #     self.mrtlist=self.readF('mrt.json')
-    #     self.taxistoplist=self.readF('taxistoplist.json')
-    # def coordinate(self,item,type):
-    #     if type=='mrt':
-    #         latitude=self.mrtlist[item][1]
-    #         longitude=self.mrtlist[item][2]
-    #     elif type=='mall':
-    #         latitude=self.malllist[item][0]
-    #         longitude=self.malllist[item][1]
-    #     elif type=='taxistop':
-    #         taxistopcoordinate=unicodedata.normalize('NFKD',self.taxistoplist[item][1]).encode('ascii','ignore')
-    #         latitude=taxistopcoordinate.split(',')[0]
-    #         longitude=taxistopcoordinate.split(',')[1]
-    #     elif type=='busstop':
-    #         latitude=self.busstoplist[item][1][1]
-    #         longitude=self.busstoplist[item][1][0]
-    #     return (latitude,longitude)
-    # def checklisttype(self,type):
-    #     if type=='mrt':
-    #         return self.mrtlist
-    #     elif type=='mall':
-    #         return self.malllist
-    #     elif type=='taxistop':
-    #         return self.taxistoplist
-    #     elif type=='busstop':
-    #         return self.busstoplist
-    # def checkTargetwithinRange(self,targetType,itemType,distance):
-    #     target=self.checklisttype(targetType)
-    #     item=self.checklisttype(itemType)
-    #     result={}
-    #     for targetItem in target:
-    #         #print targetItem
-    #         targetItemCoordinate=self.coordinate(targetItem,targetType)
-    #         #print targetItemCoordinate
-    #         resultItem=[]
-    #         for aitem in item:
-    #             itemCoordinate=self.coordinate(aitem,itemType)
-    #             if((vincenty(targetItemCoordinate,itemCoordinate).m)<distance):
-    #                 resultItem.append(aitem)
-    #         result[targetItem]=resultItem
-    #         #print target[targetItem],result[targetItem]
-    #     return result
+
 
 

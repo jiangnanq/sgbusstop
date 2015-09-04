@@ -15,26 +15,21 @@ from urlparse import urlparse
 import httplib2 as http
 from geopy.distance import vincenty
 class lta:
-    AccountKey='QbJYYDbzk2V605i6JBXPHA=='
-    UniqueUserID='5aa27f9b-74fd-4bb6-8f4e-3a9aa47613bb'
-    uri='http://datamall.mytransport.sg'
     path=''
     headers={}
     type=''
-    filename=''
-    busstoplist={}
-    malllist={}
-    mrtlist={}
-    taxistoplist={}
     def __init__(self,type):
         # init class base on the appoint class type
+        self.AccountKey='QbJYYDbzk2V605i6JBXPHA=='
+        self.UniqueUserID='5aa27f9b-74fd-4bb6-8f4e-3a9aa47613bb'
+        self.uri='http://datamall.mytransport.sg'
         self.type=type
         self.headers={'AccountKey':'QbJYYDbzk2V605i6JBXPHA==',
              'UniqueUserID':'5aa27f9b-74fd-4bb6-8f4e-3a9aa47613bb',
              'accept':'application/json'}
         if type=='busstop':
             self.path='/ltaodataservice.svc/BusStopCodeSet?$skip='
-            self.filename='busstop.json'
+            self.filename='busstopdynamic.json'
         elif type=='sbsbusroute':
             self.path='/ltaodataservice.svc/SBSTRouteSet?$skip='
             self.filename='sbsbusroute.json'
@@ -81,6 +76,6 @@ class lta:
             for item in jsonData['d']:
                 ltadata.append(item)
             if a<50:
-                filenam='data\\'+self.filename
-                json.dump(ltadata,open(self.filename,'w'))
+                filename='data\\'+self.filename
+                json.dump(ltadata,open(filename,'w'))
                 break
