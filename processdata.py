@@ -24,7 +24,7 @@ class processdata:
             data=json.load(datafile)
         return data
     def readbusstopdynamic(self):
-        #read dynamic bus stop data
+        #read dynamic bus stop data, dynamic data means read from LTA by GET method
         busstopsraw=self.readF('data\\busstopdynamic.json')
         busstops={}
         for abusstop in busstopsraw:
@@ -33,7 +33,7 @@ class processdata:
             busstops[busstopnumber]=busstopdescription
         return busstops
     def readbusstopstatic(self):
-        #read static bus stop data
+        #read static bus stop data, static data means download data from datamall website
         busstopsraw=self.readF('data\\busstopStatic.json')["features"]
         busstops={}
         for abusstop in busstopsraw:
@@ -70,6 +70,7 @@ class processdata:
         return busroute
     def processbusroute(self):
         #process bus rote data from LTA data file
+        #comibne bus stop information to each bus line
         busroute=self.readbusroute()
         buslines={}
         for abusroute in busroute:
@@ -85,6 +86,7 @@ class processdata:
         return buslines
     def combinebusstopinfo(self):
         #generate bus stop detail information
+        #inlcude dyanmic,static and bus line information
         staticbusstops=self.readbusstopstatic()
         dynamicbusstops=self.readbusstopdynamic()
         busroutes=self.readbusroute()
@@ -119,22 +121,140 @@ class processdata:
                         busstops[abusroute[0]][3].append(abusroute[1])
         for key,abusstop in busstops.iteritems():
             if len(abusstop)==4:
-                busstoptext='The bus in '+key+' are '
+                busstoptext='The bus in '+key+' are:'
+                abusstop[3].sort()
                 for busline in abusstop[3]:
                     busstoptext=busstoptext+busline+','
                 abusstop.pop()
                 abusstop.append(busstoptext)
-        with open('busstop.json','w') as fp:
+        malls=self.readF('data\\mall.json')
+        mrts=self.readF('data\\mrt.json')
+        for busstopkey,abusstop in busstops.iteritems():
+            busstoplatitude=abusstop[1][1]
+            busstoplongitude=abusstop[1][0]
+            busstopcoordinate=(busstoplatitude,busstoplongitude)
+            cloestmrt=[]
+            cloestmall=[]
+            for mrtkey,amrt in mrts.iteritems():
+                mrtlatitude=amrt[0][1]
+                mrtlongitude=amrt[0][2]
+                mrtcoordinate=(mrtlatitude,mrtlongitude)
+                if(vincenty(mrtcoordinate,busstopcoordinate).m<200):
+                    cloestmrt.append(mrtkey)
+            for mallkey,amall in malls.iteritems():
+                malllatitude=amall[0][0]
+                malllongitude=amall[0][1]
+                mallcoordinate=(malllatitude,malllongitude)
+                if(vincenty(mallcoordinate,busstopcoordinate).m<150):
+                    cloestmall.append(mallkey)
+            abusstop.append(cloestmall)
+            abusstop.append(cloestmrt)
+        with open('data\\busstop.json','w') as fp:
             json.dump(busstops,fp)
         return busstops
     def  readmrtdata(self):
+        # read MRT station information from excel file
         fname='inputdata\\MRT.xlsx'
         xl_workbook=xlrd.open_workbook(fname)
         sheet_names=xl_workbook.sheet_names()
         xl_sheet=xl_workbook.sheet_by_index(0)
-        row=xl_sheet.row(0)
-        return row
-    # def readDataFromJson(self):
+        num_cols=xl_sheet.ncols
+        mrt=[]
+        for row_idx in range(0,xl_sheet.nrows):
+            amrt=[]
+            for col_idx in range(0,num_cols):
+                amrt.append(xl_sheet.cell(row_idx,col_idx).value)
+            mrt.append(amrt)
+        mrt.pop(0)
+        return mrt
+    def processmrt(self):
+        # process MRT station information and save to json file
+        mrt=self.readmrtdata()
+        mrtdict={}
+        for amrt in mrt:
+            mrtnumber=str(amrt[0])
+            mrtname=amrt[1]
+            mrtlatitude=amrt[3]
+            mrtlongitude=amrt[4]
+            mrtdict[mrtnumber]=[mrtname,mrtlatitude,mrtlongitude]
+        busstops=self.readF("data\\busstop.json")
+        malls=self.readF("data\\mall.json")
+        for mrtkey,amrt in mrtdict.iteritems():
+            mrtlatitude=amrt[1]
+            mrtlongitude=amrt[2]
+            mrtcoordinate=(mrtlatitude,mrtlongitude)
+            closestbusstop=[]
+            closestmall=[]
+            for busstopkey,abusstop in busstops.iteritems():
+                busstoplatitude=abusstop[1][1]
+                busstoplongitude=abusstop[1][0]
+                busstopcoordinate=(busstoplatitude,busstoplongitude)
+                if(vincenty(mrtcoordinate,busstopcoordinate).m<200):
+                    closestbusstop.append(busstopkey)
+            for mallkey,amall in malls.iteritems():
+                malllatitude=amall[0][0]
+                malllongitude=amall[0][1]
+                mallcoordinate=(malllatitude,malllongitude)
+                if(vincenty(mallcoordinate,mrtcoordinate).m<300):
+                    closestmall.append(mallkey)
+            mrtdict[mrtkey]=[amrt,closestbusstop,closestmall]
+        with open("data\\mrt.json","w") as fp:
+            json.dump(mrtdict,fp)
+        return mrtdict
+    def readmalldata(self):
+        # read MRT station information from excel file
+        fname='inputdata\\Shopping Mall.xlsx'
+        xl_workbook=xlrd.open_workbook(fname)
+        sheet_names=xl_workbook.sheet_names()
+        xl_sheet=xl_workbook.sheet_by_index(0)
+        num_cols=xl_sheet.ncols
+        mrt=[]
+        for row_idx in range(0,xl_sheet.nrows):
+            amrt=[]
+            for col_idx in range(0,num_cols):
+                amrt.append(xl_sheet.cell(row_idx,col_idx).value)
+            mrt.append(amrt)
+        mrt.pop(0)
+        return mrt
+    def processmalldata(self):
+         # process Shopping mall information and save to json file
+        mall=self.readmalldata()
+        malldict={}
+        for amall in mall:
+            mallname=amall[1]
+            malllatitude=amall[2]
+            malllongitude=amall[3]
+            mallpostcode=amall[4]
+            mallstreet=amall[5]
+            mallweb=amall[6]
+            malltel=amall[7]
+            malldict[mallname]=[malllatitude,malllongitude,mallpostcode,mallstreet,mallweb,malltel]
+        busstops=self.readF("data\\busstop.json")
+        mrts=self.readF("data\\mrt.json")
+        for mallkey,amall in malldict.iteritems():
+            malllatitude=amall[0]
+            malllongitude=amall[1]
+            mallcoordinate=(malllatitude,malllongitude)
+            closestbusstop=[]
+            cloesetmrt=[]
+            for busstopkey,abusstop in busstops.iteritems():
+                busstoplatitude=abusstop[1][1]
+                busstoplongitude=abusstop[1][0]
+                busstopcoordinate=(busstoplatitude,busstoplongitude)
+                if(vincenty(mallcoordinate,busstopcoordinate).m<150):
+                    closestbusstop.append(busstopkey)
+            for mrtkey,amrt in mrts.iteritems():
+                mrtlatitude=amrt[0][1]
+                mrtlongitude=amrt[0][2]
+                mrtcoordinate=(mrtlatitude,mrtlongitude)
+                if(vincenty(mallcoordinate,mrtcoordinate).m<300):
+                    cloesetmrt.append(mrtkey)
+            malldict[mallkey]=[amall,closestbusstop,cloesetmrt]
+        with open("data\\mall.json","w") as fp:
+            json.dump(malldict,fp)
+        return malldict
+
+    # def readDataFromJson(self)    :
     #     self.busstoplist= self.readF('BusStopDetails.json')
     #     self.malllist=self.readF('mall.json')
     #     self.mrtlist=self.readF('mrt.json')
