@@ -12,7 +12,7 @@ import json
 # busstop=lta('busstop')
 # busstop.readDataFromLTA()
 # test=processdata().readbusstopdynamic()
-test=processdata().combinebusstopinfo()
+test=processdata().processmrt()
 # print test
 
 
