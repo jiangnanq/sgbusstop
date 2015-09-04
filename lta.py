@@ -84,25 +84,3 @@ class lta:
                 filenam='data\\'+self.filename
                 json.dump(ltadata,open(self.filename,'w'))
                 break
-# class processdata:
-#     # def __init__(self):
-#
-#     def readF(self,filename):
-#         #read file to data
-#         with open(filename) as datafile:
-#             data=json.load(datafile)
-#         return data
-#
-#     def readDataFromJson(self):
-#         # read existing data from data file
-#         self.busstoplist= self.readF('data\\BusStopDetails.json')
-#         self.malllist=self.readF('data\\mall.json')
-#         self.mrtlist=self.readF('data\\mrt.json')
-#         self.taxistoplist=self.readF('data\\taxistoplist.json')
-#     def  combineLTAData(self):
-#         sbsbusroute=self.readF('data\\sbsbusroute.json')
-#         sbsbusservice=self.readF('data\\sbsbusservice.json')
-#         smrtbusroute=self.readF('data\\smrtbusroute.json')
-#         smrtbusservice=self.readF('data\\smrtbusservice.json')
-#         busstoplist=self.readF('data\\BusStopListwithGPS.json')
-
