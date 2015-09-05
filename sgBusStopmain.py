@@ -5,11 +5,11 @@ from geopy.distance import vincenty
 import json
 
 # busstop=lta('smrtbusservice')
-busstop=lta('sbsbusservice')
+# busstop=lta('sbsbusservice')
 # busstop=lta('smrtbusroute')
 # busstop=lta('sbsbusroute')
 # busstop=lta('busstop')
-busstop.readDataFromLTA()
+# busstop.readDataFromLTA()
 
-# test=processdata().processmrt()
+test=processdata().combinebusstopinfo()
 print 'process completed'
