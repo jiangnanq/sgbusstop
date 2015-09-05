@@ -91,13 +91,13 @@ class processdata:
                 busstoproad=dynamicbusstop[1]
                 busstopID=dynamicbusstop[2]
 
-                busstoptag1=[busstopdescription,busstoproad,busstopID,busstoplocation]
+                busstoptag1=[busstopdescription,busstoproad,busstopID]
                 busstoptag2=[busstoplatitude,busstoplongitude]
                 busstoptag3=busstoproofnumber
                 busstops[abusstop]=[busstoptag1,busstoptag2,busstoptag3]
         for abusroute in busroutes:
             if abusroute[0] in busstops:
-                if len(busstops[abusroute[0]])==3:
+                if len(busstops[abusroute[0]]) == 3:
                     abus=[]
                     abus.append(abusroute[1])
                     busstops[abusroute[0]].append(abus)
@@ -107,7 +107,7 @@ class processdata:
                     else:
                         busstops[abusroute[0]][3].append(abusroute[1])
         for key,abusstop in busstops.iteritems():
-            if len(abusstop)==4:
+            if len(abusstop) == 4:
                 busstoptext='The bus in '+key+' are:'
                 abusstop[3].sort()
                 for busline in abusstop[3]:
