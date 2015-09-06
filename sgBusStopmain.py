@@ -12,8 +12,4 @@ import json
 # busstop.readDataFromLTA()
 
 test=processdata().combinebusstopinfo()
-<<<<<<< HEAD
 print 'process completed'
-=======
-print 'process completed'
->>>>>>> 7886f10c5a21ef8824dcc568deb0f852dd8228a0
