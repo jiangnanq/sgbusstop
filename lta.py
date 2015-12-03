@@ -1,3 +1,4 @@
+import os
 import json
 from urlparse import urlparse
 import httplib2 as http
@@ -79,6 +80,6 @@ class lta:
             for item in jsonData['d']:
                 ltadata.append(item)
             if a < 50:
-                filename = 'data\\' + self.filename
-                json.dump(ltadata, open(filename, 'w'))
+                filename = '~/Dropbox/project/busstop/data/' + self.filename
+                json.dump(ltadata, open(os.path.expanduser(filename), 'w'))
                 break

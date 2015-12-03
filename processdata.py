@@ -274,4 +274,4 @@ class processdata:
             malldict[mallkey] = [amall, closestbusstop, cloesetmrt]
         with open("data\\mall.json", "w") as fp:
             json.dump(malldict, fp)
-    return malldict
+        return malldict
