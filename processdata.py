@@ -11,11 +11,11 @@ __author__ = 'Nanqing'
 
 class processdata:
     datafolder = '~/Dropbox/project/busstop/data/'
-    inputdatafolder='~/Dropbox/project/busstop/input/'
+    inputdatafolder = '~/Dropbox/project/busstop/inputdata/'
 
     def readF(self, filename):
         # read json file
-        with open(filename) as datafile:
+        with open(os.path.expanduser(filename)) as datafile:
             data = json.load(datafile)
         return data
 
@@ -86,7 +86,7 @@ class processdata:
         return busroute
 
     def processbusroute(self):
-        # process bus rote data from LTA data file
+        # process bus route data from LTA data file
         # comibne bus stop information to each bus line
         busroute = self.readbusroute()
         buslines = {}
@@ -95,10 +95,11 @@ class processdata:
             if abusroute[1] in buslines:
                 busline = buslines[abusroute[1]]
                 busline = busline+','+atag
-                buslines[abusroute[1]] = busline
+                buslines[abusroute[1]] = busline    
             else:
                 buslines[abusroute[1]] = atag
-        with open('busline.json', 'w') as fp:
+        f1 = self.datafolder+'busline.json'
+        with open(os.path.expanduser(f1), 'w+') as fp:
             json.dump(buslines, fp)
         return buslines
 
@@ -145,8 +146,9 @@ class processdata:
                     busstoptext = busstoptext+busline+','
                 abusstop.pop()
                 abusstop.append(busstoptext)
-        malls = self.readF(self.datafolder+'mall.json')
-        mrts = self.readF(self.datafolder+'mrt.json')
+        print 'Start processing mrt&mall data!'
+        malls = self.readF(self.inputdatafolder+'mall.json')
+        mrts = self.readF(self.inputdatafolder+'mrt.json')
         for busstopkey, abusstop in busstops.iteritems():
             busstoplatitude = abusstop[1][1]
             busstoplongitude = abusstop[1][0]
@@ -167,14 +169,15 @@ class processdata:
                     cloestmall.append(mallkey)
             abusstop.append(cloestmall)
             abusstop.append(cloestmrt)
-        with open(self.datafolder+'busstop.json', 'w') as fp:
+        f1 = self.datafolder + 'busstop.json'
+        with open(os.path.expanduser(f1), 'w') as fp:
             json.dump(busstops, fp)
         return busstops
 
     def readmrtdata(self):
         # read MRT station information from excel file
-        fname = self.datafolder+'MRT.xlsx'
-        xl_workbook = xlrd.open_workbook(fname)
+        fname = self.inputdatafolder+'MRT.xlsx'
+        xl_workbook = xlrd.open_workbook(os.path.expanduser(fname))
         xl_sheet = xl_workbook.sheet_by_index(0)
         num_cols = xl_sheet.ncols
         mrt = []
@@ -217,7 +220,8 @@ class processdata:
                 if(vincenty(mallcoordinate, mrtcoordinate).m < 300):
                     closestmall.append(mallkey)
             mrtdict[mrtkey] = [amrt, closestbusstop, closestmall]
-        with open(self.datafolder+"mrt.json", "w") as fp:
+        f1 = self.datafolder + 'mrt.json'
+        with open(os.path.expanduser(f1), "w") as fp:
             json.dump(mrtdict, fp)
         return mrtdict
 
