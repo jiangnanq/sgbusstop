@@ -1,4 +1,5 @@
 import json
+import os
 # import unicodedata
 from geopy.distance import vincenty
 import xlrd
@@ -9,6 +10,9 @@ __author__ = 'Nanqing'
 
 
 class processdata:
+    datafolder = '~/Dropbox/project/busstop/data/'
+    inputdatafolder='~/Dropbox/project/busstop/input/'
+
     def readF(self, filename):
         # read json file
         with open(filename) as datafile:
@@ -18,7 +22,7 @@ class processdata:
     def readbusstopdynamic(self):
         # read dynamic bus stop data,
         # dynamic data means read from LTA by GET method
-        busstopsraw = self.readF('data\\busstopdynamic.json')
+        busstopsraw = self.readF(self.datafolder+'busstopdynamic.json')
         busstops = {}
         for abusstop in busstopsraw:
             busstopnumber = abusstop['Code']
@@ -32,7 +36,7 @@ class processdata:
     def readbusstopstatic(self):
         # read static bus stop data,
         # static data means download data from datamall website
-        busstopsraw = self.readF('data\\busstopStatic.json')["features"]
+        busstopsraw = self.readF(self.datafolder+'busstopStatic.json')["features"]
         busstops = {}
         for abusstop in busstopsraw:
             busstopnumber = abusstop['properties']['BUS_STOP_N']
@@ -50,7 +54,7 @@ class processdata:
 
     def readbusroute(self):
         # read bus route data
-        busrouteraw = self.readF('data\\sbsbusroute.json')
+        busrouteraw = self.readF(self.datafolder+'sbsbusroute.json')
         busroute = []
         for abusroute in busrouteraw:
             buscode = abusroute['SR_BS_CODE']
@@ -65,7 +69,7 @@ class processdata:
                 busdirection,
                 busrouteseq]
             busroute.append(busroutedetails)
-        busrouterawsmrt = self.readF('data\\smrtbusroute.json')
+        busrouterawsmrt = self.readF(self.datafolder+'smrtbusroute.json')
         for abusroute in busrouterawsmrt:
             buscode = abusroute['SR_BS_CODE']
             busnumber = abusroute['SR_SVC_NUM']
@@ -141,8 +145,8 @@ class processdata:
                     busstoptext = busstoptext+busline+','
                 abusstop.pop()
                 abusstop.append(busstoptext)
-        malls = self.readF('data\\mall.json')
-        mrts = self.readF('data\\mrt.json')
+        malls = self.readF(self.datafolder+'mall.json')
+        mrts = self.readF(self.datafolder+'mrt.json')
         for busstopkey, abusstop in busstops.iteritems():
             busstoplatitude = abusstop[1][1]
             busstoplongitude = abusstop[1][0]
@@ -163,13 +167,13 @@ class processdata:
                     cloestmall.append(mallkey)
             abusstop.append(cloestmall)
             abusstop.append(cloestmrt)
-        with open('data\\busstop.json', 'w') as fp:
+        with open(self.datafolder+'busstop.json', 'w') as fp:
             json.dump(busstops, fp)
         return busstops
 
     def readmrtdata(self):
         # read MRT station information from excel file
-        fname = 'inputdata\\MRT.xlsx'
+        fname = self.datafolder+'MRT.xlsx'
         xl_workbook = xlrd.open_workbook(fname)
         xl_sheet = xl_workbook.sheet_by_index(0)
         num_cols = xl_sheet.ncols
@@ -192,8 +196,8 @@ class processdata:
             mrtlatitude = amrt[3]
             mrtlongitude = amrt[4]
             mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude]
-        busstops = self.readF("data\\busstop.json")
-        malls = self.readF("data\\mall.json")
+        busstops = self.readF(self.datafolder+"busstop.json")
+        malls = self.readF(self.datafolder+"mall.json")
         for mrtkey, amrt in mrtdict.iteritems():
             mrtlatitude = amrt[1]
             mrtlongitude = amrt[2]
@@ -213,7 +217,7 @@ class processdata:
                 if(vincenty(mallcoordinate, mrtcoordinate).m < 300):
                     closestmall.append(mallkey)
             mrtdict[mrtkey] = [amrt, closestbusstop, closestmall]
-        with open("data\\mrt.json", "w") as fp:
+        with open(self.datafolder+"mrt.json", "w") as fp:
             json.dump(mrtdict, fp)
         return mrtdict
 
@@ -251,8 +255,8 @@ class processdata:
                     mallstreet,
                     mallweb,
                     malltel]
-        busstops = self.readF("data\\busstop.json")
-        mrts = self.readF("data\\mrt.json")
+        busstops = self.readF(self.datafolder+"busstop.json")
+        mrts = self.readF(self.datafolder+"mrt.json")
         for mallkey, amall in malldict.iteritems():
             malllatitude = amall[0]
             malllongitude = amall[1]
@@ -272,6 +276,6 @@ class processdata:
                 if(vincenty(mallcoordinate, mrtcoordinate).m < 300):
                     cloesetmrt.append(mrtkey)
             malldict[mallkey] = [amall, closestbusstop, cloesetmrt]
-        with open("data\\mall.json", "w") as fp:
+        with open(self.datafolder+"mall.json", "w") as fp:
             json.dump(malldict, fp)
         return malldict
