@@ -80,6 +80,6 @@ class lta:
             for item in jsonData['d']:
                 ltadata.append(item)
             if a < 50:
-                filename = '~/Dropbox/project/busstop/data/' + self.filename
+                filename = '~/Dropbox/project/busstoppy/data/' + self.filename
                 json.dump(ltadata, open(os.path.expanduser(filename), 'w'))
                 break

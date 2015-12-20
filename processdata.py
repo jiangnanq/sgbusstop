@@ -10,8 +10,8 @@ __author__ = 'Nanqing'
 
 
 class processdata:
-    datafolder = '~/Dropbox/project/busstop/data/'
-    inputdatafolder = '~/Dropbox/project/busstop/inputdata/'
+    datafolder = '~/Dropbox/project/busstoppy/data/'
+    inputdatafolder = '~/Dropbox/project/busstoppy/inputdata/'
 
     def readF(self, filename):
         # read json file
