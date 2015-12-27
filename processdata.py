@@ -147,8 +147,8 @@ class processdata:
                 abusstop.pop()
                 abusstop.append(busstoptext)
         print 'Start processing mrt&mall data!'
-        malls = self.readF(self.inputdatafolder+'mall.json')
-        mrts = self.readF(self.inputdatafolder+'mrt.json')
+        malls = self.readF(self.datafolder+'mall.json')
+        mrts = self.readF(self.datafolder+'mrt.json')
         for busstopkey, abusstop in busstops.iteritems():
             busstoplatitude = abusstop[1][1]
             busstoplongitude = abusstop[1][0]
@@ -159,7 +159,7 @@ class processdata:
                 mrtlatitude = amrt[0][1]
                 mrtlongitude = amrt[0][2]
                 mrtcoordinate = (mrtlatitude, mrtlongitude)
-                if(vincenty(mrtcoordinate, busstopcoordinate).m < 200):
+                if(vincenty(mrtcoordinate, busstopcoordinate).m < 300):
                     cloestmrt.append(mrtkey)
             for mallkey, amall in malls.iteritems():
                 malllatitude = amall[0][0]
@@ -191,6 +191,7 @@ class processdata:
 
     def processmrt(self):
         # process MRT station information and save to json file
+        print 'start processing mrt data.'
         mrt = self.readmrtdata()
         mrtdict = {}
         for amrt in mrt:
@@ -227,8 +228,8 @@ class processdata:
 
     def readmalldata(self):
         # read MRT station information from excel file
-        fname = 'inputdata\\Shopping Mall.xlsx'
-        xl_workbook = xlrd.open_workbook(fname)
+        fname = self.inputdatafolder+'Shopping Mall.xlsx'
+        xl_workbook = xlrd.open_workbook(os.path.expanduser(fname))
         xl_sheet = xl_workbook.sheet_by_index(0)
         num_cols = xl_sheet.ncols
         mrt = []
@@ -242,6 +243,7 @@ class processdata:
 
     # process Shopping mall information and save to json file
     def processmalldata(self):
+        print 'start processing.'
         mall = self.readmalldata()
         malldict = {}
         for amall in mall:
@@ -259,8 +261,8 @@ class processdata:
                     mallstreet,
                     mallweb,
                     malltel]
-        busstops = self.readF(self.datafolder+"busstop.json")
-        mrts = self.readF(self.datafolder+"mrt.json")
+        busstops = self.readF(self.datafolder+'busstop.json')
+        mrts = self.readF(self.datafolder+'mrt.json')
         for mallkey, amall in malldict.iteritems():
             malllatitude = amall[0]
             malllongitude = amall[1]
@@ -280,6 +282,8 @@ class processdata:
                 if(vincenty(mallcoordinate, mrtcoordinate).m < 300):
                     cloesetmrt.append(mrtkey)
             malldict[mallkey] = [amall, closestbusstop, cloesetmrt]
-        with open(self.datafolder+"mall.json", "w") as fp:
+        f1 = self.datafolder + 'mall.json'
+        print 'Start to write to file.'
+        with open(os.path.expanduser(f1), "w") as fp:
             json.dump(malldict, fp)
         return malldict

@@ -26,5 +26,5 @@ test = processdata().combinebusstopinfo()
 
 # Process shopping mall information
 # Update mall.json file
-# test = processdata().processmalldata
+# test = processdata().processmalldata()
 print 'process completed'
