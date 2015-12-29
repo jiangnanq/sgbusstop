@@ -17,14 +17,15 @@ __author__ = 'Jiang'
 # This step will generate busline.json
 # test = processdata().processbusroute()
 
-# Generate busstop.json with MRT&Mall information
-test = processdata().combinebusstopinfo()
-
 # Process MRT information
 # Update mrt.json file
 # test = processdata().processmrt()
 
 # Process shopping mall information
 # Update mall.json file
-# test = processdata().processmalldata()
+test = processdata().processmalldata()
+
+# Generate busstop.json with MRT&Mall information
+# test = processdata().combinebusstopinfo()
+
 print 'process completed'

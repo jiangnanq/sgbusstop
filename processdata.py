@@ -12,6 +12,9 @@ __author__ = 'Nanqing'
 class processdata:
     datafolder = '~/Dropbox/project/busstoppy/data/'
     inputdatafolder = '~/Dropbox/project/busstoppy/inputdata/'
+    DistanceMrtBusstation = 150
+    DistanceMrtMall = 300
+    DistanceMallBusstation = 150
 
     def readF(self, filename):
         # read json file
@@ -159,13 +162,13 @@ class processdata:
                 mrtlatitude = amrt[0][1]
                 mrtlongitude = amrt[0][2]
                 mrtcoordinate = (mrtlatitude, mrtlongitude)
-                if(vincenty(mrtcoordinate, busstopcoordinate).m < 300):
+                if(vincenty(mrtcoordinate, busstopcoordinate).m < self.DistanceMrtBusstation):
                     cloestmrt.append(mrtkey)
             for mallkey, amall in malls.iteritems():
                 malllatitude = amall[0][0]
                 malllongitude = amall[0][1]
                 mallcoordinate = (malllatitude, malllongitude)
-                if(vincenty(mallcoordinate, busstopcoordinate).m < 150):
+                if(vincenty(mallcoordinate, busstopcoordinate).m < self.DistanceMallBusstation):
                     cloestmall.append(mallkey)
             abusstop.append(cloestmall)
             abusstop.append(cloestmrt)
@@ -212,13 +215,13 @@ class processdata:
                 busstoplatitude = abusstop[1][1]
                 busstoplongitude = abusstop[1][0]
                 busstopcoordinate = (busstoplatitude, busstoplongitude)
-                if(vincenty(mrtcoordinate, busstopcoordinate).m < 200):
+                if(vincenty(mrtcoordinate, busstopcoordinate).m < self.DistanceMrtBusstation):
                     closestbusstop.append(busstopkey)
             for mallkey, amall in malls.iteritems():
                 malllatitude = amall[0][0]
                 malllongitude = amall[0][1]
                 mallcoordinate = (malllatitude, malllongitude)
-                if(vincenty(mallcoordinate, mrtcoordinate).m < 300):
+                if(vincenty(mallcoordinate, mrtcoordinate).m < self.DistanceMrtMall):
                     closestmall.append(mallkey)
             mrtdict[mrtkey] = [amrt, closestbusstop, closestmall]
         f1 = self.datafolder + 'mrt.json'
@@ -273,13 +276,13 @@ class processdata:
                 busstoplatitude = abusstop[1][1]
                 busstoplongitude = abusstop[1][0]
                 busstopcoordinate = (busstoplatitude, busstoplongitude)
-                if(vincenty(mallcoordinate, busstopcoordinate).m < 150):
+                if(vincenty(mallcoordinate, busstopcoordinate).m < self.DistanceMallBusstation):
                     closestbusstop.append(busstopkey)
             for mrtkey, amrt in mrts.iteritems():
                 mrtlatitude = amrt[0][1]
                 mrtlongitude = amrt[0][2]
                 mrtcoordinate = (mrtlatitude, mrtlongitude)
-                if(vincenty(mallcoordinate, mrtcoordinate).m < 300):
+                if(vincenty(mallcoordinate, mrtcoordinate).m < self.DistanceMrtMall):
                     cloesetmrt.append(mrtkey)
             malldict[mallkey] = [amall, closestbusstop, cloesetmrt]
         f1 = self.datafolder + 'mall.json'
