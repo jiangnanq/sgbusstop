@@ -4714,7 +4714,7 @@
 { "type": "Feature", "properties": { "BUS_STOP_N": "44179", "BUS_ROOF_N": "B05", "LOC_DESC": "AFT BT BATOK WEST AVE 5" }, "geometry": { "type": "Point", "coordinates": [ 103.747308751633994, 1.367767933164685 ] } },
 { "type": "Feature", "properties": { "BUS_STOP_N": "03539", "BUS_ROOF_N": "B03", "LOC_DESC": "Marina Bay Stn" }, "geometry": { "type": "Point", "coordinates": [ 103.85558176734304, 1.277512661019182 ] } },
 { "type": "Feature", "properties": { "BUS_STOP_N": "27309", "BUS_ROOF_N": "B12", "LOC_DESC": "BLK 705" }, "geometry": { "type": "Point", "coordinates": [ 103.694377751880694, 1.340975985882201 ] } },
-{ "type": "Feature", "properties": { "BUS_STOP_N": "22301", "BUS_ROOF_N": "B11", "LOC_DESC": "BLK 978" }, "geometry": { "type": "Point", "coordinates": [ 103.694308366760481, 1.340535147597248 ] } },
+{ "type": "Feature", "properties": { "BUS_STOP_N": "27301", "BUS_ROOF_N": "B11", "LOC_DESC": "BLK 978" }, "geometry": { "type": "Point", "coordinates": [ 103.694308366760481, 1.340535147597248 ] } },
 { "type": "Feature", "properties": { "BUS_STOP_N": "27321", "BUS_ROOF_N": "B13", "LOC_DESC": "BLK 949" }, "geometry": { "type": "Point", "coordinates": [ 103.691405994973422, 1.344142377937463 ] } },
 { "type": "Feature", "properties": { "BUS_STOP_N": "27329", "BUS_ROOF_N": "B14", "LOC_DESC": "BLK 840" }, "geometry": { "type": "Point", "coordinates": [ 103.691965258336452, 1.343953014336928 ] } },
 { "type": "Feature", "properties": { "BUS_STOP_N": "67089", "BUS_ROOF_N": "B02", "LOC_DESC": "OPP THE HIDING PL" }, "geometry": { "type": "Point", "coordinates": [ 103.868854101334009, 1.390005588702831 ] } },

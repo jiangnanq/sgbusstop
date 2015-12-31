@@ -91,6 +91,7 @@ class processdata:
     def processbusroute(self):
         # process bus route data from LTA data file
         # comibne bus stop information to each bus line
+        # generate busline file
         busroute = self.readbusroute()
         buslines = {}
         for abusroute in busroute:
@@ -117,10 +118,10 @@ class processdata:
             if abusstop in dynamicbusstops:
                 staticbusstop = staticbusstops[abusstop]
                 dynamicbusstop = dynamicbusstops[abusstop]
-                busstoproofnumber = staticbusstop[0]
+                # busstoproofnumber = staticbusstop[0]
                 # busstoplocation = staticbusstop[1]
-                busstoplatitude = staticbusstop[2]
-                busstoplongitude = staticbusstop[3]
+                busstoplatitude = staticbusstop[3]
+                busstoplongitude = staticbusstop[2]
 
                 busstopdescription = dynamicbusstop[0]
                 busstoproad = dynamicbusstop[1]
@@ -128,27 +129,29 @@ class processdata:
 
                 busstoptag1 = [busstopdescription, busstoproad, busstopID]
                 busstoptag2 = [busstoplatitude, busstoplongitude]
-                busstoptag3 = busstoproofnumber
-                busstops[abusstop] = [busstoptag1, busstoptag2, busstoptag3]
+                # busstoptag3 = busstoproofnumber
+                busstops[abusstop] = [busstoptag1, busstoptag2]
         for abusroute in busroutes:
             if abusroute[0] in busstops:
-                if len(busstops[abusroute[0]]) == 3:
+                if len(busstops[abusroute[0]]) == 2:
                     abus = []
                     abus.append(abusroute[1])
                     busstops[abusroute[0]].append(abus)
                 else:
-                    if abusroute[1] in busstops[abusroute[0]][3]:
+                    if abusroute[1] in busstops[abusroute[0]][2]:
                         continue
                     else:
-                        busstops[abusroute[0]][3].append(abusroute[1])
+                        busstops[abusroute[0]][2].append(abusroute[1])
         for key, abusstop in busstops.iteritems():
-            if len(abusstop) == 4:
+            if len(abusstop) == 3:
                 busstoptext = 'The bus in '+key+' are:'
-                abusstop[3].sort()
-                for busline in abusstop[3]:
+                abusstop[2].sort()
+                for busline in abusstop[2]:
                     busstoptext = busstoptext+busline+','
                 abusstop.pop()
                 abusstop.append(busstoptext)
+            else:
+                abusstop.append('The bus in '+key+' are:')
         print 'Start processing mrt&mall data!'
         malls = self.readF(self.datafolder+'mall.json')
         mrts = self.readF(self.datafolder+'mrt.json')
@@ -290,3 +293,48 @@ class processdata:
         with open(os.path.expanduser(f1), "w") as fp:
             json.dump(malldict, fp)
         return malldict
+
+    def processSpecialBus(self):
+        # Process special bus in the special bus file
+        specialBusFileName = self.inputdatafolder + 'specialbus.txt'
+        allbusstops = self.readF(self.datafolder + 'busstop.json')
+        allbuslines = self.readF(self.datafolder + 'busline.json')
+        with open(os.path.expanduser(specialBusFileName)) as datafile:
+            for abus in datafile:
+                busnumber = abus.partition(':')[0]
+                busstops = abus.partition(':')[2].split(',')
+                for i, abusstop in enumerate(busstops):
+                    busstops[i] = abusstop.strip('\n')
+                busstoplocation = []
+                # update busstop.json for each special busline
+                for abusstop in busstops:
+                    latitude = allbusstops[abusstop][1][0]
+                    longitude = allbusstops[abusstop][1][1]
+                    busstoplocation.append((latitude,longitude))
+                    test = allbusstops[abusstop][2]
+                    allbusstops[abusstop][2] = test.replace(busnumber[0:3],busnumber)
+                busstopdistance = []
+                for i in range(len(busstoplocation)):
+                    if i == 0 : 
+                        busstopdistance.append("%.1f" % 0)
+                    else:
+                        dis = vincenty(busstoplocation[i],busstoplocation[i-1]).m+ float(busstopdistance[i-1])
+                        busstopdistance.append("%.1f" % dis)
+                for i, dis in enumerate(busstopdistance):
+                    disFloat = float(dis) / 1000
+                    busstopdistance[i] = "%.1f" % disFloat
+                for i in range(len(busstops)):
+                    busstops[i] = busstops[i] + ':' + busstopdistance[i] + ':' + '1' + ':' + str(i+1)
+                    busline = ''
+                for busstop in busstops:
+                    busline = busline + busstop + ','
+                busline = busline.rstrip(',')
+                allbuslines[busnumber] = busline
+                if busnumber[0:3] in allbuslines:
+                    del allbuslines[busnumber[0:3]]
+        f1 = self.datafolder+'busline.json'        
+        with open(os.path.expanduser(f1), 'w') as fp:
+            json.dump(allbuslines, fp)
+        f1 = self.datafolder+'busstop.json'        
+        with open(os.path.expanduser(f1), 'w') as fp:
+            json.dump(allbusstops, fp)

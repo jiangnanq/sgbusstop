@@ -1,0 +1,1601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>112 Katong</key>
+	<array>
+		<array>
+			<real>1.305293</real>
+			<real>103.905142</real>
+			<real>428802</real>
+			<string>112 East Coast Road</string>
+			<string>112katong.com.sg</string>
+			<string>6636 2112</string>
+		</array>
+		<array>
+			<string>92181</string>
+			<string>92189</string>
+		</array>
+		<array/>
+	</array>
+	<key>313@Somerset</key>
+	<array>
+		<array>
+			<real>1.3011330000000001</real>
+			<real>103.838514</real>
+			<real>238895</real>
+			<string>313 Orchard Rd</string>
+			<string>313somerset.com.sg</string>
+			<string></string>
+		</array>
+		<array>
+			<string>09038</string>
+			<string>08121</string>
+		</array>
+		<array>
+			<string>NS23</string>
+		</array>
+	</array>
+	<key>AMK Hub</key>
+	<array>
+		<array>
+			<real>1.3695250000000001</real>
+			<real>103.84845199999999</real>
+			<real>569933</real>
+			<string>53 Ang Mo Kio Avenue 3</string>
+			<string>amkhub.com.sg</string>
+			<string>6753 9000</string>
+		</array>
+		<array>
+			<string>54009</string>
+		</array>
+		<array>
+			<string>NS16</string>
+		</array>
+	</array>
+	<key>Alexandra Retail Centre</key>
+	<array>
+		<array>
+			<real>1.273652</real>
+			<real>103.80153900000001</real>
+			<real>119963</real>
+			<string>460 Alexandra Rd</string>
+			<string>arc4u.com.sg</string>
+			<string>6377 0592</string>
+		</array>
+		<array>
+			<string>15041</string>
+			<string>15049</string>
+			<string>15141</string>
+			<string>15149</string>
+		</array>
+		<array>
+			<string>CC27</string>
+		</array>
+	</array>
+	<key>Anchorpoint</key>
+	<array>
+		<array>
+			<real>1.288834</real>
+			<real>103.805128</real>
+			<real>159953</real>
+			<string>370 Alexandra Road</string>
+			<string>fraserscentrepointmalls.com</string>
+			<string>6475 2257</string>
+		</array>
+		<array>
+			<string>11521</string>
+			<string>11529</string>
+		</array>
+		<array/>
+	</array>
+	<key>Bedok Mall</key>
+	<array>
+		<array>
+			<real>1.324867</real>
+			<real>103.929205</real>
+			<real>467360</real>
+			<string>311 New Upper Changi Rd</string>
+			<string>bedokmall.com.sg</string>
+			<string>6702 5120</string>
+		</array>
+		<array>
+			<string>84009</string>
+			<string>84091</string>
+			<string>84031</string>
+		</array>
+		<array>
+			<string>EW5</string>
+		</array>
+	</array>
+	<key>Bedok Point</key>
+	<array>
+		<array>
+			<real>1.324964</real>
+			<real>103.932355</real>
+			<real>467350</real>
+			<string>Bedok Central</string>
+			<string>bedokpoint.com.sg</string>
+			<string>6481 1353</string>
+		</array>
+		<array/>
+		<array>
+			<string>EW5</string>
+		</array>
+	</array>
+	<key>Big Box</key>
+	<array>
+		<array>
+			<real>1.331858</real>
+			<string>103.744730</string>
+			<real>608521</real>
+			<string>1 Venture Ave</string>
+			<string>bigbox.com.sg</string>
+			<string>6801 6688</string>
+		</array>
+		<array>
+			<string>28051</string>
+			<string>28059</string>
+		</array>
+		<array/>
+	</array>
+	<key>Boon Lay Shopping Centre</key>
+	<array>
+		<array>
+			<real>1.3463940000000001</real>
+			<real>103.712429</real>
+			<real>640221</real>
+			<string>221 Boon Lay P1</string>
+			<string></string>
+			<string>6264 0920</string>
+		</array>
+		<array>
+			<string>21431</string>
+			<string>21441</string>
+			<string>21449</string>
+		</array>
+		<array/>
+	</array>
+	<key>Bugis Cube</key>
+	<array>
+		<array>
+			<real>1.2981659999999999</real>
+			<real>103.855553</real>
+			<real>408936</real>
+			<string>470 North Bridge Rd</string>
+			<string>bugiscube.com</string>
+			<string>6589 8494</string>
+		</array>
+		<array>
+			<string>01639</string>
+			<string>01631</string>
+			<string>01039</string>
+		</array>
+		<array>
+			<string>EW12</string>
+			<string>DT14</string>
+		</array>
+	</array>
+	<key>Bugis Junction</key>
+	<array>
+		<array>
+			<real>1.2994270000000001</real>
+			<real>103.855552</real>
+			<real>188021</real>
+			<string>200 Victoria St</string>
+			<string>bugisjunction-mall.com.sg</string>
+			<string>6557 6557</string>
+		</array>
+		<array>
+			<string>01119</string>
+			<string>01112</string>
+			<string>01039</string>
+		</array>
+		<array>
+			<string>EW12</string>
+			<string>DT14</string>
+		</array>
+	</array>
+	<key>Bugis+</key>
+	<array>
+		<array>
+			<real>1.299679</real>
+			<real>103.854291</real>
+			<real>188067</real>
+			<string>201 Victoria St</string>
+			<string>bugis-plus.com.sg</string>
+			<string>6634 6810</string>
+		</array>
+		<array>
+			<string>01119</string>
+			<string>01112</string>
+			<string>07569</string>
+		</array>
+		<array>
+			<string>EW12</string>
+			<string>DT14</string>
+		</array>
+	</array>
+	<key>Bukit Panjang Plaza</key>
+	<array>
+		<array>
+			<real>1.3799870000000001</real>
+			<real>103.764354</real>
+			<real>677743</real>
+			<string>1 Jelebu Road</string>
+			<string>bukitpanjangplaza.com.sg</string>
+			<string>6314 6388</string>
+		</array>
+		<array>
+			<string>44639</string>
+			<string>44631</string>
+			<string>44739</string>
+			<string>44731</string>
+		</array>
+		<array>
+			<string>DT1</string>
+			<string>BP6</string>
+		</array>
+	</array>
+	<key>Causeway Point</key>
+	<array>
+		<array>
+			<real>1.4360919999999999</real>
+			<real>103.78608699999999</real>
+			<string></string>
+			<string>woodlands Square</string>
+			<string>fraserscentrepointmalls.com</string>
+			<string></string>
+		</array>
+		<array>
+			<string>46008</string>
+		</array>
+		<array>
+			<string>NS9</string>
+		</array>
+	</array>
+	<key>Century Square</key>
+	<array>
+		<array>
+			<real>1.352457</real>
+			<real>103.94379499999999</real>
+			<real>529509</real>
+			<string>2 Tampines Central 5 #05-27</string>
+			<string>centurysquare.com.sg</string>
+			<string>6789 6261</string>
+		</array>
+		<array>
+			<string>76131</string>
+			<string>76139</string>
+		</array>
+		<array>
+			<string>EW2</string>
+		</array>
+	</array>
+	<key>Change Alley (Singapore)</key>
+	<array>
+		<array>
+			<real>1.2840320000000001</real>
+			<string>103.852120</string>
+			<string>049318</string>
+			<string></string>
+			<string></string>
+			<string>6438 4620</string>
+		</array>
+		<array>
+			<string>03019</string>
+		</array>
+		<array>
+			<string>EW14</string>
+			<string>NS26</string>
+		</array>
+	</array>
+	<key>Changi City Point</key>
+	<array>
+		<array>
+			<real>1.334052</real>
+			<real>103.963831</real>
+			<real>486038</real>
+			<string>5 Changi Business Park Central 1</string>
+			<string></string>
+			<string>6511 1088</string>
+		</array>
+		<array/>
+		<array>
+			<string>CG1</string>
+		</array>
+	</array>
+	<key>Chinatown Point</key>
+	<array>
+		<array>
+			<real>1.2853289999999999</real>
+			<real>103.84486800000001</real>
+			<string>059413</string>
+			<string>133 New Bridge Rd</string>
+			<string>chinatownpoint.com.sg</string>
+			<string>6702 0114</string>
+		</array>
+		<array>
+			<string>05131</string>
+			<string>05022</string>
+			<string>05049</string>
+		</array>
+		<array>
+			<string>DT19</string>
+			<string>NE4</string>
+		</array>
+	</array>
+	<key>City Square Mall</key>
+	<array>
+		<array>
+			<real>1.3114250000000001</real>
+			<real>103.856661</real>
+			<real>208539</real>
+			<string>180 Kitchener Rd</string>
+			<string>citysquaremall.com.sg</string>
+			<string>6595 6595</string>
+		</array>
+		<array/>
+		<array>
+			<string>NE8</string>
+		</array>
+	</array>
+	<key>Compass Point</key>
+	<array>
+		<array>
+			<real>1.3922680000000001</real>
+			<real>103.894972</real>
+			<real>545078</real>
+			<string>1 Sengkang Square</string>
+			<string>fraserscentrepointmalls.com</string>
+			<string>6881 2707</string>
+		</array>
+		<array>
+			<string>67401</string>
+			<string>67409</string>
+		</array>
+		<array>
+			<string>NE16</string>
+			<string>STC</string>
+		</array>
+	</array>
+	<key>East Point Mall</key>
+	<array>
+		<array>
+			<real>1.3427960000000001</real>
+			<real>103.95307699999999</real>
+			<real>528833</real>
+			<string>3 Simei Street 6</string>
+			<string>fraserscentrepointmalls.com</string>
+			<string>6587 7200</string>
+		</array>
+		<array>
+			<string>96169</string>
+			<string>96161</string>
+		</array>
+		<array>
+			<string>EW3</string>
+		</array>
+	</array>
+	<key>Great World City</key>
+	<array>
+		<array>
+			<real>1.2935019999999999</real>
+			<real>103.831998</real>
+			<real>237994</real>
+			<string>1 Kim Seng Promenade</string>
+			<string>greatworldcity.com.sg</string>
+			<string>6737 3855</string>
+		</array>
+		<array>
+			<string>13119</string>
+		</array>
+		<array/>
+	</array>
+	<key>Greenwich V</key>
+	<array>
+		<array>
+			<real>1.387451</real>
+			<real>103.869647</real>
+			<string></string>
+			<string></string>
+			<string>greenwichv.com.sg</string>
+			<string></string>
+		</array>
+		<array>
+			<string>67049</string>
+			<string>67041</string>
+		</array>
+		<array/>
+	</array>
+	<key>HarbourFront Centre</key>
+	<array>
+		<array>
+			<real>1.264478</real>
+			<real>103.82014100000001</real>
+			<string>099253</string>
+			<string>1 Maritime Square</string>
+			<string>harbourfrontcentre.com</string>
+			<string>6377 6311</string>
+		</array>
+		<array/>
+		<array>
+			<string>CC29</string>
+			<string>NE1</string>
+		</array>
+	</array>
+	<key>Heartland Mall</key>
+	<array>
+		<array>
+			<real>1.3595680000000001</real>
+			<real>103.885277</real>
+			<real>530205</real>
+			<string>205 Hougang Street 21</string>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string>63039</string>
+			<string>63031</string>
+		</array>
+		<array>
+			<string>NE13</string>
+		</array>
+	</array>
+	<key>Hougang 1</key>
+	<array>
+		<array>
+			<real>1.375769</real>
+			<string>103.879490</string>
+			<real>538692</real>
+			<string>1 Hougang Street 91</string>
+			<string>hougang1.com.sg</string>
+			<string>6593 3257</string>
+		</array>
+		<array>
+			<string>64491</string>
+			<string>64081</string>
+		</array>
+		<array/>
+	</array>
+	<key>Hougang Mall</key>
+	<array>
+		<array>
+			<real>1.3724590000000001</real>
+			<real>103.893821</real>
+			<real>538766</real>
+			<string>90 Hougang Ave 10</string>
+			<string>hougangmall.com.sg</string>
+			<string>6488 9617</string>
+		</array>
+		<array/>
+		<array>
+			<string>NE14</string>
+		</array>
+	</array>
+	<key>IMM</key>
+	<array>
+		<array>
+			<real>1.3348249999999999</real>
+			<real>103.746911</real>
+			<real>609601</real>
+			<string>2 Jurong East Street 21</string>
+			<string>imm.sg</string>
+			<string>6665 8268</string>
+		</array>
+		<array>
+			<string>28651</string>
+			<string>28659</string>
+		</array>
+		<array/>
+	</array>
+	<key>ION Orchard</key>
+	<array>
+		<array>
+			<real>1.303501</real>
+			<real>103.832235</real>
+			<real>238801</real>
+			<string>2 Orchard Turn</string>
+			<string>ionorchard.com</string>
+			<string>6238 8228</string>
+		</array>
+		<array>
+			<string>09047</string>
+			<string>09023</string>
+			<string>09022</string>
+		</array>
+		<array>
+			<string>NS22</string>
+		</array>
+	</array>
+	<key>JCube</key>
+	<array>
+		<array>
+			<real>1.333402</real>
+			<real>103.740101</real>
+			<real>609731</real>
+			<string>2 Jurong East Central 1</string>
+			<string>j-cube.com.sg</string>
+			<string>6684 2153</string>
+		</array>
+		<array/>
+		<array>
+			<string>EW24</string>
+			<string>NS1</string>
+		</array>
+	</array>
+	<key>Jem</key>
+	<array>
+		<array>
+			<real>1.3332489999999999</real>
+			<real>103.743392</real>
+			<real>608549</real>
+			<string>50 Jurong Gateway Road</string>
+			<string>jem.sg</string>
+			<string>6225 5536</string>
+		</array>
+		<array/>
+		<array>
+			<string>EW24</string>
+			<string>NS1</string>
+		</array>
+	</array>
+	<key>Junction 10</key>
+	<array>
+		<array>
+			<string>1.380660</string>
+			<real>103.759985</real>
+			<real>677899</real>
+			<string>1 Woodlands Rd</string>
+			<string>junction10.com.sg</string>
+			<string>6892 5310</string>
+		</array>
+		<array>
+			<string>44041</string>
+			<string>44049</string>
+		</array>
+		<array/>
+	</array>
+	<key>Junction 8</key>
+	<array>
+		<array>
+			<real>1.3507070000000001</real>
+			<real>103.84866700000001</real>
+			<real>579837</real>
+			<string>9 Bishan P1</string>
+			<string>junction8.com.sg</string>
+			<string>6354 2955</string>
+		</array>
+		<array>
+			<string>53239</string>
+			<string>53231</string>
+			<string>53009</string>
+		</array>
+		<array>
+			<string>NS17</string>
+			<string>CC15</string>
+		</array>
+	</array>
+	<key>Jurong Point Shopping Mall</key>
+	<array>
+		<array>
+			<real>1.339793</real>
+			<real>103.706577</real>
+			<real>648886</real>
+			<string>1 Jurong West Central 2 #03-07</string>
+			<string>jurongpoint.com.sg</string>
+			<string>6792 5662</string>
+		</array>
+		<array>
+			<string>22009</string>
+		</array>
+		<array>
+			<string>EW27</string>
+		</array>
+	</array>
+	<key>Kallang Leisure Park</key>
+	<array>
+		<array>
+			<real>1.302203</real>
+			<real>103.876485</real>
+			<real>397693</real>
+			<string>5 Stadium Walk</string>
+			<string>leisurepark.com.sg</string>
+			<string>6242 1220</string>
+		</array>
+		<array/>
+		<array>
+			<string>CC6</string>
+		</array>
+	</array>
+	<key>Kallang Wave Mall</key>
+	<array>
+		<array>
+			<real>1.3032319999999999</real>
+			<real>103.87293099999999</real>
+			<real>397628</real>
+			<string>1 Stadium Place</string>
+			<string>thekallangwave.sg</string>
+			<string>6702 5168</string>
+		</array>
+		<array/>
+		<array>
+			<string>CC6</string>
+		</array>
+	</array>
+	<key>Katong V</key>
+	<array>
+		<array>
+			<real>1.3038130000000001</real>
+			<real>103.90290299999999</real>
+			<real>428751</real>
+			<string>30 E Coast Rd</string>
+			<string></string>
+			<string>6593 3327</string>
+		</array>
+		<array>
+			<string>92119</string>
+			<string>92111</string>
+		</array>
+		<array/>
+	</array>
+	<key>Liang Court</key>
+	<array>
+		<array>
+			<real>1.291649</real>
+			<real>103.844632</real>
+			<real>179030</real>
+			<string>177 River Valley Rd</string>
+			<string>liangcourt.com.sg</string>
+			<string>6336 7184</string>
+		</array>
+		<array>
+			<string>04331</string>
+			<string>04339</string>
+		</array>
+		<array/>
+	</array>
+	<key>Limbang Shopping Centre</key>
+	<array>
+		<array>
+			<real>1.392056</real>
+			<real>103.74308600000001</real>
+			<real>680534</real>
+			<string>533 Choa Chu Kang Street 51</string>
+			<string></string>
+			<string>6314 3307</string>
+		</array>
+		<array/>
+		<array/>
+	</array>
+	<key>Lot One Shoppers' Mall</key>
+	<array>
+		<array>
+			<real>1.3852850000000001</real>
+			<real>103.744905</real>
+			<real>689812</real>
+			<string>21 Choa Chu Kang Ave 4</string>
+			<string>lotone.com.sg</string>
+			<string>6314 6200</string>
+		</array>
+		<array>
+			<string>44539</string>
+			<string>44531</string>
+			<string>44009</string>
+		</array>
+		<array>
+			<string>NS4</string>
+			<string>BP1</string>
+		</array>
+	</array>
+	<key>Marina Bay Link Mall</key>
+	<array>
+		<array>
+			<string>1.279840</string>
+			<real>103.854043</real>
+			<string></string>
+			<string></string>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string>03391</string>
+		</array>
+		<array>
+			<string>DT17</string>
+		</array>
+	</array>
+	<key>Marina Square</key>
+	<array>
+		<array>
+			<real>1.291628</real>
+			<string>103.857560</string>
+			<string>039594</string>
+			<string>6 Raffles Blvd</string>
+			<string>marinasquare.com.sg</string>
+			<string>6339 8787</string>
+		</array>
+		<array/>
+		<array/>
+	</array>
+	<key>Millenia Walk</key>
+	<array>
+		<array>
+			<real>1.292762</real>
+			<real>103.858104</real>
+			<string>039596</string>
+			<string>9 Raffles Boulevard</string>
+			<string>milleniawalk.com</string>
+			<string>6883 1122</string>
+		</array>
+		<array>
+			<string>02151</string>
+			<string>02159</string>
+		</array>
+		<array/>
+	</array>
+	<key>Mustafa Centre</key>
+	<array>
+		<array>
+			<real>1.310281</real>
+			<real>103.855287</real>
+			<real>207704</real>
+			<string>145 Syed Alwi Rd</string>
+			<string>mustafa.com.sg</string>
+			<string>6295 5855</string>
+		</array>
+		<array/>
+		<array>
+			<string>NE8</string>
+		</array>
+	</array>
+	<key>Nex</key>
+	<array>
+		<array>
+			<real>1.3507990000000001</real>
+			<real>103.872224</real>
+			<real>556083</real>
+			<string>23 Serangoon Central</string>
+			<string>nex.com.sg</string>
+			<string>6416 6366</string>
+		</array>
+		<array>
+			<string>66381</string>
+			<string>66359</string>
+			<string>66351</string>
+		</array>
+		<array>
+			<string>CC13</string>
+			<string>NE12</string>
+		</array>
+	</array>
+	<key>Ngee Ann City</key>
+	<array>
+		<array>
+			<real>1.302675</real>
+			<real>103.834734</real>
+			<real>238873</real>
+			<string>391 Orchard Rd</string>
+			<string>ngeeanncity.com.sg</string>
+			<string>6506 0460</string>
+		</array>
+		<array>
+			<string>09048</string>
+			<string>09011</string>
+		</array>
+		<array/>
+	</array>
+	<key>Northpoint Shopping Centre</key>
+	<array>
+		<array>
+			<real>1.4294389999999999</real>
+			<real>103.835846</real>
+			<real>769098</real>
+			<string>930 Yishun Ave 2</string>
+			<string></string>
+			<string>6754 2300</string>
+		</array>
+		<array>
+			<string>59008</string>
+			<string>59072</string>
+			<string>59073</string>
+			<string>59079</string>
+		</array>
+		<array>
+			<string>NS13</string>
+		</array>
+	</array>
+	<key>Novena Square</key>
+	<array>
+		<array>
+			<real>1.3200510000000001</real>
+			<real>103.843744</real>
+			<real>307683</real>
+			<string>238 Thomson Road</string>
+			<string></string>
+			<string>6358 0700</string>
+		</array>
+		<array>
+			<string>50038</string>
+		</array>
+		<array>
+			<string>NS20</string>
+		</array>
+	</array>
+	<key>One KM</key>
+	<array>
+		<array>
+			<real>1.3149679999999999</real>
+			<real>103.89460699999999</real>
+			<real>437157</real>
+			<string>11 Tanjong Katong Road</string>
+			<string>onekm.com.sg</string>
+			<string>6702 3610</string>
+		</array>
+		<array>
+			<string>82119</string>
+			<string>82029</string>
+		</array>
+		<array/>
+	</array>
+	<key>Orchard Central</key>
+	<array>
+		<array>
+			<real>1.300659</real>
+			<real>103.839759</real>
+			<real>238896</real>
+			<string>181 Orchard Rd</string>
+			<string>orchardcentral.com.sg</string>
+			<string>6238 1051</string>
+		</array>
+		<array>
+			<string>08137</string>
+			<string>08121</string>
+			<string>08111</string>
+		</array>
+		<array>
+			<string>NS23</string>
+		</array>
+	</array>
+	<key>Orchard Gateway</key>
+	<array>
+		<array>
+			<real>1.3009839999999999</real>
+			<real>103.839646</real>
+			<real>238858</real>
+			<string>277 Orchard Rd #04-19</string>
+			<string>orchardgateway.sg</string>
+			<string>6513 4633</string>
+		</array>
+		<array>
+			<string>09038</string>
+			<string>08121</string>
+		</array>
+		<array>
+			<string>NS23</string>
+		</array>
+	</array>
+	<key>POMO</key>
+	<array>
+		<array>
+			<real>1.3001769999999999</real>
+			<real>103.849407</real>
+			<real>188306</real>
+			<string>1 Selegie Rd</string>
+			<string>pomo.com.sg</string>
+			<string>6339 4253</string>
+		</array>
+		<array>
+			<string>08079</string>
+			<string>07011</string>
+		</array>
+		<array/>
+	</array>
+	<key>Parkway Parade</key>
+	<array>
+		<array>
+			<real>1.3009409999999999</real>
+			<real>103.905773</real>
+			<real>449269</real>
+			<string>80 Marine Parade Rd</string>
+			<string>parkwayparade.com.sg</string>
+			<string>6344 1242</string>
+		</array>
+		<array>
+			<string>92251</string>
+		</array>
+		<array/>
+	</array>
+	<key>Paya Lebar Square</key>
+	<array>
+		<array>
+			<real>1.318727</real>
+			<real>103.892285</real>
+			<string></string>
+			<string>60 Paya Lebar Rd </string>
+			<string>payalebarsquare.sg</string>
+			<string></string>
+		</array>
+		<array>
+			<string>81111</string>
+			<string>81119</string>
+		</array>
+		<array>
+			<string>CC9</string>
+			<string>EW8</string>
+		</array>
+	</array>
+	<key>Pearl Centre</key>
+	<array>
+		<array>
+			<real>1.281423</real>
+			<real>103.840531</real>
+			<string>059812</string>
+			<string>100 Eu Tong Sen St</string>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string>05069</string>
+			<string>05012</string>
+			<string>05019</string>
+		</array>
+		<array>
+			<string>EW16</string>
+			<string>NE3</string>
+		</array>
+	</array>
+	<key>People's Park Centre</key>
+	<array>
+		<array>
+			<string>1.285970</string>
+			<real>103.844133</real>
+			<string>058357</string>
+			<string>101 Upper Cross St</string>
+			<string>peoplesparkcentre.com</string>
+			<string>6589 8494</string>
+		</array>
+		<array>
+			<string>05022</string>
+			<string>05049</string>
+		</array>
+		<array>
+			<string>DT19</string>
+			<string>NE4</string>
+		</array>
+	</array>
+	<key>People's Park Complex</key>
+	<array>
+		<array>
+			<real>1.2842389999999999</real>
+			<real>103.842623</real>
+			<string>059108</string>
+			<string>1 Park Rd</string>
+			<string>peoplesparkcomplex.com</string>
+			<string>6589 8494</string>
+		</array>
+		<array>
+			<string>05013</string>
+		</array>
+		<array>
+			<string>DT19</string>
+			<string>NE4</string>
+		</array>
+	</array>
+	<key>Pioneer Mall</key>
+	<array>
+		<array>
+			<real>1.3416870000000001</real>
+			<real>103.696792</real>
+			<real>641638</real>
+			<string>638A Jurong West Street 61</string>
+			<string></string>
+			<string>6795 6380</string>
+		</array>
+		<array>
+			<string>22359</string>
+			<string>22361</string>
+			<string>22239</string>
+			<string>22231</string>
+		</array>
+		<array/>
+	</array>
+	<key>Plaza Singapura</key>
+	<array>
+		<array>
+			<real>1.300832</real>
+			<real>103.84505900000001</real>
+			<real>238839</real>
+			<string>68 Orchard Rd</string>
+			<string>plazasingapura.com.sg</string>
+			<string>6332 9298</string>
+		</array>
+		<array/>
+		<array>
+			<string>CC1</string>
+			<string>NE6</string>
+			<string>NS24</string>
+		</array>
+	</array>
+	<key>Queensway Shopping Centre</key>
+	<array>
+		<array>
+			<real>1.287574</real>
+			<real>103.80333899999999</real>
+			<real>149053</real>
+			<string></string>
+			<string>queenswayshoppingcentre.com</string>
+			<string></string>
+		</array>
+		<array>
+			<string>11519</string>
+		</array>
+		<array/>
+	</array>
+	<key>Raffles City</key>
+	<array>
+		<array>
+			<real>1.293852</real>
+			<real>103.85294500000001</real>
+			<real>179103</real>
+			<string>252 North Bridge Road</string>
+			<string>rafflescity.com.sg</string>
+			<string>6338 7766</string>
+		</array>
+		<array>
+			<string>02049</string>
+		</array>
+		<array>
+			<string>EW13</string>
+			<string>CC3</string>
+			<string>NS25</string>
+		</array>
+	</array>
+	<key>Rivervale Mall</key>
+	<array>
+		<array>
+			<real>1.392007</real>
+			<real>103.90432800000001</real>
+			<real>545082</real>
+			<string>11 Rivervale Crescent</string>
+			<string>rivervalemall.com.sg</string>
+			<string>6788 8370</string>
+		</array>
+		<array>
+			<string>67231</string>
+			<string>67239</string>
+		</array>
+		<array>
+			<string>SE2</string>
+		</array>
+	</array>
+	<key>Rivervale Plaza</key>
+	<array>
+		<array>
+			<real>1.3857269999999999</real>
+			<real>103.901841</real>
+			<real>540118</real>
+			<string>Blk 118 Rivervale Dr</string>
+			<string></string>
+			<string></string>
+		</array>
+		<array/>
+		<array>
+			<string>SE4</string>
+		</array>
+	</array>
+	<key>Rochester Mall</key>
+	<array>
+		<array>
+			<real>1.305275</real>
+			<real>103.788392</real>
+			<real>138639</real>
+			<string>35 Rochester Park</string>
+			<string>rochestermall.com.sg</string>
+			<string>6570 3966</string>
+		</array>
+		<array>
+			<string>18141</string>
+		</array>
+		<array>
+			<string>CC22</string>
+			<string>EW21</string>
+		</array>
+	</array>
+	<key>Sembawang Shopping Centre</key>
+	<array>
+		<array>
+			<real>1.441818</real>
+			<real>103.82486400000001</real>
+			<real>758459</real>
+			<string>604 Sembawang Rd</string>
+			<string>sembawangsc.com.sg</string>
+			<string>6757 8000</string>
+		</array>
+		<array>
+			<string>58019</string>
+			<string>58011</string>
+		</array>
+		<array/>
+	</array>
+	<key>Serangoon Plaza</key>
+	<array>
+		<array>
+			<real>1.310894</real>
+			<real>103.85510499999999</real>
+			<real>218108</real>
+			<string>320 Serangoon Rd</string>
+			<string></string>
+			<string>6295 5855</string>
+		</array>
+		<array/>
+		<array>
+			<string>NE8</string>
+		</array>
+	</array>
+	<key>Sim Lim Square</key>
+	<array>
+		<array>
+			<real>1.3031010000000001</real>
+			<real>103.85301699999999</real>
+			<real>188504</real>
+			<string>1 Rochor Canal Rd</string>
+			<string>simlimsquare.com.sg</string>
+			<string>6338 3859</string>
+		</array>
+		<array>
+			<string>07531</string>
+		</array>
+		<array>
+			<string>DT13</string>
+		</array>
+	</array>
+	<key>Square 2</key>
+	<array>
+		<array>
+			<real>1.3208120000000001</real>
+			<real>103.844204</real>
+			<real>307506</real>
+			<string>10 Sinaran Dr</string>
+			<string>square2.com.sg</string>
+			<string>6397 2288</string>
+		</array>
+		<array/>
+		<array>
+			<string>NS20</string>
+		</array>
+	</array>
+	<key>Star Vista</key>
+	<array>
+		<array>
+			<real>1.306959</real>
+			<real>103.788247</real>
+			<real>138617</real>
+			<string>1 Vista Exchange Green</string>
+			<string>thestarvista.com</string>
+			<string>6694 3111</string>
+		</array>
+		<array>
+			<string>11191</string>
+		</array>
+		<array>
+			<string>CC22</string>
+			<string>EW21</string>
+		</array>
+	</array>
+	<key>Sun Plaza</key>
+	<array>
+		<array>
+			<real>1.4482520000000001</real>
+			<real>103.819491</real>
+			<real>757713</real>
+			<string>30 Sembawang Dr</string>
+			<string></string>
+			<string>6752 0359</string>
+		</array>
+		<array>
+			<string>58219</string>
+			<string>58211</string>
+			<string>58009</string>
+			<string>58251</string>
+			<string>58259</string>
+			<string>58241</string>
+		</array>
+		<array>
+			<string>NS11</string>
+		</array>
+	</array>
+	<key>Suntec City</key>
+	<array>
+		<array>
+			<real>1.295358</real>
+			<real>103.859516</real>
+			<string>038983</string>
+			<string>3 Temasek Boulevard</string>
+			<string>sunteccity.com.sg</string>
+			<string>6822 1537</string>
+		</array>
+		<array>
+			<string>02141</string>
+			<string>02149</string>
+		</array>
+		<array>
+			<string>CC4</string>
+		</array>
+	</array>
+	<key>Tampines 1</key>
+	<array>
+		<array>
+			<real>1.354255</real>
+			<real>103.945097</real>
+			<real>529536</real>
+			<string>10 Tampines Central 1</string>
+			<string>tampines1.com.sg</string>
+			<string>6572 5500</string>
+		</array>
+		<array>
+			<string>76141</string>
+		</array>
+		<array>
+			<string>EW2</string>
+		</array>
+	</array>
+	<key>Tampines Mall</key>
+	<array>
+		<array>
+			<real>1.352525</real>
+			<real>103.944862</real>
+			<real>529510</real>
+			<string>4 Tampines Central 5</string>
+			<string>tampinesmall.com.sg</string>
+			<string>6788 8370</string>
+		</array>
+		<array/>
+		<array>
+			<string>EW2</string>
+		</array>
+	</array>
+	<key>Tanglin Mall</key>
+	<array>
+		<array>
+			<real>1.3049360000000001</real>
+			<real>103.82386099999999</real>
+			<real>247933</real>
+			<string>163 Tanglin Rd</string>
+			<string>tanglinmall.com.sg</string>
+			<string>6736 4922</string>
+		</array>
+		<array>
+			<string>09139</string>
+			<string>09131</string>
+		</array>
+		<array/>
+	</array>
+	<key>Tanglin Shopping Centre</key>
+	<array>
+		<array>
+			<real>1.3063089999999999</real>
+			<string>103.826990</string>
+			<real>247909</real>
+			<string>19 Tanglin Rd</string>
+			<string>tanglinsc.com</string>
+			<string>6737 0849</string>
+		</array>
+		<array>
+			<string>09159</string>
+		</array>
+		<array/>
+	</array>
+	<key>Tekka Centre</key>
+	<array>
+		<array>
+			<real>1.3062780000000001</real>
+			<real>103.85065400000001</real>
+			<string></string>
+			<string>Bukit Timah Rd</string>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string>07031</string>
+		</array>
+		<array>
+			<string>DT12</string>
+			<string>NE7</string>
+		</array>
+	</array>
+	<key>The Centrepoint</key>
+	<array>
+		<array>
+			<real>1.302011</real>
+			<real>103.839805</real>
+			<real>238843</real>
+			<string>176 Orchard Rd</string>
+			<string>fraserscentrepointmalls.com</string>
+			<string>6737 9000</string>
+		</array>
+		<array>
+			<string>09038</string>
+		</array>
+		<array>
+			<string>NS23</string>
+		</array>
+	</array>
+	<key>The Clementi Mall</key>
+	<array>
+		<array>
+			<real>1.3149580000000001</real>
+			<real>103.76422599999999</real>
+			<real>129588</real>
+			<string>3155 Commonwealth Ave W</string>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string>17171</string>
+			<string>17179</string>
+		</array>
+		<array>
+			<string>EW23</string>
+		</array>
+	</array>
+	<key>The Rail Mall</key>
+	<array>
+		<array>
+			<real>1.359621</real>
+			<real>103.76783500000001</real>
+			<real>678040</real>
+			<string>380 Upper Bukit Timah Rd</string>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string>43059</string>
+			<string>43051</string>
+		</array>
+		<array/>
+	</array>
+	<key>The Seletar Mall</key>
+	<array>
+		<array>
+			<real>1.391192</real>
+			<real>103.87619599999999</real>
+			<real>797653</real>
+			<string>33 Sengkang W Avenue</string>
+			<string>theseletarmall.com</string>
+			<string>6341 6252</string>
+		</array>
+		<array>
+			<string>67489</string>
+		</array>
+		<array>
+			<string>SW5</string>
+		</array>
+	</array>
+	<key>The Verge</key>
+	<array>
+		<array>
+			<real>1.305248</real>
+			<real>103.851517</real>
+			<real>218227</real>
+			<string>2 Serangoon Rd</string>
+			<string></string>
+			<string>6307 6761</string>
+		</array>
+		<array>
+			<string>07539</string>
+			<string>07031</string>
+		</array>
+		<array>
+			<string>DT13</string>
+			<string>DT12</string>
+			<string>NE7</string>
+		</array>
+	</array>
+	<key>Thomson Plaza</key>
+	<array>
+		<array>
+			<string>1.354640</string>
+			<string>103.830920</string>
+			<real>574408</real>
+			<string>301 Upper Thomson Rd</string>
+			<string>thomsonplaza.com.sg</string>
+			<string>6454 9133</string>
+		</array>
+		<array>
+			<string>53059</string>
+		</array>
+		<array/>
+	</array>
+	<key>Tiong Bahru Plaza</key>
+	<array>
+		<array>
+			<real>1.2864450000000001</real>
+			<real>103.82690599999999</real>
+			<real>168732</real>
+			<string>298 Tiong Bahru Rd #07-01/02</string>
+			<string>tiongbahruplaza.com</string>
+			<string>6276 4686</string>
+		</array>
+		<array>
+			<string>10169</string>
+			<string>10161</string>
+		</array>
+		<array>
+			<string>EW17</string>
+		</array>
+	</array>
+	<key>Upper Serangoon Shopping Centre</key>
+	<array>
+		<array>
+			<real>1.3535349999999999</real>
+			<real>103.878792</real>
+			<string></string>
+			<string></string>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string>63011</string>
+			<string>63019</string>
+		</array>
+		<array/>
+	</array>
+	<key>VivoCity</key>
+	<array>
+		<array>
+			<real>1.2643549999999999</real>
+			<real>103.82230800000001</real>
+			<string>098585</string>
+			<string>1 Harbourfront Walk</string>
+			<string>vivocity.com.sg</string>
+			<string>6377 6870</string>
+		</array>
+		<array>
+			<string>14141</string>
+		</array>
+		<array>
+			<string>CC29</string>
+			<string>NE1</string>
+		</array>
+	</array>
+	<key>Waterway Point</key>
+	<array>
+		<array>
+			<real>1.405321</real>
+			<real>103.90207100000001</real>
+			<string></string>
+			<string>69 Punggol Central</string>
+			<string>waterwaypoint.com</string>
+			<string>6589 8494</string>
+		</array>
+		<array>
+			<string>65251</string>
+			<string>65259</string>
+		</array>
+		<array>
+			<string>PTC</string>
+			<string>NE17</string>
+		</array>
+	</array>
+	<key>West Mall</key>
+	<array>
+		<array>
+			<real>1.349823</real>
+			<real>103.749195</real>
+			<real>658713</real>
+			<string>1 Bukit Batok Central Link</string>
+			<string>westmall.com.sg</string>
+			<string>6898 9281</string>
+		</array>
+		<array/>
+		<array>
+			<string>NS2</string>
+		</array>
+	</array>
+	<key>Westgate</key>
+	<array>
+		<array>
+			<string>1.334320</string>
+			<real>103.74281499999999</real>
+			<real>608532</real>
+			<string>3 Gateway Dr</string>
+			<string>westgate.com.sg</string>
+			<string>6908 3737</string>
+		</array>
+		<array>
+			<string>28009</string>
+		</array>
+		<array>
+			<string>EW24</string>
+			<string>NS1</string>
+		</array>
+	</array>
+	<key>Wheelock Place</key>
+	<array>
+		<array>
+			<real>1.3046549999999999</real>
+			<real>103.83075700000001</real>
+			<real>238880</real>
+			<string>501 Orchard Rd</string>
+			<string>wheelockplace.com</string>
+			<string></string>
+		</array>
+		<array>
+			<string>09179</string>
+		</array>
+		<array>
+			<string>NS22</string>
+		</array>
+	</array>
+	<key>Wisma Atria</key>
+	<array>
+		<array>
+			<real>1.3038160000000001</real>
+			<real>103.833118</real>
+			<real>238877</real>
+			<string>435 Orchard Rd</string>
+			<string>wismaonline.com</string>
+			<string>6235 2103</string>
+		</array>
+		<array>
+			<string>09047</string>
+			<string>09048</string>
+		</array>
+		<array>
+			<string>NS22</string>
+		</array>
+	</array>
+	<key>Yew Tee Point</key>
+	<array>
+		<array>
+			<real>1.397197</real>
+			<real>103.746686</real>
+			<real>689578</real>
+			<string>21 Choa Chu Kang North 6</string>
+			<string>yewteepoint.com</string>
+			<string>6465 1986</string>
+		</array>
+		<array>
+			<string>45329</string>
+			<string>45321</string>
+			<string>45349</string>
+		</array>
+		<array>
+			<string>NS5</string>
+		</array>
+	</array>
+	<key>hillv2</key>
+	<array>
+		<array>
+			<real>1.3632709999999999</real>
+			<real>103.764481</real>
+			<real>667979</real>
+			<string>4 Hillview Rise</string>
+			<string>hillv2.com.sg</string>
+			<string></string>
+		</array>
+		<array>
+			<string>43151</string>
+			<string>43159</string>
+		</array>
+		<array/>
+	</array>
+	<key>myVillage</key>
+	<array>
+		<array>
+			<real>1.365135</real>
+			<real>103.865194</real>
+			<real>556679</real>
+			<string>1 Maju Ave</string>
+			<string>myvillage.sg</string>
+			<string>6634 2288</string>
+		</array>
+		<array>
+			<string>66261</string>
+			<string>66271</string>
+		</array>
+		<array/>
+	</array>
+</dict>
+</plist>
