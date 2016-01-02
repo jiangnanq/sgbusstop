@@ -156,8 +156,8 @@ class processdata:
         malls = self.readF(self.datafolder+'mall.json')
         mrts = self.readF(self.datafolder+'mrt.json')
         for busstopkey, abusstop in busstops.iteritems():
-            busstoplatitude = abusstop[1][1]
-            busstoplongitude = abusstop[1][0]
+            busstoplatitude = abusstop[1][0]
+            busstoplongitude = abusstop[1][1]
             busstopcoordinate = (busstoplatitude, busstoplongitude)
             cloestmrt = []
             cloestmall = []

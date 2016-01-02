@@ -74,7 +74,10 @@
 			<real>103.8555222896607</real>
 		</array>
 		<string>The bus in 01039 are:145,175,197,32,51,61,63,7,80,851,</string>
-		<array/>
+		<array>
+			<string>Bugis Junction</string>
+			<string>Bugis Cube</string>
+		</array>
 		<array/>
 	</array>
 	<key>01059</key>
@@ -90,7 +93,10 @@
 		</array>
 		<string>The bus in 01059 are:12,130,133,2,33,960,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW12</string>
+			<string>DT14</string>
+		</array>
 	</array>
 	<key>01109</key>
 	<array>
@@ -119,8 +125,13 @@
 			<real>103.85519325748433</real>
 		</array>
 		<string>The bus in 01112 are:12,175,197,63,7,80,851,960,980,NR7,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Bugis Junction</string>
+			<string>Bugis+</string>
+		</array>
+		<array>
+			<string>DT14</string>
+		</array>
 	</array>
 	<key>01113</key>
 	<array>
@@ -135,7 +146,10 @@
 		</array>
 		<string>The bus in 01113 are:130,133,145,2,32,33,51,61,NR7,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW12</string>
+			<string>DT14</string>
+		</array>
 	</array>
 	<key>01119</key>
 	<array>
@@ -149,8 +163,13 @@
 			<real>103.85508147143069</real>
 		</array>
 		<string>The bus in 01119 are:12,130,133,2,33,960,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Bugis Junction</string>
+			<string>Bugis+</string>
+		</array>
+		<array>
+			<string>DT14</string>
+		</array>
 	</array>
 	<key>01121</key>
 	<array>
@@ -195,7 +214,9 @@
 		</array>
 		<string>The bus in 01139 are:145,175,197,32,51,61,63,7,80,851,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW12</string>
+		</array>
 	</array>
 	<key>01211</key>
 	<array>
@@ -285,7 +306,9 @@
 		</array>
 		<string>The bus in 01311 are:107,107M,12,133,145,175,197,2,32,33,51,61,63,7,80,NR7,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW11</string>
+		</array>
 	</array>
 	<key>01319</key>
 	<array>
@@ -300,7 +323,9 @@
 		</array>
 		<string>The bus in 01319 are:107,107M,12,133,2,33,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW11</string>
+		</array>
 	</array>
 	<key>01329</key>
 	<array>
@@ -599,7 +624,9 @@
 			<real>103.85579398839857</real>
 		</array>
 		<string>The bus in 01631 are:56,980,</string>
-		<array/>
+		<array>
+			<string>Bugis Cube</string>
+		</array>
 		<array/>
 	</array>
 	<key>01639</key>
@@ -614,7 +641,9 @@
 			<real>103.85559813944485</real>
 		</array>
 		<string>The bus in 01639 are:56,980,</string>
-		<array/>
+		<array>
+			<string>Bugis Cube</string>
+		</array>
 		<array/>
 	</array>
 	<key>02011</key>
@@ -674,7 +703,9 @@
 			<real>103.85410661073071</real>
 		</array>
 		<string>The bus in 02049 are:106,111,128,130,131,133,14,14e,16,162,162M,167,171,36,502,502A,518,518A,700,700A,77,850E,857,951E,960,</string>
-		<array/>
+		<array>
+			<string>Raffles City</string>
+		</array>
 		<array/>
 	</array>
 	<key>02051</key>
@@ -794,7 +825,9 @@
 			<real>103.85936381638778</real>
 		</array>
 		<string>The bus in 02141 are:107M,</string>
-		<array/>
+		<array>
+			<string>Suntec City</string>
+		</array>
 		<array/>
 	</array>
 	<key>02149</key>
@@ -809,7 +842,9 @@
 			<real>103.85951844083975</real>
 		</array>
 		<string>The bus in 02149 are:36,531,</string>
-		<array/>
+		<array>
+			<string>Suntec City</string>
+		</array>
 		<array/>
 	</array>
 	<key>02151</key>
@@ -824,7 +859,9 @@
 			<real>103.85786931500088</real>
 		</array>
 		<string>The bus in 02151 are:106,111,133,162M,36,502,502A,518,518A,531,700A,70M,857,868,97,97e,</string>
-		<array/>
+		<array>
+			<string>Millenia Walk</string>
+		</array>
 		<array/>
 	</array>
 	<key>02159</key>
@@ -839,7 +876,9 @@
 			<real>103.85834943051493</real>
 		</array>
 		<string>The bus in 02159 are:36,97,97e,</string>
-		<array/>
+		<array>
+			<string>Millenia Walk</string>
+		</array>
 		<array/>
 	</array>
 	<key>02161</key>
@@ -855,7 +894,10 @@
 		</array>
 		<string>The bus in 02161 are:106,111,133,162M,36,502,502A,518,518A,531,700A,70M,857,868,97,97e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC4</string>
+			<string>DT15</string>
+		</array>
 	</array>
 	<key>02169</key>
 	<array>
@@ -870,7 +912,10 @@
 		</array>
 		<string>The bus in 02169 are:107M,97,97e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC4</string>
+			<string>DT15</string>
+		</array>
 	</array>
 	<key>02171</key>
 	<array>
@@ -929,7 +974,9 @@
 			<real>103.85312023089251</real>
 		</array>
 		<string>The bus in 03019 are:10,100,107,10e,128,130,131,162,167,196,196e,531,546,57,587,590,598,70,700,75,850E,951E,971E,</string>
-		<array/>
+		<array>
+			<string>Change Alley (Singapore)</string>
+		</array>
 		<array/>
 	</array>
 	<key>03021</key>
@@ -975,7 +1022,9 @@
 		</array>
 		<string>The bus in 03041 are:186,970,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT18</string>
+		</array>
 	</array>
 	<key>03059</key>
 	<array>
@@ -1140,7 +1189,9 @@
 		</array>
 		<string>The bus in 03223 are:131,167,186,400,402,533,534,535,536,542,543,549,555,560,561,563,564,565,569,57,700,761,970,971E,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW15</string>
+		</array>
 	</array>
 	<key>03239</key>
 	<array>
@@ -1259,7 +1310,9 @@
 			<real>103.85504730346578</real>
 		</array>
 		<string>The bus in 03391 are:106,133,400,402,513,97,97e,982E,</string>
-		<array/>
+		<array>
+			<string>Marina Bay Link Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>03411</key>
@@ -1275,7 +1328,9 @@
 		</array>
 		<string>The bus in 03411 are:402,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS28</string>
+		</array>
 	</array>
 	<key>03419</key>
 	<array>
@@ -1290,7 +1345,9 @@
 		</array>
 		<string>The bus in 03419 are:402,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS28</string>
+		</array>
 	</array>
 	<key>03421</key>
 	<array>
@@ -1335,7 +1392,10 @@
 		</array>
 		<string>The bus in 03509 are:106,133,502,502A,518,518A,97,97e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CE1</string>
+			<string>DT16</string>
+		</array>
 	</array>
 	<key>03511</key>
 	<array>
@@ -1350,7 +1410,10 @@
 		</array>
 		<string>The bus in 03511 are:106,133,97,97e,NR1,NR6,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CE1</string>
+			<string>DT16</string>
+		</array>
 	</array>
 	<key>03519</key>
 	<array>
@@ -1365,7 +1428,9 @@
 		</array>
 		<string>The bus in 03519 are:106,133,502,502A,518,518A,97,97e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CE1</string>
+		</array>
 	</array>
 	<key>03529</key>
 	<array>
@@ -1380,7 +1445,9 @@
 		</array>
 		<string>The bus in 03529 are:106,133,400,402,502,502A,513,97,97e,982E,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT17</string>
+		</array>
 	</array>
 	<key>03539</key>
 	<array>
@@ -1410,7 +1477,10 @@
 		</array>
 		<string>The bus in 04111 are:106,111,128,131,14,14e,16,162,162M,167,171,175,36,7,700,700A,77,850E,857,951E,971E,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW13</string>
+			<string>NS25</string>
+		</array>
 	</array>
 	<key>04121</key>
 	<array>
@@ -1515,7 +1585,10 @@
 		</array>
 		<string>The bus in 04167 are:124,145,166,174,174e,197,1N,2N,3N,4N,5N,61,6N,NR1,NR2,NR5,NR6,NR7,NR8,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW13</string>
+			<string>NS25</string>
+		</array>
 	</array>
 	<key>04168</key>
 	<array>
@@ -1545,7 +1618,9 @@
 		</array>
 		<string>The bus in 04179 are:106,111,128,131,14,14e,16,162,162M,167,171,175,36,502,502A,518,518A,587,590,598,7,700,700A,77,850E,857,951E,NR7,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC2</string>
+		</array>
 	</array>
 	<key>04189</key>
 	<array>
@@ -1560,7 +1635,9 @@
 		</array>
 		<string>The bus in 04189 are:131,147,166,857,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC2</string>
+		</array>
 	</array>
 	<key>04211</key>
 	<array>
@@ -1605,7 +1682,9 @@
 		</array>
 		<string>The bus in 04222 are:12,124,145,147,166,174,174e,190,197,1N,2,2N,33,3N,4N,51,54,5N,61,63,6N,80,851,961,961C,NR1,NR2,NR3,NR5,NR6,NR7,NR8,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE5</string>
+		</array>
 	</array>
 	<key>04223</key>
 	<array>
@@ -1650,7 +1729,9 @@
 		</array>
 		<string>The bus in 04239 are:12,147,190,2,33,54,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE5</string>
+		</array>
 	</array>
 	<key>04249</key>
 	<array>
@@ -1739,7 +1820,9 @@
 			<real>103.84499309025746</real>
 		</array>
 		<string>The bus in 04331 are:195,1N,2N,32,3N,4N,54,5N,6N,NR1,NR2,NR3,NR5,NR6,NR7,NR8,</string>
-		<array/>
+		<array>
+			<string>Liang Court</string>
+		</array>
 		<array/>
 	</array>
 	<key>04339</key>
@@ -1754,7 +1837,9 @@
 			<real>103.84467132528965</real>
 		</array>
 		<string>The bus in 04339 are:195,32,530,54,</string>
-		<array/>
+		<array>
+			<string>Liang Court</string>
+		</array>
 		<array/>
 	</array>
 	<key>05009</key>
@@ -1784,8 +1869,12 @@
 			<real>103.84087015946801</real>
 		</array>
 		<string>The bus in 05012 are:124,143,147,166,190,54,851,970,CT18,CT28,CT8,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Pearl Centre</string>
+		</array>
+		<array>
+			<string>NE3</string>
+		</array>
 	</array>
 	<key>05013</key>
 	<array>
@@ -1799,8 +1888,13 @@
 			<real>103.84296937683742</real>
 		</array>
 		<string>The bus in 05013 are:12,143,197,2,33,61,63,80,961,961C,970,CT18,CT28,CT8,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>People's Park Complex</string>
+		</array>
+		<array>
+			<string>DT19</string>
+			<string>NE4</string>
+		</array>
 	</array>
 	<key>05019</key>
 	<array>
@@ -1814,8 +1908,12 @@
 			<real>103.84106910030251</real>
 		</array>
 		<string>The bus in 05019 are:12,124,143,147,190,2,33,54,63,851,961,961C,970,CT18,CT28,CT8,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Pearl Centre</string>
+		</array>
+		<array>
+			<string>NE3</string>
+		</array>
 	</array>
 	<key>05022</key>
 	<array>
@@ -1829,7 +1927,10 @@
 			<real>103.84448874547778</real>
 		</array>
 		<string>The bus in 05022 are:124,145,147,166,190,54,851,</string>
-		<array/>
+		<array>
+			<string>People's Park Centre</string>
+			<string>Chinatown Point</string>
+		</array>
 		<array/>
 	</array>
 	<key>05023</key>
@@ -1889,8 +1990,13 @@
 			<real>103.84448261760969</real>
 		</array>
 		<string>The bus in 05049 are:12,143,147,190,2,33,54,CT18,CT28,CT8,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>People's Park Centre</string>
+			<string>Chinatown Point</string>
+		</array>
+		<array>
+			<string>NE4</string>
+		</array>
 	</array>
 	<key>05059</key>
 	<array>
@@ -1919,8 +2025,12 @@
 			<real>103.8402424854869</real>
 		</array>
 		<string>The bus in 05069 are:124,143,147,961,961C,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Pearl Centre</string>
+		</array>
+		<array>
+			<string>NE3</string>
+		</array>
 	</array>
 	<key>05129</key>
 	<array>
@@ -1949,7 +2059,9 @@
 			<real>103.84526046542479</real>
 		</array>
 		<string>The bus in 05131 are:124,174,174e,186,51,63,851,961,961C,970,</string>
-		<array/>
+		<array>
+			<string>Chinatown Point</string>
+		</array>
 		<array/>
 	</array>
 	<key>05189</key>
@@ -2250,7 +2362,9 @@
 		</array>
 		<string>The bus in 06011 are:121,122,174,174e,33,63,75,851,970,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW16</string>
+		</array>
 	</array>
 	<key>06029</key>
 	<array>
@@ -2265,7 +2379,10 @@
 		</array>
 		<string>The bus in 06029 are:121,122,174,174e,33,534,535,549,561,565,569,63,75,761,851,970,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW16</string>
+			<string>NE3</string>
+		</array>
 	</array>
 	<key>06031</key>
 	<array>
@@ -2534,7 +2651,9 @@
 			<real>103.84982443270799</real>
 		</array>
 		<string>The bus in 07011 are:131,139,147,166,1N,2N,3N,4N,5N,64,65,6N,857,NR6,</string>
-		<array/>
+		<array>
+			<string>POMO</string>
+		</array>
 		<array/>
 	</array>
 	<key>07021</key>
@@ -2564,7 +2683,10 @@
 			<real>103.85120199473626</real>
 		</array>
 		<string>The bus in 07031 are:131,139,147,23,64,65,66,67,857,NR6,</string>
-		<array/>
+		<array>
+			<string>Tekka Centre</string>
+			<string>The Verge</string>
+		</array>
 		<array/>
 	</array>
 	<key>07111</key>
@@ -2864,8 +2986,12 @@
 			<real>103.85249220486315</real>
 		</array>
 		<string>The bus in 07531 are:170,23,48,57,66,67,851,960,980,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Sim Lim Square</string>
+		</array>
+		<array>
+			<string>DT13</string>
+		</array>
 	</array>
 	<key>07539</key>
 	<array>
@@ -2879,8 +3005,12 @@
 			<real>103.85205313075654</real>
 		</array>
 		<string>The bus in 07539 are:131,166,170,2N,48,4N,56,57,851,960,980,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>The Verge</string>
+		</array>
+		<array>
+			<string>DT13</string>
+		</array>
 	</array>
 	<key>07551</key>
 	<array>
@@ -2924,7 +3054,9 @@
 			<real>103.8530457718105</real>
 		</array>
 		<string>The bus in 07569 are:56,980,</string>
-		<array/>
+		<array>
+			<string>Bugis+</string>
+		</array>
 		<array/>
 	</array>
 	<key>07571</key>
@@ -3000,7 +3132,11 @@
 		</array>
 		<string>The bus in 08031 are:106,111,124,128,139,14,14e,16,162,162M,167,171,174,174e,175,190,36,64,65,7,700,700A,77,850E,951E,971E,972,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC1</string>
+			<string>NE6</string>
+			<string>NS24</string>
+		</array>
 	</array>
 	<key>08041</key>
 	<array>
@@ -3030,7 +3166,11 @@
 		</array>
 		<string>The bus in 08057 are:106,111,124,128,14,14e,16,162,162M,167,171,174,174e,175,190,1N,2N,36,3N,4N,502,502A,518,518A,5N,6N,7,700,700A,77,850E,951E,971E,972,NR6,NR7,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC1</string>
+			<string>NE6</string>
+			<string>NS24</string>
+		</array>
 	</array>
 	<key>08058</key>
 	<array>
@@ -3045,7 +3185,10 @@
 		</array>
 		<string>The bus in 08058 are:139,587,590,598,64,65,NR6,NR7,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE6</string>
+			<string>NS24</string>
+		</array>
 	</array>
 	<key>08069</key>
 	<array>
@@ -3074,7 +3217,9 @@
 			<real>103.849065924323</real>
 		</array>
 		<string>The bus in 08079 are:131,139,147,166,1N,2N,3N,4N,5N,64,65,6N,857,NR6,</string>
-		<array/>
+		<array>
+			<string>POMO</string>
+		</array>
 		<array/>
 	</array>
 	<key>08111</key>
@@ -3089,7 +3234,9 @@
 			<real>103.8408468764802</real>
 		</array>
 		<string>The bus in 08111 are:106,111,123,124,128,14,143,14e,16,162,162M,167,171,174,174e,175,190,36,65,7,700,700A,77,971E,972,</string>
-		<array/>
+		<array>
+			<string>Orchard Central</string>
+		</array>
 		<array/>
 	</array>
 	<key>08121</key>
@@ -3104,8 +3251,14 @@
 			<real>103.83870030291237</real>
 		</array>
 		<string>The bus in 08121 are:106,111,123,124,128,14,143,14e,16,162,162M,167,171,174,174e,175,190,36,65,7,700,700A,77,971E,972,NR1,NR2,NR3,NR5,NR8,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Orchard Gateway</string>
+			<string>Orchard Central</string>
+			<string>313@Somerset</string>
+		</array>
+		<array>
+			<string>NS23</string>
+		</array>
 	</array>
 	<key>08137</key>
 	<array>
@@ -3119,7 +3272,9 @@
 			<real>103.8410594001856</real>
 		</array>
 		<string>The bus in 08137 are:123,143,587,590,598,NR6,NR7,</string>
-		<array/>
+		<array>
+			<string>Orchard Central</string>
+		</array>
 		<array/>
 	</array>
 	<key>08138</key>
@@ -3149,7 +3304,9 @@
 			<real>103.83425621624161</real>
 		</array>
 		<string>The bus in 09011 are:124,128,143,14e,162,162M,167,171,190,700,700A,972,NR1,NR2,NR3,NR5,NR8,</string>
-		<array/>
+		<array>
+			<string>Ngee Ann City</string>
+		</array>
 		<array/>
 	</array>
 	<key>09022</key>
@@ -3164,7 +3321,9 @@
 			<real>103.83234182832896</real>
 		</array>
 		<string>The bus in 09022 are:106,111,123,14,16,174,174e,175,36,65,7,77,NR5,NR8,</string>
-		<array/>
+		<array>
+			<string>ION Orchard</string>
+		</array>
 		<array/>
 	</array>
 	<key>09023</key>
@@ -3179,8 +3338,12 @@
 			<real>103.83168679585954</real>
 		</array>
 		<string>The bus in 09023 are:124,128,143,14e,162,162M,167,171,190,700,700A,972,NR1,NR2,NR3,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>ION Orchard</string>
+		</array>
+		<array>
+			<string>NS22</string>
+		</array>
 	</array>
 	<key>09037</key>
 	<array>
@@ -3209,7 +3372,11 @@
 			<real>103.83861374947753</real>
 		</array>
 		<string>The bus in 09038 are:106,111,123,14,14e,16,175,1N,2N,3N,4N,502,502A,5N,65,6N,7,NR6,NR7,</string>
-		<array/>
+		<array>
+			<string>The Centrepoint</string>
+			<string>Orchard Gateway</string>
+			<string>313@Somerset</string>
+		</array>
 		<array/>
 	</array>
 	<key>09047</key>
@@ -3224,8 +3391,13 @@
 			<real>103.83273078049984</real>
 		</array>
 		<string>The bus in 09047 are:124,128,143,162,162M,167,171,174,174e,190,36,518,518A,700,700A,77,971E,972,NR6,NR7,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Wisma Atria</string>
+			<string>ION Orchard</string>
+		</array>
+		<array>
+			<string>NS22</string>
+		</array>
 	</array>
 	<key>09048</key>
 	<array>
@@ -3239,7 +3411,10 @@
 			<real>103.83416738745899</real>
 		</array>
 		<string>The bus in 09048 are:106,111,123,14,14e,16,175,1N,2N,3N,4N,502,502A,5N,65,6N,7,NR6,NR7,</string>
-		<array/>
+		<array>
+			<string>Ngee Ann City</string>
+			<string>Wisma Atria</string>
+		</array>
 		<array/>
 	</array>
 	<key>09059</key>
@@ -3299,7 +3474,9 @@
 			<real>103.82327467629942</real>
 		</array>
 		<string>The bus in 09131 are:105,106,111,123,132,174,174e,7,75,77,NR8,</string>
-		<array/>
+		<array>
+			<string>Tanglin Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>09139</key>
@@ -3314,7 +3491,9 @@
 			<real>103.82374799572641</real>
 		</array>
 		<string>The bus in 09139 are:564,75,</string>
-		<array/>
+		<array>
+			<string>Tanglin Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>09141</key>
@@ -3359,7 +3538,9 @@
 			<real>103.82585193067069</real>
 		</array>
 		<string>The bus in 09159 are:105,106,111,123,132,174,174e,36,7,77,</string>
-		<array/>
+		<array>
+			<string>Tanglin Shopping Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>09169</key>
@@ -3389,7 +3570,9 @@
 			<real>103.83052888337679</real>
 		</array>
 		<string>The bus in 09179 are:105,106,111,123,132,174,174e,36,502,502A,7,77,</string>
-		<array/>
+		<array>
+			<string>Wheelock Place</string>
+		</array>
 		<array/>
 	</array>
 	<key>09191</key>
@@ -3855,7 +4038,9 @@
 		</array>
 		<string>The bus in 10151 are:121,122,123,123M,16,195,33,5,63,851,NR5,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW17</string>
+		</array>
 	</array>
 	<key>10161</key>
 	<array>
@@ -3869,8 +4054,12 @@
 			<real>103.82654097422591</real>
 		</array>
 		<string>The bus in 10161 are:121,122,123,123M,16,195,33,5,63,851,NR5,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Tiong Bahru Plaza</string>
+		</array>
+		<array>
+			<string>EW17</string>
+		</array>
 	</array>
 	<key>10169</key>
 	<array>
@@ -3884,8 +4073,12 @@
 			<real>103.82752942653032</real>
 		</array>
 		<string>The bus in 10169 are:121,122,123,123M,16,195,33,5,63,851,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Tiong Bahru Plaza</string>
+		</array>
+		<array>
+			<string>EW17</string>
+		</array>
 	</array>
 	<key>10171</key>
 	<array>
@@ -3990,7 +4183,9 @@
 		</array>
 		<string>The bus in 10201 are:120,132,145,32,33,64,NR5,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW18</string>
+		</array>
 	</array>
 	<key>10209</key>
 	<array>
@@ -4005,7 +4200,9 @@
 		</array>
 		<string>The bus in 10209 are:120,132,145,32,33,64,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW18</string>
+		</array>
 	</array>
 	<key>10211</key>
 	<array>
@@ -5130,7 +5327,9 @@
 		</array>
 		<string>The bus in 11111 are:153,165,174,186,48,855,93,961,961C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC20</string>
+		</array>
 	</array>
 	<key>11119</key>
 	<array>
@@ -5145,7 +5344,9 @@
 		</array>
 		<string>The bus in 11119 are:153,165,174,186,48,564,5N,855,93,961,961C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC20</string>
+		</array>
 	</array>
 	<key>11139</key>
 	<array>
@@ -5175,7 +5376,9 @@
 		</array>
 		<string>The bus in 11141 are:111,145,186,195,51,970,NR5,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW19</string>
+		</array>
 	</array>
 	<key>11149</key>
 	<array>
@@ -5190,7 +5393,9 @@
 		</array>
 		<string>The bus in 11149 are:111,145,186,195,51,970,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW19</string>
+		</array>
 	</array>
 	<key>11151</key>
 	<array>
@@ -5235,7 +5440,9 @@
 		</array>
 		<string>The bus in 11161 are:100,105,111,145,147,196,198,32,970,NR5,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW20</string>
+		</array>
 	</array>
 	<key>11169</key>
 	<array>
@@ -5250,7 +5457,9 @@
 		</array>
 		<string>The bus in 11169 are:100,105,111,122,145,147,195,196,198,32,970,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW20</string>
+		</array>
 	</array>
 	<key>11171</key>
 	<array>
@@ -5324,8 +5533,12 @@
 			<real>103.78830415814978</real>
 		</array>
 		<string>The bus in 11191 are:105,106,147,185,NR5,NR8,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Star Vista</string>
+		</array>
+		<array>
+			<string>CC22</string>
+		</array>
 	</array>
 	<key>11199</key>
 	<array>
@@ -5340,7 +5553,9 @@
 		</array>
 		<string>The bus in 11199 are:105,106,147,185,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC22</string>
+		</array>
 	</array>
 	<key>11201</key>
 	<array>
@@ -5790,7 +6005,9 @@
 		</array>
 		<string>The bus in 11361 are:191,196,198,200,74,91,92,92M,95,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW21</string>
+		</array>
 	</array>
 	<key>11369</key>
 	<array>
@@ -5895,7 +6112,9 @@
 		</array>
 		<string>The bus in 11419 are:106,48,61,970,NR8,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC21</string>
+		</array>
 	</array>
 	<key>11429</key>
 	<array>
@@ -6119,7 +6338,9 @@
 			<real>103.80328472805196</real>
 		</array>
 		<string>The bus in 11519 are:100,120,14,195,197,33,51,61,93,</string>
-		<array/>
+		<array>
+			<string>Queensway Shopping Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>11521</key>
@@ -6134,7 +6355,9 @@
 			<real>103.80549620030611</real>
 		</array>
 		<string>The bus in 11521 are:120,195,33,64,</string>
-		<array/>
+		<array>
+			<string>Anchorpoint</string>
+		</array>
 		<array/>
 	</array>
 	<key>11529</key>
@@ -6149,7 +6372,9 @@
 			<real>103.80605122310841</real>
 		</array>
 		<string>The bus in 11529 are:120,195,33,</string>
-		<array/>
+		<array>
+			<string>Anchorpoint</string>
+		</array>
 		<array/>
 	</array>
 	<key>11531</key>
@@ -7124,7 +7349,9 @@
 			<real>103.83284656039001</real>
 		</array>
 		<string>The bus in 13119 are:16,175,195,5,75,970,NR5,</string>
-		<array/>
+		<array>
+			<string>Great World City</string>
+		</array>
 		<array/>
 	</array>
 	<key>13121</key>
@@ -7635,7 +7862,9 @@
 		</array>
 		<string>The bus in 14121 are:10,100,131,143,145,166,188R,30,30e,57,61,963R,97,97e,RWS8,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC29</string>
+		</array>
 	</array>
 	<key>14129</key>
 	<array>
@@ -7650,7 +7879,10 @@
 		</array>
 		<string>The bus in 14129 are:10,100,123,123M,131,143,145,166,188R,30,30e,57,61,65,80,855,963R,97,97e,NR1,NR6,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC29</string>
+			<string>NE1</string>
+		</array>
 	</array>
 	<key>14131</key>
 	<array>
@@ -7694,8 +7926,12 @@
 			<real>103.82204708829074</real>
 		</array>
 		<string>The bus in 14141 are:10,100,123,123M,131,143,145,166,30,30e,57,61,65,80,855,97,97e,NR1,NR6,RWS8,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>VivoCity</string>
+		</array>
+		<array>
+			<string>NE1</string>
+		</array>
 	</array>
 	<key>14151</key>
 	<array>
@@ -7740,7 +7976,9 @@
 		</array>
 		<string>The bus in 14161 are:10,100,120,143,166,176,188,188R,30,57,61,93,963,963R,97,97e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC28</string>
+		</array>
 	</array>
 	<key>14169</key>
 	<array>
@@ -7755,7 +7993,9 @@
 		</array>
 		<string>The bus in 14169 are:10,100,120,143,166,176,188,188R,30,57,61,93,963,963R,97,97e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC28</string>
+		</array>
 	</array>
 	<key>14171</key>
 	<array>
@@ -8265,7 +8505,9 @@
 		</array>
 		<string>The bus in 14401 are:408,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC27</string>
+		</array>
 	</array>
 	<key>14409</key>
 	<array>
@@ -8369,7 +8611,9 @@
 			<real>103.80182351651227</real>
 		</array>
 		<string>The bus in 15041 are:100,120,166,175,408,51,57,61,93,963,963E,963R,97,97e,</string>
-		<array/>
+		<array>
+			<string>Alexandra Retail Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>15049</key>
@@ -8384,7 +8628,9 @@
 			<real>103.80216083753338</real>
 		</array>
 		<string>The bus in 15049 are:100,120,166,175,408,51,57,61,93,963,963E,963R,97,97e,</string>
-		<array/>
+		<array>
+			<string>Alexandra Retail Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>15051</key>
@@ -8580,7 +8826,9 @@
 		</array>
 		<string>The bus in 15131 are:200,92,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC24</string>
+		</array>
 	</array>
 	<key>15139</key>
 	<array>
@@ -8595,7 +8843,9 @@
 		</array>
 		<string>The bus in 15139 are:200,92,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC24</string>
+		</array>
 	</array>
 	<key>15141</key>
 	<array>
@@ -8609,7 +8859,9 @@
 			<real>103.80085878757765</real>
 		</array>
 		<string>The bus in 15141 are:10,143,175,176,188,30,30e,51,</string>
-		<array/>
+		<array>
+			<string>Alexandra Retail Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>15149</key>
@@ -8624,7 +8876,9 @@
 			<real>103.80067023893093</real>
 		</array>
 		<string>The bus in 15149 are:10,143,175,176,188,188E,30,30e,51,</string>
-		<array/>
+		<array>
+			<string>Alexandra Retail Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>15151</key>
@@ -8730,7 +8984,9 @@
 		</array>
 		<string>The bus in 15191 are:10,143,175,176,188,30,30e,51,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC26</string>
+		</array>
 	</array>
 	<key>15199</key>
 	<array>
@@ -8775,7 +9031,9 @@
 		</array>
 		<string>The bus in 15209 are:10,143,175,176,188,30,30e,51,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC26</string>
+		</array>
 	</array>
 	<key>15211</key>
 	<array>
@@ -8865,7 +9123,9 @@
 		</array>
 		<string>The bus in 16011 are:10,143,188,200,30,30e,51,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC25</string>
+		</array>
 	</array>
 	<key>16019</key>
 	<array>
@@ -8880,7 +9140,9 @@
 		</array>
 		<string>The bus in 16019 are:10,143,188,200,30,30e,51,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC25</string>
+		</array>
 	</array>
 	<key>16021</key>
 	<array>
@@ -9480,7 +9742,9 @@
 		</array>
 		<string>The bus in 16221 are:175,176,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC25</string>
+		</array>
 	</array>
 	<key>16229</key>
 	<array>
@@ -9495,7 +9759,9 @@
 		</array>
 		<string>The bus in 16229 are:175,176,589,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC25</string>
+		</array>
 	</array>
 	<key>16231</key>
 	<array>
@@ -10034,8 +10300,12 @@
 			<real>103.76499219059096</real>
 		</array>
 		<string>The bus in 17171 are:105,106,14,147,154,156,165,166,175,183,185,189,201,285,52,5N,78,96,NR5,NR8,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>The Clementi Mall</string>
+		</array>
+		<array>
+			<string>EW23</string>
+		</array>
 	</array>
 	<key>17179</key>
 	<array>
@@ -10049,8 +10319,12 @@
 			<real>103.76540993476638</real>
 		</array>
 		<string>The bus in 17179 are:105,106,154,183,184,185,189,201,52,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>The Clementi Mall</string>
+		</array>
+		<array>
+			<string>EW23</string>
+		</array>
 	</array>
 	<key>17181</key>
 	<array>
@@ -10725,7 +10999,9 @@
 		</array>
 		<string>The bus in 18051 are:91,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC23</string>
+		</array>
 	</array>
 	<key>18059</key>
 	<array>
@@ -10740,7 +11016,9 @@
 		</array>
 		<string>The bus in 18059 are:91,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC23</string>
+		</array>
 	</array>
 	<key>18061</key>
 	<array>
@@ -10964,7 +11242,9 @@
 			<real>103.78792684921576</real>
 		</array>
 		<string>The bus in 18141 are:191,196,198,200,74,74e,91,92,92M,95,</string>
-		<array/>
+		<array>
+			<string>Rochester Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>18149</key>
@@ -11445,7 +11725,9 @@
 		</array>
 		<string>The bus in 19031 are:105,106,14,147,166,185,74,74e,NR5,NR8,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW22</string>
+		</array>
 	</array>
 	<key>19039</key>
 	<array>
@@ -11460,7 +11742,9 @@
 		</array>
 		<string>The bus in 19039 are:105,106,14,147,166,185,74,74e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW22</string>
+		</array>
 	</array>
 	<key>19041</key>
 	<array>
@@ -13499,7 +13783,9 @@
 			<real>103.71246278287408</real>
 		</array>
 		<string>The bus in 21431 are:240,99,</string>
-		<array/>
+		<array>
+			<string>Boon Lay Shopping Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>21439</key>
@@ -13529,7 +13815,9 @@
 			<real>103.71329690815131</real>
 		</array>
 		<string>The bus in 21441 are:240,99,</string>
-		<array/>
+		<array>
+			<string>Boon Lay Shopping Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>21449</key>
@@ -13544,7 +13832,9 @@
 			<real>103.71296857924483</real>
 		</array>
 		<string>The bus in 21449 are:240,246,99,</string>
-		<array/>
+		<array>
+			<string>Boon Lay Shopping Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>21451</key>
@@ -14428,9 +14718,13 @@
 			<real>1.339861584133311</real>
 			<real>103.70567316782305</real>
 		</array>
-		<string>The bus in 22009 are:154,157,172,174,174e,178,179,180,181,182,182M,187,192,193,194,198,199,240,241,242,243,246,249,251,252,254,255,257,30,405,79,</string>
-		<array/>
-		<array/>
+		<string>The bus in 22009 are:154,157,172,174,174e,178,179,180,181,182,182M,187,192,193,194,198,199,240,241,242,243WWGG,246,249,251,252,254,255,257,30,405,79,</string>
+		<array>
+			<string>Jurong Point Shopping Mall</string>
+		</array>
+		<array>
+			<string>EW27</string>
+		</array>
 	</array>
 	<key>22011</key>
 	<array>
@@ -14938,8 +15232,10 @@
 			<real>1.3408589924024941</real>
 			<real>103.69714738087256</real>
 		</array>
-		<string>The bus in 22231 are:243,5N,NR5,</string>
-		<array/>
+		<string>The bus in 22231 are:243W,5N,NR5,</string>
+		<array>
+			<string>Pioneer Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>22239</key>
@@ -14953,8 +15249,10 @@
 			<real>1.340754302743753</real>
 			<real>103.69747462591873</real>
 		</array>
-		<string>The bus in 22239 are:243,</string>
-		<array/>
+		<string>The bus in 22239 are:243G,</string>
+		<array>
+			<string>Pioneer Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>22241</key>
@@ -14968,7 +15266,7 @@
 			<real>1.340112189547022</real>
 			<real>103.69931920812269</real>
 		</array>
-		<string>The bus in 22241 are:243,257,NR5,</string>
+		<string>The bus in 22241 are:243W,257,NR5,</string>
 		<array/>
 		<array/>
 	</array>
@@ -14983,7 +15281,7 @@
 			<real>1.3401764834969561</real>
 			<real>103.69871540491341</real>
 		</array>
-		<string>The bus in 22249 are:243,257,</string>
+		<string>The bus in 22249 are:243G,257,</string>
 		<array/>
 		<array/>
 	</array>
@@ -14998,7 +15296,7 @@
 			<real>1.3407165806672809</real>
 			<real>103.70257002412114</real>
 		</array>
-		<string>The bus in 22251 are:243,257,NR5,</string>
+		<string>The bus in 22251 are:243W,257,NR5,</string>
 		<array/>
 		<array/>
 	</array>
@@ -15013,7 +15311,7 @@
 			<real>1.3408883044737989</real>
 			<real>103.70261932333891</real>
 		</array>
-		<string>The bus in 22259 are:243,257,</string>
+		<string>The bus in 22259 are:243G,257,</string>
 		<array/>
 		<array/>
 	</array>
@@ -15194,7 +15492,9 @@
 			<real>103.69715988586789</real>
 		</array>
 		<string>The bus in 22359 are:192,193,242,5N,</string>
-		<array/>
+		<array>
+			<string>Pioneer Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>22361</key>
@@ -15208,8 +15508,10 @@
 			<real>1.3407463593649029</real>
 			<real>103.69584153387241</real>
 		</array>
-		<string>The bus in 22361 are:192,193,243,</string>
-		<array/>
+		<string>The bus in 22361 are:192,193,243W,</string>
+		<array>
+			<string>Pioneer Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>22369</key>
@@ -15223,7 +15525,7 @@
 			<real>1.3406927553283541</real>
 			<real>103.69539284258708</real>
 		</array>
-		<string>The bus in 22369 are:192,193,243,</string>
+		<string>The bus in 22369 are:192,193,243G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -15388,7 +15690,7 @@
 			<real>1.3427266161446241</real>
 			<real>103.70362013131793</real>
 		</array>
-		<string>The bus in 22441 are:181,192,193,243,502,</string>
+		<string>The bus in 22441 are:181,192,193,243G,502,</string>
 		<array/>
 		<array/>
 	</array>
@@ -15403,7 +15705,7 @@
 			<real>1.342668754060619</real>
 			<real>103.70380518073533</real>
 		</array>
-		<string>The bus in 22449 are:181,192,193,243,502,502A,NR5,</string>
+		<string>The bus in 22449 are:181,192,193,243W,502,502A,NR5,</string>
 		<array/>
 		<array/>
 	</array>
@@ -15465,7 +15767,9 @@
 		</array>
 		<string>The bus in 22469 are:185,192,193,255,257,502,536,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW28</string>
+		</array>
 	</array>
 	<key>22471</key>
 	<array>
@@ -15630,7 +15934,9 @@
 		</array>
 		<string>The bus in 22521 are:179,241,255,257,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW28</string>
+		</array>
 	</array>
 	<key>22529</key>
 	<array>
@@ -15645,7 +15951,9 @@
 		</array>
 		<string>The bus in 22529 are:179,241,255,257,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW28</string>
+		</array>
 	</array>
 	<key>22531</key>
 	<array>
@@ -15795,7 +16103,9 @@
 		</array>
 		<string>The bus in 22579 are:194,240,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW27</string>
+		</array>
 	</array>
 	<key>22591</key>
 	<array>
@@ -15808,7 +16118,7 @@
 			<real>1.34430246160964</real>
 			<real>103.70324509500031</real>
 		</array>
-		<string>The bus in 22591 are:181,192,193,243,502,</string>
+		<string>The bus in 22591 are:181,192,193,243G,502,</string>
 		<array/>
 		<array/>
 	</array>
@@ -15823,7 +16133,7 @@
 			<real>1.3448187006879291</real>
 			<real>103.70311549636335</real>
 		</array>
-		<string>The bus in 22599 are:181,192,193,243,502,502A,</string>
+		<string>The bus in 22599 are:181,192,193,243W,502,502A,</string>
 		<array/>
 		<array/>
 	</array>
@@ -17175,7 +17485,9 @@
 		</array>
 		<string>The bus in 23491 are:252,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW29</string>
+		</array>
 	</array>
 	<key>23499</key>
 	<array>
@@ -17190,7 +17502,9 @@
 		</array>
 		<string>The bus in 23499 are:252,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW29</string>
+		</array>
 	</array>
 	<key>23501</key>
 	<array>
@@ -20597,6 +20911,21 @@
 		<array/>
 		<array/>
 	</array>
+	<key>27301</key>
+	<array>
+		<array>
+			<string>Blk 978</string>
+			<string>Pioneer Rd Nth</string>
+			<integer>68299968</integer>
+		</array>
+		<array>
+			<real>1.340535147597248</real>
+			<real>103.69430836676048</real>
+		</array>
+		<string>The bus in 27301 are:179,185,241,243W,502,502A,</string>
+		<array/>
+		<array/>
+	</array>
 	<key>27309</key>
 	<array>
 		<array>
@@ -20608,7 +20937,7 @@
 			<real>1.340975985882201</real>
 			<real>103.69437775188069</real>
 		</array>
-		<string>The bus in 27309 are:179,185,241,243,502,536,</string>
+		<string>The bus in 27309 are:179,185,241,243G,502,536,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20743,7 +21072,7 @@
 			<real>1.34280124318371</real>
 			<real>103.69441153700301</real>
 		</array>
-		<string>The bus in 27361 are:185,243,502,5N,99,</string>
+		<string>The bus in 27361 are:185,243G,502,5N,99,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20758,7 +21087,7 @@
 			<real>1.34292131280385</real>
 			<real>103.694099408992</real>
 		</array>
-		<string>The bus in 27369 are:185,243,502,502A,99,</string>
+		<string>The bus in 27369 are:185,243W,502,502A,99,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20773,7 +21102,7 @@
 			<real>1.347492453764791</real>
 			<real>103.70103328646822</real>
 		</array>
-		<string>The bus in 27371 are:181,243,502,</string>
+		<string>The bus in 27371 are:181,243G,502,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20788,7 +21117,7 @@
 			<real>1.348003637690103</real>
 			<real>103.70096015925401</real>
 		</array>
-		<string>The bus in 27379 are:181,243,502,502A,NR5,</string>
+		<string>The bus in 27379 are:181,243W,502,502A,NR5,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20803,7 +21132,7 @@
 			<real>1.3481690466887331</real>
 			<real>103.69858919040489</real>
 		</array>
-		<string>The bus in 27381 are:181,243,502,</string>
+		<string>The bus in 27381 are:181,243G,502,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20818,7 +21147,7 @@
 			<real>1.3484642213143869</real>
 			<real>103.69815045584097</real>
 		</array>
-		<string>The bus in 27389 are:181,243,502,502A,NR5,</string>
+		<string>The bus in 27389 are:181,243W,502,502A,NR5,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20833,7 +21162,7 @@
 			<real>1.3484472848537441</real>
 			<real>103.69624616756192</real>
 		</array>
-		<string>The bus in 27391 are:243,</string>
+		<string>The bus in 27391 are:243G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20848,7 +21177,7 @@
 			<real>1.348652975417683</real>
 			<real>103.69646508384585</real>
 		</array>
-		<string>The bus in 27399 are:243,NR5,</string>
+		<string>The bus in 27399 are:243W,NR5,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20863,7 +21192,7 @@
 			<real>1.347357374653736</real>
 			<real>103.69420931642584</real>
 		</array>
-		<string>The bus in 27401 are:243,NR5,</string>
+		<string>The bus in 27401 are:243W,NR5,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20878,7 +21207,7 @@
 			<real>1.3472142458289931</real>
 			<real>103.69412968163965</real>
 		</array>
-		<string>The bus in 27409 are:243,</string>
+		<string>The bus in 27409 are:243G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20893,7 +21222,7 @@
 			<real>1.345938869881965</real>
 			<real>103.69273953429047</real>
 		</array>
-		<string>The bus in 27411 are:243,NR5,</string>
+		<string>The bus in 27411 are:243W,NR5,</string>
 		<array/>
 		<array/>
 	</array>
@@ -20908,7 +21237,7 @@
 			<real>1.345724054857947</real>
 			<real>103.69287714738016</real>
 		</array>
-		<string>The bus in 27419 are:243,</string>
+		<string>The bus in 27419 are:243G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -21089,8 +21418,13 @@
 			<real>103.74178468121262</real>
 		</array>
 		<string>The bus in 28009 are:105,143,143M,160,183,197,333,334,335,41,506,51,52,66,78,79,97,97e,98,98M,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Westgate</string>
+		</array>
+		<array>
+			<string>EW24</string>
+			<string>NS1</string>
+		</array>
 	</array>
 	<key>28011</key>
 	<array>
@@ -21224,7 +21558,9 @@
 			<real>103.74567260844404</real>
 		</array>
 		<string>The bus in 28051 are:99,990,</string>
-		<array/>
+		<array>
+			<string>Big Box</string>
+		</array>
 		<array/>
 	</array>
 	<key>28059</key>
@@ -21239,7 +21575,9 @@
 			<real>103.74576194170174</real>
 		</array>
 		<string>The bus in 28059 are:99,990,</string>
-		<array/>
+		<array>
+			<string>Big Box</string>
+		</array>
 		<array/>
 	</array>
 	<key>28061</key>
@@ -21255,7 +21593,9 @@
 		</array>
 		<string>The bus in 28061 are:98,98M,99,990,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS1</string>
+		</array>
 	</array>
 	<key>28069</key>
 	<array>
@@ -21345,7 +21685,9 @@
 		</array>
 		<string>The bus in 28091 are:154,180,187,240,246,49,98,98M,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW26</string>
+		</array>
 	</array>
 	<key>28099</key>
 	<array>
@@ -21360,7 +21702,9 @@
 		</array>
 		<string>The bus in 28099 are:154,180,187,240,246,49,98,98M,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW26</string>
+		</array>
 	</array>
 	<key>28101</key>
 	<array>
@@ -21855,7 +22199,9 @@
 		</array>
 		<string>The bus in 28301 are:105,143,143M,160,183,197,333,334,335,506,51,52,66,78,79,97,97e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW24</string>
+		</array>
 	</array>
 	<key>28309</key>
 	<array>
@@ -21975,7 +22321,9 @@
 		</array>
 		<string>The bus in 28341 are:180,335,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW25</string>
+		</array>
 	</array>
 	<key>28349</key>
 	<array>
@@ -21990,7 +22338,9 @@
 		</array>
 		<string>The bus in 28349 are:180,335,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW25</string>
+		</array>
 	</array>
 	<key>28351</key>
 	<array>
@@ -22724,7 +23074,9 @@
 			<real>103.7479430901794</real>
 		</array>
 		<string>The bus in 28651 are:105,188,188E,188R,333,502,52,543,990,</string>
-		<array/>
+		<array>
+			<string>IMM</string>
+		</array>
 		<array/>
 	</array>
 	<key>28659</key>
@@ -22739,7 +23091,9 @@
 			<real>103.74767040804569</real>
 		</array>
 		<string>The bus in 28659 are:105,188,188R,333,502,52,990,NR5,</string>
-		<array/>
+		<array>
+			<string>IMM</string>
+		</array>
 		<array/>
 	</array>
 	<key>28661</key>
@@ -24570,7 +24924,10 @@
 		</array>
 		<string>The bus in 40019 are:131,166,170,48,56,57,66,67,851,960,980,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT12</string>
+			<string>NE7</string>
+		</array>
 	</array>
 	<key>40021</key>
 	<array>
@@ -24750,7 +25107,9 @@
 		</array>
 		<string>The bus in 40081 are:170,171,48,66,67,700,700A,960,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT10</string>
+		</array>
 	</array>
 	<key>40089</key>
 	<array>
@@ -24930,7 +25289,10 @@
 		</array>
 		<string>The bus in 40181 are:124,128,143,162,162M,167,171,5,54,700,700A,NR1,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT11</string>
+			<string>NS21</string>
+		</array>
 	</array>
 	<key>40189</key>
 	<array>
@@ -24945,7 +25307,10 @@
 		</array>
 		<string>The bus in 40189 are:124,128,143,162,162M,167,171,5,518,518A,54,700,700A,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT11</string>
+			<string>NS21</string>
+		</array>
 	</array>
 	<key>40191</key>
 	<array>
@@ -25050,7 +25415,9 @@
 		</array>
 		<string>The bus in 40221 are:105,132,190,972,NR2,NR3,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT10</string>
+		</array>
 	</array>
 	<key>40229</key>
 	<array>
@@ -25065,7 +25432,9 @@
 		</array>
 		<string>The bus in 40229 are:105,132,190,502,502A,972,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT10</string>
+		</array>
 	</array>
 	<key>40231</key>
 	<array>
@@ -25245,7 +25614,10 @@
 		</array>
 		<string>The bus in 41021 are:151,153,154,156,170,171,186,48,66,67,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT9</string>
+			<string>CC19</string>
+		</array>
 	</array>
 	<key>41029</key>
 	<array>
@@ -25260,7 +25632,10 @@
 		</array>
 		<string>The bus in 41029 are:151,153,154,156,170,171,186,48,66,67,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT9</string>
+			<string>CC19</string>
+		</array>
 	</array>
 	<key>41031</key>
 	<array>
@@ -25320,7 +25695,9 @@
 		</array>
 		<string>The bus in 41051 are:151,154,156,157,170,171,174,66,67,74,852,961,961C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT8</string>
+		</array>
 	</array>
 	<key>41061</key>
 	<array>
@@ -25350,7 +25727,9 @@
 		</array>
 		<string>The bus in 41069 are:151,154,156,157,170,171,174,66,67,74,852,961,961C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT8</string>
+		</array>
 	</array>
 	<key>41071</key>
 	<array>
@@ -25395,7 +25774,9 @@
 		</array>
 		<string>The bus in 41081 are:151,154,156,157,170,171,174,66,67,74,852,961,961C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT7</string>
+		</array>
 	</array>
 	<key>41089</key>
 	<array>
@@ -25710,7 +26091,9 @@
 		</array>
 		<string>The bus in 42049 are:151,154,157,170,171,174,66,67,74,77,852,961,961C,970,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT6</string>
+		</array>
 	</array>
 	<key>42051</key>
 	<array>
@@ -25935,7 +26318,9 @@
 		</array>
 		<string>The bus in 42151 are:157,173,174,174e,3N,41,61,66,77,970,985,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT5</string>
+		</array>
 	</array>
 	<key>42159</key>
 	<array>
@@ -25950,7 +26335,9 @@
 		</array>
 		<string>The bus in 42159 are:157,173,174,174e,41,61,66,77,970,985,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT5</string>
+		</array>
 	</array>
 	<key>42161</key>
 	<array>
@@ -26235,7 +26622,9 @@
 		</array>
 		<string>The bus in 42259 are:157,174,174e,41,52,61,66,77,970,985,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT5</string>
+		</array>
 	</array>
 	<key>42291</key>
 	<array>
@@ -26444,7 +26833,9 @@
 			<real>103.7671735519459</real>
 		</array>
 		<string>The bus in 43051 are:170,171,178,184,67,75,961,961C,</string>
-		<array/>
+		<array>
+			<string>The Rail Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>43059</key>
@@ -26459,7 +26850,9 @@
 			<real>103.76742861589709</real>
 		</array>
 		<string>The bus in 43059 are:170,171,178,184,67,75,961,961C,</string>
-		<array/>
+		<array>
+			<string>The Rail Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>43061</key>
@@ -26475,7 +26868,9 @@
 		</array>
 		<string>The bus in 43061 are:170,171,178,184,67,75,961,961C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT3</string>
+		</array>
 	</array>
 	<key>43069</key>
 	<array>
@@ -26490,7 +26885,9 @@
 		</array>
 		<string>The bus in 43069 are:170,171,178,184,67,75,961,961C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT3</string>
+		</array>
 	</array>
 	<key>43071</key>
 	<array>
@@ -26550,7 +26947,9 @@
 		</array>
 		<string>The bus in 43091 are:170,171,176,178,67,961,961C,963,970,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT2</string>
+		</array>
 	</array>
 	<key>43109</key>
 	<array>
@@ -26669,7 +27068,9 @@
 			<real>103.76505149383915</real>
 		</array>
 		<string>The bus in 43151 are:177,</string>
-		<array/>
+		<array>
+			<string>hillv2</string>
+		</array>
 		<array/>
 	</array>
 	<key>43159</key>
@@ -26684,7 +27085,9 @@
 			<real>103.76516636611021</real>
 		</array>
 		<string>The bus in 43159 are:177,</string>
-		<array/>
+		<array>
+			<string>hillv2</string>
+		</array>
 		<array/>
 	</array>
 	<key>43161</key>
@@ -27840,7 +28243,9 @@
 		</array>
 		<string>The bus in 43571 are:3N,945,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS3</string>
+		</array>
 	</array>
 	<key>43579</key>
 	<array>
@@ -27855,7 +28260,9 @@
 		</array>
 		<string>The bus in 43579 are:945,NR8,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS3</string>
+		</array>
 	</array>
 	<key>43581</key>
 	<array>
@@ -28619,8 +29026,13 @@
 			<real>103.74375025153245</real>
 		</array>
 		<string>The bus in 44009 are:172,188,188E,188R,190,300,301,302,307,67,925,927,983,985,BPS1,NR3,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Lot One Shoppers' Mall</string>
+		</array>
+		<array>
+			<string>NS4</string>
+			<string>BP1</string>
+		</array>
 	</array>
 	<key>44011</key>
 	<array>
@@ -28694,7 +29106,9 @@
 			<real>103.76025899772102</real>
 		</array>
 		<string>The bus in 44041 are:160,170,178,960,961,961C,</string>
-		<array/>
+		<array>
+			<string>Junction 10</string>
+		</array>
 		<array/>
 	</array>
 	<key>44049</key>
@@ -28709,7 +29123,9 @@
 			<real>103.76059943032946</real>
 		</array>
 		<string>The bus in 44049 are:160,170,178,960,961,961C,</string>
-		<array/>
+		<array>
+			<string>Junction 10</string>
+		</array>
 		<array/>
 	</array>
 	<key>44051</key>
@@ -28995,7 +29411,9 @@
 		</array>
 		<string>The bus in 44141 are:160,180,187,190,67,975,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP5</string>
+		</array>
 	</array>
 	<key>44149</key>
 	<array>
@@ -29010,7 +29428,9 @@
 		</array>
 		<string>The bus in 44149 are:160,180,187,190,555,67,975,NR3,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP5</string>
+		</array>
 	</array>
 	<key>44151</key>
 	<array>
@@ -29145,7 +29565,9 @@
 		</array>
 		<string>The bus in 44201 are:171,75,960,963,963E,963R,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP7</string>
+		</array>
 	</array>
 	<key>44209</key>
 	<array>
@@ -29160,7 +29582,9 @@
 		</array>
 		<string>The bus in 44209 are:171,75,960,963,963E,963R,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP7</string>
+		</array>
 	</array>
 	<key>44211</key>
 	<array>
@@ -29205,7 +29629,9 @@
 		</array>
 		<string>The bus in 44221 are:171,184,700,700A,960,963,963E,963R,966,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP8</string>
+		</array>
 	</array>
 	<key>44229</key>
 	<array>
@@ -29220,7 +29646,9 @@
 		</array>
 		<string>The bus in 44229 are:171,184,700,700A,960,963,963E,963R,966,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP8</string>
+		</array>
 	</array>
 	<key>44231</key>
 	<array>
@@ -29475,7 +29903,9 @@
 		</array>
 		<string>The bus in 44321 are:555,920,922,971E,972,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP9</string>
+		</array>
 	</array>
 	<key>44329</key>
 	<array>
@@ -29490,7 +29920,9 @@
 		</array>
 		<string>The bus in 44329 are:920,922,971E,972,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP9</string>
+		</array>
 	</array>
 	<key>44331</key>
 	<array>
@@ -29745,7 +30177,9 @@
 		</array>
 		<string>The bus in 44449 are:188,188R,3N,67,982E,NR3,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP3</string>
+		</array>
 	</array>
 	<key>44451</key>
 	<array>
@@ -29760,7 +30194,9 @@
 		</array>
 		<string>The bus in 44451 are:188,188E,188R,301,67,982E,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP2</string>
+		</array>
 	</array>
 	<key>44459</key>
 	<array>
@@ -29775,7 +30211,9 @@
 		</array>
 		<string>The bus in 44459 are:188,188R,300,301,3N,67,982E,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP2</string>
+		</array>
 	</array>
 	<key>44461</key>
 	<array>
@@ -29999,8 +30437,12 @@
 			<real>103.74466354084007</real>
 		</array>
 		<string>The bus in 44531 are:307,925,927,975,BPS1,NR3,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Lot One Shoppers' Mall</string>
+		</array>
+		<array>
+			<string>NS4</string>
+		</array>
 	</array>
 	<key>44539</key>
 	<array>
@@ -30014,8 +30456,12 @@
 			<real>103.74481709909982</real>
 		</array>
 		<string>The bus in 44539 are:172,190,307,925,927,975,985,BPS1,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Lot One Shoppers' Mall</string>
+		</array>
+		<array>
+			<string>NS4</string>
+		</array>
 	</array>
 	<key>44541</key>
 	<array>
@@ -30209,7 +30655,9 @@
 			<real>103.76389546586228</real>
 		</array>
 		<string>The bus in 44631 are:171,75,960,963,963E,963R,970,</string>
-		<array/>
+		<array>
+			<string>Bukit Panjang Plaza</string>
+		</array>
 		<array/>
 	</array>
 	<key>44639</key>
@@ -30224,7 +30672,9 @@
 			<real>103.76391673065083</real>
 		</array>
 		<string>The bus in 44639 are:171,177,75,960,963,963E,963R,</string>
-		<array/>
+		<array>
+			<string>Bukit Panjang Plaza</string>
+		</array>
 		<array/>
 	</array>
 	<key>44641</key>
@@ -30405,7 +30855,9 @@
 		</array>
 		<string>The bus in 44721 are:BPS1,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP12</string>
+		</array>
 	</array>
 	<key>44731</key>
 	<array>
@@ -30419,8 +30871,13 @@
 			<real>103.76437278302789</real>
 		</array>
 		<string>The bus in 44731 are:176,971E,975,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Bukit Panjang Plaza</string>
+		</array>
+		<array>
+			<string>DT1</string>
+			<string>BP6</string>
+		</array>
 	</array>
 	<key>44739</key>
 	<array>
@@ -30434,8 +30891,13 @@
 			<real>103.76455747116013</real>
 		</array>
 		<string>The bus in 44739 are:176,971E,975,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Bukit Panjang Plaza</string>
+		</array>
+		<array>
+			<string>DT1</string>
+			<string>BP6</string>
+		</array>
 	</array>
 	<key>44771</key>
 	<array>
@@ -30450,7 +30912,9 @@
 		</array>
 		<string>The bus in 44771 are:922,971E,972,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP10</string>
+		</array>
 	</array>
 	<key>44779</key>
 	<array>
@@ -30465,7 +30929,9 @@
 		</array>
 		<string>The bus in 44779 are:555,922,971E,972,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP10</string>
+		</array>
 	</array>
 	<key>44791</key>
 	<array>
@@ -30495,7 +30961,9 @@
 		</array>
 		<string>The bus in 44799 are:555,920,972,BPS1,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP13</string>
+		</array>
 	</array>
 	<key>44801</key>
 	<array>
@@ -30600,7 +31068,10 @@
 		</array>
 		<string>The bus in 44851 are:180,970,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT1</string>
+			<string>BP6</string>
+		</array>
 	</array>
 	<key>44859</key>
 	<array>
@@ -30615,7 +31086,10 @@
 		</array>
 		<string>The bus in 44859 are:177,598,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT1</string>
+			<string>BP6</string>
+		</array>
 	</array>
 	<key>45009</key>
 	<array>
@@ -30630,7 +31104,10 @@
 		</array>
 		<string>The bus in 45009 are:176,184,700,700A,75,920,922,970,971E,972,975,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>DT1</string>
+			<string>BP6</string>
+		</array>
 	</array>
 	<key>45011</key>
 	<array>
@@ -30990,7 +31467,9 @@
 		</array>
 		<string>The bus in 45131 are:160,170,170X,178,925,925C,960,961,961C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS7</string>
+		</array>
 	</array>
 	<key>45139</key>
 	<array>
@@ -31005,7 +31484,9 @@
 		</array>
 		<string>The bus in 45139 are:160,170,170X,178,925,925C,960,961,961C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS7</string>
+		</array>
 	</array>
 	<key>45141</key>
 	<array>
@@ -31290,7 +31771,9 @@
 		</array>
 		<string>The bus in 45239 are:302,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>BP1</string>
+		</array>
 	</array>
 	<key>45241</key>
 	<array>
@@ -31514,8 +31997,12 @@
 			<real>103.74756177543993</real>
 		</array>
 		<string>The bus in 45321 are:302,307,3N,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Yew Tee Point</string>
+		</array>
+		<array>
+			<string>NS5</string>
+		</array>
 	</array>
 	<key>45329</key>
 	<array>
@@ -31529,8 +32016,12 @@
 			<real>103.7478259281967</real>
 		</array>
 		<string>The bus in 45329 are:302,3N,NR3,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Yew Tee Point</string>
+		</array>
+		<array>
+			<string>NS5</string>
+		</array>
 	</array>
 	<key>45339</key>
 	<array>
@@ -31559,7 +32050,9 @@
 			<real>103.74554339514019</real>
 		</array>
 		<string>The bus in 45349 are:307,</string>
-		<array/>
+		<array>
+			<string>Yew Tee Point</string>
+		</array>
 		<array/>
 	</array>
 	<key>45351</key>
@@ -31799,8 +32292,12 @@
 			<real>103.78571304265229</real>
 		</array>
 		<string>The bus in 46008 are:911,912,913,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Causeway Point</string>
+		</array>
+		<array>
+			<string>NS9</string>
+		</array>
 	</array>
 	<key>46009</key>
 	<array>
@@ -31815,7 +32312,9 @@
 		</array>
 		<string>The bus in 46009 are:161,168,169,178,187,856,858,900,900A,901,902,903,904,911,912,913,925,925C,926,950,960,961,961C,962,963,963E,963R,964,965,966,969,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS9</string>
+		</array>
 	</array>
 	<key>46011</key>
 	<array>
@@ -33285,7 +33784,9 @@
 		</array>
 		<string>The bus in 46521 are:187,856,925,925C,926,950,960,961,961C,963,963E,963R,966,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS8</string>
+		</array>
 	</array>
 	<key>46529</key>
 	<array>
@@ -33300,7 +33801,9 @@
 		</array>
 		<string>The bus in 46529 are:187,856,925,925C,926,950,960,961,961C,963,963E,963R,966,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS8</string>
+		</array>
 	</array>
 	<key>46531</key>
 	<array>
@@ -33960,7 +34463,9 @@
 		</array>
 		<string>The bus in 46771 are:904,913,964,965,969,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS10</string>
+		</array>
 	</array>
 	<key>46779</key>
 	<array>
@@ -33975,7 +34480,9 @@
 		</array>
 		<string>The bus in 46779 are:904,912,913,964,965,969,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS10</string>
+		</array>
 	</array>
 	<key>46781</key>
 	<array>
@@ -36464,8 +36971,12 @@
 			<real>103.84350259820093</real>
 		</array>
 		<string>The bus in 50038 are:131,141,166,21,56,57,851,980,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Novena Square</string>
+		</array>
+		<array>
+			<string>NS20</string>
+		</array>
 	</array>
 	<key>50041</key>
 	<array>
@@ -37410,7 +37921,9 @@
 		</array>
 		<string>The bus in 52009 are:139,139M,141,142,143,145,155,157,159,163,231,232,235,238,26,28,31,73,8,88,90,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS19</string>
+		</array>
 	</array>
 	<key>52011</key>
 	<array>
@@ -37770,7 +38283,9 @@
 		</array>
 		<string>The bus in 52161 are:231,235,59,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS18</string>
+		</array>
 	</array>
 	<key>52169</key>
 	<array>
@@ -37785,7 +38300,9 @@
 		</array>
 		<string>The bus in 52169 are:231,235,59,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS18</string>
+		</array>
 	</array>
 	<key>52171</key>
 	<array>
@@ -37830,7 +38347,9 @@
 		</array>
 		<string>The bus in 52181 are:105,153,56,NR1,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS19</string>
+		</array>
 	</array>
 	<key>52189</key>
 	<array>
@@ -37845,7 +38364,9 @@
 		</array>
 		<string>The bus in 52189 are:105,153,232,56,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS19</string>
+		</array>
 	</array>
 	<key>52191</key>
 	<array>
@@ -38010,7 +38531,9 @@
 		</array>
 		<string>The bus in 52241 are:141,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC17</string>
+		</array>
 	</array>
 	<key>52249</key>
 	<array>
@@ -38025,7 +38548,9 @@
 		</array>
 		<string>The bus in 52249 are:141,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC17</string>
+		</array>
 	</array>
 	<key>52251</key>
 	<array>
@@ -38745,7 +39270,9 @@
 		</array>
 		<string>The bus in 52559 are:235,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC17</string>
+		</array>
 	</array>
 	<key>53009</key>
 	<array>
@@ -38758,8 +39285,10 @@
 			<real>1.350468204712084</real>
 			<real>103.84980572269929</real>
 		</array>
-		<string>The bus in 53009 are:410,50,52,53,54,55,56,57,58,59,</string>
-		<array/>
+		<string>The bus in 53009 are:410GGWW,50,52,53,54,55,56,57,58,59,</string>
+		<array>
+			<string>Junction 8</string>
+		</array>
 		<array/>
 	</array>
 	<key>53011</key>
@@ -38848,7 +39377,7 @@
 			<real>1.3531403292731561</real>
 			<real>103.83427771260919</real>
 		</array>
-		<string>The bus in 53041 are:132,162,162M,163,165,166,167,410,52,855,980,</string>
+		<string>The bus in 53041 are:132,162,162M,163,165,166,167,410G,52,855,980,</string>
 		<array/>
 		<array/>
 	</array>
@@ -38863,7 +39392,7 @@
 			<real>1.3536025707024231</real>
 			<real>103.83427119457983</real>
 		</array>
-		<string>The bus in 53049 are:132,162,162M,163,165,166,167,410,52,855,980,</string>
+		<string>The bus in 53049 are:132,162,162M,163,165,166,167,410W,52,855,980,</string>
 		<array/>
 		<array/>
 	</array>
@@ -38878,7 +39407,7 @@
 			<real>1.3545609048642651</real>
 			<real>103.83237486134685</real>
 		</array>
-		<string>The bus in 53051 are:132,162,162M,163,165,166,167,410,52,855,980,</string>
+		<string>The bus in 53051 are:132,162,162M,163,165,166,167,410G,52,855,980,</string>
 		<array/>
 		<array/>
 	</array>
@@ -38893,8 +39422,10 @@
 			<real>1.355426687199196</real>
 			<real>103.83143456276555</real>
 		</array>
-		<string>The bus in 53059 are:132,162,162M,163,165,166,167,410,52,855,980,</string>
-		<array/>
+		<string>The bus in 53059 are:132,162,162M,163,165,166,167,410W,52,855,980,</string>
+		<array>
+			<string>Thomson Plaza</string>
+		</array>
 		<array/>
 	</array>
 	<key>53061</key>
@@ -38908,7 +39439,7 @@
 			<real>1.357236154432458</real>
 			<real>103.82878278731513</real>
 		</array>
-		<string>The bus in 53061 are:132,162,162M,163,165,166,167,410,52,855,980,</string>
+		<string>The bus in 53061 are:132,162,162M,163,165,166,167,410G,52,855,980,</string>
 		<array/>
 		<array/>
 	</array>
@@ -38923,7 +39454,7 @@
 			<real>1.3576765784689031</real>
 			<real>103.82898104065902</real>
 		</array>
-		<string>The bus in 53069 are:132,162,162M,163,165,166,167,410,52,855,980,</string>
+		<string>The bus in 53069 are:132,162,162M,163,165,166,167,410W,52,855,980,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39058,9 +39589,11 @@
 			<real>1.350252140737829</real>
 			<real>103.83947421525261</real>
 		</array>
-		<string>The bus in 53121 are:410,54,74,74e,851,852,</string>
+		<string>The bus in 53121 are:410G,54,74,74e,851,852,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC16</string>
+		</array>
 	</array>
 	<key>53129</key>
 	<array>
@@ -39073,9 +39606,11 @@
 			<real>1.349613451599819</real>
 			<real>103.83975331891992</real>
 		</array>
-		<string>The bus in 53129 are:410,54,588,851,</string>
+		<string>The bus in 53129 are:410W,54,588,851,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC16</string>
+		</array>
 	</array>
 	<key>53131</key>
 	<array>
@@ -39223,7 +39758,7 @@
 			<real>1.3529678505481879</real>
 			<real>103.83576456480174</real>
 		</array>
-		<string>The bus in 53179 are:130,410,</string>
+		<string>The bus in 53179 are:130,410G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39358,7 +39893,7 @@
 			<real>1.3481568977390339</real>
 			<real>103.84846004360151</real>
 		</array>
-		<string>The bus in 53221 are:410,50,52,54,55,56,57,58,59,NR1,</string>
+		<string>The bus in 53221 are:410G,50,52,54,55,56,57,58,59,NR1,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39389,8 +39924,13 @@
 			<real>103.84794831290586</real>
 		</array>
 		<string>The bus in 53231 are:128,13,156,50,52,54,55,58,88,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Junction 8</string>
+		</array>
+		<array>
+			<string>NS17</string>
+			<string>CC15</string>
+		</array>
 	</array>
 	<key>53239</key>
 	<array>
@@ -39404,8 +39944,13 @@
 			<real>103.84766582408963</real>
 		</array>
 		<string>The bus in 53239 are:128,13,156,50,52,54,55,58,88,NR1,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Junction 8</string>
+		</array>
+		<array>
+			<string>NS17</string>
+			<string>CC15</string>
+		</array>
 	</array>
 	<key>53241</key>
 	<array>
@@ -39478,7 +40023,7 @@
 			<real>1.3529084666412281</real>
 			<real>103.85175683451563</real>
 		</array>
-		<string>The bus in 53261 are:410,53,</string>
+		<string>The bus in 53261 are:410W,53,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39493,7 +40038,7 @@
 			<real>1.3533552741259851</real>
 			<real>103.85119404905745</real>
 		</array>
-		<string>The bus in 53269 are:410,53,</string>
+		<string>The bus in 53269 are:410G,53,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39508,7 +40053,7 @@
 			<real>1.3493927003933219</real>
 			<real>103.85391393002266</real>
 		</array>
-		<string>The bus in 53271 are:410,54,56,</string>
+		<string>The bus in 53271 are:410W,54,56,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39523,7 +40068,7 @@
 			<real>1.3496355056114131</real>
 			<real>103.85394926177516</real>
 		</array>
-		<string>The bus in 53279 are:410,54,56,</string>
+		<string>The bus in 53279 are:410G,54,56,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39538,7 +40083,7 @@
 			<real>1.3467976926536109</real>
 			<real>103.85434646870496</real>
 		</array>
-		<string>The bus in 53281 are:410,54,56,</string>
+		<string>The bus in 53281 are:410W,54,56,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39553,7 +40098,7 @@
 			<real>1.3471614268985119</real>
 			<real>103.85458291131386</real>
 		</array>
-		<string>The bus in 53289 are:410,54,56,</string>
+		<string>The bus in 53289 are:410G,54,56,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39568,7 +40113,7 @@
 			<real>1.3522189310763499</real>
 			<real>103.83717478204191</real>
 		</array>
-		<string>The bus in 53291 are:410,</string>
+		<string>The bus in 53291 are:410G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39583,7 +40128,7 @@
 			<real>1.351668704167984</real>
 			<real>103.83790735430971</real>
 		</array>
-		<string>The bus in 53299 are:410,</string>
+		<string>The bus in 53299 are:410W,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39598,7 +40143,7 @@
 			<real>1.3485618282257199</real>
 			<real>103.845854429672</real>
 		</array>
-		<string>The bus in 53301 are:410,</string>
+		<string>The bus in 53301 are:410G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39613,7 +40158,7 @@
 			<real>1.348524259043947</real>
 			<real>103.84533743980789</real>
 		</array>
-		<string>The bus in 53309 are:410,588,</string>
+		<string>The bus in 53309 are:410W,588,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39628,7 +40173,7 @@
 			<real>1.346853720748598</real>
 			<real>103.84165626265194</real>
 		</array>
-		<string>The bus in 53311 are:410,</string>
+		<string>The bus in 53311 are:410G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39643,7 +40188,7 @@
 			<real>1.3472435574804129</real>
 			<real>103.84123617276177</real>
 		</array>
-		<string>The bus in 53319 are:410,588,</string>
+		<string>The bus in 53319 are:410W,588,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39658,7 +40203,7 @@
 			<real>1.361378574433771</real>
 			<real>103.84022532597902</real>
 		</array>
-		<string>The bus in 53321 are:130,162,162M,410,52,</string>
+		<string>The bus in 53321 are:130,162,162M,410W,52,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39673,7 +40218,7 @@
 			<real>1.3615025608703919</real>
 			<real>103.84056926999813</real>
 		</array>
-		<string>The bus in 53329 are:130,162,162M,410,52,588,</string>
+		<string>The bus in 53329 are:130,162,162M,410G,52,588,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39688,7 +40233,7 @@
 			<real>1.3628357593884191</real>
 			<real>103.83700223493277</real>
 		</array>
-		<string>The bus in 53331 are:162,162M,410,52,</string>
+		<string>The bus in 53331 are:162,162M,410W,52,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39703,7 +40248,7 @@
 			<real>1.3631081333798161</real>
 			<real>103.83682316153092</real>
 		</array>
-		<string>The bus in 53339 are:162,162M,410,52,588,</string>
+		<string>The bus in 53339 are:162,162M,410G,52,588,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39718,7 +40263,7 @@
 			<real>1.3635410586784</real>
 			<real>103.83387842537361</real>
 		</array>
-		<string>The bus in 53341 are:162,162M,410,52,</string>
+		<string>The bus in 53341 are:162,162M,410W,52,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39733,7 +40278,7 @@
 			<real>1.3636643877856469</real>
 			<real>103.83371252188377</real>
 		</array>
-		<string>The bus in 53349 are:162,162M,410,52,588,</string>
+		<string>The bus in 53349 are:162,162M,410G,52,588,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39748,7 +40293,7 @@
 			<real>1.360762625090328</real>
 			<real>103.83214046944748</real>
 		</array>
-		<string>The bus in 53351 are:162,162M,410,52,</string>
+		<string>The bus in 53351 are:162,162M,410W,52,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39763,7 +40308,7 @@
 			<real>1.361360148456213</real>
 			<real>103.83195219241522</real>
 		</array>
-		<string>The bus in 53359 are:162,162M,410,52,588,</string>
+		<string>The bus in 53359 are:162,162M,410G,52,588,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39778,7 +40323,7 @@
 			<real>1.3593117897021381</real>
 			<real>103.83028850312591</real>
 		</array>
-		<string>The bus in 53361 are:162,162M,410,52,</string>
+		<string>The bus in 53361 are:162,162M,410W,52,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39793,7 +40338,7 @@
 			<real>1.3594731696851581</real>
 			<real>103.83010061630875</real>
 		</array>
-		<string>The bus in 53369 are:162,162M,410,52,588,</string>
+		<string>The bus in 53369 are:162,162M,410G,52,588,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39808,7 +40353,7 @@
 			<real>1.3600356540515359</real>
 			<real>103.84371162531151</real>
 		</array>
-		<string>The bus in 53371 are:13,162,162M,410,52,54,88,NR1,</string>
+		<string>The bus in 53371 are:13,162,162M,410W,52,54,88,NR1,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39823,7 +40368,7 @@
 			<real>1.360129797475814</real>
 			<real>103.84392108253873</real>
 		</array>
-		<string>The bus in 53379 are:13,162,162M,410,52,54,88,</string>
+		<string>The bus in 53379 are:13,162,162M,410G,52,54,88,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39838,7 +40383,7 @@
 			<real>1.3581854989009099</real>
 			<real>103.8449549569179</real>
 		</array>
-		<string>The bus in 53381 are:13,162,162M,410,52,54,88,NR1,</string>
+		<string>The bus in 53381 are:13,162,162M,410W,52,54,88,NR1,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39853,7 +40398,7 @@
 			<real>1.3579515975391589</real>
 			<real>103.845172525618</real>
 		</array>
-		<string>The bus in 53389 are:13,162,162M,410,52,54,88,</string>
+		<string>The bus in 53389 are:13,162,162M,410G,52,54,88,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39868,7 +40413,7 @@
 			<real>1.3544899048746231</real>
 			<real>103.84691893929366</real>
 		</array>
-		<string>The bus in 53391 are:13,162,162M,410,52,54,88,NR1,</string>
+		<string>The bus in 53391 are:13,162,162M,410W,52,54,88,NR1,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39883,7 +40428,7 @@
 			<real>1.35459792137567</real>
 			<real>103.8470598078475</real>
 		</array>
-		<string>The bus in 53399 are:13,162,162M,410,52,54,88,</string>
+		<string>The bus in 53399 are:13,162,162M,410G,52,54,88,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39898,7 +40443,7 @@
 			<real>1.345382929052453</real>
 			<real>103.85048821686644</real>
 		</array>
-		<string>The bus in 53401 are:410,</string>
+		<string>The bus in 53401 are:410G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39913,7 +40458,7 @@
 			<real>1.3453195189929901</real>
 			<real>103.85131336701428</real>
 		</array>
-		<string>The bus in 53409 are:410,588,</string>
+		<string>The bus in 53409 are:410W,588,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39928,7 +40473,7 @@
 			<real>1.346352091227454</real>
 			<real>103.84982643927259</real>
 		</array>
-		<string>The bus in 53419 are:410,588,</string>
+		<string>The bus in 53419 are:410W,588,</string>
 		<array/>
 		<array/>
 	</array>
@@ -39944,8 +40489,12 @@
 			<real>103.84870041053759</real>
 		</array>
 		<string>The bus in 54009 are:130,133,135,136,138,166,169,22,24,25,261,262,265,269,73,86,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>AMK Hub</string>
+		</array>
+		<array>
+			<string>NS16</string>
+		</array>
 	</array>
 	<key>54011</key>
 	<array>
@@ -42000,7 +42549,9 @@
 		</array>
 		<string>The bus in 55181 are:128,45,851,852,853,853C,86,NR1,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS15</string>
+		</array>
 	</array>
 	<key>55189</key>
 	<array>
@@ -42015,7 +42566,9 @@
 		</array>
 		<string>The bus in 55189 are:128,45,529,70,70M,76,825,851,852,853,853C,86,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS15</string>
+		</array>
 	</array>
 	<key>55199</key>
 	<array>
@@ -42510,7 +43063,9 @@
 		</array>
 		<string>The bus in 55509 are:13,162,162M,529,70,70M,72,76,825,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS15</string>
+		</array>
 	</array>
 	<key>56019</key>
 	<array>
@@ -43304,7 +43859,9 @@
 			<real>103.82014855069653</real>
 		</array>
 		<string>The bus in 58009 are:167,859,859A,859B,882,980,981,</string>
-		<array/>
+		<array>
+			<string>Sun Plaza</string>
+		</array>
 		<array/>
 	</array>
 	<key>58011</key>
@@ -43319,7 +43876,9 @@
 			<real>103.82416019794591</real>
 		</array>
 		<string>The bus in 58011 are:167,856,858,859,980,</string>
-		<array/>
+		<array>
+			<string>Sembawang Shopping Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>58019</key>
@@ -43334,7 +43893,9 @@
 			<real>103.8247400221651</real>
 		</array>
 		<string>The bus in 58019 are:167,856,858,859,980,</string>
-		<array/>
+		<array>
+			<string>Sembawang Shopping Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>58021</key>
@@ -43889,8 +44450,12 @@
 			<real>103.81968922562874</real>
 		</array>
 		<string>The bus in 58211 are:858,859,859B,882,981,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Sun Plaza</string>
+		</array>
+		<array>
+			<string>NS11</string>
+		</array>
 	</array>
 	<key>58219</key>
 	<array>
@@ -43904,8 +44469,12 @@
 			<real>103.8197787975996</real>
 		</array>
 		<string>The bus in 58219 are:858,859,859A,882,981,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Sun Plaza</string>
+		</array>
+		<array>
+			<string>NS11</string>
+		</array>
 	</array>
 	<key>58221</key>
 	<array>
@@ -43949,7 +44518,9 @@
 			<real>103.82021811619202</real>
 		</array>
 		<string>The bus in 58241 are:859,859A,</string>
-		<array/>
+		<array>
+			<string>Sun Plaza</string>
+		</array>
 		<array/>
 	</array>
 	<key>58249</key>
@@ -43979,7 +44550,9 @@
 			<real>103.81911294365152</real>
 		</array>
 		<string>The bus in 58251 are:859,859B,882,962,980,981,NR2,</string>
-		<array/>
+		<array>
+			<string>Sun Plaza</string>
+		</array>
 		<array/>
 	</array>
 	<key>58259</key>
@@ -43994,7 +44567,9 @@
 			<real>103.81888110296647</real>
 		</array>
 		<string>The bus in 58259 are:859,859A,882,962,980,981,</string>
-		<array/>
+		<array>
+			<string>Sun Plaza</string>
+		</array>
 		<array/>
 	</array>
 	<key>58271</key>
@@ -44669,8 +45244,12 @@
 			<real>103.83607476448339</real>
 		</array>
 		<string>The bus in 59008 are:</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Northpoint Shopping Centre</string>
+		</array>
+		<array>
+			<string>NS13</string>
+		</array>
 	</array>
 	<key>59009</key>
 	<array>
@@ -44790,7 +45369,9 @@
 		</array>
 		<string>The bus in 59041 are:1N,39,85,851,852,853,853C,854,855,857,858,965,969,NR1,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS14</string>
+		</array>
 	</array>
 	<key>59049</key>
 	<array>
@@ -44805,7 +45386,9 @@
 		</array>
 		<string>The bus in 59049 are:39,85,851,852,853,853C,854,854E,855,857,858,965,969,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS14</string>
+		</array>
 	</array>
 	<key>59051</key>
 	<array>
@@ -44879,8 +45462,12 @@
 			<real>103.8354929445057</real>
 		</array>
 		<string>The bus in 59072 are:811,851,852,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Northpoint Shopping Centre</string>
+		</array>
+		<array>
+			<string>NS13</string>
+		</array>
 	</array>
 	<key>59073</key>
 	<array>
@@ -44894,8 +45481,12 @@
 			<real>103.83544666618705</real>
 		</array>
 		<string>The bus in 59073 are:103,169,39,85,854,854E,858,965,969,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Northpoint Shopping Centre</string>
+		</array>
+		<array>
+			<string>NS13</string>
+		</array>
 	</array>
 	<key>59079</key>
 	<array>
@@ -44909,8 +45500,12 @@
 			<real>103.83516678660614</real>
 		</array>
 		<string>The bus in 59079 are:169,858,965,969,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Northpoint Shopping Centre</string>
+		</array>
+		<array>
+			<string>NS13</string>
+		</array>
 	</array>
 	<key>59081</key>
 	<array>
@@ -45135,7 +45730,9 @@
 		</array>
 		<string>The bus in 59159 are:171,811,856,859,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS13</string>
+		</array>
 	</array>
 	<key>59161</key>
 	<array>
@@ -46215,7 +46812,9 @@
 		</array>
 		<string>The bus in 59561 are:1N,811,812,NR1,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS14</string>
+		</array>
 	</array>
 	<key>59569</key>
 	<array>
@@ -46230,7 +46829,9 @@
 		</array>
 		<string>The bus in 59569 are:811,860,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NS14</string>
+		</array>
 	</array>
 	<key>59571</key>
 	<array>
@@ -46680,7 +47281,9 @@
 		</array>
 		<string>The bus in 60121 are:125,13,133,140,147,23,31,64,65,66,857,985,NR6,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE9</string>
+		</array>
 	</array>
 	<key>60139</key>
 	<array>
@@ -46905,7 +47508,9 @@
 		</array>
 		<string>The bus in 60261 are:107,107M,13,133,142,147,853,853C,NR6,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE10</string>
+		</array>
 	</array>
 	<key>60269</key>
 	<array>
@@ -46920,7 +47525,9 @@
 		</array>
 		<string>The bus in 60269 are:107,107M,13,133,142,147,853,853C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE10</string>
+		</array>
 	</array>
 	<key>61009</key>
 	<array>
@@ -47010,7 +47617,9 @@
 		</array>
 		<string>The bus in 61031 are:107,107M,13,133,147,853,853C,NR6,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE11</string>
+		</array>
 	</array>
 	<key>61039</key>
 	<array>
@@ -47025,7 +47634,9 @@
 		</array>
 		<string>The bus in 61039 are:107,107M,13,133,147,853,853C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE11</string>
+		</array>
 	</array>
 	<key>61041</key>
 	<array>
@@ -47085,7 +47696,9 @@
 		</array>
 		<string>The bus in 61059 are:100,135,155,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE11</string>
+		</array>
 	</array>
 	<key>61061</key>
 	<array>
@@ -47370,7 +47983,9 @@
 		</array>
 		<string>The bus in 62071 are:158,28,93,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC12</string>
+		</array>
 	</array>
 	<key>62079</key>
 	<array>
@@ -47385,7 +48000,9 @@
 		</array>
 		<string>The bus in 62079 are:158,28,93,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC12</string>
+		</array>
 	</array>
 	<key>62081</key>
 	<array>
@@ -47550,7 +48167,10 @@
 		</array>
 		<string>The bus in 62131 are:101,103,107,107M,147,153,158,315,317,45,58,853,853C,NR6,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC13</string>
+			<string>NE12</string>
+		</array>
 	</array>
 	<key>62139</key>
 	<array>
@@ -47565,7 +48185,10 @@
 		</array>
 		<string>The bus in 62139 are:101,103,107,107M,147,153,158,315,317,45,58,853,853C,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC13</string>
+			<string>NE12</string>
+		</array>
 	</array>
 	<key>62141</key>
 	<array>
@@ -47819,7 +48442,9 @@
 			<real>103.87834298335152</real>
 		</array>
 		<string>The bus in 63011 are:101,107,107M,136,153,80,81,82,</string>
-		<array/>
+		<array>
+			<string>Upper Serangoon Shopping Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>63019</key>
@@ -47834,7 +48459,9 @@
 			<real>103.87794483733148</real>
 		</array>
 		<string>The bus in 63019 are:101,107,107M,136,153,80,81,82,</string>
-		<array/>
+		<array>
+			<string>Upper Serangoon Shopping Centre</string>
+		</array>
 		<array/>
 	</array>
 	<key>63021</key>
@@ -47879,8 +48506,12 @@
 			<real>103.88528190514317</real>
 		</array>
 		<string>The bus in 63031 are:101,107,107M,112,113,136,153,80,81,82,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Heartland Mall</string>
+		</array>
+		<array>
+			<string>NE13</string>
+		</array>
 	</array>
 	<key>63039</key>
 	<array>
@@ -47894,8 +48525,12 @@
 			<real>103.88542840948182</real>
 		</array>
 		<string>The bus in 63039 are:101,107,107M,112,113,115,119,136,153,80,81,82,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Heartland Mall</string>
+		</array>
+		<array>
+			<string>NE13</string>
+		</array>
 	</array>
 	<key>63041</key>
 	<array>
@@ -48885,7 +49520,9 @@
 		</array>
 		<string>The bus in 64009 are:102,107,107M,112,113,116,132,147,151,151e,153,161,165,27,324,325,51,74,74e,89,89e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE14</string>
+		</array>
 	</array>
 	<key>64011</key>
 	<array>
@@ -49109,7 +49746,9 @@
 			<real>103.8800753925491</real>
 		</array>
 		<string>The bus in 64081 are:325,</string>
-		<array/>
+		<array>
+			<string>Hougang 1</string>
+		</array>
 		<array/>
 	</array>
 	<key>64091</key>
@@ -50129,7 +50768,9 @@
 			<real>103.87910220187028</real>
 		</array>
 		<string>The bus in 64491 are:109,116,159,325,6N,72,NR6,</string>
-		<array/>
+		<array>
+			<string>Hougang 1</string>
+		</array>
 		<array/>
 	</array>
 	<key>64499</key>
@@ -50220,7 +50861,9 @@
 		</array>
 		<string>The bus in 64541 are:101,72,80,87,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE14</string>
+		</array>
 	</array>
 	<key>64549</key>
 	<array>
@@ -50235,7 +50878,9 @@
 		</array>
 		<string>The bus in 64549 are:101,6N,72,80,87,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE14</string>
+		</array>
 	</array>
 	<key>64551</key>
 	<array>
@@ -50415,7 +51060,10 @@
 		</array>
 		<string>The bus in 65009 are:119,136,3,34,386,43,43M,50,62,82,83,84,85,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PTC</string>
+			<string>NE17</string>
+		</array>
 	</array>
 	<key>65011</key>
 	<array>
@@ -50670,7 +51318,9 @@
 		</array>
 		<string>The bus in 65099 are:84,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE7</string>
+		</array>
 	</array>
 	<key>65101</key>
 	<array>
@@ -50820,7 +51470,9 @@
 		</array>
 		<string>The bus in 65151 are:136,3,62,6N,83,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE1</string>
+		</array>
 	</array>
 	<key>65159</key>
 	<array>
@@ -50835,7 +51487,9 @@
 		</array>
 		<string>The bus in 65159 are:136,3,569,62,83,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE1</string>
+		</array>
 	</array>
 	<key>65161</key>
 	<array>
@@ -50850,7 +51504,9 @@
 		</array>
 		<string>The bus in 65161 are:3,62,6N,83,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE2</string>
+		</array>
 	</array>
 	<key>65169</key>
 	<array>
@@ -50865,7 +51521,9 @@
 		</array>
 		<string>The bus in 65169 are:3,569,62,83,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE2</string>
+		</array>
 	</array>
 	<key>65171</key>
 	<array>
@@ -50880,7 +51538,9 @@
 		</array>
 		<string>The bus in 65171 are:3,386,62,6N,83,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE3</string>
+		</array>
 	</array>
 	<key>65179</key>
 	<array>
@@ -50895,7 +51555,9 @@
 		</array>
 		<string>The bus in 65179 are:3,569,62,83,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE3</string>
+		</array>
 	</array>
 	<key>65181</key>
 	<array>
@@ -51045,7 +51707,9 @@
 		</array>
 		<string>The bus in 65231 are:3,386,50,6N,83,85,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE4</string>
+		</array>
 	</array>
 	<key>65239</key>
 	<array>
@@ -51060,7 +51724,9 @@
 		</array>
 		<string>The bus in 65239 are:3,50,569,83,85,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE4</string>
+		</array>
 	</array>
 	<key>65241</key>
 	<array>
@@ -51104,8 +51770,13 @@
 			<real>103.90183555096309</real>
 		</array>
 		<string>The bus in 65251 are:</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Waterway Point</string>
+		</array>
+		<array>
+			<string>PTC</string>
+			<string>NE17</string>
+		</array>
 	</array>
 	<key>65259</key>
 	<array>
@@ -51119,8 +51790,13 @@
 			<real>103.90309555894719</real>
 		</array>
 		<string>The bus in 65259 are:</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Waterway Point</string>
+		</array>
+		<array>
+			<string>PTC</string>
+			<string>NE17</string>
+		</array>
 	</array>
 	<key>65261</key>
 	<array>
@@ -51255,7 +51931,9 @@
 		</array>
 		<string>The bus in 65311 are:386,50,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE6</string>
+		</array>
 	</array>
 	<key>65319</key>
 	<array>
@@ -51285,7 +51963,9 @@
 		</array>
 		<string>The bus in 65321 are:50,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE5</string>
+		</array>
 	</array>
 	<key>65329</key>
 	<array>
@@ -51300,7 +51980,9 @@
 		</array>
 		<string>The bus in 65329 are:50,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>PE5</string>
+		</array>
 	</array>
 	<key>65331</key>
 	<array>
@@ -51405,7 +52087,9 @@
 		</array>
 		<string>The bus in 65801 are:50,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SW7</string>
+		</array>
 	</array>
 	<key>65809</key>
 	<array>
@@ -52019,7 +52703,9 @@
 			<real>103.86641861373295</real>
 		</array>
 		<string>The bus in 66261 are:317,</string>
-		<array/>
+		<array>
+			<string>myVillage</string>
+		</array>
 		<array/>
 	</array>
 	<key>66271</key>
@@ -52034,7 +52720,9 @@
 			<real>103.86576776086966</real>
 		</array>
 		<string>The bus in 66271 are:136,315,317,73,</string>
-		<array/>
+		<array>
+			<string>myVillage</string>
+		</array>
 		<array/>
 	</array>
 	<key>66291</key>
@@ -52214,7 +52902,9 @@
 			<real>103.87318359420593</real>
 		</array>
 		<string>The bus in 66351 are:22,315,43,43M,53,70,70M,81,82,</string>
-		<array/>
+		<array>
+			<string>Nex</string>
+		</array>
 		<array/>
 	</array>
 	<key>66359</key>
@@ -52229,7 +52919,9 @@
 			<real>103.87334263765558</real>
 		</array>
 		<string>The bus in 66359 are:116,22,315,43,53,53M,70,70M,</string>
-		<array/>
+		<array>
+			<string>Nex</string>
+		</array>
 		<array/>
 	</array>
 	<key>66361</key>
@@ -52304,7 +52996,9 @@
 			<real>103.87121574490286</real>
 		</array>
 		<string>The bus in 66381 are:133,135,45,58,</string>
-		<array/>
+		<array>
+			<string>Nex</string>
+		</array>
 		<array/>
 	</array>
 	<key>66389</key>
@@ -52350,7 +53044,9 @@
 		</array>
 		<string>The bus in 66399 are:105,58,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC14</string>
+		</array>
 	</array>
 	<key>66401</key>
 	<array>
@@ -52785,7 +53481,10 @@
 		</array>
 		<string>The bus in 67009 are:156,159,163,163M,371,372,80,83,86,87,965,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE16</string>
+			<string>STC</string>
+		</array>
 	</array>
 	<key>67011</key>
 	<array>
@@ -52874,7 +53573,9 @@
 			<real>103.87044546591116</real>
 		</array>
 		<string>The bus in 67041 are:103,50,70,70M,854,</string>
-		<array/>
+		<array>
+			<string>Greenwich V</string>
+		</array>
 		<array/>
 	</array>
 	<key>67049</key>
@@ -52889,7 +53590,9 @@
 			<real>103.86990151560369</real>
 		</array>
 		<string>The bus in 67049 are:103,50,70,70M,854,</string>
-		<array/>
+		<array>
+			<string>Greenwich V</string>
+		</array>
 		<array/>
 	</array>
 	<key>67051</key>
@@ -53115,7 +53818,9 @@
 		</array>
 		<string>The bus in 67131 are:119,136,85,86,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SE3</string>
+		</array>
 	</array>
 	<key>67139</key>
 	<array>
@@ -53130,7 +53835,9 @@
 		</array>
 		<string>The bus in 67139 are:119,136,85,86,NR6,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SE3</string>
+		</array>
 	</array>
 	<key>67141</key>
 	<array>
@@ -53160,7 +53867,9 @@
 		</array>
 		<string>The bus in 67151 are:119,136,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SE4</string>
+		</array>
 	</array>
 	<key>67159</key>
 	<array>
@@ -53175,7 +53884,9 @@
 		</array>
 		<string>The bus in 67159 are:119,136,NR6,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SE4</string>
+		</array>
 	</array>
 	<key>67161</key>
 	<array>
@@ -53340,7 +54051,9 @@
 		</array>
 		<string>The bus in 67211 are:163,163M,87,89,89e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SE5</string>
+		</array>
 	</array>
 	<key>67219</key>
 	<array>
@@ -53355,7 +54068,9 @@
 		</array>
 		<string>The bus in 67219 are:163,163M,87,89,89e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SE5</string>
+		</array>
 	</array>
 	<key>67221</key>
 	<array>
@@ -53370,7 +54085,9 @@
 		</array>
 		<string>The bus in 67221 are:371,86,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SE2</string>
+		</array>
 	</array>
 	<key>67229</key>
 	<array>
@@ -53385,7 +54102,9 @@
 		</array>
 		<string>The bus in 67229 are:86,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SE2</string>
+		</array>
 	</array>
 	<key>67231</key>
 	<array>
@@ -53399,7 +54118,9 @@
 			<real>103.90399809716813</real>
 		</array>
 		<string>The bus in 67231 are:371,86,</string>
-		<array/>
+		<array>
+			<string>Rivervale Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>67239</key>
@@ -53414,7 +54135,9 @@
 			<real>103.90367080114082</real>
 		</array>
 		<string>The bus in 67239 are:371,86,</string>
-		<array/>
+		<array>
+			<string>Rivervale Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>67241</key>
@@ -53460,7 +54183,9 @@
 		</array>
 		<string>The bus in 67251 are:27,371,83,89,89e,965,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SE1</string>
+		</array>
 	</array>
 	<key>67259</key>
 	<array>
@@ -53475,7 +54200,9 @@
 		</array>
 		<string>The bus in 67259 are:27,371,83,89,89e,965,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SE1</string>
+		</array>
 	</array>
 	<key>67261</key>
 	<array>
@@ -53580,7 +54307,9 @@
 		</array>
 		<string>The bus in 67291 are:163,163M,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SW8</string>
+		</array>
 	</array>
 	<key>67299</key>
 	<array>
@@ -53595,7 +54324,9 @@
 		</array>
 		<string>The bus in 67299 are:163,163M,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SW8</string>
+		</array>
 	</array>
 	<key>67301</key>
 	<array>
@@ -53610,7 +54341,9 @@
 		</array>
 		<string>The bus in 67301 are:163,163M,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SW7</string>
+		</array>
 	</array>
 	<key>67309</key>
 	<array>
@@ -53879,8 +54612,12 @@
 			<real>103.8951455327734</real>
 		</array>
 		<string>The bus in 67401 are:102,119,156,159,161,50,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Compass Point</string>
+		</array>
+		<array>
+			<string>STC</string>
+		</array>
 	</array>
 	<key>67409</key>
 	<array>
@@ -53894,8 +54631,13 @@
 			<real>103.89603781322386</real>
 		</array>
 		<string>The bus in 67409 are:102,119,156,159,161,372,50,NR6,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Compass Point</string>
+		</array>
+		<array>
+			<string>NE16</string>
+			<string>STC</string>
+		</array>
 	</array>
 	<key>67411</key>
 	<array>
@@ -54030,7 +54772,9 @@
 		</array>
 		<string>The bus in 67461 are:109,156,159,161,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SW8</string>
+		</array>
 	</array>
 	<key>67469</key>
 	<array>
@@ -54045,7 +54789,9 @@
 		</array>
 		<string>The bus in 67469 are:109,156,159,161,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SW8</string>
+		</array>
 	</array>
 	<key>67471</key>
 	<array>
@@ -54060,7 +54806,9 @@
 		</array>
 		<string>The bus in 67471 are:163,163M,50,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SW6</string>
+		</array>
 	</array>
 	<key>67479</key>
 	<array>
@@ -54075,7 +54823,9 @@
 		</array>
 		<string>The bus in 67479 are:163,163M,50,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>SW6</string>
+		</array>
 	</array>
 	<key>67481</key>
 	<array>
@@ -54104,8 +54854,12 @@
 			<real>103.87698409745758</real>
 		</array>
 		<string>The bus in 67489 are:163,163M,50,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>The Seletar Mall</string>
+		</array>
+		<array>
+			<string>SW5</string>
+		</array>
 	</array>
 	<key>67491</key>
 	<array>
@@ -54390,7 +55144,9 @@
 		</array>
 		<string>The bus in 67601 are:102,27,43,43M,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>NE15</string>
+		</array>
 	</array>
 	<key>67609</key>
 	<array>
@@ -55425,7 +56181,9 @@
 		</array>
 		<string>The bus in 70281 are:158,22,24,28,43,58,62,70,70M,76,80,93,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC11</string>
+		</array>
 	</array>
 	<key>70289</key>
 	<array>
@@ -55440,7 +56198,9 @@
 		</array>
 		<string>The bus in 70289 are:158,22,24,28,43,58,62,70,70M,76,80,93,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC11</string>
+		</array>
 	</array>
 	<key>70291</key>
 	<array>
@@ -55650,7 +56410,9 @@
 		</array>
 		<string>The bus in 70391 are:135,154,158,61,63,63M,65,66,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC10</string>
+		</array>
 	</array>
 	<key>71011</key>
 	<array>
@@ -57794,7 +58556,9 @@
 			<real>103.94260449467035</real>
 		</array>
 		<string>The bus in 76131 are:15,168,21,27,2N,3,NR7,</string>
-		<array/>
+		<array>
+			<string>Century Square</string>
+		</array>
 		<array/>
 	</array>
 	<key>76139</key>
@@ -57809,7 +58573,9 @@
 			<real>103.94380446800427</real>
 		</array>
 		<string>The bus in 76139 are:15,168,21,27,3,553,</string>
-		<array/>
+		<array>
+			<string>Century Square</string>
+		</array>
 		<array/>
 	</array>
 	<key>76141</key>
@@ -57824,8 +58590,12 @@
 			<real>103.94612466943514</real>
 		</array>
 		<string>The bus in 76141 are:15,168,21,27,2N,3,NR7,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Tampines 1</string>
+		</array>
+		<array>
+			<string>EW2</string>
+		</array>
 	</array>
 	<key>76149</key>
 	<array>
@@ -57840,7 +58610,9 @@
 		</array>
 		<string>The bus in 76149 are:15,168,21,27,3,553,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW2</string>
+		</array>
 	</array>
 	<key>76151</key>
 	<array>
@@ -59115,7 +59887,9 @@
 		</array>
 		<string>The bus in 77171 are:359,403,89,89e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW1</string>
+		</array>
 	</array>
 	<key>77179</key>
 	<array>
@@ -59130,7 +59904,9 @@
 		</array>
 		<string>The bus in 77179 are:359,403,89,89e,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW1</string>
+		</array>
 	</array>
 	<key>77181</key>
 	<array>
@@ -59535,7 +60311,9 @@
 		</array>
 		<string>The bus in 77321 are:3,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW1</string>
+		</array>
 	</array>
 	<key>77329</key>
 	<array>
@@ -60315,7 +61093,9 @@
 		</array>
 		<string>The bus in 80009 are:11,140,141,175,853,961,961C,980,985,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW10</string>
+		</array>
 	</array>
 	<key>80011</key>
 	<array>
@@ -60360,7 +61140,9 @@
 		</array>
 		<string>The bus in 80031 are:100,12,13,197,2,32,33,51,63,67,7,80,NR7,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW10</string>
+		</array>
 	</array>
 	<key>80039</key>
 	<array>
@@ -60480,7 +61262,9 @@
 		</array>
 		<string>The bus in 80101 are:140,175,21,26,31,853,853C,961,961C,985,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW10</string>
+		</array>
 	</array>
 	<key>80109</key>
 	<array>
@@ -60615,7 +61399,9 @@
 		</array>
 		<string>The bus in 80169 are:10,14,16,196,546,70,70M,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC5</string>
+		</array>
 	</array>
 	<key>80171</key>
 	<array>
@@ -60705,7 +61491,9 @@
 		</array>
 		<string>The bus in 80199 are:11,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC6</string>
+		</array>
 	</array>
 	<key>80211</key>
 	<array>
@@ -60855,7 +61643,9 @@
 		</array>
 		<string>The bus in 80271 are:12,14,158,196,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC7</string>
+		</array>
 	</array>
 	<key>80279</key>
 	<array>
@@ -60990,7 +61780,9 @@
 		</array>
 		<string>The bus in 81011 are:13,2,21,26,40,51,67,853C,NR7,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW9</string>
+		</array>
 	</array>
 	<key>81029</key>
 	<array>
@@ -61080,7 +61872,9 @@
 		</array>
 		<string>The bus in 81081 are:100,125,158,40,62,63,80,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW9</string>
+		</array>
 	</array>
 	<key>81089</key>
 	<array>
@@ -61095,7 +61889,9 @@
 		</array>
 		<string>The bus in 81089 are:100,158,40,62,63,80,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW9</string>
+		</array>
 	</array>
 	<key>81091</key>
 	<array>
@@ -61169,8 +61965,13 @@
 			<real>103.89213368363927</real>
 		</array>
 		<string>The bus in 81111 are:135,154,155,24,28,43,70,70M,76,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Paya Lebar Square</string>
+		</array>
+		<array>
+			<string>CC9</string>
+			<string>EW8</string>
+		</array>
 	</array>
 	<key>81119</key>
 	<array>
@@ -61184,8 +61985,12 @@
 			<real>103.89169279979917</real>
 		</array>
 		<string>The bus in 81119 are:135,154,155,24,28,43,70,70M,76,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Paya Lebar Square</string>
+		</array>
+		<array>
+			<string>CC9</string>
+		</array>
 	</array>
 	<key>81129</key>
 	<array>
@@ -61365,7 +62170,9 @@
 		</array>
 		<string>The bus in 81181 are:10,16,30,30e,31,32,33,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC8</string>
+		</array>
 	</array>
 	<key>81189</key>
 	<array>
@@ -61380,7 +62187,9 @@
 		</array>
 		<string>The bus in 81189 are:10,10e,16,30,30e,31,32,33,401,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>CC8</string>
+		</array>
 	</array>
 	<key>81191</key>
 	<array>
@@ -61559,7 +62368,9 @@
 			<real>103.89550336769786</real>
 		</array>
 		<string>The bus in 82029 are:13,154,155,2,21,24,26,28,30,30e,51,67,7,</string>
-		<array/>
+		<array>
+			<string>One KM</string>
+		</array>
 		<array/>
 	</array>
 	<key>82032</key>
@@ -61620,7 +62431,9 @@
 		</array>
 		<string>The bus in 82061 are:13,155,2,21,24,26,28,30,30e,51,60,61,63,63M,67,7,93,94,NR7,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW7</string>
+		</array>
 	</array>
 	<key>82069</key>
 	<array>
@@ -61769,7 +62582,9 @@
 			<real>103.89409293027515</real>
 		</array>
 		<string>The bus in 82119 are:135,197,40,43,76,853C,</string>
-		<array/>
+		<array>
+			<string>One KM</string>
+		</array>
 		<array/>
 	</array>
 	<key>82121</key>
@@ -62070,7 +62885,9 @@
 		</array>
 		<string>The bus in 83062 are:2,24,25,26,28,30,33,67,7,854,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW6</string>
+		</array>
 	</array>
 	<key>83063</key>
 	<array>
@@ -62715,7 +63532,9 @@
 		</array>
 		<string>The bus in 83321 are:42,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW6</string>
+		</array>
 	</array>
 	<key>83329</key>
 	<array>
@@ -62730,7 +63549,9 @@
 		</array>
 		<string>The bus in 83329 are:42,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW6</string>
+		</array>
 	</array>
 	<key>83331</key>
 	<array>
@@ -62833,9 +63654,13 @@
 			<real>1.325309289225588</real>
 			<real>103.92995439698929</real>
 		</array>
-		<string>The bus in 84009 are:14,16,168,17,17A,18,196,197,222,225,228,229,25,26,30,30e,32,33,35,35M,38,40,401,60,66,69,7,854,854E,87,9,</string>
-		<array/>
-		<array/>
+		<string>The bus in 84009 are:14,16,168,17,17A,18,196,197,222,225WWGG,228,229,25,26,30,30e,32,33,35,35M,38,40,401,60,66,69,7,854,854E,87,9,</string>
+		<array>
+			<string>Bedok Mall</string>
+		</array>
+		<array>
+			<string>EW5</string>
+		</array>
 	</array>
 	<key>84011</key>
 	<array>
@@ -62909,8 +63734,12 @@
 			<real>103.930133737321</real>
 		</array>
 		<string>The bus in 84031 are:2,222,24,28,31,35,35M,67,9,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>Bedok Mall</string>
+		</array>
+		<array>
+			<string>EW5</string>
+		</array>
 	</array>
 	<key>84039</key>
 	<array>
@@ -63089,7 +63918,9 @@
 			<real>103.93010848097239</real>
 		</array>
 		<string>The bus in 84091 are:</string>
-		<array/>
+		<array>
+			<string>Bedok Mall</string>
+		</array>
 		<array/>
 	</array>
 	<key>84101</key>
@@ -63583,7 +64414,7 @@
 			<real>1.3278579541832001</real>
 			<real>103.9265828976136</real>
 		</array>
-		<string>The bus in 84301 are:17,17A,225,4N,518,60,87,</string>
+		<string>The bus in 84301 are:17,17A,225G,4N,518,60,87,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63598,7 +64429,7 @@
 			<real>1.3279608542036541</real>
 			<real>103.92685162747073</real>
 		</array>
-		<string>The bus in 84309 are:17,17A,225,544,60,87,</string>
+		<string>The bus in 84309 are:17,17A,225W,544,60,87,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63688,7 +64519,7 @@
 			<real>1.328810232736074</real>
 			<real>103.93079377239357</real>
 		</array>
-		<string>The bus in 84339 are:18,225,</string>
+		<string>The bus in 84339 are:18,225W,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63793,7 +64624,7 @@
 			<real>1.330558369473104</real>
 			<real>103.9262317610585</real>
 		</array>
-		<string>The bus in 84371 are:225,</string>
+		<string>The bus in 84371 are:225G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63808,7 +64639,7 @@
 			<real>1.33036680379838</real>
 			<real>103.92644141187779</real>
 		</array>
-		<string>The bus in 84379 are:225,544,</string>
+		<string>The bus in 84379 are:225W,544,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63823,7 +64654,7 @@
 			<real>1.3307878584111441</real>
 			<real>103.92429215182038</real>
 		</array>
-		<string>The bus in 84381 are:225,</string>
+		<string>The bus in 84381 are:225G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63838,7 +64669,7 @@
 			<real>1.3327563091514061</real>
 			<real>103.92456663118877</real>
 		</array>
-		<string>The bus in 84391 are:225,</string>
+		<string>The bus in 84391 are:225G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63853,7 +64684,7 @@
 			<real>1.3331816898372579</real>
 			<real>103.92696613921318</real>
 		</array>
-		<string>The bus in 84401 are:225,</string>
+		<string>The bus in 84401 are:225G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63868,7 +64699,7 @@
 			<real>1.3329118497966099</real>
 			<real>103.92665045567479</real>
 		</array>
-		<string>The bus in 84409 are:225,544,</string>
+		<string>The bus in 84409 are:225W,544,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63883,7 +64714,7 @@
 			<real>1.3338419864149851</real>
 			<real>103.92934255070314</real>
 		</array>
-		<string>The bus in 84411 are:225,</string>
+		<string>The bus in 84411 are:225G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63898,7 +64729,7 @@
 			<real>1.3336248413960829</real>
 			<real>103.92916141858719</real>
 		</array>
-		<string>The bus in 84419 are:225,544,</string>
+		<string>The bus in 84419 are:225W,544,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63913,7 +64744,7 @@
 			<real>1.332264372095961</real>
 			<real>103.93031846167766</real>
 		</array>
-		<string>The bus in 84421 are:225,</string>
+		<string>The bus in 84421 are:225G,</string>
 		<array/>
 		<array/>
 	</array>
@@ -63958,7 +64789,7 @@
 			<real>1.3332917920742451</real>
 			<real>103.93154348030014</real>
 		</array>
-		<string>The bus in 84449 are:225,</string>
+		<string>The bus in 84449 are:225W,</string>
 		<array/>
 		<array/>
 	</array>
@@ -64800,7 +65631,9 @@
 		</array>
 		<string>The bus in 85091 are:12,14,2,24,31,35,35M,38,45,48,9,NR7,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW4</string>
+		</array>
 	</array>
 	<key>85099</key>
 	<array>
@@ -64815,7 +65648,9 @@
 		</array>
 		<string>The bus in 85099 are:12,14,14e,2,24,31,35,35M,38,45,48,9,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW4</string>
+		</array>
 	</array>
 	<key>85101</key>
 	<array>
@@ -65519,7 +66354,9 @@
 			<real>103.90289336725729</real>
 		</array>
 		<string>The bus in 92111 are:10,10e,12,14,14e,32,40,</string>
-		<array/>
+		<array>
+			<string>Katong V</string>
+		</array>
 		<array/>
 	</array>
 	<key>92119</key>
@@ -65534,7 +66371,9 @@
 			<real>103.90272787110135</real>
 		</array>
 		<string>The bus in 92119 are:10,10e,12,14,14e,32,40,</string>
-		<array/>
+		<array>
+			<string>Katong V</string>
+		</array>
 		<array/>
 	</array>
 	<key>92121</key>
@@ -65729,7 +66568,9 @@
 			<real>103.90530670807377</real>
 		</array>
 		<string>The bus in 92181 are:16,</string>
-		<array/>
+		<array>
+			<string>112 Katong</string>
+		</array>
 		<array/>
 	</array>
 	<key>92189</key>
@@ -65744,7 +66585,9 @@
 			<real>103.90593626119559</real>
 		</array>
 		<string>The bus in 92189 are:16,</string>
-		<array/>
+		<array>
+			<string>112 Katong</string>
+		</array>
 		<array/>
 	</array>
 	<key>92191</key>
@@ -65939,7 +66782,9 @@
 			<real>103.90622558244543</real>
 		</array>
 		<string>The bus in 92251 are:401,</string>
-		<array/>
+		<array>
+			<string>Parkway Parade</string>
+		</array>
 		<array/>
 	</array>
 	<key>92261</key>
@@ -67605,7 +68450,9 @@
 		</array>
 		<string>The bus in 96149 are:20,38,</string>
 		<array/>
-		<array/>
+		<array>
+			<string>EW3</string>
+		</array>
 	</array>
 	<key>96151</key>
 	<array>
@@ -67649,8 +68496,12 @@
 			<real>103.95347099887599</real>
 		</array>
 		<string>The bus in 96161 are:20,38,5,531,9,NR7,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>East Point Mall</string>
+		</array>
+		<array>
+			<string>EW3</string>
+		</array>
 	</array>
 	<key>96169</key>
 	<array>
@@ -67664,8 +68515,12 @@
 			<real>103.95345823574606</real>
 		</array>
 		<string>The bus in 96169 are:20,38,4N,5,531,9,</string>
-		<array/>
-		<array/>
+		<array>
+			<string>East Point Mall</string>
+		</array>
+		<array>
+			<string>EW3</string>
+		</array>
 	</array>
 	<key>96171</key>
 	<array>
