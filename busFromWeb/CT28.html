@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop no-websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms no-csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<!--//Clickjacking - Framable Page Security Vulernability - HS20150812 -->
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+   if (self === top) {
+       var antiClickjack = document.getElementById("antiClickjack");
+       antiClickjack.parentNode.removeChild(antiClickjack);
+   } else {
+       top.location = self.location;
+   }
+</script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style media="screen"></style>
+<meta name="keywords" content="transitlink,eguide,bus,mrt,lrt,services">
+<meta name="description" content="TransitLink eService">
+<meta charset="utf-8">
+<title>TransitLink eGuide - Bus Enquiry</title>
+<link rel="stylesheet" type="text/css" href="../css/eservice.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../css/tl_main.css" media="all" />
+<!--[if lt IE 8]><link rel="stylesheet" href="../css/ie.css" type="text/css" media="screen" /><![endif]-->
+<!--  <script type="text/javascript" src="../js/jquery-1.6.1.min.js"></script>-->
+<script type="text/javascript" src="../js/png.js"></script>
+<script>DD_belatedPNG.fix('img, .xpng');</script>
+<script type="text/javascript" src="../js/modernizr-1.7.min.js"></script>
+<script type="text/javascript" src="../js/eguide.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29711756-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script></head>
+
+<body><!-- Change this ID to what page you are in, this is useful if you are using CSS to style your navigation //-->
+
+<div id="Content-eservice">
+<table width="100%" border="0">
+<tr>
+  <td width="10%"><img src="../imgs/transitlink_logo_60.jpg" /></td>
+  <td><img src="../imgs/title/eguide.png" alt="Electronic Guide"></td>
+  
+  <!-- Add Mobile Services Icons -->
+  <!--
+  <td width="200">
+   <table>
+    <tr>
+		<td rowspan="2"><img src="../../imgs/eservice/transitlink_mobile_services.png" alt="TransitLink Mobile Services"></td>
+		<td valign="bottom"><a href="https://itunes.apple.com/sg/app/transitlink-mobile-services/id667933103?mt=8"><img src="../../imgs/eservice/app_store_badge.png" alt="TransitLink Mobile Services" target="_blank" border="0" width="100"></a></td>
+	</tr>
+	<tr>
+		<td><a href="https://play.google.com/store/apps/details?id=sg.com.transitlink&hl=en"><img src="../../imgs/eservice/play_store_badge.png" alt="TransitLink Mobile Services" target="_blank" border="0" width="100"></a></td>
+	</tr>
+    </table>
+  </td>   -->
+</tr>
+</table>
+<article>
+<p>E-Guide provides a convenient one-stop information guide on bus and train services.</p><!--//HS201311 -->
+<span class="print_hide"><h2>BUS ENQUIRY</h2></span>
+
+<span  class="print_hide"><p>Click <a href="service_idx.php">here</a> to perform other Bus Service Enquiry.</p></span><style type="text/css">.eguide-table td.company { background-color:#8B008B; }</style>
+	
+<section class="eguide-table">
+<table border="0" cellspacing="0" width="100%">
+<tr>
+    <td width="20%" align="center" rowspan="3">Chinatown Direct<br><h1>CT28</h1></td>
+    <td width="20%" align="center" rowspan="2" class="company">SBS Transit</td>
+    <td width="20%" align="center" colspan="2" class="subhead">Weekdays</td>
+    <td width="20%" align="center" colspan="2" class="subhead">Saturdays</td>
+    <td width="20%" align="center" colspan="2" class="subhead">Suns / P.Hs</td>
+  </tr>
+  <tr>
+    <td width="10%" class="subhead2">1st bus</td>
+    <td width="10%" class="subhead2">Last bus</td>
+    <td width="10%" class="subhead2">1st bus</td>
+    <td width="10%" class="subhead2">Last bus</td>
+    <td width="10%" class="subhead2">1st bus</td>
+    <td width="10%" class="subhead2">Last bus</td>
+  </tr>
+  <tr>
+    <td width="20%">New Bridge Rd Ter</td>
+    <td width="10%" align="center">1101</td>
+    <td width="10%" align="center">1701</td>
+    <td width="10%" align="center">1057</td>
+    <td width="10%" align="center">2157</td>
+    <td width="10%" align="center">1057</td>
+    <td width="10%" align="center">2157</td>
+  </tr>
+  </table>
+<br>
+<table width="100%">
+  <tbody> 
+  <tr>
+    <td width="20%" class="subhead"><strong>Period</strong></td>
+    <td width="20%" class="subhead">0630 - 0830</td>
+    <td width="20%" class="subhead">0831 - 1659</td>
+    <td width="20%" class="subhead">1700 - 1900</td>
+    <td width="20%" class="subhead">After 1900</td>
+  </tr>
+  <tr>
+    <td width="20%"><strong>Freq. Range</strong></td>
+    <td width="20%" align="center"> -  minutes</td>
+    <td width="20%" align="center">30 - 30 minutes</td>
+    <td width="20%" align="center"> -  minutes</td>
+    <td width="20%" align="center"> -  minutes</td>
+  </tr>
+</table>
+</section>		<p><font size="2.5"><b><u>Note</u> :</b></font><br />
+		<table border="0" cellspacing="0" cellpadding="2" width="800">
+			<tr><td><font size="2.5">
+				This service will only operate during pre-Lunar New Year period. Closer to the period, please visit www.sbstransit.com.sg for operating details.<br />
+				</font>
+			</td></tr>
+			</table>
+		
+<br />
+<!-- for LOOP Service -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+  	<td width="49%" valign="top">  	<!--<td width="49%" valign="top">-->
+   	  <form method="post" action="fare_info.php" name="calculateFareDir1" id="calculateFareDir1" onSubmit="return verifyRoute(1);">
+   	  <input type="hidden" name="cat" value="10">
+   	  <input type="hidden" name="stype" value="1">
+   	  <input type="hidden" name="sno" value="CT28">
+   	  <input type="hidden" name="sdir" value="1">
+   	  
+	  <section class="eguide-table">
+	  <table width="100%">
+        <tr>
+          <td width="100%" colspan="3" class="subhead">
+          LOOP SERVICE</td>
+        </tr>
+        <tr>
+          <td width="12%"><strong>Distance (km)</strong></td>
+          <td width="20%"><strong>Bus Stop<br>Code</strong></td>
+          <td width="68%" class="route" ><strong>Road / Bus Stop Description</strong></td>
+        </tr>
+		<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Eu Tong Sen St</td>
+	    			</tr><td>0.2</td>
+<td>10017</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft Hosp Dr</td>
+</tr>
+<td>0.7</td>
+<td>05012</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Pearl's Ctr</td>
+</tr>
+<td>1.1</td>
+<td>05013</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;People's Pk Cplx</td>
+</tr>
+<td>1.5</td>
+<td>05023</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Hong Lim Pk</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">CTE</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Express</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">AYE</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Express</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Clementi Rd</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Express</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">C'wealth Ave West</td>
+	    			</tr><td>12.2</td>
+<td>17151</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 410</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Clementi Ave 2</td>
+	    			</tr><td>12.7</td>
+<td>17241</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 334</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Clementi Ave 5</td>
+	    			</tr><td>13.1</td>
+<td>17229</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 335</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Clementi Ave 4</td>
+	    			</tr><td>13.5</td>
+<td>17211</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Bet Blks 315/318</td>
+</tr>
+<td>13.8</td>
+<td>17201</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 308</td>
+</tr>
+<td>14.2</td>
+<td>17219</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 376</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Clementi Ave 5</td>
+	    			</tr><td>14.5</td>
+<td>17221</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 377</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Clementi Ave 2</td>
+	    			</tr><td>15.0</td>
+<td>17249</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 355</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">C'wealth Ave West</td>
+	    			</tr><td>15.5</td>
+<td>17159</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 365</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Clementi Rd</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Express</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">AYE</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Express</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">CTE</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Express</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">New Bridge Rd</td>
+	    			</tr><td>26.5</td>
+<td>05059</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Hong Lim Pk</td>
+</tr>
+<td>26.7</td>
+<td>05049</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Chinatown Pt</td>
+</tr>
+<td>27.1</td>
+<td>05039</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;New Bridge Ctr</td>
+</tr>
+<td>27.4</td>
+<td>05019</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Pearl's Ctr</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Eu Tong Sen St</td>
+	    			</tr><td>28.0</td>
+<td>10589</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;New Bridge Rd Ter</td>
+</tr>
+</td></tr></form>			
+			<!-- //to remove comment for print version
+			<form action="service_route.php" method="post">
+			<input type="hidden" name="service" value="CT28">
+			<input type="hidden" name="print" value="1">
+			<input type="hidden" name="pt_dir" value="1">
+			-->
+			    </table>
+	 
+	</section>
+	<!-- end of route 1 -->
+	</td>
+	
+	<td width="2%">&nbsp;</td>
+	<span><td width="49%" valign="top">    	</section>
+	</td>
+	</tr>
+</table></section>
+
+</div> <!-- End Content //-->
+</body>
+</html>
+	

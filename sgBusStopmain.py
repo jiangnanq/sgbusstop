@@ -5,11 +5,11 @@ __author__ = 'Jiang'
 # Step 1: Read dynamic data from LTA datamall
 # This step will generate 5 json files in data directory
 # busstop = lta('smrtbusservice')
-# busstop = lta('sbsbusservice')
+busstop = lta('sbsbusservice')
 # busstop = lta('smrtbusroute')
 # busstop = lta('sbsbusroute')
 # busstop = lta('busstop')
-# busstop.readDataFromLTA()
+busstop.readDataFromLTA()
 
 # Step 2: process data with relative function
 
@@ -28,6 +28,8 @@ __author__ = 'Jiang'
 # Generate busstop.json with MRT&Mall information
 # test = processdata().combinebusstopinfo()
 
-test = processdata().processSpecialBus()
+# Process special bus 225W/225G, 243W/243G, 410W/410G
+# The First/Last stop need to manully update
+# test = processdata().processSpecialBus()
 
 print 'process completed'

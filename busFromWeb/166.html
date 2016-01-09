@@ -1,0 +1,1059 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop no-websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms no-csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<!--//Clickjacking - Framable Page Security Vulernability - HS20150812 -->
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+   if (self === top) {
+       var antiClickjack = document.getElementById("antiClickjack");
+       antiClickjack.parentNode.removeChild(antiClickjack);
+   } else {
+       top.location = self.location;
+   }
+</script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style media="screen"></style>
+<meta name="keywords" content="transitlink,eguide,bus,mrt,lrt,services">
+<meta name="description" content="TransitLink eService">
+<meta charset="utf-8">
+<title>TransitLink eGuide - Bus Enquiry</title>
+<link rel="stylesheet" type="text/css" href="../css/eservice.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../css/tl_main.css" media="all" />
+<!--[if lt IE 8]><link rel="stylesheet" href="../css/ie.css" type="text/css" media="screen" /><![endif]-->
+<!--  <script type="text/javascript" src="../js/jquery-1.6.1.min.js"></script>-->
+<script type="text/javascript" src="../js/png.js"></script>
+<script>DD_belatedPNG.fix('img, .xpng');</script>
+<script type="text/javascript" src="../js/modernizr-1.7.min.js"></script>
+<script type="text/javascript" src="../js/eguide.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29711756-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script></head>
+
+<body><!-- Change this ID to what page you are in, this is useful if you are using CSS to style your navigation //-->
+
+<div id="Content-eservice">
+<table width="100%" border="0">
+<tr>
+  <td width="10%"><img src="../imgs/transitlink_logo_60.jpg" /></td>
+  <td><img src="../imgs/title/eguide.png" alt="Electronic Guide"></td>
+  
+  <!-- Add Mobile Services Icons -->
+  <!--
+  <td width="200">
+   <table>
+    <tr>
+		<td rowspan="2"><img src="../../imgs/eservice/transitlink_mobile_services.png" alt="TransitLink Mobile Services"></td>
+		<td valign="bottom"><a href="https://itunes.apple.com/sg/app/transitlink-mobile-services/id667933103?mt=8"><img src="../../imgs/eservice/app_store_badge.png" alt="TransitLink Mobile Services" target="_blank" border="0" width="100"></a></td>
+	</tr>
+	<tr>
+		<td><a href="https://play.google.com/store/apps/details?id=sg.com.transitlink&hl=en"><img src="../../imgs/eservice/play_store_badge.png" alt="TransitLink Mobile Services" target="_blank" border="0" width="100"></a></td>
+	</tr>
+    </table>
+  </td>   -->
+</tr>
+</table>
+<article>
+<p>E-Guide provides a convenient one-stop information guide on bus and train services.</p><!--//HS201311 -->
+<span class="print_hide"><h2>BUS ENQUIRY</h2></span>
+
+<span  class="print_hide"><p>Click <a href="service_idx.php">here</a> to perform other Bus Service Enquiry.</p></span><style type="text/css">.eguide-table td.company { background-color:#8B008B; }</style>
+	
+<section class="eguide-table">
+<table border="0" cellspacing="0" width="100%">
+<tr>
+    <td width="20%" align="center" rowspan="4"><br><h1>166</h1></td>
+    <td width="20%" align="center" rowspan="2" class="company">SBS Transit</td>
+    <td width="20%" align="center" colspan="2" class="subhead">Weekdays</td>
+    <td width="20%" align="center" colspan="2" class="subhead">Saturdays</td>
+    <td width="20%" align="center" colspan="2" class="subhead">Suns / P.Hs</td>
+  </tr>
+  <tr>
+    <td width="10%" class="subhead2">1st bus</td>
+    <td width="10%" class="subhead2">Last bus</td>
+    <td width="10%" class="subhead2">1st bus</td>
+    <td width="10%" class="subhead2">Last bus</td>
+    <td width="10%" class="subhead2">1st bus</td>
+    <td width="10%" class="subhead2">Last bus</td>
+  </tr>
+  <tr>
+    <td width="20%">Ang Mo Kio Int</td>
+    <td width="10%" align="center">0530</td>
+    <td width="10%" align="center">2315</td>
+    <td width="10%" align="center">0530</td>
+    <td width="10%" align="center">2315</td>
+    <td width="10%" align="center">0530</td>
+    <td width="10%" align="center">2330</td>
+  </tr>
+  <tr>
+    <td width="20%">Clementi Int</td>
+    <td width="10%" align="center">0530</td>
+    <td width="10%" align="center">2345</td>
+    <td width="10%" align="center">0530</td>
+    <td width="10%" align="center">2400</td>
+    <td width="10%" align="center">0530</td>
+    <td width="10%" align="center">2345</td>
+  </tr>
+  </table>
+<br>
+<table width="100%">
+  <tbody> 
+  <tr>
+    <td width="20%" class="subhead"><strong>Period</strong></td>
+    <td width="20%" class="subhead">0630 - 0830</td>
+    <td width="20%" class="subhead">0831 - 1659</td>
+    <td width="20%" class="subhead">1700 - 1900</td>
+    <td width="20%" class="subhead">After 1900</td>
+  </tr>
+  <tr>
+    <td width="20%"><strong>Freq. Range</strong><br>Direction 1<br>Direction 2</td>
+    <td width="20%" align="center"><br>07 - 14 minutes<br>09 - 12 minutes</td>
+    <td width="20%" align="center"><br>08 - 19 minutes<br>06 - 16 minutes</td>
+    <td width="20%" align="center"><br>09 - 15 minutes<br>10 - 17 minutes</td>
+    <td width="20%" align="center"><br>13 - 19 minutes<br>13 - 19 minutes</td>
+  </tr>
+</table>
+</section>
+<br />
+<!-- for LOOP Service -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+  	<td width="49%" valign="top">  	<!--<td width="49%" valign="top">-->
+   	  <form method="post" action="fare_info.php" name="calculateFareDir1" id="calculateFareDir1" onSubmit="return verifyRoute(1);">
+   	  <input type="hidden" name="cat" value="1">
+   	  <input type="hidden" name="stype" value="1">
+   	  <input type="hidden" name="sno" value="166">
+   	  <input type="hidden" name="sdir" value="1">
+   	  
+	  <section class="eguide-table">
+	  <table width="100%">
+        <tr>
+          <td width="100%" colspan="3" class="subhead">
+          DIRECTION 1</td>
+        </tr>
+        <tr>
+          <td width="12%"><strong>Distance (km)</strong></td>
+          <td width="20%"><strong>Bus Stop<br>Code</strong></td>
+          <td width="68%" class="route" ><strong>Road / Bus Stop Description</strong></td>
+        </tr>
+		<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Ang Mo Kio Ave 8</td>
+	    			</tr><td>0.0</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="6800" name="calc1[]">&nbsp;54009</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Ang Mo Kio Int</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Ang Mo Kio Ave 3</td>
+	    			</tr><td>0.7</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3555" name="calc1[]">&nbsp;54248</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 324</td>
+</tr>
+<td>1.1</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3552" name="calc1[]">&nbsp;54239</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 209</td>
+</tr>
+<td>1.5</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3550" name="calc1[]">&nbsp;54229</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Ang Mo Kio Pr Sch</td>
+</tr>
+<td>1.9</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3548" name="calc1[]">&nbsp;54219</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Mayflower Sec Sch</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Ang Mo Kio Ave 1</td>
+	    			</tr><td>2.4</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3531" name="calc1[]">&nbsp;54069</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Blk 246</td>
+</tr>
+<td>2.6</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3713" name="calc1[]">&nbsp;56269</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Blk 248</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Upp Thomson Rd</td>
+	    			</tr><td>3.1</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3456" name="calc1[]">&nbsp;53099</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft Ang Mo Kio Ave 1</td>
+</tr>
+<td>3.4</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3454" name="calc1[]">&nbsp;53089</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Faber Gdn</td>
+</tr>
+<td>3.8</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3452" name="calc1[]">&nbsp;53079</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Flame Tree Pk</td>
+</tr>
+<td>4.2</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3450" name="calc1[]">&nbsp;53069</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Windsor Pk</td>
+</tr>
+<td>4.6</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3448" name="calc1[]">&nbsp;53059</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Thomson Plaza</td>
+</tr>
+<td>5.0</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3446" name="calc1[]">&nbsp;53049</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef Jln Todak</td>
+</tr>
+<td>5.3</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3444" name="calc1[]">&nbsp;53039</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Thomson CC</td>
+</tr>
+<td>5.6</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3443" name="calc1[]">&nbsp;53029</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Shunfu Est</td>
+</tr>
+<td>6.0</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3441" name="calc1[]">&nbsp;53019</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp St. Theresa's Home</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Thomson Rd</td>
+	    			</tr><td>6.7</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3341" name="calc1[]">&nbsp;51069</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Mt Alvernia Hosp</td>
+</tr>
+<td>7.2</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3340" name="calc1[]">&nbsp;51059</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp MediaCorp</td>
+</tr>
+<td>7.6</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3338" name="calc1[]">&nbsp;51049</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;SLF Cplx</td>
+</tr>
+<td>7.9</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3336" name="calc1[]">&nbsp;51039</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp S'pore Polo Club</td>
+</tr>
+<td>8.1</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3334" name="calc1[]">&nbsp;51029</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Old Police Academy</td>
+</tr>
+<td>8.3</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3332" name="calc1[]">&nbsp;51019</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Thomson Flyover</td>
+</tr>
+<td>8.8</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3295" name="calc1[]">&nbsp;50059</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Thomson Med Ctr</td>
+</tr>
+<td>9.0</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3293" name="calc1[]">&nbsp;50049</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Novena Lodge</td>
+</tr>
+<td>9.5</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3291" name="calc1[]">&nbsp;50038</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Novena Stn</td>
+</tr>
+<td>9.9</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3289" name="calc1[]">&nbsp;50029</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp United Sq</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Keng Lee Rd</td>
+	    			</tr><td>10.5</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="3287" name="calc1[]">&nbsp;50019</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Parish of Christ Ch</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Kg Java Rd</td>
+	    			</tr><td>10.7</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="2580" name="calc1[]">&nbsp;40109</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp KK Women & Child Hosp</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Bt Timah Rd</td>
+	    			</tr><td>11.2</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="2562" name="calc1[]">&nbsp;40019</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Little India Stn</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Sungei Rd</td>
+	    			</tr><td>11.6</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1197" name="calc1[]">&nbsp;07539</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Rochor Stn</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Bencoolen St</td>
+	    			</tr><td>12.2</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1193" name="calc1[]">&nbsp;07517</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Burlington Sq</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Middle Rd</td>
+	    			</tr><td>12.3</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1201" name="calc1[]">&nbsp;07571</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Prime Ctr</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Bras Basah Rd</td>
+	    			</tr><td>12.6</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="6985" name="calc1[]">&nbsp;04189</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Manulife Ctr</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Nth Bridge Rd</td>
+	    			</tr><td>13.4</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="6546" name="calc1[]">&nbsp;04167</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;St. Andrew's Cath</td>
+</tr>
+<td>13.7</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1121" name="calc1[]">&nbsp;04249</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp The Treasury</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Sth Bridge Rd</td>
+	    			</tr><td>14.1</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1134" name="calc1[]">&nbsp;05029</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Boat Quay</td>
+</tr>
+<td>14.5</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1139" name="calc1[]">&nbsp;05199</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Hong Lim Cplx</td>
+</tr>
+<td>14.8</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1138" name="calc1[]">&nbsp;05189</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Sri Mariamman Tp</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Neil Rd</td>
+	    			</tr><td>15.2</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1141" name="calc1[]">&nbsp;05259</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft Kreta Ayer Rd</td>
+</tr>
+<td>15.4</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="5418" name="calc1[]">&nbsp;05239</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef The Pinnacle@Duxton</td>
+</tr>
+<td>15.8</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1241" name="calc1[]">&nbsp;10021</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 3</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Kg Bahru Rd</td>
+	    			</tr><td>16.2</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1243" name="calc1[]">&nbsp;10041</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft Blair Rd</td>
+</tr>
+<td>16.7</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1311" name="calc1[]">&nbsp;10399</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Melati Blk 2</td>
+</tr>
+<td>17.1</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1541" name="calc1[]">&nbsp;14221</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp St. Teresa's Ch</td>
+</tr>
+<td>17.5</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1543" name="calc1[]">&nbsp;14231</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Keppel DP Blk 519</td>
+</tr>
+<td>17.9</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1505" name="calc1[]">&nbsp;14019</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Mt Faber Lodge</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Telok Blangah Rd</td>
+	    			</tr><td>18.5</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="5561" name="calc1[]">&nbsp;14141</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;VivoCity</td>
+</tr>
+<td>18.8</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1523" name="calc1[]">&nbsp;14121</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;HarbourFront Stn</td>
+</tr>
+<td>19.2</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1525" name="calc1[]">&nbsp;14131</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Caribbean at Keppel Bay</td>
+</tr>
+<td>19.7</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1528" name="calc1[]">&nbsp;14151</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Chr Community Chapel</td>
+</tr>
+<td>20.1</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1530" name="calc1[]">&nbsp;14161</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Telok Blangah Stn</td>
+</tr>
+<td>20.5</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1527" name="calc1[]">&nbsp;14171</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Yeo's Bldg</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Alexandra Rd</td>
+	    			</tr><td>21.2</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1564" name="calc1[]">&nbsp;15041</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;NOL Bldg</td>
+</tr>
+<td>21.5</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1566" name="calc1[]">&nbsp;15051</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Alexandra Pt</td>
+</tr>
+<td>22.0</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1711" name="calc1[]">&nbsp;18011</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;SP Jain</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">AYE</td>
+	    			</tr><td>23.4</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1716" name="calc1[]">&nbsp;18041</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Normanton Pk</td>
+</tr>
+<td>23.6</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="4703" name="calc1[]">&nbsp;18131</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Science Pk</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Buona Vista Flyover</td>
+	    			</tr><td>24.4</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1727" name="calc1[]">&nbsp;18101</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;PSB Science Pk Bldg</td>
+</tr>
+<td>25.0</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1731" name="calc1[]">&nbsp;18121</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Ayer Rajah Ind Est</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Dover Rd</td>
+	    			</tr><td>25.3</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1730" name="calc1[]">&nbsp;18119</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Fairfield Meth Pr Sch</td>
+</tr>
+<td>25.8</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1767" name="calc1[]">&nbsp;19089</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;United World College</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Dover Ave</td>
+	    			</tr><td>26.3</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1768" name="calc1[]">&nbsp;19091</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;S'pore Poly</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">C'wealth Ave West</td>
+	    			</tr><td>26.7</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1756" name="calc1[]">&nbsp;19021</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;SP SMA</td>
+</tr>
+<td>27.1</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="6442" name="calc1[]">&nbsp;19031</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Dover Stn</td>
+</tr>
+<td>27.5</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1758" name="calc1[]">&nbsp;19041</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Sch Of Science & Tech</td>
+</tr>
+<td>28.2</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1671" name="calc1[]">&nbsp;17151</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 410</td>
+</tr>
+<td>28.5</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1673" name="calc1[]">&nbsp;17161</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Blk 329</td>
+</tr>
+<td>28.9</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="1675" name="calc1[]">&nbsp;17171</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Clementi Stn</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Clementi Ave 3</td>
+	    			</tr><td>29.1</td>
+<td>
+		                <input valign="bottom" align="left" type="checkbox" onclick="countCheckboxes(this.value,1)" value="6655" name="calc1[]">&nbsp;17009</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Clementi Int</td>
+</tr>
+<tr class="print_hide"><td colspan="4" class="route"><input type="submit" name="step" value="Calculate Fare">&nbsp;&nbsp;
+					<input type="reset" value="Clear" name="B2"></td></tr></form>			
+			<!-- //to remove comment for print version
+			<form action="service_route.php" method="post">
+			<input type="hidden" name="service" value="166">
+			<input type="hidden" name="print" value="1">
+			<input type="hidden" name="pt_dir" value="1">
+			-->
+			    </table>
+	 
+	</section>
+	<!-- end of route 1 -->
+	</td>
+	
+	<td width="2%">&nbsp;</td>
+	<span><td width="49%" valign="top">    		  <!--  Start of route 2 -->
+	   	  <form method=POST name="calculateFareDir2" action="fare_info.php" onSubmit="return verifyRoute(2);">
+	   	  <input type="hidden" name="cat" value="1">
+	   	  <input type="hidden" name="stype" value="1">
+	   	  <input type="hidden" name="sno" value="166">
+	   	  <input type="hidden" name="sdir" value="2">
+	   	  
+		  <section class="eguide-table">
+		  <table width="100%">
+	        <tr>
+	          <td width="100%" colspan="3" class="subhead">DIRECTION 2</td>
+	        </tr>
+	        <tr>
+	          <td width="12%"><strong>Distance (km)</strong></td>
+	          <td width="20%"><strong>Bus Stop<br>Code</strong></td>
+	          <td width="68%" class="route" ><strong>Road / Bus Stop Description</strong></td>
+	        </tr>
+			<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Clementi Ave 3</td>
+	    			</tr>
+<tr>
+	            	  <td>0.0</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="6772" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;17009</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Clementi Int</td>
+</tr>
+
+<tr>
+	            	  <td>0.6</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1685" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;17239</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;NTUC Fairprice</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">C'wealth Ave West</td>
+	    			</tr>
+<tr>
+	            	  <td>1.1</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1672" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;17159</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 365</td>
+</tr>
+
+<tr>
+	            	  <td>1.6</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1759" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;19049</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Sch Of Science & Tech</td>
+</tr>
+
+<tr>
+	            	  <td>2.1</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="6443" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;19039</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Dover Stn</td>
+</tr>
+
+<tr>
+	            	  <td>2.6</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1757" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;19029</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp SP SMA</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Dover Ave</td>
+	    			</tr>
+<tr>
+	            	  <td>3.0</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1769" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;19099</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp S'pore Poly</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Dover Rd</td>
+	    			</tr>
+<tr>
+	            	  <td>3.2</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1764" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;19071</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp United World College</td>
+</tr>
+
+<tr>
+	            	  <td>3.5</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1766" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;19081</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp ACS Boarding Sch</td>
+</tr>
+
+<tr>
+	            	  <td>3.8</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1729" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;18111</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Fairfield Meth Pr Sch</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Buona Vista Flyover</td>
+	    			</tr>
+<tr>
+	            	  <td>4.2</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1732" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;18129</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Ayer Rajah Ind Est</td>
+</tr>
+
+<tr>
+	            	  <td>4.6</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1728" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;18109</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp PSB Science Pk Bldg</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">AYE</td>
+	    			</tr>
+<tr>
+	            	  <td>5.4</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1717" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;18049</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Normanton Pk</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Alexandra Rd</td>
+	    			</tr>
+<tr>
+	            	  <td>7.2</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1712" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;18019</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp SP Jain</td>
+</tr>
+
+<tr>
+	            	  <td>7.7</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1567" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;15059</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Alexandra Pt</td>
+</tr>
+
+<tr>
+	            	  <td>8.0</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1565" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;15049</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp NOL Bldg</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Telok Blangah Rd</td>
+	    			</tr>
+<tr>
+	            	  <td>8.4</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1534" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;14189</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft Alexandra Rd</td>
+</tr>
+
+<tr>
+	            	  <td>8.7</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1532" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;14179</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Yeo's Bldg</td>
+</tr>
+
+<tr>
+	            	  <td>9.1</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1531" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;14169</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Telok Blangah Stn</td>
+</tr>
+
+<tr>
+	            	  <td>9.6</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1529" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;14159</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef Chr Community Chapel</td>
+</tr>
+
+<tr>
+	            	  <td>10.0</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1526" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;14139</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef Seah Im Rd</td>
+</tr>
+
+<tr>
+	            	  <td>10.5</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1524" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;14129</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;HarbourFront Stn</td>
+</tr>
+
+<tr>
+	            	  <td>10.8</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1522" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;14119</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp VivoCity</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Kg Bahru Rd</td>
+	    			</tr>
+<tr>
+	            	  <td>11.4</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1504" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;14011</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef Mt Faber Lodge</td>
+</tr>
+
+<tr>
+	            	  <td>12.0</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1544" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;14239</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Keppel DP Blk 519</td>
+</tr>
+
+<tr>
+	            	  <td>12.3</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1542" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;14229</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;St. Teresa's Ch</td>
+</tr>
+
+<tr>
+	            	  <td>12.7</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1310" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;10391</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Melati Blk 2</td>
+</tr>
+
+<tr>
+	            	  <td>13.1</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1244" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;10049</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft Jln Bt Merah</td>
+</tr>
+
+<tr>
+	            	  <td>13.4</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1242" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;10039</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef Hosp Dr</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Eu Tong Sen St</td>
+	    			</tr>
+<tr>
+	            	  <td>13.7</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1239" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;10018</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef Outram Rd</td>
+</tr>
+
+<tr>
+	            	  <td>14.1</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1129" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;05012</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Pearl's Ctr</td>
+</tr>
+
+<tr>
+	            	  <td>14.7</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1132" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;05022</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;People's Pk Ctr</td>
+</tr>
+
+<tr>
+	            	  <td></td>
+	            	  <td></td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Express</td>
+</tr>
+
+<tr>
+	            	  <td>15.2</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1119" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;04222</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Clarke Quay Stn</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Hill St</td>
+	    			</tr>
+<tr>
+	            	  <td>15.5</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1117" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;04223</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Old Hill St Police Stn</td>
+</tr>
+
+<tr>
+	            	  <td>15.9</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1106" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;04143</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Stamford Ct</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Stamford Rd</td>
+	    			</tr>
+<tr>
+	            	  <td>16.2</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1104" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;04121</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;SMU</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Prinsep St</td>
+	    			</tr>
+<tr>
+	            	  <td>16.6</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1209" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;08079</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Sch of The Arts</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Selegie Rd</td>
+	    			</tr>
+<tr>
+	            	  <td>16.8</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1174" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;07011</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Peace Ctr</td>
+</tr>
+
+<tr>
+	            	  <td>17.2</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="1175" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;07021</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Selegie Ctr</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Bt Timah Rd</td>
+	    			</tr>
+<tr>
+	            	  <td>17.7</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="2561" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;40011</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Little India Stn</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Kg Java Rd</td>
+	    			</tr>
+<tr>
+	            	  <td>18.3</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="2579" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;40101</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;KK Women & Child Hosp</td>
+</tr>
+
+<tr>
+	            	  <td>18.5</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3286" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;50011</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Parish of Christ Ch</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Thomson Rd</td>
+	    			</tr>
+<tr>
+	            	  <td>19.2</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3288" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;50021</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;United Sq</td>
+</tr>
+
+<tr>
+	            	  <td>19.7</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3290" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;50031</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Novena Ch</td>
+</tr>
+
+<tr>
+	            	  <td>20.0</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3292" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;50041</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Novena Lodge</td>
+</tr>
+
+<tr>
+	            	  <td>20.2</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3294" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;50051</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Thomson Med Ctr</td>
+</tr>
+
+<tr>
+	            	  <td>20.5</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3331" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;51011</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Tan Tong Meng Twr</td>
+</tr>
+
+<tr>
+	            	  <td>20.9</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3333" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;51021</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Old Police Academy</td>
+</tr>
+
+<tr>
+	            	  <td>21.1</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3335" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;51031</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;S'pore Polo Club</td>
+</tr>
+
+<tr>
+	            	  <td>21.3</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3337" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;51041</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp SLF Cplx</td>
+</tr>
+
+<tr>
+	            	  <td>21.7</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3339" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;51051</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;MediaCorp</td>
+</tr>
+
+<tr>
+	            	  <td>22.4</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3342" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;51071</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;MacRitchie Reservoir</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Upp Thomson Rd</td>
+	    			</tr>
+<tr>
+	            	  <td>22.9</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3440" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;53011</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;St. Theresa's Home</td>
+</tr>
+
+<tr>
+	            	  <td>23.4</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3442" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;53021</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Shunfu Est</td>
+</tr>
+
+<tr>
+	            	  <td>23.9</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3445" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;53041</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef Thomson Ridge</td>
+</tr>
+
+<tr>
+	            	  <td>24.2</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3447" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;53051</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef Thomson Plaza</td>
+</tr>
+
+<tr>
+	            	  <td>24.7</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3449" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;53061</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Thomson View Condo</td>
+</tr>
+
+<tr>
+	            	  <td>25.1</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3451" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;53071</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Flame Tree Pk</td>
+</tr>
+
+<tr>
+	            	  <td>25.4</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3453" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;53081</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Faber Gdn</td>
+</tr>
+
+<tr>
+	            	  <td>25.6</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3455" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;53091</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef Ang Mo Kio Ave 1</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Ang Mo Kio Ave 1</td>
+	    			</tr>
+<tr>
+	            	  <td>26.3</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3712" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;56261</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 248</td>
+</tr>
+
+<tr>
+	            	  <td>26.6</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3530" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;54061</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 246</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Ang Mo Kio Ave 3</td>
+	    			</tr>
+<tr>
+	            	  <td>27.0</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3547" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;54211</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Mayflower Sec Sch</td>
+</tr>
+
+<tr>
+	            	  <td>27.4</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3549" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;54221</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Ang Mo Kio Pr Sch</td>
+</tr>
+
+<tr>
+	            	  <td>27.7</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3551" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;54231</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 129</td>
+</tr>
+
+<tr>
+	            	  <td>28.2</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="3553" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;54241</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 700B</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Ang Mo Kio Ave 8</td>
+	    			</tr>
+<tr>
+	            	  <td>28.7</td>
+	            	  <td><input valign="bottom" align="left" type="checkbox" value="6799" onclick="countCheckboxes(this.value,2)" name="calc2[]">&nbsp;54009</td><td width="68%" class="route">&nbsp;&#8226;&nbsp;Ang Mo Kio Int</td>
+</tr>
+<tr class="print_hide"><td colspan="4" class="route"><input type="submit" value="Calculate Fare">&nbsp;&nbsp;
+				<input type="reset" value="Clear" name="B2"></td></tr></table></form>		<!-- //for print version to remove comment
+			<form action="service_route.php" method="post">
+			<input type="hidden" name="service" value="166">
+			<input type="hidden" name="print" value="1">
+			<input type="hidden" name="pt_dir" value="2">
+		-->
+			</section>
+	</td>
+	</tr>
+</table></section>
+
+</div> <!-- End Content //-->
+</body>
+</html>
+	

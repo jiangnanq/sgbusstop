@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop no-websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms no-csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<!--//Clickjacking - Framable Page Security Vulernability - HS20150812 -->
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+   if (self === top) {
+       var antiClickjack = document.getElementById("antiClickjack");
+       antiClickjack.parentNode.removeChild(antiClickjack);
+   } else {
+       top.location = self.location;
+   }
+</script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style media="screen"></style>
+<meta name="keywords" content="transitlink,eguide,bus,mrt,lrt,services">
+<meta name="description" content="TransitLink eService">
+<meta charset="utf-8">
+<title>TransitLink eGuide - Bus Enquiry</title>
+<link rel="stylesheet" type="text/css" href="../css/eservice.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../css/tl_main.css" media="all" />
+<!--[if lt IE 8]><link rel="stylesheet" href="../css/ie.css" type="text/css" media="screen" /><![endif]-->
+<!--  <script type="text/javascript" src="../js/jquery-1.6.1.min.js"></script>-->
+<script type="text/javascript" src="../js/png.js"></script>
+<script>DD_belatedPNG.fix('img, .xpng');</script>
+<script type="text/javascript" src="../js/modernizr-1.7.min.js"></script>
+<script type="text/javascript" src="../js/eguide.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29711756-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script></head>
+
+<body><!-- Change this ID to what page you are in, this is useful if you are using CSS to style your navigation //-->
+
+<div id="Content-eservice">
+<table width="100%" border="0">
+<tr>
+  <td width="10%"><img src="../imgs/transitlink_logo_60.jpg" /></td>
+  <td><img src="../imgs/title/eguide.png" alt="Electronic Guide"></td>
+  
+  <!-- Add Mobile Services Icons -->
+  <!--
+  <td width="200">
+   <table>
+    <tr>
+		<td rowspan="2"><img src="../../imgs/eservice/transitlink_mobile_services.png" alt="TransitLink Mobile Services"></td>
+		<td valign="bottom"><a href="https://itunes.apple.com/sg/app/transitlink-mobile-services/id667933103?mt=8"><img src="../../imgs/eservice/app_store_badge.png" alt="TransitLink Mobile Services" target="_blank" border="0" width="100"></a></td>
+	</tr>
+	<tr>
+		<td><a href="https://play.google.com/store/apps/details?id=sg.com.transitlink&hl=en"><img src="../../imgs/eservice/play_store_badge.png" alt="TransitLink Mobile Services" target="_blank" border="0" width="100"></a></td>
+	</tr>
+    </table>
+  </td>   -->
+</tr>
+</table>
+<article>
+<p>E-Guide provides a convenient one-stop information guide on bus and train services.</p><!--//HS201311 -->
+<span class="print_hide"><h2>BUS ENQUIRY</h2></span>
+
+<span  class="print_hide"><p>Click <a href="service_idx.php">here</a> to perform other Bus Service Enquiry.</p></span><style type="text/css">.eguide-table td.company { background-color:#FF0000; }</style>
+	
+<section class="eguide-table">
+<table border="0" cellspacing="0" width="100%">
+<tr>
+    <td width="20%" align="center" rowspan="3">NightRider<br><h1>NR6</h1></td>
+    <td width="20%" align="center" rowspan="1" class="company">SMRT Buses</td>
+    <td width="60%" align="center"  class="subhead">Fridays, Saturdays and eves of P.Hs</td>
+  </tr>
+  <tr>
+    <td width="20%">Resorts World Sentosa</td>
+    <td width="60%">2335 - 0200</td> 
+  </tr>   
+  <tr>
+    <td width="20%"><strong>Average Freq.</strong></td>
+    <td width="60%" align="center">29 minutes</td>
+  </tr>  
+</table>
+</section>
+<br />
+<!-- for LOOP Service -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+  	<td width="49%" valign="top">  	<!--<td width="49%" valign="top">-->
+   	  <form method="post" action="fare_info.php" name="calculateFareDir1" id="calculateFareDir1" onSubmit="return verifyRoute(1);">
+   	  <input type="hidden" name="cat" value="8">
+   	  <input type="hidden" name="stype" value="2">
+   	  <input type="hidden" name="sno" value="NR6">
+   	  <input type="hidden" name="sdir" value="1">
+   	  
+	  <section class="eguide-table">
+	  <table width="100%">
+        <tr>
+          <td width="100%" colspan="3" class="subhead">
+          DIRECTION 1</td>
+        </tr>
+        <tr>
+          <td width="12%"><strong>Distance (km)</strong></td>
+          <td width="20%"><strong>Bus Stop<br>Code</strong></td>
+          <td width="68%" class="route" ><strong>Road / Bus Stop Description</strong></td>
+        </tr>
+		<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Sentosa Gateway</td>
+	    			</tr><td>0.0</td>
+<td>14519</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Resorts World Sentosa</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Telok Blangah Rd</td>
+	    			</tr><td>2.0</td>
+<td>14141</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;VivoCity</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Seah Im Rd</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Non Stop</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Telok Blangah Rd</td>
+	    			</tr><td>3.0</td>
+<td>14129</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;HarbourFront Stn</td>
+</tr>
+<td>3.3</td>
+<td>14119</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp VivoCity</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Keppel Rd</td>
+	    			</tr><td>4.0</td>
+<td>14109</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Keppel DP Blk 517</td>
+</tr>
+<td>4.4</td>
+<td>14089</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Tg Pagar DP Blk F5</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">AYE</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Express</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">MCE</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Express</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Marina Lk</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Non Stop</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Central Blvd</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Non Stop</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Bayfront Ave</td>
+	    			</tr><td>9.8</td>
+<td>03511</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Marina Bay Sands MICE</td>
+</tr>
+<td>10.2</td>
+<td>03501</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Marina Bay Sands Theatre</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Raffles Ave</td>
+	    			</tr><td>10.9</td>
+<td>02051</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Seating Gallery</td>
+</tr>
+<td>11.2</td>
+<td>02061</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;The Esplanade</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Stamford Rd</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Non Stop</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Nth Bridge Rd</td>
+	    			</tr><td>12.2</td>
+<td>04167</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;St. Andrew's Cath</td>
+</tr>
+<td>12.5</td>
+<td>04249</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp The Treasury</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Sth Bridge Rd</td>
+	    			</tr><td>12.9</td>
+<td>05029</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Boat Quay</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Nth Canal Rd</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Non Stop</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Eu Tong Sen St</td>
+	    			</tr><td>13.5</td>
+<td>04222</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Clarke Quay Stn</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">River Valley Rd</td>
+	    			</tr><td>13.8</td>
+<td>04211</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Clarke Quay</td>
+</tr>
+<td>14.1</td>
+<td>04331</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Liang Ct</td>
+</tr>
+<td>14.4</td>
+<td>13109</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;UE Sq</td>
+</tr>
+<td>14.9</td>
+<td>13099</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef AA Ctr</td>
+</tr>
+<td>15.3</td>
+<td>13089</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;The Morningside</td>
+</tr>
+<td>15.7</td>
+<td>13079</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft ERC Inst</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Hoot Kiam Rd</td>
+	    			</tr><td>16.2</td>
+<td>13141</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft Zion Full Gospel Ch</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Paterson Hill</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Non Stop</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Paterson Rd</td>
+	    			</tr><td>16.8</td>
+<td>13191</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Paterson Lodge</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Orchard Rd</td>
+	    			</tr><td>17.3</td>
+<td>09047</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Tang Plaza</td>
+</tr>
+<td>17.5</td>
+<td>09048</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Lucky Plaza</td>
+</tr>
+<td>17.9</td>
+<td>09037</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Mandarin Orchard</td>
+</tr>
+<td>18.1</td>
+<td>09038</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Midpoint Orchard</td>
+</tr>
+<td>18.4</td>
+<td>08137</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Orchard Plaza</td>
+</tr>
+<td>18.6</td>
+<td>08138</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Concorde Hotel S'pore</td>
+</tr>
+<td>19.0</td>
+<td>08057</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Dhoby Ghaut Stn</td>
+</tr>
+<td>19.1</td>
+<td>08058</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;MacDonald Hse</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Bras Basah Rd</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Non Stop</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Prinsep St</td>
+	    			</tr><td>19.4</td>
+<td>08079</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Sch of The Arts</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Selegie Rd</td>
+	    			</tr><td>19.6</td>
+<td>07011</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Peace Ctr</td>
+</tr>
+<td>20.0</td>
+<td>07021</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Selegie Ctr</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">S'goon Rd</td>
+	    			</tr><td>20.2</td>
+<td>07031</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Tekka Ctr</td>
+</tr>
+<td>20.6</td>
+<td>07111</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Broadway Hotel</td>
+</tr>
+<td>21.2</td>
+<td>07211</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Sri Srinivasa Perumal Tp</td>
+</tr>
+<td>21.5</td>
+<td>07221</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Sri Vadapathira K Tp</td>
+</tr>
+<td>21.9</td>
+<td>60101</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Kwong Wai Shiu Hosp</td>
+</tr>
+<td>22.2</td>
+<td>60121</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Boon Keng Stn</td>
+</tr>
+<td>22.6</td>
+<td>60141</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Bendemeer Pr Sch</td>
+</tr>
+<td>22.9</td>
+<td>60161</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;St. Michael's Pl</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Upp S'goon Rd</td>
+	    			</tr><td>23.6</td>
+<td>60201</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Leong Bee Ct</td>
+</tr>
+<td>23.7</td>
+<td>60261</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Potong Pasir Stn</td>
+</tr>
+<td>23.9</td>
+<td>61011</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 103</td>
+</tr>
+<td>24.2</td>
+<td>61021</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft Woodleigh Pk</td>
+</tr>
+<td>24.4</td>
+<td>61031</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Woodleigh Stn</td>
+</tr>
+<td>24.7</td>
+<td>61041</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef Braddell Rd</td>
+</tr>
+<td>25.1</td>
+<td>62111</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft Sommerville Rd</td>
+</tr>
+<td>25.3</td>
+<td>62121</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft Wolskel Rd</td>
+</tr>
+<td>25.6</td>
+<td>62131</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;S'goon Stn</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">S'goon Ctrl</td>
+	    			</tr><td>26.2</td>
+<td>66371</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 261</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Yio Chu Kang Link</td>
+	    			</tr><td>26.6</td>
+<td>63361</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp S'goon Swim Cplx</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Yio Chu Kang Rd</td>
+	    			</tr><td>27.0</td>
+<td>63181</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Bef St. Helier's Ave</td>
+</tr>
+<td>27.4</td>
+<td>63191</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Aft S'goon Nth Ave 1</td>
+</tr>
+<td>27.6</td>
+<td>63201</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 133</td>
+</tr>
+<td>27.9</td>
+<td>63211</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 138</td>
+</tr>
+<td>28.4</td>
+<td>64101</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Gracehaven S Army</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Hougang Ave 9</td>
+	    			</tr><td>29.0</td>
+<td>64491</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Hougang 1</td>
+</tr>
+<td>29.2</td>
+<td>64481</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Bet Blks 930/931</td>
+</tr>
+<td>29.5</td>
+<td>64471</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 917</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Hougang St 61</td>
+	    			</tr><td></td>
+<td></td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Non Stop</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Hougang Ave 8</td>
+	    			</tr><td>30.1</td>
+<td>64351</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Montfort Sch</td>
+</tr>
+<td>30.4</td>
+<td>64361</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 535</td>
+</tr>
+<td>30.8</td>
+<td>64031</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 436</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Hougang Ave 10</td>
+	    			</tr><td>31.3</td>
+<td>64021</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 458</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Punggol Rd</td>
+	    			</tr><td>31.7</td>
+<td>65011</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp The Rivervale</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Sengkang East Ave</td>
+	    			</tr><td>32.0</td>
+<td>67169</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 101</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Rivervale Dr</td>
+	    			</tr><td>32.7</td>
+<td>67159</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 112</td>
+</tr>
+<td>33.1</td>
+<td>67139</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Blk 121</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Sengkang East Way</td>
+	    			</tr><td>33.5</td>
+<td>67129</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 137</td>
+</tr>
+<td>33.7</td>
+<td>67119</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 128</td>
+</tr>
+<td>34.1</td>
+<td>67109</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 235</td>
+</tr>
+<td>34.5</td>
+<td>67409</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Sengkang Stn</td>
+</tr>
+<td>35.0</td>
+<td>67399</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 325 CP</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Anchorvale Link</td>
+	    			</tr><td>35.4</td>
+<td>67581</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 319A</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Anchorvale Dr</td>
+	    			</tr><td>35.7</td>
+<td>67351</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 321 CP</td>
+</tr>
+<tr>
+				      <td class="subhead2">&nbsp;</td>
+				      <td class="subhead2">&nbsp;</td>                	
+				      <td class="subhead2 route">Compassvale Dr</td>
+	    			</tr><td>36.2</td>
+<td>67341</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Opp Blk 204 CP</td>
+</tr>
+<td>36.7</td>
+<td>67171</td>
+<td width="68%" class="route">&nbsp;&#8226;&nbsp;Blk 225A</td>
+</tr>
+</td></tr></form>			
+			<!-- //to remove comment for print version
+			<form action="service_route.php" method="post">
+			<input type="hidden" name="service" value="NR6">
+			<input type="hidden" name="print" value="1">
+			<input type="hidden" name="pt_dir" value="1">
+			-->
+			    </table>
+	 
+	</section>
+	<!-- end of route 1 -->
+	</td>
+	
+	<td width="2%">&nbsp;</td>
+	<span><td width="49%" valign="top">    	</section>
+	</td>
+	</tr>
+</table></section>
+
+</div> <!-- End Content //-->
+</body>
+</html>
+	
