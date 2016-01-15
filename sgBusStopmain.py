@@ -5,16 +5,19 @@ __author__ = 'Jiang'
 # Step 1: Read dynamic data from LTA datamall
 # This step will generate 5 json files in data directory
 # busstop = lta('smrtbusservice')
-busstop = lta('sbsbusservice')
+# busstop = lta('sbsbusservice')
 # busstop = lta('smrtbusroute')
 # busstop = lta('sbsbusroute')
 # busstop = lta('busstop')
-busstop.readDataFromLTA()
+# busstop.readDataFromLTA()
 
 # Step 2: process data with relative function
 
 # Generate busline for each busline
 # This step will generate busline.json
+# note: this step is replaced by a python program
+# 		to read bus line information from transitlink.com.sg
+#		The bus information provided by LTA is outdated
 # test = processdata().processbusroute()
 
 # Process MRT information
