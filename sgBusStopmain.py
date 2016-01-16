@@ -1,6 +1,6 @@
 from lta import *
 from processdata import *
-__author__ = 'Jiang'
+__author__ = 'Jiang Nanqing'
 
 # Step 1: Read dynamic data from LTA datamall
 # This step will generate 5 json files in data directory
@@ -26,7 +26,7 @@ __author__ = 'Jiang'
 
 # Process shopping mall information
 # Update mall.json file
-# test = processdata().processmalldata()
+test = processdata().processmalldata()
 
 # Generate busstop.json with MRT&Mall information
 # test = processdata().combinebusstopinfo()
@@ -34,5 +34,4 @@ __author__ = 'Jiang'
 # Process special bus 225W/225G, 243W/243G, 410W/410G
 # The First/Last stop need to manully update
 # test = processdata().processSpecialBus()
-
 print 'process completed'

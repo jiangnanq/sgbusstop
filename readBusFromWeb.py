@@ -92,7 +92,7 @@ buslines = {}
 for abus in readBusLines():
 	buslines[abus] = parseBusFile(abus)
 datafolder = '~/Dropbox/project/busstoppy/busFromWeb/'
-filename = datafolder + 'busline.json'
+filename = datafolder + 'buslines.json'
 with open(os.path.expanduser(filename),'w') as f:
 	json.dump(buslines,f)
 print 'process completed!'
