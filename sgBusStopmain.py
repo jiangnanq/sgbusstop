@@ -26,12 +26,14 @@ __author__ = 'Jiang Nanqing'
 
 # Process shopping mall information
 # Update mall.json file
-test = processdata().processmalldata()
+# test = processdata().processmalldata()
+
+# Process special bus 243/410/225
+# This function must implement once after 
+# update the busline from transitlink.com.sg
+# test = processdata().processSpecialBus()
 
 # Generate busstop.json with MRT&Mall information
 # test = processdata().combinebusstopinfo()
 
-# Process special bus 225W/225G, 243W/243G, 410W/410G
-# The First/Last stop need to manully update
-# test = processdata().processSpecialBus()
 print 'process completed'

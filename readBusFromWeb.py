@@ -71,8 +71,6 @@ def checkFloat(rows,direction):
 		c.append(abusstop)
 	return c
 
-# def combineBusLine(d1,d2):
-# 	reture d1 + d2
 
 def parseBusFile(busnumber):
 	datafolder = '~/Dropbox/project/busstoppy/busFromWeb/'

@@ -101,7 +101,6 @@
 		</array>
 		<array>
 			<string>84009</string>
-			<string>84091</string>
 			<string>84031</string>
 		</array>
 		<array>
@@ -187,8 +186,8 @@
 			<string>6557 6557</string>
 		</array>
 		<array>
-			<string>01119</string>
 			<string>01112</string>
+			<string>01119</string>
 			<string>01039</string>
 		</array>
 		<array>
@@ -207,8 +206,8 @@
 			<string>6634 6810</string>
 		</array>
 		<array>
-			<string>01119</string>
 			<string>01112</string>
+			<string>01119</string>
 			<string>07569</string>
 		</array>
 		<array>
@@ -228,6 +227,7 @@
 		</array>
 		<array>
 			<string>44639</string>
+			<string>44909</string>
 			<string>44631</string>
 			<string>44739</string>
 			<string>44731</string>
@@ -249,6 +249,7 @@
 		</array>
 		<array>
 			<string>46008</string>
+			<string>46009</string>
 		</array>
 		<array>
 			<string>NS9</string>
@@ -265,7 +266,6 @@
 			<string>6789 6261</string>
 		</array>
 		<array>
-			<string>76131</string>
 			<string>76139</string>
 		</array>
 		<array>
@@ -316,7 +316,6 @@
 			<string>6702 0114</string>
 		</array>
 		<array>
-			<string>05131</string>
 			<string>05022</string>
 			<string>05049</string>
 		</array>
@@ -353,6 +352,7 @@
 		<array>
 			<string>67401</string>
 			<string>67409</string>
+			<string>67009</string>
 		</array>
 		<array>
 			<string>NE16</string>
@@ -370,8 +370,8 @@
 			<string>6587 7200</string>
 		</array>
 		<array>
-			<string>96169</string>
 			<string>96161</string>
+			<string>96169</string>
 		</array>
 		<array>
 			<string>EW3</string>
@@ -389,6 +389,7 @@
 		</array>
 		<array>
 			<string>13119</string>
+			<string>13121</string>
 		</array>
 		<array/>
 	</array>
@@ -403,8 +404,8 @@
 			<string></string>
 		</array>
 		<array>
-			<string>67049</string>
 			<string>67041</string>
+			<string>67049</string>
 		</array>
 		<array/>
 	</array>
@@ -453,8 +454,8 @@
 			<string>6593 3257</string>
 		</array>
 		<array>
-			<string>64491</string>
 			<string>64081</string>
+			<string>64491</string>
 		</array>
 		<array/>
 	</array>
@@ -501,8 +502,8 @@
 		</array>
 		<array>
 			<string>09047</string>
-			<string>09023</string>
 			<string>09022</string>
+			<string>09023</string>
 		</array>
 		<array>
 			<string>NS22</string>
@@ -518,7 +519,11 @@
 			<string>j-cube.com.sg</string>
 			<string>6684 2153</string>
 		</array>
-		<array/>
+		<array>
+			<string>28211</string>
+			<string>28249</string>
+			<string>28301</string>
+		</array>
 		<array>
 			<string>EW24</string>
 			<string>NS1</string>
@@ -551,6 +556,7 @@
 			<string>6892 5310</string>
 		</array>
 		<array>
+			<string>44031</string>
 			<string>44041</string>
 			<string>44049</string>
 		</array>
@@ -603,7 +609,9 @@
 			<string>leisurepark.com.sg</string>
 			<string>6242 1220</string>
 		</array>
-		<array/>
+		<array>
+			<string>80191</string>
+		</array>
 		<array>
 			<string>CC6</string>
 		</array>
@@ -650,8 +658,8 @@
 			<string>6336 7184</string>
 		</array>
 		<array>
-			<string>04331</string>
 			<string>04339</string>
+			<string>04331</string>
 		</array>
 		<array/>
 	</array>
@@ -665,7 +673,9 @@
 			<string></string>
 			<string>6314 3307</string>
 		</array>
-		<array/>
+		<array>
+			<string>45319</string>
+		</array>
 		<array/>
 	</array>
 	<key>Lot One Shoppers' Mall</key>
@@ -699,6 +709,7 @@
 			<string></string>
 		</array>
 		<array>
+			<string>03529</string>
 			<string>03391</string>
 		</array>
 		<array>
@@ -760,6 +771,8 @@
 			<string>6416 6366</string>
 		</array>
 		<array>
+			<string>66009</string>
+			<string>66389</string>
 			<string>66381</string>
 			<string>66359</string>
 			<string>66351</string>
@@ -780,7 +793,6 @@
 			<string>6506 0460</string>
 		</array>
 		<array>
-			<string>09048</string>
 			<string>09011</string>
 		</array>
 		<array/>
@@ -796,7 +808,7 @@
 			<string>6754 2300</string>
 		</array>
 		<array>
-			<string>59008</string>
+			<string>59689</string>
 			<string>59072</string>
 			<string>59073</string>
 			<string>59079</string>
@@ -833,8 +845,10 @@
 			<string>6702 3610</string>
 		</array>
 		<array>
+			<string>82231</string>
 			<string>82119</string>
 			<string>82029</string>
+			<string>82109</string>
 		</array>
 		<array/>
 	</array>
@@ -851,7 +865,6 @@
 		<array>
 			<string>08137</string>
 			<string>08121</string>
-			<string>08111</string>
 		</array>
 		<array>
 			<string>NS23</string>
@@ -937,8 +950,8 @@
 		</array>
 		<array>
 			<string>05069</string>
-			<string>05012</string>
 			<string>05019</string>
+			<string>05012</string>
 		</array>
 		<array>
 			<string>EW16</string>
@@ -975,6 +988,7 @@
 			<string>6589 8494</string>
 		</array>
 		<array>
+			<string>05039</string>
 			<string>05013</string>
 		</array>
 		<array>
@@ -993,8 +1007,8 @@
 			<string>6795 6380</string>
 		</array>
 		<array>
-			<string>22359</string>
 			<string>22361</string>
+			<string>22359</string>
 			<string>22239</string>
 			<string>22231</string>
 		</array>
@@ -1266,8 +1280,8 @@
 			<string>6736 4922</string>
 		</array>
 		<array>
-			<string>09139</string>
 			<string>09131</string>
+			<string>09139</string>
 		</array>
 		<array/>
 	</array>
@@ -1314,9 +1328,7 @@
 			<string>fraserscentrepointmalls.com</string>
 			<string>6737 9000</string>
 		</array>
-		<array>
-			<string>09038</string>
-		</array>
+		<array/>
 		<array>
 			<string>NS23</string>
 		</array>
@@ -1334,6 +1346,7 @@
 		<array>
 			<string>17171</string>
 			<string>17179</string>
+			<string>17009</string>
 		</array>
 		<array>
 			<string>EW23</string>
@@ -1350,8 +1363,8 @@
 			<string></string>
 		</array>
 		<array>
-			<string>43059</string>
 			<string>43051</string>
+			<string>43059</string>
 		</array>
 		<array/>
 	</array>
@@ -1436,8 +1449,9 @@
 			<string></string>
 		</array>
 		<array>
-			<string>63011</string>
+			<string>63151</string>
 			<string>63019</string>
+			<string>63011</string>
 		</array>
 		<array/>
 	</array>
@@ -1469,10 +1483,7 @@
 			<string>waterwaypoint.com</string>
 			<string>6589 8494</string>
 		</array>
-		<array>
-			<string>65251</string>
-			<string>65259</string>
-		</array>
+		<array/>
 		<array>
 			<string>PTC</string>
 			<string>NE17</string>
@@ -1503,9 +1514,7 @@
 			<string>westgate.com.sg</string>
 			<string>6908 3737</string>
 		</array>
-		<array>
-			<string>28009</string>
-		</array>
+		<array/>
 		<array>
 			<string>EW24</string>
 			<string>NS1</string>
@@ -1539,8 +1548,9 @@
 			<string>6235 2103</string>
 		</array>
 		<array>
-			<string>09047</string>
 			<string>09048</string>
+			<string>09047</string>
+			<string>09023</string>
 		</array>
 		<array>
 			<string>NS22</string>
@@ -1557,6 +1567,7 @@
 			<string>6465 1986</string>
 		</array>
 		<array>
+			<string>45479</string>
 			<string>45329</string>
 			<string>45321</string>
 			<string>45349</string>

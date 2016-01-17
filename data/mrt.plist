@@ -48,6 +48,7 @@
 			<real>103.764661</real>
 		</array>
 		<array>
+			<string>44821</string>
 			<string>44721</string>
 		</array>
 		<array/>
@@ -120,11 +121,10 @@
 			<real>103.76354499999999</real>
 		</array>
 		<array>
-			<string>45009</string>
-			<string>44859</string>
 			<string>44851</string>
 			<string>44739</string>
 			<string>44731</string>
+			<string>44859</string>
 		</array>
 		<array>
 			<string>Bukit Panjang Plaza</string>
@@ -272,8 +272,8 @@
 			<real>103.839516</real>
 		</array>
 		<array>
-			<string>53121</string>
 			<string>53129</string>
+			<string>53121</string>
 		</array>
 		<array/>
 	</array>
@@ -299,8 +299,8 @@
 			<real>103.815376</real>
 		</array>
 		<array>
-			<string>41029</string>
 			<string>41021</string>
+			<string>41029</string>
 		</array>
 		<array/>
 	</array>
@@ -350,8 +350,8 @@
 			<real>103.788983</real>
 		</array>
 		<array>
-			<string>11191</string>
 			<string>11199</string>
+			<string>11191</string>
 		</array>
 		<array>
 			<string>Rochester Mall</string>
@@ -379,8 +379,10 @@
 			<real>103.78434799999999</real>
 		</array>
 		<array>
+			<string>18331</string>
 			<string>15139</string>
 			<string>15131</string>
+			<string>18339</string>
 		</array>
 		<array/>
 	</array>
@@ -394,8 +396,8 @@
 		<array>
 			<string>16011</string>
 			<string>16019</string>
-			<string>16221</string>
 			<string>16229</string>
+			<string>16221</string>
 		</array>
 		<array/>
 	</array>
@@ -408,7 +410,6 @@
 		</array>
 		<array>
 			<string>15209</string>
-			<string>15191</string>
 		</array>
 		<array/>
 	</array>
@@ -420,6 +421,8 @@
 			<real>103.80281100000001</real>
 		</array>
 		<array>
+			<string>14189</string>
+			<string>14409</string>
 			<string>14401</string>
 		</array>
 		<array>
@@ -462,7 +465,9 @@
 			<real>1.2934680000000001</real>
 			<real>103.855352</real>
 		</array>
-		<array/>
+		<array>
+			<string>01619</string>
+		</array>
 		<array>
 			<string>Raffles City</string>
 		</array>
@@ -475,8 +480,8 @@
 			<real>103.86082399999999</real>
 		</array>
 		<array>
-			<string>02169</string>
 			<string>02161</string>
+			<string>02169</string>
 		</array>
 		<array>
 			<string>Suntec City</string>
@@ -502,7 +507,7 @@
 			<real>103.875286</real>
 		</array>
 		<array>
-			<string>80199</string>
+			<string>80191</string>
 		</array>
 		<array>
 			<string>Kallang Leisure Park</string>
@@ -516,9 +521,7 @@
 			<real>1.3064039999999999</real>
 			<real>103.882582</real>
 		</array>
-		<array>
-			<string>80271</string>
-		</array>
+		<array/>
 		<array/>
 	</array>
 	<key>CC8</key>
@@ -557,8 +560,8 @@
 			<real>103.858994</real>
 		</array>
 		<array>
-			<string>03511</string>
 			<string>03519</string>
+			<string>03511</string>
 			<string>03509</string>
 		</array>
 		<array/>
@@ -603,11 +606,10 @@
 			<real>103.76354499999999</real>
 		</array>
 		<array>
-			<string>45009</string>
-			<string>44859</string>
 			<string>44851</string>
 			<string>44739</string>
 			<string>44731</string>
+			<string>44859</string>
 		</array>
 		<array>
 			<string>Bukit Panjang Plaza</string>
@@ -621,9 +623,9 @@
 			<real>103.825997</real>
 		</array>
 		<array>
-			<string>40081</string>
 			<string>40221</string>
 			<string>40229</string>
+			<string>40081</string>
 		</array>
 		<array/>
 	</array>
@@ -637,6 +639,7 @@
 		<array>
 			<string>40181</string>
 			<string>40189</string>
+			<string>40041</string>
 		</array>
 		<array/>
 	</array>
@@ -679,10 +682,11 @@
 			<real>103.85553400000001</real>
 		</array>
 		<array>
+			<string>01112</string>
 			<string>01113</string>
 			<string>01119</string>
 			<string>01059</string>
-			<string>01112</string>
+			<string>07551</string>
 		</array>
 		<array>
 			<string>Bugis Junction</string>
@@ -698,8 +702,8 @@
 			<real>103.861628</real>
 		</array>
 		<array>
-			<string>02169</string>
 			<string>02161</string>
+			<string>02169</string>
 		</array>
 		<array/>
 	</array>
@@ -766,6 +770,7 @@
 			<real>103.764803</real>
 		</array>
 		<array>
+			<string>43099</string>
 			<string>43091</string>
 		</array>
 		<array/>
@@ -778,7 +783,6 @@
 			<real>103.76738899999999</real>
 		</array>
 		<array>
-			<string>43061</string>
 			<string>43069</string>
 		</array>
 		<array/>
@@ -791,8 +795,8 @@
 			<real>103.775797</real>
 		</array>
 		<array>
-			<string>42151</string>
 			<string>42159</string>
+			<string>42151</string>
 			<string>42259</string>
 		</array>
 		<array/>
@@ -842,8 +846,8 @@
 			<real>103.815376</real>
 		</array>
 		<array>
-			<string>41029</string>
 			<string>41021</string>
+			<string>41029</string>
 		</array>
 		<array/>
 	</array>
@@ -855,7 +859,7 @@
 			<real>103.949504</real>
 		</array>
 		<array>
-			<string>77321</string>
+			<string>77009</string>
 			<string>77171</string>
 			<string>77179</string>
 		</array>
@@ -896,6 +900,7 @@
 			<real>103.856409</real>
 		</array>
 		<array>
+			<string>01112</string>
 			<string>01113</string>
 			<string>01059</string>
 			<string>01139</string>
@@ -969,7 +974,6 @@
 		</array>
 		<array>
 			<string>10169</string>
-			<string>10151</string>
 			<string>10161</string>
 		</array>
 		<array>
@@ -997,8 +1001,8 @@
 			<real>103.80611500000001</real>
 		</array>
 		<array>
-			<string>11149</string>
 			<string>11141</string>
+			<string>11149</string>
 		</array>
 		<array/>
 	</array>
@@ -1027,8 +1031,8 @@
 			<real>103.79822900000001</real>
 		</array>
 		<array>
-			<string>11161</string>
 			<string>11169</string>
+			<string>11161</string>
 		</array>
 		<array/>
 	</array>
@@ -1070,6 +1074,7 @@
 		<array>
 			<string>17171</string>
 			<string>17179</string>
+			<string>17009</string>
 		</array>
 		<array>
 			<string>The Clementi Mall</string>
@@ -1083,6 +1088,7 @@
 			<real>103.741388</real>
 		</array>
 		<array>
+			<string>28211</string>
 			<string>28009</string>
 			<string>28301</string>
 		</array>
@@ -1113,8 +1119,8 @@
 			<real>103.720403</real>
 		</array>
 		<array>
-			<string>28099</string>
 			<string>28091</string>
+			<string>28099</string>
 		</array>
 		<array/>
 	</array>
@@ -1127,7 +1133,6 @@
 		</array>
 		<array>
 			<string>22009</string>
-			<string>22579</string>
 		</array>
 		<array>
 			<string>Jurong Point Shopping Mall</string>
@@ -1168,9 +1173,9 @@
 			<real>103.953366</real>
 		</array>
 		<array>
-			<string>96149</string>
-			<string>96169</string>
 			<string>96161</string>
+			<string>96169</string>
+			<string>96149</string>
 		</array>
 		<array>
 			<string>East Point Mall</string>
@@ -1198,6 +1203,7 @@
 		</array>
 		<array>
 			<string>84009</string>
+			<string>84039</string>
 			<string>84031</string>
 		</array>
 		<array>
@@ -1213,7 +1219,6 @@
 			<real>103.912826</real>
 		</array>
 		<array>
-			<string>83329</string>
 			<string>83321</string>
 			<string>83062</string>
 		</array>
@@ -1268,7 +1273,7 @@
 		</array>
 		<array>
 			<string>14141</string>
-			<string>14129</string>
+			<string>14119</string>
 		</array>
 		<array>
 			<string>VivoCity</string>
@@ -1296,8 +1301,8 @@
 			<real>103.870757</real>
 		</array>
 		<array>
-			<string>61039</string>
 			<string>61031</string>
+			<string>61039</string>
 			<string>61059</string>
 		</array>
 		<array/>
@@ -1312,6 +1317,8 @@
 		<array>
 			<string>62131</string>
 			<string>62139</string>
+			<string>62179</string>
+			<string>66351</string>
 		</array>
 		<array>
 			<string>Nex</string>
@@ -1340,8 +1347,8 @@
 			<real>103.892472</real>
 		</array>
 		<array>
-			<string>64009</string>
 			<string>64541</string>
+			<string>64009</string>
 			<string>64549</string>
 		</array>
 		<array>
@@ -1384,8 +1391,6 @@
 		</array>
 		<array>
 			<string>65009</string>
-			<string>65251</string>
-			<string>65259</string>
 		</array>
 		<array>
 			<string>Waterway Point</string>
@@ -1401,8 +1406,8 @@
 		<array>
 			<string>06029</string>
 			<string>05069</string>
-			<string>05012</string>
 			<string>05019</string>
+			<string>05012</string>
 		</array>
 		<array>
 			<string>Pearl Centre</string>
@@ -1416,8 +1421,8 @@
 			<real>103.843559</real>
 		</array>
 		<array>
-			<string>05049</string>
 			<string>05013</string>
+			<string>05049</string>
 		</array>
 		<array>
 			<string>People's Park Complex</string>
@@ -1446,8 +1451,8 @@
 			<real>103.845888</real>
 		</array>
 		<array>
-			<string>08058</string>
 			<string>08057</string>
+			<string>08058</string>
 			<string>08031</string>
 		</array>
 		<array>
@@ -1476,7 +1481,10 @@
 			<real>1.3124089999999999</real>
 			<string>103.854320</string>
 		</array>
-		<array/>
+		<array>
+			<string>50259</string>
+			<string>50251</string>
+		</array>
 		<array>
 			<string>City Square Mall</string>
 			<string>Serangoon Plaza</string>
@@ -1502,10 +1510,7 @@
 			<real>1.334362</real>
 			<real>103.742569</real>
 		</array>
-		<array>
-			<string>28061</string>
-			<string>28009</string>
-		</array>
+		<array/>
 		<array>
 			<string>Westgate</string>
 			<string>Jem</string>
@@ -1548,7 +1553,6 @@
 			<real>103.83524300000001</real>
 		</array>
 		<array>
-			<string>59008</string>
 			<string>59159</string>
 			<string>59072</string>
 			<string>59073</string>
@@ -1566,8 +1570,8 @@
 			<string>103.832840</string>
 		</array>
 		<array>
-			<string>59569</string>
 			<string>59561</string>
+			<string>59569</string>
 			<string>59041</string>
 			<string>59049</string>
 		</array>
@@ -1581,8 +1585,8 @@
 			<real>103.844773</real>
 		</array>
 		<array>
-			<string>55189</string>
 			<string>55509</string>
+			<string>55189</string>
 			<string>55181</string>
 		</array>
 		<array/>
@@ -1680,6 +1684,7 @@
 		<array>
 			<string>40181</string>
 			<string>40189</string>
+			<string>40041</string>
 		</array>
 		<array/>
 	</array>
@@ -1725,8 +1730,8 @@
 			<real>103.846191</real>
 		</array>
 		<array>
-			<string>08058</string>
 			<string>08057</string>
+			<string>08058</string>
 			<string>08031</string>
 		</array>
 		<array>
@@ -1820,6 +1825,7 @@
 			<real>103.747339</real>
 		</array>
 		<array>
+			<string>45479</string>
 			<string>45329</string>
 			<string>45321</string>
 		</array>
@@ -1862,7 +1868,6 @@
 		</array>
 		<array>
 			<string>46009</string>
-			<string>46008</string>
 		</array>
 		<array>
 			<string>Causeway Point</string>
@@ -1915,8 +1920,8 @@
 			<real>103.916523</real>
 		</array>
 		<array>
-			<string>65231</string>
 			<string>65239</string>
+			<string>65231</string>
 		</array>
 		<array/>
 	</array>
@@ -1928,8 +1933,8 @@
 			<real>103.91639499999999</real>
 		</array>
 		<array>
-			<string>65321</string>
 			<string>65329</string>
+			<string>65321</string>
 		</array>
 		<array/>
 	</array>
@@ -1954,6 +1959,7 @@
 		</array>
 		<array>
 			<string>65099</string>
+			<string>65109</string>
 		</array>
 		<array/>
 	</array>
@@ -1966,8 +1972,6 @@
 		</array>
 		<array>
 			<string>65009</string>
-			<string>65251</string>
-			<string>65259</string>
 		</array>
 		<array>
 			<string>Waterway Point</string>
@@ -1994,8 +1998,9 @@
 			<real>103.90622399999999</real>
 		</array>
 		<array>
-			<string>67229</string>
+			<string>67671</string>
 			<string>67221</string>
+			<string>67229</string>
 		</array>
 		<array>
 			<string>Rivervale Mall</string>
@@ -2085,9 +2090,7 @@
 			<real>1.391921</real>
 			<real>103.876087</real>
 		</array>
-		<array>
-			<string>67489</string>
-		</array>
+		<array/>
 		<array>
 			<string>The Seletar Mall</string>
 		</array>
@@ -2113,8 +2116,8 @@
 			<real>103.886107</real>
 		</array>
 		<array>
-			<string>65801</string>
 			<string>67301</string>
+			<string>65801</string>
 		</array>
 		<array/>
 	</array>
