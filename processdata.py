@@ -289,4 +289,12 @@ class processdata:
         with open(os.path.expanduser(f1), "w") as fp:
             json.dump(malldict, fp)
         return malldict
-
+    def exportAllBusStops(self):
+        # Export all bus stops information to translate to chinese
+        busstops = self.readF(self.datafolder+"busstop.json")        
+        outputBusStops = []
+        f1 = self.datafolder + 'busstop_chinese.txt'
+        with open(os.path.expanduser(f1),"w") as fp:
+            for busstopkey, busstop in busstops.iteritems():
+                aline = busstopkey + ',' + busstop[0][0] + ',' +busstop[0][1] + '\n'
+                fp.write(aline)

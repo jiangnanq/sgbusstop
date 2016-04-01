@@ -30,27 +30,35 @@ class lta:
             'UniqueUserID': '5aa27f9b-74fd-4bb6-8f4e-3a9aa47613bb',
             'accept': 'application/json'}
         if type == 'busstop':
-            self.path = '/ltaodataservice.svc/BusStopCodeSet?$skip='
-            self.filename = 'busstopdynamic.json'
-        elif type == 'sbsbusroute':
-            self.path = '/ltaodataservice.svc/SBSTRouteSet?$skip='
-            self.filename = 'sbsbusroute.json'
-        elif type == 'sbsbusservice':
-            self.path = '/ltaodataservice.svc/SBSTInfoSet?$skip='
-            self.filename = 'sbsbusservice.json'
-        elif type == 'smrtbusroute':
-            self.path = '/ltaodataservice.svc/SMRTRouteSet?$skip='
-            self.filename = 'smrtbusroute.json'
-        elif type == 'smrtbusservice':
-            self.path = '/ltaodataservice.svc/SMRTInfoSet?$skip='
-            self.filename = 'smrtbusservice.json'
+            self.path = '/ltaodataservice/BusStops?$skip='
+            self.uri = 'http://datamall2.mytransport.sg'
+            self.filename = 'busstop.json'
+        # elif type == 'sbsbusroute':
+        #     self.path = '/ltaodataservice.svc/SBSTRouteSet?$skip='
+        #     self.filename = 'sbsbusroute.json'
+        # elif type == 'sbsbusservice':
+        #     self.path = '/ltaodataservice.svc/SBSTInfoSet?$skip='
+        #     self.filename = 'sbsbusservice.json'
+        # elif type == 'smrtbusroute':
+        #     self.path = '/ltaodataservice.svc/SMRTRouteSet?$skip='
+        #     self.filename = 'smrtbusroute.json'
+        # elif type == 'smrtbusservice':
+        #     self.path = '/ltaodataservice.svc/SMRTInfoSet?$skip='
+        #     self.filename = 'smrtbusservice.json'
         elif type == 'arrivaltime':
             self.path = '/ltaodataservice/BusArrival?BusStopID='
             self.uri = 'http://datamall2.mytransport.sg'
         elif type == 'taxi':
             self.path = '/ltaodataservice/TaxiAvailability?$skip='
             self.uri = 'http://datamall2.mytransport.sg'
-
+        elif type == 'busServices':
+            self.path = '/ltaodataservice/BusServices?$skip='
+            self.uri = 'http://datamall2.mytransport.sg'
+            self.filename = 'busservices.json'
+        elif type == 'busRoutes':
+            self.path = '/ltaodataservice/BusRoutes?$skip='
+            self.uri = 'http://datamall2.mytransport.sg'
+            self.filename = 'busroutes.json'
     def GetDataFromLta(self, i):
         # send request to LTA and return reply json data
         apath = self.path+i
@@ -74,10 +82,12 @@ class lta:
         while True:
             step = str(i*50)
             jsonData = self.GetDataFromLta(step)
+            # print(jsonData)
             i = i+1
-            a = len(jsonData['d'])
+            # a = len(jsonData['d'])
+            a = len(jsonData['value'])
             print i, a
-            for item in jsonData['d']:
+            for item in jsonData['value']:
                 ltadata.append(item)
             if a < 50:
                 filename = '~/Dropbox/project/busstoppy/data/' + self.filename

@@ -8,8 +8,10 @@ __author__ = 'Jiang Nanqing'
 # busstop = lta('sbsbusservice')
 # busstop = lta('smrtbusroute')
 # busstop = lta('sbsbusroute')
-# busstop = lta('busstop')
-# busstop.readDataFromLTA()
+busstop = lta('busstop')
+# busstop = lta('busServices')
+# busstop = lta('busRoutes')
+busstop.readDataFromLTA()
 
 # Step 2: process data with relative function
 
@@ -35,5 +37,9 @@ __author__ = 'Jiang Nanqing'
 
 # Generate busstop.json with MRT&Mall information
 # test = processdata().combinebusstopinfo()
+
+# Generate busstop file for translate
+# test = processdata().exportAllBusStops()
+
 
 print 'process completed'
