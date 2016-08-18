@@ -1,1 +1,7 @@
 *.pyc
+
+*.json
+
+data/
+
+inputdata/
