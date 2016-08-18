@@ -10,3 +10,4 @@ dom = xmltodict.parse(webcontent)
 # print dom['channel']['item']['weatherForecast']['area'][1]
 for item in dom['channel']['item']['weatherForecast']['area']:
 	print item['@name'],item['@forecast']
+print ("process completed")

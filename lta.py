@@ -4,14 +4,7 @@ from urlparse import urlparse
 import httplib2 as http
 __author__ = 'Jiang'
 # Class to extract busstop/bus json data from LTA API
-# There are 7 types of data:
-# 1. busstop
-# 2. sbsbusroute
-# 3. sbsbusservice
-# 4. smrtbusroute
-# 5. smrtbusservice
-# 6. arrivaltime
-# 7. taxi
+# Refer manual of LTA for details
 
 
 class lta:
@@ -33,18 +26,6 @@ class lta:
             self.path = '/ltaodataservice/BusStops?$skip='
             self.uri = 'http://datamall2.mytransport.sg'
             self.filename = 'busstop.json'
-        # elif type == 'sbsbusroute':
-        #     self.path = '/ltaodataservice.svc/SBSTRouteSet?$skip='
-        #     self.filename = 'sbsbusroute.json'
-        # elif type == 'sbsbusservice':
-        #     self.path = '/ltaodataservice.svc/SBSTInfoSet?$skip='
-        #     self.filename = 'sbsbusservice.json'
-        # elif type == 'smrtbusroute':
-        #     self.path = '/ltaodataservice.svc/SMRTRouteSet?$skip='
-        #     self.filename = 'smrtbusroute.json'
-        # elif type == 'smrtbusservice':
-        #     self.path = '/ltaodataservice.svc/SMRTInfoSet?$skip='
-        #     self.filename = 'smrtbusservice.json'
         elif type == 'arrivaltime':
             self.path = '/ltaodataservice/BusArrival?BusStopID='
             self.uri = 'http://datamall2.mytransport.sg'

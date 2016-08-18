@@ -17,7 +17,6 @@ def readBusLines():
 
 def readBusLineFromWeb(buses):
 	url = "http://www.transitlink.com.sg/eservice/eguide/service_route.php?service="
-
 	for abus in buses:
 		datafolder = '~/Dropbox/project/busstoppy/busFromWeb/'
 		time.sleep(0.5)
@@ -85,12 +84,12 @@ def parseBusFile(busnumber):
 	alldirections = direction1 + direction2
 	return ",".join(alldirections)
 
-# parseBusFile('184')
-buslines = {}
-for abus in readBusLines():
-	buslines[abus] = parseBusFile(abus)
-datafolder = '~/Dropbox/project/busstoppy/busFromWeb/'
-filename = datafolder + 'buslines.json'
-with open(os.path.expanduser(filename),'w') as f:
-	json.dump(buslines,f)
+parseBusFile('184')
+#buslines = {}
+#for abus in readBusLines():
+#	buslines[abus] = parseBusFile(abus)
+#datafolder = '~/Dropbox/project/busstoppy/busFromWeb/'
+#filename = datafolder + 'buslines.json'
+#with open(os.path.expanduser(filename),'w') as f:
+#	json.dump(buslines,f)
 print 'process completed!'

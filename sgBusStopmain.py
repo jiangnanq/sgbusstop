@@ -8,10 +8,10 @@ __author__ = 'Jiang Nanqing'
 # busstop = lta('sbsbusservice')
 # busstop = lta('smrtbusroute')
 # busstop = lta('sbsbusroute')
-busstop = lta('busstop')
+# busstop = lta('busstop')
 # busstop = lta('busServices')
 # busstop = lta('busRoutes')
-busstop.readDataFromLTA()
+# busstop.readDataFromLTA()
 
 # Step 2: process data with relative function
 
@@ -20,7 +20,7 @@ busstop.readDataFromLTA()
 # note: this step is replaced by a python program
 # 		to read bus line information from transitlink.com.sg
 #		The bus information provided by LTA is outdated
-# test = processdata().processbusroute()
+test = processdata().processbusroutes()
 
 # Process MRT information
 # Update mrt.json file

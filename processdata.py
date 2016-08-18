@@ -3,6 +3,8 @@ import os
 # import unicodedata
 from geopy.distance import vincenty
 import xlrd
+import collections
+from natsort import natsorted, ns
 __author__ = 'Nanqing'
 # Class to process busstop/mall/mrt station information
 # All information should been extract
@@ -15,7 +17,7 @@ class processdata:
     DistanceMrtBusstation = 150
     DistanceMrtMall = 300
     DistanceMallBusstation = 150
-    specialBus={'243':['243G','243W'],'225':['225G','225W'],'410':['410W','410G']}
+    # specialBus={'243':['243G','243W'],'225':['225G','225W'],'410':['410W','410G']}
 
     def readF(self, filename):
         # read json file
@@ -23,52 +25,93 @@ class processdata:
             data = json.load(datafile)
         return data
 
-    def readbusstopdynamic(self):
-        # read dynamic bus stop data,
-        # dynamic data means read from LTA by GET method
-        busstopsraw = self.readF(self.datafolder+'busstopdynamic.json')
+    def saveF(self, filename, datatosave):
+        with open(os.path.expanduser(filename), 'w') as fp:
+            json.dump(datatosave, fp)
+
+    def readbusstop(self):
+        busstopsraw = self.readF(self.datafolder + 'busstop.json')
         busstops = {}
         for abusstop in busstopsraw:
-            busstopnumber = abusstop['Code']
+            busstopnumber = abusstop['BusStopCode']
             busstopdescription = [
                 abusstop['Description'],
-                abusstop['Road'],
-                abusstop['BusStopCodeID']]
-            busstops[busstopnumber] = busstopdescription
-        return busstops
+                abusstop['RoadName']
+            ]
+            busstoplocation = [
+                abusstop['Latitude'],
+                abusstop['Longitude']
+            ]
+            busstops[busstopnumber] = [busstopdescription,busstoplocation]
+            return busstops
 
-    def readbusstopstatic(self):
-        # read static bus stop data,
-        # static data means download data from datamall website
-        busstopsraw = self.readF(self.inputdatafolder+'bus-stops.json')
-        busstops = {}
-        for abusstop in busstopsraw:
-            busstopnumber = abusstop['no']
-            latitude = abusstop['lat']
-            longitude = abusstop['lng']
-            name = abusstop['name']
-            busstops[busstopnumber] = [latitude,longitude,name]
-        return busstops
-
-    def processSpecialBus(self):
-        allbuslines = self.allBusRoutes()
-        for key,aSpecialBus in self.specialBus.iteritems():
-            busline = allbuslines[key].split(',')
-            index = 0
-            for i in range(0,len(busline)-1):
-                if busline[i].split(':')[2] == '2':
-                    index = i
-                    break
-            direction1 = ','.join(busline[:index]) 
-            direction2 = ','.join(busline[index:])
-            allbuslines[aSpecialBus[0]]=direction1
-            allbuslines[aSpecialBus[1]]=direction2
-        for busnumber in self.specialBus.keys():
-            del allbuslines[busnumber]
-        f1 = self.datafolder + 'busline.json'
-        with open(os.path.expanduser(f1), 'w') as fp:
-            json.dump(allbuslines, fp)
+    def processbusroutes(self):
+        busroutestops = self.readF(self.datafolder + 'busroutes.json')
+        busroutes = {}
+        for abusstop in busroutestops:
+            if abusstop['Distance'] is not None:
+                busnumber = abusstop['ServiceNo']
+                details = abusstop['BusStopCode'] + ':' + str(abusstop['Distance'])
+                details = details + ':' + str(abusstop['Direction'])
+                details = details + ':' + str(abusstop['StopSequence'])
+                if busnumber in busroutes:
+                    busroutes[busnumber] = busroutes[busnumber] + ',' + details
+                else:
+                    busroutes[busnumber] = details
+        sortbusnumber = natsorted(busroutes, key=lambda y:y.lower())
+        sortedbusroutes = {}
+        for busnumber in sortbusnumber:
+            sortedbusroutes[busnumber] = busroutes[busnumber]
+        f1 = self.datafolder + 'busroute.json'
+        self.saveF(f1, sortedbusroutes)
         return
+
+    # def readbusstopdynamic(self):
+    #     # read dynamic bus stop data,
+    #     # dynamic data means read from LTA by GET method
+    #     busstopsraw = self.readF(self.datafolder+'busstopdynamic.json')
+    #     busstops = {}
+    #     for abusstop in busstopsraw:
+    #         busstopnumber = abusstop['Code']
+    #         busstopdescription = [
+    #             abusstop['Description'],
+    #             abusstop['Road'],
+    #             abusstop['BusStopCodeID']]
+    #         busstops[busstopnumber] = busstopdescription
+    #     return busstops
+
+    # def readbusstopstatic(self):
+    #     # read static bus stop data,
+    #     # static data means download data from datamall website
+    #     busstopsraw = self.readF(self.inputdatafolder+'bus-stops.json')
+    #     busstops = {}
+    #     for abusstop in busstopsraw:
+    #         busstopnumber = abusstop['no']
+    #         latitude = abusstop['lat']
+    #         longitude = abusstop['lng']
+    #         name = abusstop['name']
+    #         busstops[busstopnumber] = [latitude,longitude,name]
+    #     return busstops
+    #
+    # def processSpecialBus(self):
+    #     allbuslines = self.allBusRoutes()
+    #     for key,aSpecialBus in self.specialBus.iteritems():
+    #         busline = allbuslines[key].split(',')
+    #         index = 0
+    #         for i in range(0,len(busline)-1):
+    #             if busline[i].split(':')[2] == '2':
+    #                 index = i
+    #                 break
+    #         direction1 = ','.join(busline[:index])
+    #         direction2 = ','.join(busline[index:])
+    #         allbuslines[aSpecialBus[0]]=direction1
+    #         allbuslines[aSpecialBus[1]]=direction2
+    #     for busnumber in self.specialBus.keys():
+    #         del allbuslines[busnumber]
+    #     f1 = self.datafolder + 'busline.json'
+    #     with open(os.path.expanduser(f1), 'w') as fp:
+    #         json.dump(allbuslines, fp)
+    #     return
 
 
     def allBusStops(self):
@@ -84,6 +127,7 @@ class processdata:
     def allBusRoutes(self):
         # return a dictonary of all bus routes
         return self.readF(self.datafolder + 'busline.json')
+
     def fillMissingBusStops(self,allbusroutes,busstops):
         # fill up missing busstops information base on the
         # previous bus stop information
@@ -289,6 +333,7 @@ class processdata:
         with open(os.path.expanduser(f1), "w") as fp:
             json.dump(malldict, fp)
         return malldict
+
     def exportAllBusStops(self):
         # Export all bus stops information to translate to chinese
         busstops = self.readF(self.datafolder+"busstop.json")        
