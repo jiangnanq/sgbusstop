@@ -20,7 +20,7 @@ __author__ = 'Jiang Nanqing'
 # note: this step is replaced by a python program
 # 		to read bus line information from transitlink.com.sg
 #		The bus information provided by LTA is outdated
-test = processdata().processbusroutes()
+# test = processdata().processbusroutes()
 
 # Process MRT information
 # Update mrt.json file
@@ -41,5 +41,6 @@ test = processdata().processbusroutes()
 # Generate busstop file for translate
 # test = processdata().exportAllBusStops()
 
-
+test = processdata()
+test.exportBusStop()
 print 'process completed'

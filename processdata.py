@@ -17,7 +17,20 @@ class processdata:
     DistanceMrtBusstation = 150
     DistanceMrtMall = 300
     DistanceMallBusstation = 150
+    busstops_lta = {}        #dict, busstopnumber: [description, roadname], [latitude, longitude]
+    mrtSource = {}          #dict, mrtnumber:[mrtname,latitude,longitude]
+    mallSource = {}
+    buslines = {}           #dict, busnumber:[busstopnumber, distance, direction, sequence]
+    busstops = {}           #dict , filter  lta data, remove busstop without location info
+
+
     # specialBus={'243':['243G','243W'],'225':['225G','225W'],'410':['410W','410G']}
+    def __init__(self):
+        self.busstops_lta = self.readbusstoplta()
+        self.mrtSource = self.readmrtdata()
+        self.mallSource = self.readmalldata()
+        self.buslines = self.readbusline()
+        self.busstops = self.readbusstops()
 
     def readF(self, filename):
         # read json file
@@ -29,7 +42,7 @@ class processdata:
         with open(os.path.expanduser(filename), 'w') as fp:
             json.dump(datatosave, fp)
 
-    def readbusstop(self):
+    def readbusstoplta(self):
         busstopsraw = self.readF(self.datafolder + 'busstop.json')
         busstops = {}
         for abusstop in busstopsraw:
@@ -43,12 +56,35 @@ class processdata:
                 abusstop['Longitude']
             ]
             busstops[busstopnumber] = [busstopdescription,busstoplocation]
-            return busstops
+        return busstops
+
+    def readbusstops(self):
+        a = {}
+        for busstopnumber, busstopdetails in self.busstops_lta.iteritems():
+            if (busstopdetails[1][0] == 0 or busstopdetails[1][1] == 0):
+                continue
+            else:
+                a[busstopnumber] = busstopdetails
+        return a
+
+    def readbusline(self):
+        buslineraw = self.readF(self.datafolder + 'busline.json')
+        allbuslines = {}
+        for key, value in buslineraw.iteritems():
+            a = []
+            allstops = value.split(',')
+            for eachStops in allstops:
+                aStop = eachStops.split(':')
+                a.append(aStop)
+            allbuslines[key] = a
+        return allbuslines
 
     def processbusroutes(self):
-        busroutestops = self.readF(self.datafolder + 'busroutes.json')
+        # process bus routes from LTA data
+        # Generate data to busline.json
+        busStopOfRoutes_lta = self.readF(self.datafolder + 'busroutes.json')
         busroutes = {}
-        for abusstop in busroutestops:
+        for abusstop in busStopOfRoutes_lta:
             if abusstop['Distance'] is not None:
                 busnumber = abusstop['ServiceNo']
                 details = abusstop['BusStopCode'] + ':' + str(abusstop['Distance'])
@@ -62,7 +98,7 @@ class processdata:
         sortedbusroutes = {}
         for busnumber in sortbusnumber:
             sortedbusroutes[busnumber] = busroutes[busnumber]
-        f1 = self.datafolder + 'busroute.json'
+        f1 = self.datafolder + 'busline.json'
         self.saveF(f1, sortedbusroutes)
         return
 
@@ -112,46 +148,93 @@ class processdata:
     #     with open(os.path.expanduser(f1), 'w') as fp:
     #         json.dump(allbuslines, fp)
     #     return
+    def checkBusstopInBusLine(self,busstopnumber, buslinenumber):
+        for abusstop in self.buslines[buslinenumber]:
+            if abusstop[0] == busstopnumber:
+                return True
+        return False
 
+    def checkdistance(self, lat1, long1, lat2, long2, condition):
+        p1 = (lat1,long1)
+        p2 = (lat2,long2)
+        if vincenty(p1,p2).m < condition:
+            return True
+        else:
+            return False
 
-    def allBusStops(self):
-        # return a list of all busstops number
+    def exportBusStop(self):
+        t = self.busstops
+        for busstopnumber,busstopdetails in self.busstops.iteritems():
+            a = []
+            for buslinenumber, busline in self.buslines.iteritems():
+                if self.checkBusstopInBusLine(busstopnumber,buslinenumber):
+                    a.append(buslinenumber)
+            sorta = natsorted(a, key=lambda y:y.lower())
+            info = 'The bus in ' + busstopnumber + ' are:'
+            for onebus in sorta:
+                info = info + onebus + ','
+            b = []
+            for mrtstationnumber, mrtstationdetails in self.mrtSource.iteritems():
+                if self.checkdistance(busstopdetails[1][0],busstopdetails[1][1],
+                                      mrtstationdetails[1],mrtstationdetails[2],
+                                      self.DistanceMrtBusstation):
+                    b.append(mrtstationnumber)
+            t[busstopnumber] = [t[busstopnumber], info, b]
+        f = self.datafolder + 'busstopsforapps.json'
+        self.saveF(f,t)
+
+    def checkBusStops(self):
         a = []
-        allBusRoutes = self.readF(self.datafolder + 'busline.json')
-        for abus in allBusRoutes.keys():
-            for abusstop in allBusRoutes[abus].split(','):
-                a.append(abusstop.split(':')[0])
-        allbusstops = sorted(set(a))
-        return allbusstops
+        for busstopnumber, busstopdetails in self.busstops_lta.iteritems():
+            if (busstopdetails[1][0] == 0 or busstopdetails[1][1] == 0):
+                a.append(busstopnumber)
+        return  a
 
-    def allBusRoutes(self):
-        # return a dictonary of all bus routes
-        return self.readF(self.datafolder + 'busline.json')
+    def checkBusLines(self):
+        for amissbusstop in self.checkBusStops():
+            for busnumber,abusline in self.buslines.iteritems():
+                for abusstop in abusline:
+                    if (abusstop[0] == amissbusstop):
+                        print busnumber, amissbusstop
 
-    def fillMissingBusStops(self,allbusroutes,busstops):
-        # fill up missing busstops information base on the
-        # previous bus stop information
-        for key,abusline in allbusroutes.iteritems():
-            for abusstop in abusline.split(','):
-                busstopnumber = abusstop.split(':')[0]
-                busstopname = busstops[busstopnumber][0][0]
-                busstoplatitude = busstops[busstopnumber][1][0]
-                if (busstopname != 'NA') and (busstoplatitude != 'NA'):
-                    previousBusStopNumber = str(busstopnumber)
-                    break
-            for abusstop in abusline.split(','):
-                abusstopnumber = str(abusstop.split(':')[0])
-                if busstops[abusstopnumber][0][0] == 'NA':
-                    print 'fill bustop ' + abusstopnumber + 'with' + previousBusStopNumber
-                    busstops[abusstopnumber][0][0] = busstops[previousBusStopNumber][0][0]
-                    busstops[abusstopnumber][0][1] = busstops[previousBusStopNumber][0][1]
-                    busstops[abusstopnumber][0][2] = busstops[previousBusStopNumber][0][2]
-                if busstops[abusstopnumber][1][0] == 'NA':
-                    print 'fill bustop ' + abusstopnumber + 'with' + previousBusStopNumber
-                    busstops[abusstopnumber][1][0] = busstops[previousBusStopNumber][1][0]
-                    busstops[abusstopnumber][1][1] = busstops[previousBusStopNumber][1][1]
-                previousBusStopNumber = abusstopnumber
-        return busstops
+    # def allBusStops(self):
+    #     # return a list of all busstops number
+    #     a = []
+    #     allBusRoutes = self.readF(self.datafolder + 'busline.json')
+    #     for abus in allBusRoutes.keys():
+    #         for abusstop in allBusRoutes[abus].split(','):
+    #             a.append(abusstop.split(':')[0])
+    #     allbusstops = sorted(set(a))
+    #     return allbusstops
+    #
+    # def allBusRoutes(self):
+    #     # return a dictonary of all bus routes
+    #     return self.readF(self.datafolder + 'busline.json')
+
+    # def fillMissingBusStops(self,allbusroutes,busstops):
+    #     # fill up missing busstops information base on the
+    #     # previous bus stop information
+    #     for key,abusline in allbusroutes.iteritems():
+    #         for abusstop in abusline.split(','):
+    #             busstopnumber = abusstop.split(':')[0]
+    #             busstopname = busstops[busstopnumber][0][0]
+    #             busstoplatitude = busstops[busstopnumber][1][0]
+    #             if (busstopname != 'NA') and (busstoplatitude != 'NA'):
+    #                 previousBusStopNumber = str(busstopnumber)
+    #                 break
+    #         for abusstop in abusline.split(','):
+    #             abusstopnumber = str(abusstop.split(':')[0])
+    #             if busstops[abusstopnumber][0][0] == 'NA':
+    #                 print 'fill bustop ' + abusstopnumber + 'with' + previousBusStopNumber
+    #                 busstops[abusstopnumber][0][0] = busstops[previousBusStopNumber][0][0]
+    #                 busstops[abusstopnumber][0][1] = busstops[previousBusStopNumber][0][1]
+    #                 busstops[abusstopnumber][0][2] = busstops[previousBusStopNumber][0][2]
+    #             if busstops[abusstopnumber][1][0] == 'NA':
+    #                 print 'fill bustop ' + abusstopnumber + 'with' + previousBusStopNumber
+    #                 busstops[abusstopnumber][1][0] = busstops[previousBusStopNumber][1][0]
+    #                 busstops[abusstopnumber][1][1] = busstops[previousBusStopNumber][1][1]
+    #             previousBusStopNumber = abusstopnumber
+    #     return busstops
 
     def combinebusstopinfo(self):
         # generate bus stop detail information
@@ -233,7 +316,14 @@ class processdata:
                 amrt.append(xl_sheet.cell(row_idx, col_idx).value)
             mrt.append(amrt)
         mrt.pop(0)
-        return mrt
+        mrtdict = {}
+        for amrt in mrt:
+            mrtnumber = str(amrt[0])
+            mrtname = amrt[1]
+            mrtlatitude = amrt[3]
+            mrtlongitude = amrt[4]
+            mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude]
+        return mrtdict
 
     def processmrt(self):
         # process MRT station information and save to json file
@@ -278,14 +368,30 @@ class processdata:
         xl_workbook = xlrd.open_workbook(os.path.expanduser(fname))
         xl_sheet = xl_workbook.sheet_by_index(0)
         num_cols = xl_sheet.ncols
-        mrt = []
+        mall = []
         for row_idx in range(0, xl_sheet.nrows):
-            amrt = []
+            amall = []
             for col_idx in range(0, num_cols):
-                amrt.append(xl_sheet.cell(row_idx, col_idx).value)
-            mrt.append(amrt)
-        mrt.pop(0)
-        return mrt
+                amall.append(xl_sheet.cell(row_idx, col_idx).value)
+            mall.append(amall)
+        mall.pop(0)
+        malldict = {}
+        for amall in mall:
+            mallname = amall[1]
+            malllatitude = amall[2]
+            malllongitude = amall[3]
+            mallpostcode = amall[4]
+            mallstreet = amall[5]
+            mallweb = amall[6]
+            malltel = amall[7]
+            malldict[mallname] = [
+                    malllatitude,
+                    malllongitude,
+                    mallpostcode,
+                    mallstreet,
+                    mallweb,
+                    malltel]
+        return malldict
 
     # process Shopping mall information and save to json file
     def processmalldata(self):
