@@ -1,15 +1,12 @@
 import json
 import os
-# import unicodedata
 from geopy.distance import vincenty
 import xlrd
-import collections
 from natsort import natsorted, ns
 __author__ = 'Nanqing'
 # Class to process busstop/mall/mrt station information
 # All information should been extract
 # from LTA and saved to file in the data directory
-
 
 class processdata:
     datafolder = '~/Dropbox/project/busstoppy/data/'
@@ -22,9 +19,11 @@ class processdata:
     mallSource = {}         #dict, mallname:[latitude,longitude,....]
     buslines = {}           #dict, busnumber:[busstopnumber, distance, direction, sequence]
     busstops = {}           #dict , filter  lta data, remove busstop without location info
+    streetname = {}         #dict, streetname_eng: streetname_chn
 
     def __init__(self):
         self.busstops_lta = self.readbusstoplta()
+        self.streetname = self.readstreetChnName()
         self.mrtSource = self.readmrtdata()
         self.mallSource = self.readmalldata()
         self.buslines = self.readbusline()
@@ -55,7 +54,7 @@ class processdata:
             ]
             busstops[busstopnumber] = [busstopdescription,busstoplocation]
         return busstops
-
+    #filter busstops, remove busstops without location information, add Chinese street name
     def readbusstops(self):
         a = {}
         for busstopnumber, busstopdetails in self.busstops_lta.iteritems():
@@ -63,6 +62,11 @@ class processdata:
                 continue
             else:
                 a[busstopnumber] = busstopdetails
+                sn = busstopdetails[0][1]
+                if sn in self.streetname:
+                    a[busstopnumber][0].append(self.streetname[sn])
+                else:
+                    a[busstopnumber][0].append('')
         return a
 
     def readbusline(self):
@@ -85,8 +89,6 @@ class processdata:
         for abusstop in busStopOfRoutes_lta:
             if abusstop['Distance'] is not None:
                 busnumber = abusstop['ServiceNo']
-                if busnumber == '46':
-                    print busnumber
                 details = abusstop['BusStopCode'] + ':' + str(abusstop['Distance'])
                 details = details + ':' + str(abusstop['Direction'])
                 details = details + ':' + str(abusstop['StopSequence'])
@@ -108,12 +110,9 @@ class processdata:
     def checkdistance(self, lat1, long1, lat2, long2, condition):
         p1 = (lat1,long1)
         p2 = (lat2,long2)
-        if vincenty(p1,p2).m < condition:
-            return True
-        else:
-            return False
+        return  vincenty(p1,p2).m < condition
 
-    def exportBusStop(self):
+    def processBusStop(self):
         t = self.busstops
         for busstopnumber,busstopdetails in self.busstops.iteritems():
             a = []
@@ -124,6 +123,8 @@ class processdata:
             info = 'The bus in ' + busstopnumber + ' are:'
             for onebus in sorta:
                 info = info + onebus + ','
+            if info.endswith(','):
+                info = info[:-1]
             b = []
             for mrtstationnumber, mrtstationdetails in self.mrtSource.iteritems():
                 if self.checkdistance(busstopdetails[1][0],busstopdetails[1][1],
@@ -172,47 +173,34 @@ class processdata:
         for amrt in mrt:
             mrtnumber = str(amrt[0])
             mrtname = amrt[1]
+            mrtname_chn = amrt[2]
             mrtlatitude = amrt[3]
             mrtlongitude = amrt[4]
-            mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude]
+            mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude, mrtname_chn]
         return mrtdict
 
     def processmrt(self):
         # process MRT station information and save to json file
-        print 'start processing mrt data.'
+        t = self.mrtSource
         mrt = self.readmrtdata()
-        mrtdict = {}
-        for amrt in mrt:
-            mrtnumber = str(amrt[0])
-            mrtname = amrt[1]
-            mrtlatitude = amrt[3]
-            mrtlongitude = amrt[4]
-            mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude]
-        busstops = self.readF(self.datafolder+"busstop.json")
-        malls = self.readF(self.datafolder+"mall.json")
-        for mrtkey, amrt in mrtdict.iteritems():
-            mrtlatitude = amrt[1]
-            mrtlongitude = amrt[2]
-            mrtcoordinate = (mrtlatitude, mrtlongitude)
-            closestbusstop = []
-            closestmall = []
-            for busstopkey, abusstop in busstops.iteritems():
-                busstoplatitude = abusstop[1][0]
-                busstoplongitude = abusstop[1][1]
-                busstopcoordinate = (busstoplatitude, busstoplongitude)
-                if(vincenty(mrtcoordinate, busstopcoordinate).m < self.DistanceMrtBusstation):
-                    closestbusstop.append(busstopkey)
-            for mallkey, amall in malls.iteritems():
-                malllatitude = amall[0][0]
-                malllongitude = amall[0][1]
-                mallcoordinate = (malllatitude, malllongitude)
-                if(vincenty(mallcoordinate, mrtcoordinate).m < self.DistanceMrtMall):
-                    closestmall.append(mallkey)
-            mrtdict[mrtkey] = [amrt, closestbusstop, closestmall]
-        f1 = self.datafolder + 'mrt.json'
-        with open(os.path.expanduser(f1), "w") as fp:
-            json.dump(mrtdict, fp)
-        return mrtdict
+        for mrtnumber, mrtdetails in mrt.iteritems():
+            latMrt = mrtdetails[1]
+            longMrt = mrtdetails[2]
+            a = []
+            for busstopnumber, busstopdetails in self.busstops.iteritems():
+                latBusstation = busstopdetails[1][0]
+                longBusstation = busstopdetails[1][1]
+                if self.checkdistance(latMrt,longMrt,latBusstation,longBusstation, self.DistanceMrtBusstation):
+                    a.append(busstopnumber)
+            b = []
+            for mallname, malldetails in self.mallSource.iteritems():
+                latMall = malldetails[0]
+                longMall = malldetails[1]
+                if self.checkdistance(latMrt,longMrt,latMall,longMall,self.DistanceMrtMall):
+                    b.append(mallname)
+            t[mrtnumber] = [t[mrtnumber],a,b]
+        f1 = self.datafolder + 'mrtforapps.json'
+        self.saveF(f1,t)
 
     def readmalldata(self):
         # read MRT station information from excel file
@@ -247,57 +235,45 @@ class processdata:
 
     # process Shopping mall information and save to json file
     def processmalldata(self):
-        print 'start processing.'
-        mall = self.readmalldata()
-        malldict = {}
-        for amall in mall:
-            mallname = amall[1]
-            malllatitude = amall[2]
-            malllongitude = amall[3]
-            mallpostcode = amall[4]
-            mallstreet = amall[5]
-            mallweb = amall[6]
-            malltel = amall[7]
-            malldict[mallname] = [
-                    malllatitude,
-                    malllongitude,
-                    mallpostcode,
-                    mallstreet,
-                    mallweb,
-                    malltel]
-        busstops = self.readF(self.datafolder+'busstop.json')
-        mrts = self.readF(self.datafolder+'mrt.json')
-        for mallkey, amall in malldict.iteritems():
-            malllatitude = amall[0]
-            malllongitude = amall[1]
-            mallcoordinate = (malllatitude, malllongitude)
-            closestbusstop = []
-            cloesetmrt = []
-            for busstopkey, abusstop in busstops.iteritems():
-                busstoplatitude = abusstop[1][0]
-                busstoplongitude = abusstop[1][1]
-                busstopcoordinate = (busstoplatitude, busstoplongitude)
-                if(vincenty(mallcoordinate, busstopcoordinate).m < self.DistanceMallBusstation):
-                    closestbusstop.append(busstopkey)
-            for mrtkey, amrt in mrts.iteritems():
-                mrtlatitude = amrt[0][1]
-                mrtlongitude = amrt[0][2]
-                mrtcoordinate = (mrtlatitude, mrtlongitude)
-                if(vincenty(mallcoordinate, mrtcoordinate).m < self.DistanceMrtMall):
-                    cloesetmrt.append(mrtkey)
-            malldict[mallkey] = [amall, closestbusstop, cloesetmrt]
-        f1 = self.datafolder + 'mall.json'
-        print 'Start to write to file.'
-        with open(os.path.expanduser(f1), "w") as fp:
-            json.dump(malldict, fp)
-        return malldict
+        t = self.mallSource
+        for mallname, malldetails in self.mallSource.iteritems():
+            a = []
+            latMall = malldetails[0]
+            longMall = malldetails[1]
+            for busstopnumber, busstopdetails in self.busstops.iteritems():
+                latBusstop = busstopdetails[1][0]
+                longBusstop = busstopdetails[1][1]
+                if self.checkdistance(latMall,longMall,latBusstop,longBusstop,self.DistanceMallBusstation):
+                    a.append(busstopnumber)
+            b = []
+            for mrtname, mrtdetails in self.mrtSource.iteritems():
+                latMrt = mrtdetails[1]
+                longMrt = mrtdetails[2]
+                if self.checkdistance(latMall,longMall,latMrt,longMrt,self.DistanceMrtMall):
+                    b.append(mrtname)
+            t[mallname] = [t[mallname], a , b]
+        f = self.datafolder + 'mallforapps.json'
+        self.saveF(f,t)
 
-    def exportAllBusStops(self):
-        # Export all bus stops information to translate to chinese
-        busstops = self.readF(self.datafolder+"busstop.json")        
-        outputBusStops = []
-        f1 = self.datafolder + 'busstop_chinese.txt'
-        with open(os.path.expanduser(f1),"w") as fp:
-            for busstopkey, busstop in busstops.iteritems():
-                aline = busstopkey + ',' + busstop[0][0] + ',' +busstop[0][1] + '\n'
-                fp.write(aline)
+    def readstreetChnName(self):
+        fname = self.inputdatafolder + 'busstop_chinese.xlsx'
+        xl_workbook = xlrd.open_workbook(os.path.expanduser(fname))
+        xl_sheet = xl_workbook.sheet_by_index(0)
+        num_cols = xl_sheet.ncols
+        streets = []
+        for row_idx in range(0, xl_sheet.nrows):
+            astreet = []
+            for col_idx in range(0, num_cols):
+                astreet.append(xl_sheet.cell(row_idx, col_idx).value)
+            streets.append(astreet)
+        streets.pop(0)
+        streetname = {}
+        for astreet in streets:
+            sname = astreet[2]
+            sname_chn = astreet[4]
+            if sname in streetname:
+                continue
+            else:
+                streetname[sname] = sname_chn
+        return streetname
+

@@ -63,9 +63,7 @@ class lta:
         while True:
             step = str(i*50)
             jsonData = self.GetDataFromLta(step)
-            # print(jsonData)
             i = i+1
-            # a = len(jsonData['d'])
             a = len(jsonData['value'])
             print i, a
             for item in jsonData['value']:

@@ -1,47 +1,31 @@
 from lta import *
 from processdata import *
+from datetime import datetime
 __author__ = 'Jiang Nanqing'
 
+print 'start processing - {:%H:%M:%S}'.format(datetime.now())
+
 # Step 1: Read dynamic data from LTA datamall
-# This step will generate 5 json files in data directory
-# busstop = lta('smrtbusservice')
-# busstop = lta('sbsbusservice')
-# busstop = lta('smrtbusroute')
-# busstop = lta('sbsbusroute')
+# This step will generate 3 json files in data directory
 # busstop = lta('busstop')
 # busstop = lta('busServices')
 # busstop = lta('busRoutes')
 # busstop.readDataFromLTA()
 
-# Step 2: process data with relative function
-
-# Generate busline for each busline
-# This step will generate busline.json
-# note: this step is replaced by a python program
-# 		to read bus line information from transitlink.com.sg
-#		The bus information provided by LTA is outdated
+test = processdata()
+# Step 2: process bus routes, generate busline.json
 # test = processdata().processbusroutes()
 
+# process bus stop information, fill up with busnumber/MRT/MALL information
+# generate busstopsforapps.json
+test.processBusStop()
+
 # Process MRT information
-# Update mrt.json file
-# test = processdata().processmrt()
+# Update mrtforapps.json file
+# test.processmrt()
 
 # Process shopping mall information
-# Update mall.json file
-# test = processdata().processmalldata()
+# Update mallforapps.json file
+# test.processmalldata()
 
-# Process special bus 243/410/225
-# This function must implement once after 
-# update the busline from transitlink.com.sg
-# test = processdata().processSpecialBus()
-
-# Generate busstop.json with MRT&Mall information
-# test = processdata().combinebusstopinfo()
-
-# Generate busstop file for translate
-# test = processdata().exportAllBusStops()
-
-test = processdata()
-test.exportBusStop()
-# test.processbusroutes()
-print 'process completed'
+print 'process completed - {:%H:%M:%S}'.format(datetime.now())
