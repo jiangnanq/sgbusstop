@@ -31,6 +31,35 @@ class busRoute:
     busRoutes = {}  #dict, busnumber:[busstopnumber, distance, direction, sequence],......
     def __init__(self):
         self.busRoutes = self.readBusRoutes()
+
+    def convertBusRoutes(self, buslines):
+        busroutes = {}
+        for busnumber, busdetails in buslines.iteritems():
+            busroutes[busnumber] = ''
+            for abusstop in busdetails:
+                details = abusstop[0]+':' +abusstop[1] + ':' +abusstop[2] + ':' +abusstop[3]
+                busroutes[busnumber] = busroutes[busnumber] + details + ','
+            busroutes[busnumber] = busroutes[busnumber][:-1]
+        return busroutes
+
+    def checkBuslines(self):
+        t = self.busRoutes
+        status = False
+        for busNumber, busDetails in self.busRoutes.iteritems():
+            for idx, abusstop in enumerate(busDetails):
+                if idx == 0:
+                    continue
+                else:
+                    previousStop = busDetails[idx-1]
+                    if previousStop[2] == abusstop[2]:
+                        if (float(previousStop[1])>float(abusstop[1]) or int(previousStop[3]) > int(abusstop[3])):
+                            status = True
+                            print busNumber, abusstop[0], previousStop[1],abusstop[1],previousStop[3],abusstop[3]
+                            t[busNumber][idx][1]=previousStop[1]
+        if status:
+            fn = dataFolder.data + 'busline.json'
+            readWriteFile().saveF(fn,self.convertBusRoutes(t))
+
     def readBusRoutes(self):
         fn = dataFolder.data + 'busline.json'
         buslineraw = readWriteFile().readF(fn)

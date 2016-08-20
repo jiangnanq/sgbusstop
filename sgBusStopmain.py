@@ -12,22 +12,13 @@ print 'start processing - {:%H:%M:%S}'.format(datetime.now())
 # busstop = lta('busRoutes')
 # busstop.readDataFromLTA()
 
+# Step 2: process bus routes, check bus routes for missing busstop
 # busRoute().processBusRoutes()
+# busRoute().checkBuslines()
+
+# Step 3: process busstop, mrt, mall, generate json file in data folder
 # processData().processBusStop()
-processData().processBusStop()
-# Step 2: process bus routes, generate busline.json
-# test = processdata().processbusroutes()
-
-# process bus stop information, fill up with busnumber/MRT/MALL information
-# generate busstopsforapps.json
-# test.processBusStop()
-
-# Process MRT information
-# Update mrtforapps.json file
-# test.processmrt()
-
-# Process shopping mall information
-# Update mallforapps.json file
-# test.processmalldata()
+# processData().processmrt()
+# processData().processmall()
 
 print 'process completed - {:%H:%M:%S}'.format(datetime.now())
