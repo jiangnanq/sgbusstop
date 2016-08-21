@@ -1,12 +1,66 @@
 import json
 import os
+from urlparse import urlparse
+import httplib2 as http
 from geopy.distance import vincenty
 import xlrd
-from natsort import natsorted, ns
+from natsort import natsorted
 __author__ = 'Nanqing'
 # Class to process busstop/mall/mrt station information
 # All information should been extract
 # from LTA and saved to file in the data directory
+
+
+class ltatype:
+    busstop = 'busstop'
+    busroute = 'busRoute'
+
+class lta:
+    path = ''
+    headers = {}
+    uri = 'http://datamall2.mytransport.sg/ltaodataservice/'
+    AccountKey = 'QbJYYDbzk2V605i6JBXPHA=='
+    UniqueUserID = '5aa27f9b-74fd-4bb6-8f4e-3a9aa47613bb'
+    ltatype = {'busstop':'BusStops?$skip=',
+               'busRoute':'BusRoutes?$skip='}
+
+    def __init__(self, type):
+        # init class base on the appoint class type
+        self.headers = {
+            'AccountKey': self.AccountKey,
+            'UniqueUserID': self.UniqueUserID,
+            'accept': 'application/json'}
+        self.path = self.ltatype[type]
+
+    def GetDataFromLta(self, i):
+        # send request to LTA and return reply json data
+        target = urlparse(self.uri + self.path+i)
+        print target.geturl()
+        method = 'GET'
+        body = ''
+        h = http.Http()
+        response, content = h.request(
+            target.geturl(),
+            method,
+            body,
+            self.headers)
+        jsonObj = json.loads(content)
+        return jsonObj
+
+    def readDataFromLTA(self):
+        # Read LTA data base on the class type
+        ltadata = []
+        i = 0
+        while True:
+            step = str(i*50)
+            jsonData = self.GetDataFromLta(step)
+            i = i+1
+            a = len(jsonData['value'])
+            print i, a
+            for item in jsonData['value']:
+                ltadata.append(item)
+            if a < 50:
+                return ltadata
 
 class dataFolder:
     data = '~/Dropbox/project/busstoppy/data/'
@@ -22,17 +76,27 @@ class readWriteFile:
         # read json file
         with open(os.path.expanduser(filename)) as datafile:
             data = json.load(datafile)
+        datafile.close()
         return data
     def saveF(self, filename, dataToSave):
         with open(os.path.expanduser(filename), 'w') as fp:
             json.dump(dataToSave, fp)
+        fp.close()
 
 class busRoute:
+    ltaDataFile = dataFolder.data + 'busRoutesLta.json'
+    localDataFile = dataFolder.data + 'busline.json'
     busRoutes = {}  #dict, busnumber:[busstopnumber, distance, direction, sequence],......
-    def __init__(self):
-        self.busRoutes = self.readBusRoutes()
+    def __init__(self, type):
+        if type == 'lta':
+            self.readBusRoutesFromLta()
+        else:
+            self.busRoutes = self.readBusRoutes()
 
-    def convertBusRoutes(self, buslines):
+    def readBusRoutesFromLta(self):
+        readWriteFile().saveF(self.ltaDataFile, lta(ltatype.busroute).readDataFromLTA())
+
+    def convertBusRoutes(self, buslines):   # convert dict to busline file format
         busroutes = {}
         for busnumber, busdetails in buslines.iteritems():
             busroutes[busnumber] = ''
@@ -57,12 +121,10 @@ class busRoute:
                             print busNumber, abusstop[0], previousStop[1],abusstop[1],previousStop[3],abusstop[3]
                             t[busNumber][idx][1]=previousStop[1]
         if status:
-            fn = dataFolder.data + 'busline.json'
-            readWriteFile().saveF(fn,self.convertBusRoutes(t))
+            readWriteFile().saveF(self.localDataFile,self.convertBusRoutes(t))
 
     def readBusRoutes(self):
-        fn = dataFolder.data + 'busline.json'
-        buslineraw = readWriteFile().readF(fn)
+        buslineraw = readWriteFile().readF(self.localDataFile)
         allbuslines = {}
         for key, value in buslineraw.iteritems():
             a = []
@@ -76,8 +138,7 @@ class busRoute:
     def processBusRoutes(self):
         # process bus routes from LTA data
         # Generate data to busline.json
-        fn = dataFolder.data + 'busroutes.json'
-        busStopOfRoutes_lta = readWriteFile().readF(fn)
+        busStopOfRoutes_lta = readWriteFile().readF(self.ltaDataFile)
         busroutes = {}
         for abusstop in busStopOfRoutes_lta:
             if abusstop['Distance'] is not None:
@@ -93,17 +154,24 @@ class busRoute:
         readWriteFile().saveF(fn, busroutes)
 
 class busStop:
+    localDataFileName = dataFolder.data + 'busstopforapp.json'
+    ltaDataFileName = dataFolder.data + 'busstop'
     busStops_lta = {}   #dict, busstopnumber: [description, roadname], [latitude, longitude]
     busStops = {}       #dict , filter  lta data, remove busstop without location info
     streetName = {}      #dict, streetname_eng: streetname_chn
-    def __init__(self):
-        self.streetName = self.readStreetName()
-        self.busStops_lta = self.readBusStopFromLta()
-        self.busStops = self.readBusStops()
+    def __init__(self, type):
+        if type == 'lta':
+            self.getBusStopDataFromLta()
+        else:
+            self.streetName = self.readStreetName()
+            self.busStops_lta = self.readBusStopFromLta()
+            self.busStops = self.readBusStops()
 
-    def readBusStopFromLta(self):
-        fn = dataFolder.data + 'busstop.json'
-        busstopsraw = readWriteFile().readF(fn)
+    def getBusStopDataFromLta(self):
+        readWriteFile().saveF(self.ltaDataFileName,lta(ltatype.busstop).readDataFromLTA())
+
+    def readBusStopFromLta(self):   # read busstop.json file to a dict: self.busStops_lta
+        busstopsraw = readWriteFile().readF(self.ltaDataFileName)
         busstops = {}
         for abusstop in busstopsraw:
             busstopnumber = abusstop['BusStopCode']
