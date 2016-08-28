@@ -84,6 +84,7 @@ class readWriteFile:
         fp.close()
 
 class busRoute:
+    specialBus = ['243','410','225']
     ltaDataFile = dataFolder.data + 'busRoutesLta.json'
     localDataFile = dataFolder.data + 'busline.json'
     busRoutes = {}  #dict, busnumber:[busstopnumber, distance, direction, sequence],......
@@ -133,6 +134,8 @@ class busRoute:
                 aStop = eachStops.split(':')
                 a.append(aStop)
             allbuslines[key] = a
+        for aspebus in self.specialBus:
+            del allbuslines[aspebus]
         return allbuslines
 
     def processBusRoutes(self):
@@ -155,7 +158,7 @@ class busRoute:
 
 class busStop:
     localDataFileName = dataFolder.data + 'busstopforapp.json'
-    ltaDataFileName = dataFolder.data + 'busstop'
+    ltaDataFileName = dataFolder.data + 'busstop.json'
     busStops_lta = {}   #dict, busstopnumber: [description, roadname], [latitude, longitude]
     busStops = {}       #dict , filter  lta data, remove busstop without location info
     streetName = {}      #dict, streetname_eng: streetname_chn
@@ -304,17 +307,17 @@ class processData:
         for buslinenumber, buslinedetails in buslines.iteritems():
             if self.checkBusstopInBusLine(busstopnumber, buslinedetails):
                 a.append(buslinenumber)
-        sorta = natsorted(a, key=lambda  y:y.lower())
-        info = 'The bus in ' + busstopnumber + ' are: '
+        sorta = natsorted(a, key=lambda y: y.lower())
+        info = 'The bus in ' + busstopnumber + ' are:'
         for onebus in sorta:
             info = info + onebus + ','
         if info.endswith(','):
             info = info[:-1]
-        return  info
+        return info
 
     def processBusStop(self):
-        busstops = busStop().busStops
-        buslines = busRoute().busRoutes
+        busstops = busStop('').busStops
+        buslines = busRoute('').busRoutes
         Mrts = Mrt().Mrts
         Malls = Mall().malls
         t = busstops
@@ -332,13 +335,15 @@ class processData:
                                       malldetails[0],malldetails[1],
                                       distance.DistanceMallBusstation):
                     c.append(mallname)
-            t[busstopnumber] = [t[busstopnumber], info, b, c]
+            t[busstopnumber].append(info)
+            t[busstopnumber].append(b)
+            t[busstopnumber].append(c)
         f = dataFolder.data + 'busstopsforapps.json'
         readWriteFile().saveF(f,t)
 
     def processmrt(self):
         # process MRT station information and save to json file
-        busstops = busStop().busStops
+        busstops = busStop('').busStops
         Mrts = Mrt().Mrts
         Malls = Mall().malls
         t = Mrts
@@ -362,7 +367,7 @@ class processData:
         readWriteFile().saveF(f1,t)
 
     def processmall(self):
-        busstops = busStop().busStops
+        busstops = busStop('').busStops
         Mrts = Mrt().Mrts
         Malls = Mall().malls
         t = Malls

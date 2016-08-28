@@ -8,6 +8,7 @@
 			<string>Choa Chu Kang</string>
 			<real>1.385521</real>
 			<real>103.743689</real>
+			<string>蔡厝港站</string>
 		</array>
 		<array>
 			<string>45239</string>
@@ -23,6 +24,7 @@
 			<string>Fajar</string>
 			<real>1.3847449999999999</real>
 			<real>103.77107700000001</real>
+			<string>法嘉站</string>
 		</array>
 		<array>
 			<string>44779</string>
@@ -36,8 +38,11 @@
 			<string>Segar</string>
 			<real>1.387491</real>
 			<real>103.77017600000001</real>
+			<string>实加站</string>
 		</array>
-		<array/>
+		<array>
+			<string>44711</string>
+		</array>
 		<array/>
 	</array>
 	<key>BP12</key>
@@ -46,6 +51,7 @@
 			<string>Jelapang</string>
 			<real>1.3868050000000001</real>
 			<real>103.764661</real>
+			<string>泽拉邦站</string>
 		</array>
 		<array>
 			<string>44821</string>
@@ -59,6 +65,7 @@
 			<string>Senja</string>
 			<real>1.383211</real>
 			<real>103.76216100000001</real>
+			<string>信加站</string>
 		</array>
 		<array>
 			<string>44799</string>
@@ -71,6 +78,7 @@
 			<string>South View</string>
 			<real>1.3803289999999999</real>
 			<real>103.745062</real>
+			<string>南景站</string>
 		</array>
 		<array>
 			<string>44451</string>
@@ -84,6 +92,7 @@
 			<string>Keat Hong</string>
 			<real>1.3786560000000001</real>
 			<real>103.748881</real>
+			<string>吉丰站</string>
 		</array>
 		<array>
 			<string>44449</string>
@@ -96,6 +105,7 @@
 			<string>Teck Whye</string>
 			<real>1.376811</real>
 			<real>103.752872</real>
+			<string>德惠站</string>
 		</array>
 		<array/>
 		<array/>
@@ -106,6 +116,7 @@
 			<string>Phoenix</string>
 			<real>1.3784419999999999</real>
 			<real>103.75763600000001</real>
+			<string>凤凰站</string>
 		</array>
 		<array>
 			<string>44149</string>
@@ -119,8 +130,10 @@
 			<string>Bukit Panjang</string>
 			<real>1.3781969999999999</real>
 			<real>103.76354499999999</real>
+			<string>武吉班让</string>
 		</array>
 		<array>
+			<string>44031</string>
 			<string>44851</string>
 			<string>44739</string>
 			<string>44731</string>
@@ -136,6 +149,7 @@
 			<string>Petir</string>
 			<real>1.377291</real>
 			<real>103.767376</real>
+			<string>柏提站</string>
 		</array>
 		<array>
 			<string>44209</string>
@@ -149,6 +163,7 @@
 			<string>Pending</string>
 			<real>1.376261</real>
 			<real>103.77131300000001</real>
+			<string>秉定站</string>
 		</array>
 		<array>
 			<string>44221</string>
@@ -162,6 +177,7 @@
 			<string>Bangkit</string>
 			<real>1.3803909999999999</real>
 			<real>103.772622</real>
+			<string>万吉站</string>
 		</array>
 		<array>
 			<string>44329</string>
@@ -175,6 +191,7 @@
 			<string>Dhoby Ghaut</string>
 			<real>1.298746</real>
 			<real>103.844688</real>
+			<string>多美歌站</string>
 		</array>
 		<array>
 			<string>08057</string>
@@ -190,9 +207,12 @@
 			<string>MacPherson</string>
 			<real>1.3265690000000001</real>
 			<real>103.890049</real>
+			<string>麦申波站</string>
 		</array>
 		<array>
 			<string>70391</string>
+			<string>70379</string>
+			<string>70371</string>
 		</array>
 		<array/>
 	</array>
@@ -202,6 +222,7 @@
 			<string>Tai Seng</string>
 			<real>1.335836</real>
 			<real>103.887861</real>
+			<string>大成站</string>
 		</array>
 		<array>
 			<string>70289</string>
@@ -215,6 +236,7 @@
 			<string>Bartley</string>
 			<real>1.3427009999999999</real>
 			<real>103.879964</real>
+			<string>巴特礼站</string>
 		</array>
 		<array>
 			<string>62071</string>
@@ -228,6 +250,7 @@
 			<string>Serangoon</string>
 			<real>1.3491789999999999</real>
 			<real>103.87279700000001</real>
+			<string>实龙岗站</string>
 		</array>
 		<array>
 			<string>62131</string>
@@ -243,6 +266,7 @@
 			<string>Lorong Chuan</string>
 			<real>1.352182</real>
 			<real>103.863528</real>
+			<string>罗弄泉站</string>
 		</array>
 		<array>
 			<string>66399</string>
@@ -255,6 +279,7 @@
 			<string>Bishan</string>
 			<real>1.3507670000000001</real>
 			<real>103.847477</real>
+			<string>碧山站</string>
 		</array>
 		<array>
 			<string>53239</string>
@@ -270,6 +295,7 @@
 			<string>Marymount</string>
 			<real>1.3490869999999999</real>
 			<real>103.839516</real>
+			<string>玛丽蒙站</string>
 		</array>
 		<array>
 			<string>53129</string>
@@ -283,6 +309,7 @@
 			<string>Caldecott</string>
 			<real>1.337804</real>
 			<real>103.839473</real>
+			<string>加利谷站</string>
 		</array>
 		<array>
 			<string>52241</string>
@@ -297,6 +324,7 @@
 			<string>Botanic Gardens</string>
 			<real>1.3225089999999999</real>
 			<real>103.815376</real>
+			<string>植物园站</string>
 		</array>
 		<array>
 			<string>41021</string>
@@ -310,6 +338,7 @@
 			<string>Bras Basah</string>
 			<real>1.2969440000000001</real>
 			<real>103.850739</real>
+			<string>百胜站</string>
 		</array>
 		<array>
 			<string>04189</string>
@@ -323,6 +352,7 @@
 			<string>Farrer Road</string>
 			<real>1.3173170000000001</real>
 			<real>103.80743699999999</real>
+			<string>花拉路站</string>
 		</array>
 		<array>
 			<string>11119</string>
@@ -336,6 +366,7 @@
 			<string>Holland Village</string>
 			<real>1.3121259999999999</real>
 			<real>103.796193</real>
+			<string>荷兰村站</string>
 		</array>
 		<array>
 			<string>11419</string>
@@ -348,10 +379,11 @@
 			<string>Buona Vista</string>
 			<real>1.3074490000000001</real>
 			<real>103.788983</real>
+			<string>波那维斯达站</string>
 		</array>
 		<array>
-			<string>11199</string>
 			<string>11191</string>
+			<string>11199</string>
 		</array>
 		<array>
 			<string>Rochester Mall</string>
@@ -364,6 +396,7 @@
 			<string>One-North</string>
 			<real>1.2992969999999999</real>
 			<real>103.78709499999999</real>
+			<string>纬壹站</string>
 		</array>
 		<array>
 			<string>18051</string>
@@ -377,6 +410,7 @@
 			<string>Kent Ridge</string>
 			<real>1.293377</real>
 			<real>103.78434799999999</real>
+			<string>肯特岗站</string>
 		</array>
 		<array>
 			<string>18331</string>
@@ -392,6 +426,7 @@
 			<string>Haw Par Villa</string>
 			<real>1.2823770000000001</real>
 			<real>103.78187699999999</real>
+			<string>虎豹别墅站</string>
 		</array>
 		<array>
 			<string>16011</string>
@@ -407,6 +442,7 @@
 			<string>Pasir Panjang</string>
 			<real>1.2760640000000001</real>
 			<real>103.791138</real>
+			<string>巴西班让站</string>
 		</array>
 		<array>
 			<string>15209</string>
@@ -419,6 +455,7 @@
 			<string>Labrador Park</string>
 			<real>1.272289</real>
 			<real>103.80281100000001</real>
+			<string>拉柏多公园站</string>
 		</array>
 		<array>
 			<string>14189</string>
@@ -435,6 +472,7 @@
 			<string>Telok Blangah</string>
 			<real>1.2705630000000001</real>
 			<real>103.809577</real>
+			<string>直落布兰雅站</string>
 		</array>
 		<array>
 			<string>14169</string>
@@ -448,6 +486,7 @@
 			<string>HarbourFront</string>
 			<real>1.2653719999999999</real>
 			<real>103.82032700000001</real>
+			<string>港湾站</string>
 		</array>
 		<array>
 			<string>14129</string>
@@ -464,6 +503,7 @@
 			<string>Esplanade</string>
 			<real>1.2934680000000001</real>
 			<real>103.855352</real>
+			<string>滨海中心站</string>
 		</array>
 		<array>
 			<string>01619</string>
@@ -478,6 +518,7 @@
 			<string>Promenade</string>
 			<real>1.293147</real>
 			<real>103.86082399999999</real>
+			<string>宝门廊站</string>
 		</array>
 		<array>
 			<string>02161</string>
@@ -493,6 +534,7 @@
 			<string>Nicoll Highway</string>
 			<real>1.2997540000000001</real>
 			<real>103.863699</real>
+			<string>尼诰大道站</string>
 		</array>
 		<array>
 			<string>80169</string>
@@ -505,6 +547,7 @@
 			<string>Stadium</string>
 			<real>1.302929</real>
 			<real>103.875286</real>
+			<string>体育场站</string>
 		</array>
 		<array>
 			<string>80191</string>
@@ -520,6 +563,7 @@
 			<string>Mountbatten</string>
 			<real>1.3064039999999999</real>
 			<real>103.882582</real>
+			<string>蒙巴登站</string>
 		</array>
 		<array/>
 		<array/>
@@ -530,6 +574,7 @@
 			<string>Dakota</string>
 			<real>1.308292</real>
 			<real>103.88824700000001</real>
+			<string>达科达站</string>
 		</array>
 		<array>
 			<string>81181</string>
@@ -543,6 +588,7 @@
 			<string>Paya Lebar</string>
 			<real>1.318074</real>
 			<real>103.89245200000001</real>
+			<string>巴耶利？站</string>
 		</array>
 		<array>
 			<string>81111</string>
@@ -558,6 +604,7 @@
 			<string>Bayfront</string>
 			<real>1.282362</real>
 			<real>103.858994</real>
+			<string>海湾舫站</string>
 		</array>
 		<array>
 			<string>03519</string>
@@ -572,8 +619,11 @@
 			<string>Marina Bay</string>
 			<real>1.276162</real>
 			<real>103.854316</real>
+			<string>滨海湾站</string>
 		</array>
-		<array/>
+		<array>
+			<string>03311</string>
+		</array>
 		<array/>
 	</array>
 	<key>CG1</key>
@@ -582,6 +632,7 @@
 			<string>Expo</string>
 			<real>1.3346929999999999</real>
 			<real>103.96136199999999</real>
+			<string>博览站</string>
 		</array>
 		<array/>
 		<array>
@@ -594,6 +645,7 @@
 			<string>Changi Airport</string>
 			<real>1.357367</real>
 			<real>103.988905</real>
+			<string>樟宜机场站</string>
 		</array>
 		<array/>
 		<array/>
@@ -604,8 +656,10 @@
 			<string>Bukit Panjang</string>
 			<real>1.3781969999999999</real>
 			<real>103.76354499999999</real>
+			<string>武吉班让</string>
 		</array>
 		<array>
+			<string>44031</string>
 			<string>44851</string>
 			<string>44739</string>
 			<string>44731</string>
@@ -621,6 +675,7 @@
 			<string>Stevens</string>
 			<real>1.3200689999999999</real>
 			<real>103.825997</real>
+			<string>史蒂芬站</string>
 		</array>
 		<array>
 			<string>40221</string>
@@ -635,6 +690,7 @@
 			<string>Newton</string>
 			<real>1.312487</real>
 			<real>103.837924</real>
+			<string>纽顿站</string>
 		</array>
 		<array>
 			<string>40181</string>
@@ -649,6 +705,7 @@
 			<string>Little India</string>
 			<real>1.3072280000000001</real>
 			<real>103.849847</real>
+			<string>小印度站</string>
 		</array>
 		<array>
 			<string>40019</string>
@@ -664,6 +721,7 @@
 			<string>Rochor</string>
 			<real>1.3037639999999999</real>
 			<real>103.852581</real>
+			<string>梧槽站</string>
 		</array>
 		<array>
 			<string>07539</string>
@@ -680,6 +738,7 @@
 			<string>Bugis</string>
 			<real>1.300799</real>
 			<real>103.85553400000001</real>
+			<string>武吉士站</string>
 		</array>
 		<array>
 			<string>01112</string>
@@ -700,6 +759,7 @@
 			<string>Promenade</string>
 			<real>1.2932049999999999</real>
 			<real>103.861628</real>
+			<string>宝门廊站</string>
 		</array>
 		<array>
 			<string>02161</string>
@@ -713,6 +773,7 @@
 			<string>Bayfront</string>
 			<real>1.2824340000000001</real>
 			<real>103.859549</real>
+			<string>海湾舫站</string>
 		</array>
 		<array>
 			<string>03511</string>
@@ -726,6 +787,7 @@
 			<string>Downtown</string>
 			<real>1.279401</real>
 			<real>103.852964</real>
+			<string>市中心站</string>
 		</array>
 		<array>
 			<string>03529</string>
@@ -740,6 +802,7 @@
 			<string>Telok Ayer</string>
 			<real>1.2820450000000001</real>
 			<real>103.848457</real>
+			<string>直落亚逸站</string>
 		</array>
 		<array>
 			<string>03041</string>
@@ -752,6 +815,7 @@
 			<string>Chinatown</string>
 			<real>1.2844370000000001</real>
 			<real>103.843264</real>
+			<string>牛车水站</string>
 		</array>
 		<array>
 			<string>05013</string>
@@ -768,6 +832,7 @@
 			<string>Cashew</string>
 			<real>1.3689750000000001</real>
 			<real>103.764803</real>
+			<string>凯秀站</string>
 		</array>
 		<array>
 			<string>43099</string>
@@ -781,8 +846,10 @@
 			<string>Hillview</string>
 			<real>1.3624719999999999</real>
 			<real>103.76738899999999</real>
+			<string>山景站</string>
 		</array>
 		<array>
+			<string>43061</string>
 			<string>43069</string>
 		</array>
 		<array/>
@@ -793,10 +860,12 @@
 			<string>Beauty World</string>
 			<real>1.3411329999999999</real>
 			<real>103.775797</real>
+			<string>美世界站</string>
 		</array>
 		<array>
 			<string>42159</string>
 			<string>42151</string>
+			<string>42099</string>
 			<string>42259</string>
 		</array>
 		<array/>
@@ -807,6 +876,7 @@
 			<string>King Albert Park</string>
 			<real>1.335628</real>
 			<real>103.78398300000001</real>
+			<string>阿尔柏王园站</string>
 		</array>
 		<array>
 			<string>42049</string>
@@ -819,6 +889,7 @@
 			<string>Sixth Avenue</string>
 			<real>1.330714</real>
 			<real>103.797633</real>
+			<string>第六道站</string>
 		</array>
 		<array>
 			<string>41081</string>
@@ -831,6 +902,7 @@
 			<string>Tan Kah Kee</string>
 			<real>1.326039</real>
 			<real>103.807169</real>
+			<string>陈嘉庚站</string>
 		</array>
 		<array>
 			<string>41051</string>
@@ -844,6 +916,7 @@
 			<string>Botanic Gardens</string>
 			<real>1.3225089999999999</real>
 			<real>103.815376</real>
+			<string>植物园站</string>
 		</array>
 		<array>
 			<string>41021</string>
@@ -857,9 +930,11 @@
 			<string>Pasir Ris</string>
 			<real>1.3725449999999999</real>
 			<real>103.949504</real>
+			<string>巴西立站</string>
 		</array>
 		<array>
 			<string>77009</string>
+			<string>77008</string>
 			<string>77171</string>
 			<string>77179</string>
 		</array>
@@ -871,6 +946,7 @@
 			<string>Kallang</string>
 			<real>1.311482</real>
 			<real>103.871392</real>
+			<string>加冷站</string>
 		</array>
 		<array>
 			<string>80101</string>
@@ -885,6 +961,7 @@
 			<string>Lavender</string>
 			<real>1.307191</real>
 			<real>103.86299099999999</real>
+			<string>劳明达站</string>
 		</array>
 		<array>
 			<string>01311</string>
@@ -898,6 +975,7 @@
 			<string>Bugis</string>
 			<real>1.3007280000000001</real>
 			<real>103.856409</real>
+			<string>武吉士站</string>
 		</array>
 		<array>
 			<string>01112</string>
@@ -917,6 +995,7 @@
 			<string>City Hall</string>
 			<real>1.2932410000000001</real>
 			<real>103.852054</real>
+			<string>政府大厦站</string>
 		</array>
 		<array>
 			<string>04167</string>
@@ -932,6 +1011,7 @@
 			<string>Raffles Place</string>
 			<real>1.283952</real>
 			<real>103.851281</real>
+			<string>莱佛士坊站</string>
 		</array>
 		<array/>
 		<array>
@@ -944,6 +1024,7 @@
 			<string>Tanjong Pagar</string>
 			<real>1.276491</real>
 			<real>103.845726</real>
+			<string>丹戎巴葛站</string>
 		</array>
 		<array>
 			<string>03223</string>
@@ -956,6 +1037,7 @@
 			<string>Outram Park</string>
 			<real>1.28135</real>
 			<real>103.838838</real>
+			<string>欧南园站</string>
 		</array>
 		<array>
 			<string>06029</string>
@@ -971,6 +1053,7 @@
 			<string>Tiong Bahru</string>
 			<real>1.286133</real>
 			<real>103.827079</real>
+			<string>中巴鲁站</string>
 		</array>
 		<array>
 			<string>10169</string>
@@ -986,6 +1069,7 @@
 			<string>Redhill</string>
 			<real>1.2897369999999999</real>
 			<real>103.816715</real>
+			<string>红山站</string>
 		</array>
 		<array>
 			<string>10201</string>
@@ -999,6 +1083,7 @@
 			<string>Queenstown</string>
 			<real>1.294511</real>
 			<real>103.80611500000001</real>
+			<string>女皇镇站</string>
 		</array>
 		<array>
 			<string>11141</string>
@@ -1012,6 +1097,7 @@
 			<string>Tampines</string>
 			<string>1.353110</string>
 			<real>103.945213</real>
+			<string>淡滨尼站</string>
 		</array>
 		<array>
 			<string>76141</string>
@@ -1029,6 +1115,7 @@
 			<string>Commonwealth</string>
 			<real>1.3025659999999999</real>
 			<real>103.79822900000001</real>
+			<string>联邦站</string>
 		</array>
 		<array>
 			<string>11169</string>
@@ -1042,6 +1129,7 @@
 			<string>Buona Vista</string>
 			<real>1.3074349999999999</real>
 			<real>103.789861</real>
+			<string>波那维斯达站</string>
 		</array>
 		<array>
 			<string>11361</string>
@@ -1057,6 +1145,7 @@
 			<string>Dover</string>
 			<real>1.31134</real>
 			<real>103.77868100000001</real>
+			<string>杜弗站</string>
 		</array>
 		<array>
 			<string>19039</string>
@@ -1070,6 +1159,7 @@
 			<string>Clementi</string>
 			<real>1.3154239999999999</real>
 			<real>103.76520600000001</real>
+			<string>金文泰站</string>
 		</array>
 		<array>
 			<string>17171</string>
@@ -1086,11 +1176,13 @@
 			<string>Jurong East</string>
 			<real>1.334387</real>
 			<real>103.741388</real>
+			<string>裕廊东站</string>
 		</array>
 		<array>
 			<string>28211</string>
-			<string>28009</string>
 			<string>28301</string>
+			<string>28009</string>
+			<string>28008</string>
 		</array>
 		<array>
 			<string>Westgate</string>
@@ -1104,6 +1196,7 @@
 			<string>Chinese Garden</string>
 			<real>1.3425389999999999</real>
 			<real>103.732505</real>
+			<string>裕华园站</string>
 		</array>
 		<array>
 			<string>28349</string>
@@ -1117,6 +1210,7 @@
 			<string>Lake Side</string>
 			<real>1.344212</real>
 			<real>103.720403</real>
+			<string>湖畔站</string>
 		</array>
 		<array>
 			<string>28091</string>
@@ -1130,9 +1224,11 @@
 			<string>Boon Lay</string>
 			<real>1.338854</real>
 			<real>103.70553200000001</real>
+			<string>文礼站</string>
 		</array>
 		<array>
 			<string>22009</string>
+			<string>22999</string>
 		</array>
 		<array>
 			<string>Jurong Point Shopping Mall</string>
@@ -1144,6 +1240,7 @@
 			<string>Pioneer</string>
 			<real>1.337402</real>
 			<real>103.697157</real>
+			<string>先驱站</string>
 		</array>
 		<array>
 			<string>22469</string>
@@ -1158,10 +1255,12 @@
 			<string>Joon Koon</string>
 			<real>1.3277060000000001</real>
 			<real>103.678489</real>
+			<string>裕群站</string>
 		</array>
 		<array>
 			<string>23499</string>
 			<string>23491</string>
+			<string>24009</string>
 		</array>
 		<array/>
 	</array>
@@ -1171,11 +1270,12 @@
 			<string>Simei</string>
 			<real>1.343221</real>
 			<real>103.953366</real>
+			<string>四美站</string>
 		</array>
 		<array>
+			<string>96149</string>
 			<string>96161</string>
 			<string>96169</string>
-			<string>96149</string>
 		</array>
 		<array>
 			<string>East Point Mall</string>
@@ -1187,6 +1287,7 @@
 			<string>Tanah Merah</string>
 			<real>1.3272569999999999</real>
 			<real>103.946594</real>
+			<string>丹那美拉站</string>
 		</array>
 		<array>
 			<string>85091</string>
@@ -1200,6 +1301,7 @@
 			<string>Bedok</string>
 			<real>1.3240419999999999</real>
 			<real>103.930025</real>
+			<string>勿洛站</string>
 		</array>
 		<array>
 			<string>84009</string>
@@ -1217,6 +1319,7 @@
 			<string>Kembangan</string>
 			<real>1.3209630000000001</real>
 			<real>103.912826</real>
+			<string>景万岸站</string>
 		</array>
 		<array>
 			<string>83321</string>
@@ -1230,6 +1333,7 @@
 			<string>Eunos</string>
 			<real>1.3197509999999999</real>
 			<real>103.90310599999999</real>
+			<string>友诺士站</string>
 		</array>
 		<array>
 			<string>82061</string>
@@ -1242,6 +1346,7 @@
 			<string>Paya Lebar</string>
 			<real>1.3181210000000001</real>
 			<real>103.89313900000001</real>
+			<string>巴耶利芭站</string>
 		</array>
 		<array>
 			<string>81111</string>
@@ -1256,6 +1361,7 @@
 			<string>Aljunied</string>
 			<real>1.3165119999999999</real>
 			<real>103.882893</real>
+			<string>阿裕尼站</string>
 		</array>
 		<array>
 			<string>81011</string>
@@ -1270,6 +1376,7 @@
 			<string>HarbourFront</string>
 			<real>1.2652969999999999</real>
 			<real>103.82118199999999</real>
+			<string>港湾站</string>
 		</array>
 		<array>
 			<string>14141</string>
@@ -1286,6 +1393,7 @@
 			<string>Potong Pasir</string>
 			<real>1.3313619999999999</real>
 			<real>103.869276</real>
+			<string>波东巴西站</string>
 		</array>
 		<array>
 			<string>60269</string>
@@ -1299,10 +1407,11 @@
 			<string>Woodleigh</string>
 			<real>1.3393630000000001</real>
 			<real>103.870757</real>
+			<string>兀里站</string>
 		</array>
 		<array>
-			<string>61031</string>
 			<string>61039</string>
+			<string>61031</string>
 			<string>61059</string>
 		</array>
 		<array/>
@@ -1313,6 +1422,7 @@
 			<string>Serangoon</string>
 			<real>1.3492420000000001</real>
 			<real>103.873632</real>
+			<string>实龙岗站</string>
 		</array>
 		<array>
 			<string>62131</string>
@@ -1330,10 +1440,11 @@
 			<string>Kovan</string>
 			<real>1.3605149999999999</real>
 			<real>103.885209</real>
+			<string>高文站</string>
 		</array>
 		<array>
-			<string>63039</string>
 			<string>63031</string>
+			<string>63039</string>
 		</array>
 		<array>
 			<string>Heartland Mall</string>
@@ -1345,6 +1456,7 @@
 			<string>Hougang</string>
 			<real>1.370919</real>
 			<real>103.892472</real>
+			<string>后港站</string>
 		</array>
 		<array>
 			<string>64541</string>
@@ -1361,6 +1473,7 @@
 			<string>Buangkok</string>
 			<real>1.382449</real>
 			<real>103.892719</real>
+			<string>万国站</string>
 		</array>
 		<array>
 			<string>67601</string>
@@ -1373,6 +1486,7 @@
 			<string>Sengkang</string>
 			<real>1.3912659999999999</real>
 			<real>103.895369</real>
+			<string>盛港站</string>
 		</array>
 		<array>
 			<string>67409</string>
@@ -1388,6 +1502,7 @@
 			<string>Punggol</string>
 			<real>1.4045449999999999</real>
 			<real>103.902023</real>
+			<string>榜鹅站</string>
 		</array>
 		<array>
 			<string>65009</string>
@@ -1402,6 +1517,7 @@
 			<string>Outram Park</string>
 			<real>1.281344</real>
 			<real>103.839765</real>
+			<string>欧南园站</string>
 		</array>
 		<array>
 			<string>06029</string>
@@ -1419,6 +1535,7 @@
 			<string>Chinatown</string>
 			<real>1.284446</real>
 			<real>103.843559</real>
+			<string>牛车水站</string>
 		</array>
 		<array>
 			<string>05013</string>
@@ -1436,6 +1553,7 @@
 			<string>Clarke Quay</string>
 			<real>1.2885009999999999</real>
 			<real>103.846778</real>
+			<string>克拉码头站</string>
 		</array>
 		<array>
 			<string>04222</string>
@@ -1449,6 +1567,7 @@
 			<string>Dhoby Ghaut</string>
 			<real>1.298594</real>
 			<real>103.845888</real>
+			<string>多美歌站</string>
 		</array>
 		<array>
 			<string>08057</string>
@@ -1465,6 +1584,7 @@
 			<string>Little India</string>
 			<real>1.3072280000000001</real>
 			<real>103.849847</real>
+			<string>小印度站</string>
 		</array>
 		<array>
 			<string>40019</string>
@@ -1480,6 +1600,7 @@
 			<string>Farrer Park</string>
 			<real>1.3124089999999999</real>
 			<string>103.854320</string>
+			<string>花拉公园站</string>
 		</array>
 		<array>
 			<string>50259</string>
@@ -1497,6 +1618,7 @@
 			<string>Boon Keng</string>
 			<real>1.319596</real>
 			<real>103.861949</real>
+			<string>文庆站</string>
 		</array>
 		<array>
 			<string>60121</string>
@@ -1509,8 +1631,11 @@
 			<string>Jurong East</string>
 			<real>1.334362</real>
 			<real>103.742569</real>
+			<string>裕廊东站</string>
 		</array>
-		<array/>
+		<array>
+			<string>28008</string>
+		</array>
 		<array>
 			<string>Westgate</string>
 			<string>Jem</string>
@@ -1523,6 +1648,7 @@
 			<string>Admiralty</string>
 			<real>1.440715</real>
 			<real>103.800997</real>
+			<string>海军部站</string>
 		</array>
 		<array>
 			<string>46779</string>
@@ -1536,6 +1662,7 @@
 			<string>Sembawang</string>
 			<real>1.4490810000000001</real>
 			<real>103.820223</real>
+			<string>三巴旺站</string>
 		</array>
 		<array>
 			<string>58219</string>
@@ -1551,8 +1678,10 @@
 			<string>Yishun</string>
 			<real>1.4295610000000001</real>
 			<real>103.83524300000001</real>
+			<string>义顺站</string>
 		</array>
 		<array>
+			<string>59008</string>
 			<string>59159</string>
 			<string>59072</string>
 			<string>59073</string>
@@ -1568,6 +1697,7 @@
 			<string>Khatib</string>
 			<real>1.417548</real>
 			<string>103.832840</string>
+			<string>卡迪站</string>
 		</array>
 		<array>
 			<string>59561</string>
@@ -1583,6 +1713,7 @@
 			<string>Yio Chu Kang</string>
 			<real>1.3820790000000001</real>
 			<real>103.844773</real>
+			<string>杨厝港</string>
 		</array>
 		<array>
 			<string>55509</string>
@@ -1597,6 +1728,7 @@
 			<string>Ang Mo Kio</string>
 			<real>1.3700349999999999</real>
 			<real>103.849475</real>
+			<string>宏茂桥站</string>
 		</array>
 		<array>
 			<string>54009</string>
@@ -1611,6 +1743,7 @@
 			<string>Bishan</string>
 			<real>1.350803</real>
 			<real>103.848316</real>
+			<string>碧山站</string>
 		</array>
 		<array>
 			<string>53239</string>
@@ -1626,6 +1759,7 @@
 			<string>Braddell</string>
 			<real>1.340292</real>
 			<real>103.845215</real>
+			<string>布莱德站</string>
 		</array>
 		<array>
 			<string>52169</string>
@@ -1639,8 +1773,10 @@
 			<string>Toa Payoh</string>
 			<real>1.3327260000000001</real>
 			<real>103.84779399999999</real>
+			<string>大巴窑站</string>
 		</array>
 		<array>
+			<string>52008</string>
 			<string>52009</string>
 			<string>52189</string>
 			<string>52181</string>
@@ -1653,6 +1789,7 @@
 			<string>Bukit Batok</string>
 			<real>1.3488629999999999</real>
 			<real>103.749522</real>
+			<string>武吉巴督站</string>
 		</array>
 		<array/>
 		<array>
@@ -1665,6 +1802,7 @@
 			<string>Novena</string>
 			<real>1.320038</real>
 			<real>103.843846</real>
+			<string>诺维娜站</string>
 		</array>
 		<array>
 			<string>50038</string>
@@ -1680,6 +1818,7 @@
 			<string>Newton</string>
 			<real>1.312487</real>
 			<real>103.837924</real>
+			<string>纽顿站</string>
 		</array>
 		<array>
 			<string>40181</string>
@@ -1694,6 +1833,7 @@
 			<string>Orchard</string>
 			<real>1.304324</real>
 			<real>103.83248399999999</real>
+			<string>乌节站</string>
 		</array>
 		<array>
 			<string>09047</string>
@@ -1711,6 +1851,7 @@
 			<string>Somerset</string>
 			<real>1.300125</real>
 			<real>103.838588</real>
+			<string>索美塞站</string>
 		</array>
 		<array>
 			<string>08121</string>
@@ -1728,6 +1869,7 @@
 			<string>Dhoby Ghaut</string>
 			<real>1.2985910000000001</real>
 			<real>103.846191</real>
+			<string>多美歌站</string>
 		</array>
 		<array>
 			<string>08057</string>
@@ -1744,6 +1886,7 @@
 			<string>City Hall</string>
 			<real>1.293239</real>
 			<real>103.85237100000001</real>
+			<string>政府大厦站</string>
 		</array>
 		<array>
 			<string>04167</string>
@@ -1759,6 +1902,7 @@
 			<string>Raffles Place</string>
 			<real>1.2839389999999999</real>
 			<real>103.851642</real>
+			<string>莱佛士坊站</string>
 		</array>
 		<array/>
 		<array>
@@ -1771,8 +1915,12 @@
 			<string>Marina Bay</string>
 			<string>1.276120</string>
 			<real>103.85480699999999</real>
+			<string>滨海湾站</string>
 		</array>
-		<array/>
+		<array>
+			<string>03311</string>
+			<string>03319</string>
+		</array>
 		<array/>
 	</array>
 	<key>NS28</key>
@@ -1781,6 +1929,7 @@
 			<string>Marina South Pier</string>
 			<real>1.2709710000000001</real>
 			<string>103.863250</string>
+			<string>滨海南码头站</string>
 		</array>
 		<array>
 			<string>03411</string>
@@ -1794,6 +1943,7 @@
 			<string>Bukit Gombak</string>
 			<real>1.358903</real>
 			<real>103.751839</real>
+			<string>武吉甘柏站</string>
 		</array>
 		<array>
 			<string>43579</string>
@@ -1807,6 +1957,7 @@
 			<string>Choa Chu Kang</string>
 			<real>1.3855630000000001</real>
 			<real>103.74480699999999</real>
+			<string>蔡厝港站</string>
 		</array>
 		<array>
 			<string>44539</string>
@@ -1823,11 +1974,13 @@
 			<string>Yew Tee</string>
 			<real>1.3975759999999999</real>
 			<real>103.747339</real>
+			<string>油池站</string>
 		</array>
 		<array>
-			<string>45479</string>
+			<string>N4431</string>
 			<string>45329</string>
 			<string>45321</string>
+			<string>45331</string>
 		</array>
 		<array>
 			<string>Yew Tee Point</string>
@@ -1839,10 +1992,11 @@
 			<string>Kranji</string>
 			<real>1.4250560000000001</real>
 			<real>103.76190099999999</real>
+			<string>克兰芝站</string>
 		</array>
 		<array>
-			<string>45131</string>
 			<string>45139</string>
+			<string>45131</string>
 		</array>
 		<array/>
 	</array>
@@ -1852,6 +2006,7 @@
 			<string>Marsiling</string>
 			<real>1.432607</real>
 			<real>103.774046</real>
+			<string>马西岭站</string>
 		</array>
 		<array>
 			<string>46529</string>
@@ -1865,8 +2020,10 @@
 			<string>Woodlands</string>
 			<real>1.4371970000000001</real>
 			<real>103.786405</real>
+			<string>兀兰站</string>
 		</array>
 		<array>
+			<string>46008</string>
 			<string>46009</string>
 		</array>
 		<array>
@@ -1879,6 +2036,7 @@
 			<string>Cove</string>
 			<real>1.3993370000000001</real>
 			<real>103.906302</real>
+			<string>海湾站</string>
 		</array>
 		<array>
 			<string>65159</string>
@@ -1892,6 +2050,7 @@
 			<string>Meridian</string>
 			<real>1.3969780000000001</real>
 			<real>103.909177</real>
+			<string>丽园站</string>
 		</array>
 		<array>
 			<string>65169</string>
@@ -1905,6 +2064,7 @@
 			<string>Coral Edge</string>
 			<real>1.393448</real>
 			<real>103.91209600000001</real>
+			<string>珊瑚站</string>
 		</array>
 		<array>
 			<string>65171</string>
@@ -1918,6 +2078,7 @@
 			<string>Riviera</string>
 			<real>1.3946190000000001</real>
 			<real>103.916523</real>
+			<string>里维达站</string>
 		</array>
 		<array>
 			<string>65239</string>
@@ -1931,6 +2092,7 @@
 			<string>Kadaloor</string>
 			<real>1.399338</real>
 			<real>103.91639499999999</real>
+			<string>卡达鲁站</string>
 		</array>
 		<array>
 			<string>65329</string>
@@ -1944,6 +2106,7 @@
 			<string>Oasis</string>
 			<real>1.4016120000000001</real>
 			<real>103.913605</real>
+			<string>绿洲站</string>
 		</array>
 		<array>
 			<string>65311</string>
@@ -1956,6 +2119,7 @@
 			<string>Damai</string>
 			<real>1.4053450000000001</real>
 			<real>103.907833</real>
+			<string>达迈站</string>
 		</array>
 		<array>
 			<string>65099</string>
@@ -1969,6 +2133,7 @@
 			<string>Punggol</string>
 			<real>1.4047289999999999</real>
 			<real>103.90225700000001</real>
+			<string>榜鹅站</string>
 		</array>
 		<array>
 			<string>65009</string>
@@ -1983,6 +2148,7 @@
 			<string>Compassvale</string>
 			<real>1.3946190000000001</real>
 			<real>103.900087</real>
+			<string>康埔桦站</string>
 		</array>
 		<array>
 			<string>67251</string>
@@ -1996,6 +2162,7 @@
 			<string>Rumbia</string>
 			<real>1.3911009999999999</real>
 			<real>103.90622399999999</real>
+			<string>棕美站</string>
 		</array>
 		<array>
 			<string>67671</string>
@@ -2012,6 +2179,7 @@
 			<string>Bakau</string>
 			<real>1.387883</real>
 			<real>103.90519399999999</real>
+			<string>码高站</string>
 		</array>
 		<array>
 			<string>67139</string>
@@ -2025,6 +2193,7 @@
 			<string>Kangkar</string>
 			<real>1.3837219999999999</real>
 			<real>103.902061</real>
+			<string>港脚站</string>
 		</array>
 		<array>
 			<string>67159</string>
@@ -2040,6 +2209,7 @@
 			<string>Ranggung</string>
 			<real>1.3836360000000001</real>
 			<real>103.89764099999999</real>
+			<string>兰岗站</string>
 		</array>
 		<array>
 			<string>67211</string>
@@ -2053,10 +2223,11 @@
 			<string>Sengkang</string>
 			<real>1.391745</real>
 			<real>103.895495</real>
+			<string>盛港站</string>
 		</array>
 		<array>
-			<string>67401</string>
 			<string>67409</string>
+			<string>67401</string>
 			<string>67009</string>
 		</array>
 		<array>
@@ -2069,8 +2240,12 @@
 			<string>Farmway</string>
 			<real>1.397295</real>
 			<real>103.888972</real>
+			<string>农道站</string>
 		</array>
-		<array/>
+		<array>
+			<string>67311</string>
+			<string>67319</string>
+		</array>
 		<array/>
 	</array>
 	<key>SW4</key>
@@ -2079,6 +2254,7 @@
 			<string>Thanggam</string>
 			<real>1.397348</real>
 			<real>103.875379</real>
+			<string>丹甘站</string>
 		</array>
 		<array/>
 		<array/>
@@ -2089,6 +2265,7 @@
 			<string>Fernvale</string>
 			<real>1.391921</real>
 			<real>103.876087</real>
+			<string>芬微站</string>
 		</array>
 		<array/>
 		<array>
@@ -2101,6 +2278,7 @@
 			<string>Layar</string>
 			<real>1.3921570000000001</real>
 			<real>103.879885</real>
+			<string>拉雅站</string>
 		</array>
 		<array>
 			<string>67471</string>
@@ -2114,6 +2292,7 @@
 			<string>Tongkang</string>
 			<real>1.3892610000000001</real>
 			<real>103.886107</real>
+			<string>同港站 </string>
 		</array>
 		<array>
 			<string>67301</string>
@@ -2127,6 +2306,7 @@
 			<string>Renjong</string>
 			<real>1.386644</real>
 			<real>103.89044199999999</real>
+			<string>仁宗站</string>
 		</array>
 		<array>
 			<string>67299</string>
