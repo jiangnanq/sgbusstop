@@ -10,7 +10,6 @@ __author__ = 'Nanqing'
 # All information should been extract
 # from LTA and saved to file in the data directory
 
-
 class ltatype:
     busstop = 'busstop'
     busroute = 'busRoute'
@@ -87,16 +86,40 @@ class busRoute:
     specialBus = ['243','410','225']
     ltaDataFile = dataFolder.data + 'busRoutesLta.json'
     localDataFile = dataFolder.data + 'busline.json'
+    busRouteCSV = dataFolder.data + 'ltaBusRoutes.csv'
+    busStopOfRoutes_lta = {}
     busRoutes = {}  #dict, busnumber:[busstopnumber, distance, direction, sequence],......
     def __init__(self, type):
         if type == 'lta':
             self.readBusRoutesFromLta()
         else:
             self.busRoutes = self.readBusRoutes()
+            self.busStopOfRoutes_lta = readWriteFile().readF(self.ltaDataFile)
 
     def readBusRoutesFromLta(self):
-        readWriteFile().saveF(self.ltaDataFile, lta(ltatype.busroute).readDataFromLTA())
+        ltadata = lta(ltatype.busroute).readDataFromLTA()
+        readWriteFile().saveF(self.ltaDataFile, ltadata)
 
+    def saveBusRoutesToCSV(self):
+        with open(os.path.expanduser(self.busRouteCSV), 'w') as fp:
+            for abusstop in self.busStopOfRoutes_lta:
+                code = str(abusstop['BusStopCode'])
+                direction = str(abusstop['Direction'])
+                Distance = str(abusstop['Distance'])
+                Operator = str(abusstop['Operator'])
+                satFirst = str(abusstop['SAT_FirstBus'])
+                satLast = str(abusstop['SAT_LastBus'])
+                sunFirst = str(abusstop['SUN_FirstBus'])
+                sunLast = str(abusstop['SUN_LastBus'])
+                serviceno = str(abusstop['ServiceNo'])
+                stopsequence = str(abusstop['StopSequence'])
+                wdFirst = str(abusstop['WD_FirstBus'])
+                wdLast = str(abusstop['WD_LastBus'])
+                line = code + ',' + direction + ',' + Distance + ',' + Operator + ','
+                line = line + satFirst + ',' + satLast + ',' + sunFirst + ',' + sunLast + ','
+                line = line + wdFirst + ',' + wdLast + ',' + serviceno + ',' + stopsequence + '\n' 
+                fp.write(line)
+        fp.close()
     def convertBusRoutes(self, buslines):   # convert dict to busline file format
         busroutes = {}
         for busnumber, busdetails in buslines.iteritems():
@@ -159,6 +182,7 @@ class busRoute:
 class busStop:
     localDataFileName = dataFolder.data + 'busstopforapp.json'
     ltaDataFileName = dataFolder.data + 'busstop.json'
+    ltaDataFileNameCSV = dataFolder.data + 'ltabusstop.csv'
     busStops_lta = {}   #dict, busstopnumber: [description, roadname], [latitude, longitude]
     busStops = {}       #dict , filter  lta data, remove busstop without location info
     streetName = {}      #dict, streetname_eng: streetname_chn
@@ -171,7 +195,19 @@ class busStop:
             self.busStops = self.readBusStops()
 
     def getBusStopDataFromLta(self):
-        readWriteFile().saveF(self.ltaDataFileName,lta(ltatype.busstop).readDataFromLTA())
+        busstops = lta(ltatype.busstop).readDataFromLTA()
+        readWriteFile().saveF(self.ltaDataFileName,bussstops)
+        busstopsraw = readWriteFile().readF(self.ltaDataFileName)
+        with open(self.ltaDataFileNameCSV, 'w') as fp:
+            for abusstop in busstopsraw:
+                code = str(abusstop['BusStopCode']).zfill(5)
+                description = str(abusstop['Description'])
+                latitude = str(abusstop['Latitude'])
+                longitude = str(abusstop['Longitude'])
+                roadname = str(abusstop['RoadName'])
+                line = code + ',' + description + ',' + roadname + ',' + latitude + ',' + longitude + '\n'
+                fp.write(line)
+        fp.close()
 
     def readBusStopFromLta(self):   # read busstop.json file to a dict: self.busStops_lta
         busstopsraw = readWriteFile().readF(self.ltaDataFileName)
