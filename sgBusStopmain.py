@@ -7,7 +7,7 @@ print 'start processing - {:%H:%M:%S}'.format(datetime.now())
 
 # Step 1: Read data from LTA
 # busStop('lta')
-a=busRoute('')
+a=lta()
 
 # Step 2: process bus routes, check bus routes for missing busstop
 # a = busRoute('')
