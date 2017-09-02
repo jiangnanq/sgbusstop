@@ -12,10 +12,36 @@ __author__ = 'Nanqing'
 # All information should been extract
 # from LTA and saved to file in the data directory
 
-class ltatype:
-    busstop = 'busstop'
-    busroute = 'busRoute'
+class dataFolder:
+    data = '~/Dropbox/project/busstoppy/data/'
+    inputData = '~/Dropbox/project/busstoppy/inputdata/'
 
+class dataFile:
+    ltabusRouteFile = dataFolder.data + 'ltabusRoutes.json'
+    ltabusStopFile = dataFolder.data + 'ltabusstop.json'
+    ltabusRouteCSV = dataFolder.data + 'ltabusRoutes.csv'
+    ltabusStopCSV = dataFolder.data + 'ltabusStop.csv'
+    ltadataCSV = dataFolder.data + 'ltadata.csv'
+    busstopCHNxls = dataFolder.inputData + 'busstop_chinese.xlsx'
+    mrtStationFile = dataFolder.inputData + 'MRT.xlsx'
+    localbusstop = dataFolder.data + 'busstop.csv'
+
+class distance:
+    DistanceMrtBusstation = 150
+    DistanceMrtMall = 300
+    DistanceMallBusstation = 15
+
+class readWriteFile:
+    def readF(self, filename):
+        # read json file
+        with open(os.path.expanduser(filename)) as datafile:
+            data = json.load(datafile)
+        datafile.close()
+        return data
+    def saveF(self, filename, dataToSave):
+        with open(os.path.expanduser(filename), 'w') as fp:
+            json.dump(dataToSave, fp)
+        fp.close()
 class lta:
     path = ''
     headers = {}
@@ -163,12 +189,12 @@ class lta:
             if len(abs[5])>0:
                 for amrt in abs[5]:
                     m = m + amrt+':'
-                m.rstrip(':')
+                m = m.rstrip(':')
             bs = ''
             if abs[4]>0:
                 for abus in abs[6]:
                     bs = bs + abus + ':'
-                bs.rstrip(':')
+                bs = bs.rstrip(':')
             abusstop = code + ',' + abs[0] + ',' + str(abs[1]) + ',' + str(abs[2]) + ',' + abs[3] \
             + ',' + str(abs[4]) + ',' + m + ',' + bs + '\n'
             allbusstops.append(abusstop)
@@ -238,36 +264,4 @@ class lta:
             mrtlongitude = float(amrt[4])
             mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude, mrtname_chn]
         return mrtdict
-
-class dataFolder:
-    data = '~/Dropbox/project/busstoppy/data/'
-    inputData = '~/Dropbox/project/busstoppy/inputdata/'
-
-class dataFile:
-    ltabusRouteFile = dataFolder.data + 'ltabusRoutes.json'
-    ltabusStopFile = dataFolder.data + 'ltabusstop.json'
-    ltabusRouteCSV = dataFolder.data + 'ltabusRoutes.csv'
-    ltabusStopCSV = dataFolder.data + 'ltabusStop.csv'
-    ltadataCSV = dataFolder.data + 'ltadata.csv'
-    busstopCHNxls = dataFolder.inputData + 'busstop_chinese.xlsx'
-    mrtStationFile = dataFolder.inputData + 'MRT.xlsx'
-    localbusstop = dataFolder.data + 'busstop.csv'
-
-class distance:
-    DistanceMrtBusstation = 150
-    DistanceMrtMall = 300
-    DistanceMallBusstation = 15
-
-class readWriteFile:
-    def readF(self, filename):
-        # read json file
-        with open(os.path.expanduser(filename)) as datafile:
-            data = json.load(datafile)
-        datafile.close()
-        return data
-    def saveF(self, filename, dataToSave):
-        with open(os.path.expanduser(filename), 'w') as fp:
-            json.dump(dataToSave, fp)
-        fp.close()
-
 a = lta()
