@@ -1,7 +1,4 @@
-import json
-import re
-import sys
-import os
+import json, re, sys, os
 from urlparse import urlparse
 import httplib2 as http
 from geopy.distance import vincenty
@@ -42,6 +39,7 @@ class readWriteFile:
         with open(os.path.expanduser(filename), 'w') as fp:
             json.dump(dataToSave, fp)
         fp.close()
+
 class lta:
     path = ''
     headers = {}
@@ -49,7 +47,8 @@ class lta:
     AccountKey = 'QbJYYDbzk2V605i6JBXPHA=='
     UniqueUserID = '5aa27f9b-74fd-4bb6-8f4e-3a9aa47613bb'
     ltatype = {'busstop':'BusStops?$skip=',
-               'busRoute':'BusRoutes?$skip='}
+               'busRoute':'BusRoutes?$skip=',
+               'taxi':'Taxi-Availability?$skip='}
 
     def __init__(self):
         # init class base on the appoint class type
@@ -57,12 +56,12 @@ class lta:
             'AccountKey': self.AccountKey,
             'UniqueUserID': self.UniqueUserID,
             'accept': 'application/json'}
-        self.loadLocalLTAdata()
+        # self.loadLocalLTAdata()
 
     def GetDataFromLta(self, i):
         # send request to LTA and return reply json data
         target = urlparse(self.uri + self.path+i)
-        print target.geturl()
+        print (target.geturl())
         method = 'GET'
         body = ''
         h = http.Http()
@@ -79,24 +78,31 @@ class lta:
         ltadata = []
         i = 0
         while True:
-            step = str(i*50)
+            step = str(i*500)
             jsonData = self.GetDataFromLta(step)
             i = i+1
             a = len(jsonData['value'])
             print i, a
             for item in jsonData['value']:
                 ltadata.append(item)
-            if a < 50:
+            if a < 500:
                 return ltadata
+    
+    def readTaxiFromlta(self):
+        self.path = self.ltatype['taxi']
+        taxi = self.readDataFromLTA()
+        readWriteFile().saveF('taxi.json', taxi)
+
     def readBusRouteFromlta(self):
         self.path = self.ltatype['busRoute']
         busroutedata = self.readDataFromLTA()
         readWriteFile().saveF(dataFile().ltabusRouteFile, busroutedata)
-        with open(os.path.expanduser(dataFile().ltabusRouteCSV), 'w') as fp:
-            for abusstop in busroutedata:
-                line = self.readRoute(abusstop)
-                fp.write(line)
-        fp.close()
+        # with open(os.path.expanduser(dataFile().ltabusRouteCSV), 'w') as fp:
+        #     for abusstop in busroutedata:
+        #         line = self.readRoute(abusstop)
+        #         fp.write(line)
+        # fp.close()
+
     def readRoute(self, abusstop):
         code = str(abusstop['BusStopCode'])
         direction = str(abusstop['Direction'])
@@ -114,6 +120,7 @@ class lta:
         line = line + satFirst + ',' + satLast + ',' + sunFirst + ',' + sunLast + ','
         line = line + wdFirst + ',' + wdLast + ',' + serviceno + ',' + stopsequence + '\n' 
         return line
+
     def readstop(self, abusstop):
         code = str(abusstop['BusStopCode']).zfill(5)
         description = str(abusstop['Description'])
@@ -127,11 +134,12 @@ class lta:
         self.path = self.ltatype['busstop']
         busstopdata = self.readDataFromLTA()
         readWriteFile().saveF(dataFile().ltabusStopFile, busstopdata)
-        with open(os.path.expanduser(dataFile().ltabusStopCSV), 'w') as fp:
-            for abusstop in busstopdata:
-                line = self.readstop(abusstop)
-                fp.write(line)
-        fp.close()
+        # with open(os.path.expanduser(dataFile().ltabusStopCSV), 'w') as fp:
+        #     for abusstop in busstopdata:
+        #         line = self.readstop(abusstop)
+        #         fp.write(line)
+        # fp.close()
+
     def loadLocalLTAdata(self):
         self.busRoutes = readWriteFile().readF(dataFile().ltabusRouteFile)
         self.busStops = readWriteFile().readF(dataFile().ltabusStopFile)
@@ -264,4 +272,3 @@ class lta:
             mrtlongitude = float(amrt[4])
             mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude, mrtname_chn]
         return mrtdict
-a = lta()
