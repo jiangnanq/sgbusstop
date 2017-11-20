@@ -18,10 +18,8 @@ class dataFile:
     ltabusRouteFile = dataFolder.data + 'ltabusRoutes.json'
     ltabusStopFile = dataFolder.data + 'ltabusstop.json'
 
-    ltabusRouteCSV = dataFolder.data + 'ltabusRoutes.csv'
-    ltabusStopCSV = dataFolder.data + 'ltabusStop.csv'
-    ltadataCSV = dataFolder.data + 'ltadata.csv'
-    localbusstop = dataFolder.data + 'busstop.csv'
+    localbusstopCSV = dataFolder.data + 'busstops.csv'
+    localbusstop = dataFolder.data + 'busstops.json'
 
     busstopCHNxls = dataFolder.inputData + 'busstop_chinese.xlsx'
     mrtStationFile = dataFolder.inputData + 'MRT.xlsx'
@@ -100,34 +98,6 @@ class Lta:
         busstopdata = self.readDataFromLTA()
         readWriteFile().saveF(dataFile().ltabusStopFile, busstopdata)
 
-    def readRoute(self, abusstop):
-        code = str(abusstop['BusStopCode'])
-        direction = str(abusstop['Direction'])
-        Distance = str(abusstop['Distance'])
-        Operator = str(abusstop['Operator'])
-        satFirst = str(abusstop['SAT_FirstBus'])
-        satLast = str(abusstop['SAT_LastBus'])
-        sunFirst = str(abusstop['SUN_FirstBus'])
-        sunLast = str(abusstop['SUN_LastBus'])
-        serviceno = str(abusstop['ServiceNo'])
-        stopsequence = str(abusstop['StopSequence'])
-        wdFirst = str(abusstop['WD_FirstBus'])
-        wdLast = str(abusstop['WD_LastBus'])
-        line = code + ',' + direction + ',' + Distance + ',' + Operator + ','
-        line = line + satFirst + ',' + satLast + ',' + sunFirst + ',' + sunLast + ','
-        line = line + wdFirst + ',' + wdLast + ',' + serviceno + ',' + stopsequence + '\n' 
-        return line
-
-    def readstop(self, abusstop):
-        code = str(abusstop['BusStopCode']).zfill(5)
-        description = str(abusstop['Description'])
-        latitude = str(abusstop['Latitude'])
-        longitude = str(abusstop['Longitude'])
-        roadname = str(abusstop['RoadName'])
-        line = code + ',' + description + ',' + roadname + ',' + latitude + ',' + longitude + '\n'
-        return line
-
-
 class Local:
     class distance:
         DistanceMrtBusstation = 150
@@ -165,16 +135,14 @@ class Local:
             bs = list(set(buses))
             bs.sort(key=self.natural_keys)
             bstop[code] = [description, busstoplat, busstoplong, roadname, len(bs), mrts, bs]
-        with open('test.json', 'w') as fp:
-            json.dump(bstop, fp)
-        fp.close()
+        readWriteFile().saveF(dataFile().localbusstop, bstop)
         return bstop
 
     def saveBusstopTofile(self):
+        # save file to CSV format for excel 
         print ('Saving to file...')
         allbusstops = []
-        with open('test.json') as fp:
-            bstop = json.load(fp)
+        bstop = readWriteFile().readF(dataFile().localbusstop)
         for code,abs in bstop.iteritems():
             m = ''
             if len(abs[5])>0:
@@ -189,7 +157,7 @@ class Local:
             abusstop = code + ',' + abs[0] + ',' + str(abs[1]) + ',' + str(abs[2]) + ',' + abs[3] \
             + ',' + str(abs[4]) + ',' + m + ',' + bs + '\n'
             allbusstops.append(abusstop)
-        with open(os.path.expanduser(dataFile().localbusstop), 'w') as fp:
+        with open('busstops.csv', 'w') as fp:
             for abusstop in allbusstops:
                 fp.write(abusstop)
         fp.close()
@@ -235,22 +203,7 @@ class Local:
     def natural_keys(self, text):
         return [ self.atoi(c) for c in re.split('([0-9]+)', text)]
 
-    def combine(self):
-        c = []
-        for abusroute in self.busRoutes:
-            code = str(abusroute['BusStopCode'])    
-            if code in self.bstops.keys():
-                line = self.readRoute(abusroute)
-                line = line.rstrip('\n') 
-                line = line + ',' + self.bstops[code][0] + ','+ self.bstops[code][1] + ','+ str(self.bstops[code][2]) + ',' \
-                + str(self.bstops[code][3]) + ',' 
-                line = line + self.bstops[code][4] + ',' + self.bstops[code][5] + '\n'
-                c.append(line)
-        with open(os.path.expanduser(dataFile().ltadataCSV), 'w') as fp:
-            for item in c:
-                fp.write(item.encode('gb2312'))
-        fp.close()
-        return
+
 
     def busstopTranslate(self):
         self.bstopsChn = {}
