@@ -12,21 +12,19 @@ __author__ = 'Nanqing'
 class dataFolder:
     data = '~/Dropbox/project/busstoppy/data/'
     inputData = '~/Dropbox/project/busstoppy/inputdata/'
+    busservice = '~/Dropbox/project/busstoppy/busservice/'
 
 class dataFile:
     ltabusRouteFile = dataFolder.data + 'ltabusRoutes.json'
     ltabusStopFile = dataFolder.data + 'ltabusstop.json'
+
     ltabusRouteCSV = dataFolder.data + 'ltabusRoutes.csv'
     ltabusStopCSV = dataFolder.data + 'ltabusStop.csv'
     ltadataCSV = dataFolder.data + 'ltadata.csv'
-    busstopCHNxls = dataFolder.inputData + 'busstop_chinese.xlsx'
-    mrtStationFile = dataFolder.inputData + 'MRT.xlsx'
     localbusstop = dataFolder.data + 'busstop.csv'
 
-class distance:
-    DistanceMrtBusstation = 150
-    DistanceMrtMall = 300
-    DistanceMallBusstation = 15
+    busstopCHNxls = dataFolder.inputData + 'busstop_chinese.xlsx'
+    mrtStationFile = dataFolder.inputData + 'MRT.xlsx'
 
 class readWriteFile:
     def readF(self, filename):
@@ -40,7 +38,7 @@ class readWriteFile:
             json.dump(dataToSave, fp)
         fp.close()
 
-class lta:
+class Lta:
     path = ''
     headers = {}
     uri = 'http://datamall2.mytransport.sg/ltaodataservice/'
@@ -56,7 +54,6 @@ class lta:
             'AccountKey': self.AccountKey,
             'UniqueUserID': self.UniqueUserID,
             'accept': 'application/json'}
-        # self.loadLocalLTAdata()
 
     def GetDataFromLta(self, i):
         # send request to LTA and return reply json data
@@ -97,11 +94,11 @@ class lta:
         self.path = self.ltatype['busRoute']
         busroutedata = self.readDataFromLTA()
         readWriteFile().saveF(dataFile().ltabusRouteFile, busroutedata)
-        # with open(os.path.expanduser(dataFile().ltabusRouteCSV), 'w') as fp:
-        #     for abusstop in busroutedata:
-        #         line = self.readRoute(abusstop)
-        #         fp.write(line)
-        # fp.close()
+
+    def readBusStopFromlta(self):
+        self.path = self.ltatype['busstop']
+        busstopdata = self.readDataFromLTA()
+        readWriteFile().saveF(dataFile().ltabusStopFile, busstopdata)
 
     def readRoute(self, abusstop):
         code = str(abusstop['BusStopCode'])
@@ -130,38 +127,24 @@ class lta:
         line = code + ',' + description + ',' + roadname + ',' + latitude + ',' + longitude + '\n'
         return line
 
-    def readBusStopFromlta(self):
-        self.path = self.ltatype['busstop']
-        busstopdata = self.readDataFromLTA()
-        readWriteFile().saveF(dataFile().ltabusStopFile, busstopdata)
-        # with open(os.path.expanduser(dataFile().ltabusStopCSV), 'w') as fp:
-        #     for abusstop in busstopdata:
-        #         line = self.readstop(abusstop)
-        #         fp.write(line)
-        # fp.close()
 
-    def loadLocalLTAdata(self):
+class Local:
+    class distance:
+        DistanceMrtBusstation = 150
+        DistanceMrtMall = 300
+        DistanceMallBusstation = 15
+
+    def __init__(self):
         self.busRoutes = readWriteFile().readF(dataFile().ltabusRouteFile)
         self.busStops = readWriteFile().readF(dataFile().ltabusStopFile)
-        # self.busstopTranslate()
         self.Mrt = self.readMrtStations()
-        # self.bstops={}
-        # for abusstop in self.busStops:
-        #     code = abusstop['BusStopCode']
-        #     self.bstops[code] = [abusstop['Description'], abusstop['RoadName'], abusstop['Latitude'], abusstop['Longitude']]
-        #     if code in self.bstopsChn.keys():
-        #         self.bstops[code].append(self.bstopsChn[code][0])
-        #         self.bstops[code].append(self.bstopsChn[code][1])
-        #     else:
-        #         self.bstops[code].append('')
-        #         self.bstops[code].append('')
 
     def processBusStops(self):
         bstop = {}
         i =0 
         for abusstop in self.busStops:
             i = i+1
-            if i>1000 and i%1000==0:
+            if i>100 and i%100==0:
                 print i
             code = abusstop['BusStopCode']
             busstoplat = abusstop['Latitude']
@@ -172,7 +155,7 @@ class lta:
             for amrtno, amrt in self.Mrt.iteritems():
                 mrtlat = amrt[1]
                 mrtlong = amrt[2]
-                if self.checkdistance(busstoplat, busstoplong, mrtlat, mrtlong, distance.DistanceMrtBusstation):
+                if self.checkdistance(busstoplat, busstoplong, mrtlat, mrtlong, self.distance.DistanceMrtBusstation):
                     mrts.append(amrtno)
             buses = []
             for abusroute in self.busRoutes:
@@ -183,7 +166,7 @@ class lta:
             bs.sort(key=self.natural_keys)
             bstop[code] = [description, busstoplat, busstoplong, roadname, len(bs), mrts, bs]
         with open('test.json', 'w') as fp:
-            json.dump(b, fp)
+            json.dump(bstop, fp)
         fp.close()
         return bstop
 
@@ -210,17 +193,45 @@ class lta:
             for abusstop in allbusstops:
                 fp.write(abusstop)
         fp.close()
-
+    
+    def processBusLines(self):
+        for aBusRoute in self.busRoutes:
+            sn = aBusRoute['ServiceNo']
+            if sn in self.serviceNo:
+                continue
+            else:
+                self.serviceNo.append(sn)
+        
+        self.route = {}
+        i = 0
+        for aline in self.serviceNo:
+            if i > 100 and i % 50 == 0: print i
+            busstops = []
+            for aBusRoute in self.busRoutes:
+                sn = aBusRoute['ServiceNo']
+                if sn == aline:
+                    info = aBusRoute['BusStopCode'] + ',' + str(aBusRoute['Direction']) + \
+                    ',' + str(aBusRoute['Distance']) + ',' + str(aBusRoute['StopSequence'])
+                    busstops.append(info)
+            self.route[aline] = busstops
+            i = i + 1
+            fname = dataFolder.busservice + aline + '.json'
+            print fname
+            readWriteFile().saveF(fname, busstops)
+        return
+        
+    
     def checkdistance(self, lat1, long1, lat2, long2, condition):
         p1 = (lat1,long1)
         p2 = (lat2,long2)
         return  vincenty(p1,p2).m < condition
+
     def atoi(self, text):
         try:
             return int(text)
         except:
             return text
-    
+
     def natural_keys(self, text):
         return [ self.atoi(c) for c in re.split('([0-9]+)', text)]
 
@@ -240,6 +251,7 @@ class lta:
                 fp.write(item.encode('gb2312'))
         fp.close()
         return
+
     def busstopTranslate(self):
         self.bstopsChn = {}
         xl_workbook = xlrd.open_workbook(os.path.expanduser(dataFile().busstopCHNxls))
@@ -250,6 +262,7 @@ class lta:
             streetname = xl_sheet.cell(row_index, 4).value.encode('gb2312')
             self.bstopsChn[busstopno] = [busstopname, streetname]
         return
+
     def readMrtStations(self):
         # read MRT station information from excel file
         fname = dataFile.mrtStationFile

@@ -1,4 +1,4 @@
-from processdata import lta
+from processdata import Lta, Local
 from datetime import datetime
 __author__ = 'Jiang Nanqing'
 
@@ -6,10 +6,11 @@ print 'start processing - {:%H:%M:%S}'.format(datetime.now())
 
 # Step 1: Read data from LTA
 # busStop('lta')
-a = lta()
+# a = lta()
 # a.readBusStopFromlta()
-a.readBusRouteFromlta()
-
+# a.readBusRouteFromlta()
+a = Local()
+a.processBusStops()
 # Step 2: process bus routes, check bus routes for missing busstop
 # a = busRoute('')
 # a.processBusRoutes()

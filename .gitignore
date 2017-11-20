@@ -1,9 +1,9 @@
-data
-.ipynb_checkpoints
-inputdata
-bustoppy
-data
-.idea
-.xlsx
-.json
+data/
+.ipynb_checkpoints/
+inputdata/
+busservice/
+*.jpg
+*.xlsx
+*.json
+*.pyc
 
