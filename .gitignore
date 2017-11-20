@@ -1,9 +1,2 @@
-data/
-.ipynb_checkpoints/
-inputdata/
-busservice/
-*.jpg
-*.xlsx
-*.json
-*.pyc
-
+*
+!*.py
