@@ -12,8 +12,8 @@ print 'start processing - {:%H:%M:%S}'.format(datetime.now())
 
 # Step 2: process busroute and busstop data from LTA
 a = Local()
-# a.processBusStops()
+a.processBusStops()
 # a.processBusLines()
-a.saveBusstopTofile()
+# a.saveBusstopTofile()
 
 print 'process completed - {:%H:%M:%S}'.format(datetime.now())

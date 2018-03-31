@@ -1,40 +1,14 @@
-import json, re, sys, os
-from urlparse import urlparse
+import json, re, sys, os, csv
+from urllib.parse import urlparse
 import httplib2 as http
 from geopy.distance import vincenty
 import xlrd
 from natsort import natsorted
+import codecs
 __author__ = 'Nanqing'
 # Class to process busstop/mall/mrt station information
 # All information should been extract
 # from LTA and saved to file in the data directory
-
-class dataFolder:
-    data = '~/Dropbox/project/busstoppy/data/'
-    inputData = '~/Dropbox/project/busstoppy/inputdata/'
-    busservice = '~/Dropbox/project/busstoppy/busservice/'
-
-class dataFile:
-    ltabusRouteFile = dataFolder.data + 'ltabusRoutes.json'
-    ltabusStopFile = dataFolder.data + 'ltabusstop.json'
-
-    localbusstopCSV = dataFolder.data + 'busstops.csv'
-    localbusstop = dataFolder.data + 'busstops.json'
-
-    busstopCHNxls = dataFolder.inputData + 'busstop_chinese.xlsx'
-    mrtStationFile = dataFolder.inputData + 'MRT.xlsx'
-
-class readWriteFile:
-    def readF(self, filename):
-        # read json file
-        with open(os.path.expanduser(filename)) as datafile:
-            data = json.load(datafile)
-        datafile.close()
-        return data
-    def saveF(self, filename, dataToSave):
-        with open(os.path.expanduser(filename), 'w') as fp:
-            json.dump(dataToSave, fp)
-        fp.close()
 
 class Lta:
     path = ''
@@ -53,9 +27,9 @@ class Lta:
             'UniqueUserID': self.UniqueUserID,
             'accept': 'application/json'}
 
-    def GetDataFromLta(self, i):
+    def GetDataFromLta(self, i, path):
         # send request to LTA and return reply json data
-        target = urlparse(self.uri + self.path+i)
+        target = urlparse(self.uri + path + i)
         print (target.geturl())
         method = 'GET'
         body = ''
@@ -68,102 +42,106 @@ class Lta:
         jsonObj = json.loads(content)
         return jsonObj
 
-    def readDataFromLTA(self):
+    def readDataFromLTA(self, path):
         # Read LTA data base on the class type
         ltadata = []
         i = 0
         while True:
-            step = str(i*500)
-            jsonData = self.GetDataFromLta(step)
+            step = str(i * 500)
+            jsonData = self.GetDataFromLta(step, path)
             i = i+1
             a = len(jsonData['value'])
-            print i, a
+            print(i, a)
             for item in jsonData['value']:
                 ltadata.append(item)
             if a < 500:
                 return ltadata
     
     def readTaxiFromlta(self):
-        self.path = self.ltatype['taxi']
-        taxi = self.readDataFromLTA()
-        readWriteFile().saveF('taxi.json', taxi)
+        taxi = self.readDataFromLTA('taxi')
+        with open('data/ltataxi.json', 'w') as fp:
+            json.dump(taxi, fp)
 
     def readBusRouteFromlta(self):
-        self.path = self.ltatype['busRoute']
-        busroutedata = self.readDataFromLTA()
-        readWriteFile().saveF(dataFile().ltabusRouteFile, busroutedata)
+        busroutedata = self.readDataFromLTA('BusRoutes?$skip=')
+        with open('data/ltabusroute.json', 'w') as fp:
+            json.dump(busroutedata, fp)
 
     def readBusStopFromlta(self):
-        self.path = self.ltatype['busstop']
-        busstopdata = self.readDataFromLTA()
-        readWriteFile().saveF(dataFile().ltabusStopFile, busstopdata)
+        busstopdata = self.readDataFromLTA('BusStops?$skip=')
+        with open('data/ltabusstop.json', 'w') as fp:
+            json.dump(busstopdata, fp)
+
 
 class Local:
     class distance:
         DistanceMrtBusstation = 150
-        DistanceMrtMall = 300
-        DistanceMallBusstation = 15
 
-    def __init__(self):
-        self.busRoutes = readWriteFile().readF(dataFile().ltabusRouteFile)
-        self.busStops = readWriteFile().readF(dataFile().ltabusStopFile)
-        self.Mrt = self.readMrtStations()
+    def readbusstops(self):
+        with open('data/ltabusstop.json') as fp:
+            b = json.load(fp)
+        return b
+
+    def readbusroute(self):
+        with open('data/ltabusroute.json') as fp:
+            b = json.load(fp)
+        return b
+
+    def readmrt(self):
+        with open('data/mrt.json') as fp:
+            m = json.load(fp)
+        return m
+
+    def readbuschn(self):
+        b = {}
+        with codecs.open('data/bchn.csv', 'r', 'utf-8') as fp:
+            for line in fp:
+                a = line.split(',')
+                if len(a) == 3:
+                    b[a[0].zfill(5)] = a[2].strip('\n')
+        return b
 
     def processBusStops(self):
+        busStops = self.readbusstops()
+        busRoutes = self.readbusroute()
+        Mrt = self.readmrt()
+        bchn = self.readbuschn()
         bstop = {}
         i =0 
-        for abusstop in self.busStops:
+        for abusstop in busStops:
             i = i+1
             if i>100 and i%100==0:
-                print i
+                print(i)
             code = abusstop['BusStopCode']
             busstoplat = abusstop['Latitude']
             busstoplong = abusstop['Longitude']
             description = abusstop['Description']
             roadname = abusstop['RoadName']
+            chn = ''
+            if code in [*bchn]:
+                chn = bchn[code]
             mrts = []
-            for amrtno, amrt in self.Mrt.iteritems():
+            for amrtno, amrt in Mrt.items():
                 mrtlat = amrt[1]
                 mrtlong = amrt[2]
                 if self.checkdistance(busstoplat, busstoplong, mrtlat, mrtlong, self.distance.DistanceMrtBusstation):
                     mrts.append(amrtno)
             buses = []
-            for abusroute in self.busRoutes:
+            for abusroute in busRoutes:
                 busstopcode = abusroute['BusStopCode']
                 if code == busstopcode:
                     buses.append(abusroute['ServiceNo'])
             bs = list(set(buses))
             bs.sort(key=self.natural_keys)
-            bstop[code] = [description, busstoplat, busstoplong, roadname, len(bs), mrts, bs]
-        readWriteFile().saveF(dataFile().localbusstop, bstop)
+            bstop[code] = [description, chn, 
+            busstoplat, busstoplong, roadname, len(bs), mrts, bs]
+        with open('data/busstop.json', 'w') as fp:
+            json.dump(bstop, fp)
         return bstop
 
-    def saveBusstopTofile(self):
-        # save file to CSV format for excel 
-        print ('Saving to file...')
-        allbusstops = []
-        bstop = readWriteFile().readF(dataFile().localbusstop)
-        for code,abs in bstop.iteritems():
-            m = ''
-            if len(abs[5])>0:
-                for amrt in abs[5]:
-                    m = m + amrt+':'
-                m = m.rstrip(':')
-            bs = ''
-            if abs[4]>0:
-                for abus in abs[6]:
-                    bs = bs + abus + ':'
-                bs = bs.rstrip(':')
-            abusstop = code + ',' + abs[0] + ',' + str(abs[1]) + ',' + str(abs[2]) + ',' + abs[3] \
-            + ',' + str(abs[4]) + ',' + m + ',' + bs + '\n'
-            allbusstops.append(abusstop)
-        with open('busstops.csv', 'w') as fp:
-            for abusstop in allbusstops:
-                fp.write(abusstop)
-        fp.close()
-    
     def processBusLines(self):
-        for aBusRoute in self.busRoutes:
+        busRoutes = self.readbusroute()
+        for aBusRoute in busRoutes:
             sn = aBusRoute['ServiceNo']
             if sn in self.serviceNo:
                 continue
@@ -173,7 +151,7 @@ class Local:
         self.route = {}
         i = 0
         for aline in self.serviceNo:
-            if i > 100 and i % 50 == 0: print i
+            if i > 100 and i % 50 == 0: print(i)
             busstops = []
             for aBusRoute in self.busRoutes:
                 sn = aBusRoute['ServiceNo']
@@ -184,10 +162,9 @@ class Local:
             self.route[aline] = busstops
             i = i + 1
             fname = dataFolder.busservice + aline + '.json'
-            print fname
+            print(fname)
             readWriteFile().saveF(fname, busstops)
         return
-        
     
     def checkdistance(self, lat1, long1, lat2, long2, condition):
         p1 = (lat1,long1)
@@ -203,18 +180,13 @@ class Local:
     def natural_keys(self, text):
         return [ self.atoi(c) for c in re.split('([0-9]+)', text)]
 
-
-
     def busstopTranslate(self):
-        self.bstopsChn = {}
-        xl_workbook = xlrd.open_workbook(os.path.expanduser(dataFile().busstopCHNxls))
-        xl_sheet =xl_workbook.sheet_by_index(0)
-        for row_index in range(1, xl_sheet.nrows):
-            busstopno = str(xl_sheet.cell(row_index, 0).value).rstrip('.0')
-            busstopname = xl_sheet.cell(row_index, 3).value.encode('gb2312')
-            streetname = xl_sheet.cell(row_index, 4).value.encode('gb2312')
-            self.bstopsChn[busstopno] = [busstopname, streetname]
-        return
+        busstopchn = {}
+        with codecs.open('inputdata/buschn.csv', 'r', 'utf-8') as fp:
+            for line in fp:
+                a = line.split(',')
+                busstopchn[a[0].zfill(5)] = a[3]
+        return busstopchn
 
     def readMrtStations(self):
         # read MRT station information from excel file
@@ -238,3 +210,31 @@ class Local:
             mrtlongitude = float(amrt[4])
             mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude, mrtname_chn]
         return mrtdict
+
+print("start processing...")
+b = Local().processBusStops()
+# busstops = {}
+# with open('data/ltabusstop.json') as fp:
+#     bs = json.load(fp)
+# for b in bs:
+#     code = b['BusStopCode']
+#     lat = b['Latitude']
+#     longi = b['Longitude']
+#     bname = b['Description']
+#     busstops[code] = [bname, lat, longi]
+# with open('data/busstopchn.json') as fp:
+#     bc = json.load(fp)
+# for key, value in busstops.items():
+#     if key in [*bc]:
+#         busstops[key].append(bc[key])
+# with open('test.json') as fp:
+#     b = json.load(fp)
+# with codecs.open('bchn.csv', 'w', 'utf-8') as fp:
+#     for key, value in b.items():
+#         if len(value) == 4:
+#             l = '{0}, {1}'.format(value[0], value[3])
+#         else:
+#             l = '{0}'.format(value[0])
+#         oneline = '{0},{1}\n'.format(key, l)
+#         fp.write(oneline)
+print('process completed.')
