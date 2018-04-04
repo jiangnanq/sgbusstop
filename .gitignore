@@ -1,2 +1,5 @@
-*
-!*.py
+*.json
+*.csv
+/data
+/busservice
+/inputdata
