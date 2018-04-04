@@ -141,29 +141,31 @@ class Local:
 
     def processBusLines(self):
         busRoutes = self.readbusroute()
+        serviceNo = []
         for aBusRoute in busRoutes:
             sn = aBusRoute['ServiceNo']
-            if sn in self.serviceNo:
+            if sn in serviceNo:
                 continue
             else:
-                self.serviceNo.append(sn)
-        
-        self.route = {}
+                serviceNo.append(sn)
+        with open('busservice/busline.json', 'w') as fp:
+            json.dump(serviceNo, fp)
+        route = {}
         i = 0
-        for aline in self.serviceNo:
+        for aline in serviceNo:
             if i > 100 and i % 50 == 0: print(i)
             busstops = []
-            for aBusRoute in self.busRoutes:
+            for aBusRoute in busRoutes:
                 sn = aBusRoute['ServiceNo']
                 if sn == aline:
-                    info = aBusRoute['BusStopCode'] + ',' + str(aBusRoute['Direction']) + \
-                    ',' + str(aBusRoute['Distance']) + ',' + str(aBusRoute['StopSequence'])
+                    info = aBusRoute['BusStopCode'] + ',' + str(aBusRoute['Direction']) + ',' + str(aBusRoute['Distance']) + ',' + str(aBusRoute['StopSequence'])
                     busstops.append(info)
-            self.route[aline] = busstops
+            route[aline] = busstops
             i = i + 1
-            fname = dataFolder.busservice + aline + '.json'
+            fname = 'busservice/' + aline + '.json'
             print(fname)
-            readWriteFile().saveF(fname, busstops)
+            with open(fname, 'w') as fp:
+                json.dump(route[aline], fp)
         return
     
     def checkdistance(self, lat1, long1, lat2, long2, condition):
@@ -213,28 +215,4 @@ class Local:
 
 print("start processing...")
 b = Local().processBusStops()
-# busstops = {}
-# with open('data/ltabusstop.json') as fp:
-#     bs = json.load(fp)
-# for b in bs:
-#     code = b['BusStopCode']
-#     lat = b['Latitude']
-#     longi = b['Longitude']
-#     bname = b['Description']
-#     busstops[code] = [bname, lat, longi]
-# with open('data/busstopchn.json') as fp:
-#     bc = json.load(fp)
-# for key, value in busstops.items():
-#     if key in [*bc]:
-#         busstops[key].append(bc[key])
-# with open('test.json') as fp:
-#     b = json.load(fp)
-# with codecs.open('bchn.csv', 'w', 'utf-8') as fp:
-#     for key, value in b.items():
-#         if len(value) == 4:
-#             l = '{0}, {1}'.format(value[0], value[3])
-#         else:
-#             l = '{0}'.format(value[0])
-#         oneline = '{0},{1}\n'.format(key, l)
-#         fp.write(oneline)
 print('process completed.')
