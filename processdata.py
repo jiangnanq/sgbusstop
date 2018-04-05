@@ -14,14 +14,16 @@ class Lta:
     path = ''
     headers = {}
     uri = 'http://datamall2.mytransport.sg/ltaodataservice/'
-    AccountKey = 'QbJYYDbzk2V605i6JBXPHA=='
-    UniqueUserID = '5aa27f9b-74fd-4bb6-8f4e-3a9aa47613bb'
     ltatype = {'busstop':'BusStops?$skip=',
                'busRoute':'BusRoutes?$skip=',
                'taxi':'Taxi-Availability?$skip='}
 
     def __init__(self):
         # init class base on the appoint class type
+        with open('apikey.json')  as fp:
+            keys = json.load(fp)
+        self.AccountKey = keys['lta_accountkey']
+        self.UniqueUserID = keys['lta_userid']
         self.headers = {
             'AccountKey': self.AccountKey,
             'UniqueUserID': self.UniqueUserID,

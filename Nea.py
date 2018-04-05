@@ -1,8 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
+import json
 
 def checkWeather():
-	key = '781CF461BB6606ADEA6B1B4F3228DE9D5024E401E592608F'
+	with open('apikey.json')  as fp:
+		keys = json.load(fp)
+	key = keys['nea']
 	url = 'http://api.nea.gov.sg/api/WebAPI/?dataset=2hr_nowcast&keyref=' + key
 	s = requests.Session()
 	r = s.get(url)
@@ -25,6 +28,5 @@ def checkWeather():
 	return areas
 
 print('Start process')
-a = checkWeather()
-print(a)
+print(checkWeather())
 print ("process completed")
