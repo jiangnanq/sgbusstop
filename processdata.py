@@ -94,6 +94,17 @@ class Local:
             m = json.load(fp)
         return m
 
+    def readareainfo(self):
+        # read plan area poly shape data
+        with open('inputdata/planarea.json') as fp:
+            area = json.load(fp)
+        allarea = {}
+        for oneAread in area:
+            areaname = oneAread['pln_area_n']
+            areapoly = Polygon(json.loads(oneAread['geojson'])['coordinates'][0][0])
+            allarea[areaname] = areapoly
+        return allarea
+
     def readbuschn(self):
         b = {}
         with codecs.open('data/bchn.csv', 'r', 'utf-8') as fp:
@@ -108,6 +119,7 @@ class Local:
         busRoutes = self.readbusroute()
         Mrt = self.readmrt()
         bchn = self.readbuschn()
+        planarea = self.readareainfo()
         bstop = {}
         i =0 
         for abusstop in busStops:
@@ -160,15 +172,20 @@ class Local:
             for aBusRoute in busRoutes:
                 sn = aBusRoute['ServiceNo']
                 if sn == aline:
-                    info = aBusRoute['BusStopCode'] + ',' + str(aBusRoute['Direction']) + ',' + str(aBusRoute['Distance']) + ',' + str(aBusRoute['StopSequence'])
+                    info = aBusRoute['BusStopCode'] + ',' + \
+                    str(aBusRoute['Direction']) + ',' + \
+                    str(aBusRoute['Distance']) + ',' + \
+                    str(aBusRoute['StopSequence'])
                     busstops.append(info)
             route[aline] = busstops
             i = i + 1
-            fname = 'busservice/' + aline + '.json'
-            print(fname)
-            with open(fname, 'w') as fp:
-                json.dump(route[aline], fp)
-        return
+            # fname = 'busservice/' + aline + '.json'
+            # print(fname)
+            # with open(fname, 'w') as fp:
+            #     json.dump(route[aline], fp)
+        with open('data/busroute.json', 'w')  as fp:
+            json.dump(route, fp)
+        return route
     
     def checkdistance(self, lat1, long1, lat2, long2, condition):
         p1 = (lat1,long1)
@@ -215,6 +232,24 @@ class Local:
             mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude, mrtname_chn]
         return mrtdict
 
+def checkbusline(busline):
+    keybusstops = []
+    mrts = []
+    for astop in busline:
+        d = astop.split(',')[1]
+        if d == '2':
+            return True
+    return False
+
 print("start processing...")
-b = Local().processBusStops()
+# busroute = Local().processBusLines()
+with open('data/busroute.json') as fp:
+    busroute = json.load(fp)
+bus1direction = []
+bus2direction = []
+for bus, line in busroute.items():
+    if checkbusline(line):
+        bus2direction.append(bus)
+    else:
+        bus1direction.append(bus)
 print('process completed.')

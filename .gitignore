@@ -4,3 +4,5 @@
 /busservice
 /inputdata
 apikey.json
+*.pyc
+/busstoppy
