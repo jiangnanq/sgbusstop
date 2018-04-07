@@ -5,6 +5,10 @@ from geopy.distance import vincenty
 import xlrd
 from natsort import natsorted
 import codecs
+from shapely.geometry import Point
+from shapely.geometry.polygon import Polygon
+import requests 
+
 __author__ = 'Nanqing'
 # Class to process busstop/mall/mrt station information
 # All information should been extract
@@ -74,10 +78,19 @@ class Lta:
         with open('data/ltabusstop.json', 'w') as fp:
             json.dump(busstopdata, fp)
 
+    def checkbusarrival(self):
+        with open('apikey.json')  as fp:
+            keys = json.load(fp)
+        key = keys['lta_accountkey']
+        h = {'AccountKey': 'QbJYYDbzk2V605i6JBXPHA==', 'accept': 'application/json'}
+        url = 'http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=22249'
+        s = requests.Session()
+        r = s.get(url, headers = h)
+        print(r.text)
+
 
 class Local:
-    class distance:
-        DistanceMrtBusstation = 150
+    DistanceMrtBusstation = 150
 
     def readbusstops(self):
         with open('data/ltabusstop.json') as fp:
@@ -114,6 +127,15 @@ class Local:
                     b[a[0].zfill(5)] = a[2].strip('\n')
         return b
 
+    def checkArea(self, latitude, longitude, planarea):
+        areaname = ''
+        point = Point(longitude, latitude)
+        for aname, apoly in planarea.items():
+            if apoly.contains(point):
+                areaname = aname
+                break
+        return areaname
+
     def processBusStops(self):
         busStops = self.readbusstops()
         busRoutes = self.readbusroute()
@@ -131,6 +153,7 @@ class Local:
             busstoplong = abusstop['Longitude']
             description = abusstop['Description']
             roadname = abusstop['RoadName']
+            areaname = self.checkArea(busstoplat, busstoplong, planarea)
             chn = ''
             if code in [*bchn]:
                 chn = bchn[code]
@@ -138,17 +161,19 @@ class Local:
             for amrtno, amrt in Mrt.items():
                 mrtlat = amrt[1]
                 mrtlong = amrt[2]
-                if self.checkdistance(busstoplat, busstoplong, mrtlat, mrtlong, self.distance.DistanceMrtBusstation):
+                if self.checkdistance(busstoplat, busstoplong, mrtlat, mrtlong, \
+                    self.DistanceMrtBusstation):
                     mrts.append(amrtno)
             buses = []
             for abusroute in busRoutes:
                 busstopcode = abusroute['BusStopCode']
                 if code == busstopcode:
                     buses.append(abusroute['ServiceNo'])
-            bs = list(set(buses))
+            bs = list(set(buses) - set(['225', '243', '410']))
             bs.sort(key=self.natural_keys)
-            bstop[code] = [description, chn, 
-            busstoplat, busstoplong, roadname, len(bs), mrts, bs]
+            bstop[code] = [description, chn, \
+            busstoplat, busstoplong, roadname, areaname, \
+            len(bs), mrts, bs]
         with open('data/busstop.json', 'w') as fp:
             json.dump(bstop, fp)
         return bstop
@@ -232,24 +257,29 @@ class Local:
             mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude, mrtname_chn]
         return mrtdict
 
-def checkbusline(busline):
-    keybusstops = []
-    mrts = []
-    for astop in busline:
-        d = astop.split(',')[1]
-        if d == '2':
-            return True
-    return False
-
 print("start processing...")
-# busroute = Local().processBusLines()
-with open('data/busroute.json') as fp:
-    busroute = json.load(fp)
-bus1direction = []
-bus2direction = []
-for bus, line in busroute.items():
-    if checkbusline(line):
-        bus2direction.append(bus)
-    else:
-        bus1direction.append(bus)
+
+# with open('data/busstop.json') as fp:
+#     busstop = json.load(fp)
+# with open('data/busroute.json') as fp:
+#     busroute = json.load(fp)
+# bus2 = []
+# bus1 = []
+# for abus, line in busroute.items():
+#     b = list(filter(lambda x: x.split(',')[1] == '2', line))
+#     if len(b) > 0:
+#         bus2.append(abus)
+#     else:
+#         bus1.append(abus)
+# allbus = {}
+# for abus in bus1:
+#     allbus[abus] = busroute[abus]
+# for abus in bus2:
+#     line = busroute[abus]
+#     line1 = list(filter(lambda x: x.split(',')[1] == '1', line))
+#     line2 = list(filter(lambda x: x.split(',')[1] == '2', line))
+#     allbus[abus + '_1'] = line1
+#     allbus[abus + '_2'] = line2
+# with open('busline.json', 'w') as fp:
+#     json.dump(allbus, fp)
 print('process completed.')
