@@ -78,16 +78,19 @@ class Lta:
         with open('data/ltabusstop.json', 'w') as fp:
             json.dump(busstopdata, fp)
 
-    def checkbusarrival(self):
+    def checkbusarrival(self, busstop):
         with open('apikey.json')  as fp:
             keys = json.load(fp)
         key = keys['lta_accountkey']
         h = {'AccountKey': 'QbJYYDbzk2V605i6JBXPHA==', 'accept': 'application/json'}
-        url = 'http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=22249'
+        url = 'http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=' \
+                + busstop
         s = requests.Session()
         r = s.get(url, headers = h)
-        print(r.text)
-
+        d = json.loads(r.text)['Services']
+        with open('busschedule.json', 'w') as fp:
+            json.dump(d, fp)
+        return d
 
 class Local:
     DistanceMrtBusstation = 150
@@ -258,6 +261,10 @@ class Local:
         return mrtdict
 
 print("start processing...")
+# b = Local().processBusStops()
+# Lta().checkbusarrival('22249')
+with open('data/busline.json') as fp:
+    busline = json.load(fp)
 
 # with open('data/busstop.json') as fp:
 #     busstop = json.load(fp)
