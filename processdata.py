@@ -82,7 +82,7 @@ class Lta:
         with open('apikey.json')  as fp:
             keys = json.load(fp)
         key = keys['lta_accountkey']
-        h = {'AccountKey': 'QbJYYDbzk2V605i6JBXPHA==', 'accept': 'application/json'}
+        h = {'AccountKey': self.AccountKey, 'accept': 'application/json'}
         url = 'http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=' \
                 + busstop
         s = requests.Session()
@@ -190,6 +190,9 @@ class Local:
                 continue
             else:
                 serviceNo.append(sn)
+
+        serviceNo = list(set(serviceNo) - set(['225', '243', '410']))
+
         with open('busservice/busline.json', 'w') as fp:
             json.dump(serviceNo, fp)
         route = {}
@@ -200,10 +203,10 @@ class Local:
             for aBusRoute in busRoutes:
                 sn = aBusRoute['ServiceNo']
                 if sn == aline:
-                    info = aBusRoute['BusStopCode'] + ',' + \
-                    str(aBusRoute['Direction']) + ',' + \
-                    str(aBusRoute['Distance']) + ',' + \
-                    str(aBusRoute['StopSequence'])
+                    info = [aBusRoute['BusStopCode'], 
+                            str(aBusRoute['Direction']), 
+                            str(aBusRoute['Distance']),
+                            str(aBusRoute['StopSequence'])]
                     busstops.append(info)
             route[aline] = busstops
             i = i + 1
@@ -260,33 +263,38 @@ class Local:
             mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude, mrtname_chn]
         return mrtdict
 
-print("start processing...")
-# b = Local().processBusStops()
-# Lta().checkbusarrival('22249')
-with open('data/busline.json') as fp:
-    busline = json.load(fp)
+    def splitbus(self):
+        with open('data/busroute.json') as fp:
+            busroute = json.load(fp)
+        bus2 = []
+        bus1 = []
+        for abus, line in busroute.items():
+            b = list(filter(lambda x: x[1] == '2', line))
+            if len(b) > 0:
+                bus2.append(abus)
+            else:
+                bus1.append(abus)
+        allbus = {}
+        for abus in bus1:
+            allbus[abus] = busroute[abus]
+        for abus in bus2:
+            line = busroute[abus]
+            line1 = list(filter(lambda x: x[1] == '1', line))
+            line2 = list(filter(lambda x: x[1] == '2', line))
+            allbus[abus + '_1'] = line1
+            allbus[abus + '_2'] = line2
+        with open('data/busline.json', 'w') as fp:
+            json.dump(allbus, fp)
 
-# with open('data/busstop.json') as fp:
-#     busstop = json.load(fp)
-# with open('data/busroute.json') as fp:
-#     busroute = json.load(fp)
-# bus2 = []
-# bus1 = []
-# for abus, line in busroute.items():
-#     b = list(filter(lambda x: x.split(',')[1] == '2', line))
-#     if len(b) > 0:
-#         bus2.append(abus)
-#     else:
-#         bus1.append(abus)
-# allbus = {}
-# for abus in bus1:
-#     allbus[abus] = busroute[abus]
-# for abus in bus2:
-#     line = busroute[abus]
-#     line1 = list(filter(lambda x: x.split(',')[1] == '1', line))
-#     line2 = list(filter(lambda x: x.split(',')[1] == '2', line))
-#     allbus[abus + '_1'] = line1
-#     allbus[abus + '_2'] = line2
-# with open('busline.json', 'w') as fp:
-#     json.dump(allbus, fp)
+
+print("start processing...")
+with open('data/busstop.json') as fp:
+    bs = json.load(fp)
+bus = 0
+busstopno = ''
+for key, value in bs.items():
+    if len(value[8]) > bus:
+        bus = len(value[8])
+        busstopno = key
+print(busstopno, bus)
 print('process completed.')
