@@ -7,7 +7,7 @@ from natsort import natsorted
 import codecs
 from shapely.geometry import Point
 from shapely.geometry.polygon import Polygon
-import requests 
+import requests
 
 __author__ = 'Nanqing'
 # Class to process busstop/mall/mrt station information
@@ -171,12 +171,15 @@ class Local:
             for abusroute in busRoutes:
                 busstopcode = abusroute['BusStopCode']
                 if code == busstopcode:
-                    buses.append(abusroute['ServiceNo'])
-            bs = list(set(buses) - set(['225', '243', '410']))
+                    if abusroute['Direction'] == 1:
+                        buses.append(abusroute['ServiceNo'])
+                    else:
+                        buses.append(abusroute['ServiceNo'] + '_2')
+            bs = list(set(buses) - set(['225', '243', '410', '225_2', '243_2', '410_2']))
             bs.sort(key=self.natural_keys)
-            bstop[code] = [description, chn, \
-            busstoplat, busstoplong, roadname, areaname, \
-            len(bs), mrts, bs]
+            bstop[code] = [description, chn,
+                            busstoplat, busstoplong, roadname, areaname, 
+                            len(bs), mrts, bs]
         with open('data/busstop.json', 'w') as fp:
             json.dump(bstop, fp)
         return bstop
@@ -193,13 +196,14 @@ class Local:
 
         serviceNo = list(set(serviceNo) - set(['225', '243', '410']))
 
-        with open('busservice/busline.json', 'w') as fp:
+        with open('busservice/ltabusline.json', 'w') as fp:
             json.dump(serviceNo, fp)
         route = {}
         i = 0
         for aline in serviceNo:
             if i > 100 and i % 50 == 0: print(i)
             busstops = []
+            busstops2 = []
             for aBusRoute in busRoutes:
                 sn = aBusRoute['ServiceNo']
                 if sn == aline:
@@ -207,8 +211,28 @@ class Local:
                             str(aBusRoute['Direction']), 
                             str(aBusRoute['Distance']),
                             str(aBusRoute['StopSequence'])]
-                    busstops.append(info)
+                    if info[2] == 'None':
+                        print(info)
+                        b = []
+                        if info[1] == '1':
+                            b = busstops
+                        else:
+                            b = busstops2
+                        print(len(b))
+                        if len(b) == 0:
+                            print('replace none value')
+                            info[2] = '0'
+                        else:
+                            info[2] = b[-1][2]
+                        print(info)
+
+                    if info[1] == '1':
+                        busstops.append(info)
+                    else:
+                        busstops2.append(info)
             route[aline] = busstops
+            if len(busstops2) > 0: 
+                route[aline + '_2'] = busstops2
             i = i + 1
             # fname = 'busservice/' + aline + '.json'
             # print(fname)
@@ -217,7 +241,7 @@ class Local:
         with open('data/busroute.json', 'w')  as fp:
             json.dump(route, fp)
         return route
-    
+
     def checkdistance(self, lat1, long1, lat2, long2, condition):
         p1 = (lat1,long1)
         p2 = (lat2,long2)
@@ -230,7 +254,7 @@ class Local:
             return text
 
     def natural_keys(self, text):
-        return [ self.atoi(c) for c in re.split('([0-9]+)', text)]
+        return [self.atoi(c) for c in re.split('([0-9]+)', text)]
 
     def busstopTranslate(self):
         busstopchn = {}
@@ -260,41 +284,22 @@ class Local:
             mrtname_chn = amrt[2]
             mrtlatitude = float(amrt[3])
             mrtlongitude = float(amrt[4])
-            mrtdict[mrtnumber] = [mrtname, mrtlatitude, mrtlongitude, mrtname_chn]
+            mrtdict[mrtnumber] = [mrtname,
+                                  mrtlatitude,
+                                  mrtlongitude,
+                                  mrtname_chn]
         return mrtdict
 
-    def splitbus(self):
-        with open('data/busroute.json') as fp:
-            busroute = json.load(fp)
-        bus2 = []
-        bus1 = []
-        for abus, line in busroute.items():
-            b = list(filter(lambda x: x[1] == '2', line))
-            if len(b) > 0:
-                bus2.append(abus)
-            else:
-                bus1.append(abus)
-        allbus = {}
-        for abus in bus1:
-            allbus[abus] = busroute[abus]
-        for abus in bus2:
-            line = busroute[abus]
-            line1 = list(filter(lambda x: x[1] == '1', line))
-            line2 = list(filter(lambda x: x[1] == '2', line))
-            allbus[abus + '_1'] = line1
-            allbus[abus + '_2'] = line2
-        with open('data/busline.json', 'w') as fp:
-            json.dump(allbus, fp)
-
-
 print("start processing...")
-with open('data/busstop.json') as fp:
-    bs = json.load(fp)
-bus = 0
-busstopno = ''
-for key, value in bs.items():
-    if len(value[8]) > bus:
-        bus = len(value[8])
-        busstopno = key
-print(busstopno, bus)
+# Local().processBusStops()
+t = Lta().checkbusarrival("22009")
+# with codecs.open("data/busstop.json", "r", "utf-8") as fp:
+#     a = json.load(fp)
+# bus = 0
+# busstopno = ''
+# for key, value in bs.items():
+#     if len(value[8]) > bus:
+#         bus = len(value[8])
+#         busstopno = key
+# print(busstopno, bus)
 print('process completed.')

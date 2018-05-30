@@ -18,9 +18,10 @@ for row_idx in range(1, xl_sheet.nrows):
     mapChnX = int(onerow[8].value)
     mapChnY = int(onerow[9].value)
     mapStatusX = int(onerow[10].value)
-    mapStatusY = int(onerow[11].value)  
+    mapStatusY = int(onerow[11].value)
     mrt[key] = [name, namec, lat, long, mapChnX, mapChnY, mapStatusX, mapStatusY]
-with open('mrt.json', 'w') as fp:
-    json.dump(mrt, fp)
-fp.close()
+
+# with open('mrt.json', 'w') as fp:
+#    json.dump(mrt, fp)
+# fp.close()
 print ('process complete')
