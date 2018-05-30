@@ -6,3 +6,4 @@
 apikey.json
 *.pyc
 /busstoppy
+*.swp
