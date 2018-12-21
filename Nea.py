@@ -4,11 +4,12 @@ import requests
 
 
 def checkWeather():
-    with open('apikey.json') as fp:
-        keys = json.load(fp)
-    key = keys['nea']
-    url = 'http://api.nea.gov.sg/api/WebAPI/?dataset=2hr_nowcast&keyref=' + key
+    # with open('apikey.json') as fp:
+    #     keys = json.load(fp)
+    # key = keys['nea']
+    url = 'https://api.data.gov.sg/v1/environment/2-hour-weather-forecast'
     s = requests.Session()
+    print(url)
     r = s.get(url)
     soup = BeautifulSoup(r.text, "html.parser")
     w = soup.find_all('area')
@@ -29,5 +30,13 @@ def checkWeather():
 
 print('Start process')
 a = checkWeather()
-print(a)
+raining = ''
+sun = ''
+for (area, weather) in a:
+    if weather == 1:
+        raining += area
+        raining += ','
+    else:
+        sun += area
+        sun += ','
 print ("process completed")

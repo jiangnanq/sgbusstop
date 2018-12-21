@@ -7,3 +7,4 @@ apikey.json
 *.pyc
 /busstoppy
 *.swp
+/venv

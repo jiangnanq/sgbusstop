@@ -3,7 +3,8 @@ import xlrd
 import json
 
 print ('start process')
-fname = '~/Dropbox/project/busstoppy/inputdata/MRT.xlsx'
+fname = 'inputdata/MRT.xlsx'
+# fname = '~/Dropbox/project/busstoppy/inputdata/MRT.xlsx'
 xl_workbook = xlrd.open_workbook(os.path.expanduser(fname))
 xl_sheet = xl_workbook.sheet_by_index(0)
 num_cols = xl_sheet.ncols
@@ -19,7 +20,8 @@ for row_idx in range(1, xl_sheet.nrows):
     mapChnY = int(onerow[9].value)
     mapStatusX = int(onerow[10].value)
     mapStatusY = int(onerow[11].value)
-    mrt[key] = [name, namec, lat, long, mapChnX, mapChnY, mapStatusX, mapStatusY]
+    mrt[key] = [name, namec, lat, long, mapChnX,
+                mapChnY, mapStatusX, mapStatusY]
 
 # with open('mrt.json', 'w') as fp:
 #    json.dump(mrt, fp)

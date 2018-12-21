@@ -14,17 +14,18 @@ __author__ = 'Nanqing'
 # All information should been extract
 # from LTA and saved to file in the data directory
 
+
 class Lta:
     path = ''
     headers = {}
     uri = 'http://datamall2.mytransport.sg/ltaodataservice/'
-    ltatype = {'busstop':'BusStops?$skip=',
-               'busRoute':'BusRoutes?$skip=',
-               'taxi':'Taxi-Availability?$skip='}
+    ltatype = {'busstop': 'BusStops?$skip=',
+               'busRoute': 'BusRoutes?$skip=',
+               'taxi': 'Taxi-Availability?$skip='}
 
     def __init__(self):
         # init class base on the appoint class type
-        with open('apikey.json')  as fp:
+        with open('apikey.json') as fp:
             keys = json.load(fp)
         self.AccountKey = keys['lta_accountkey']
         self.UniqueUserID = keys['lta_userid']
@@ -62,11 +63,12 @@ class Lta:
                 ltadata.append(item)
             if a < 500:
                 return ltadata
-    
+
     def readTaxiFromlta(self):
-        taxi = self.readDataFromLTA('taxi')
+        taxi = self.readDataFromLTA('Taxi-Availability?$skip=')
         with open('data/ltataxi.json', 'w') as fp:
             json.dump(taxi, fp)
+        return taxi
 
     def readBusRouteFromlta(self):
         busroutedata = self.readDataFromLTA('BusRoutes?$skip=')
@@ -79,18 +81,18 @@ class Lta:
             json.dump(busstopdata, fp)
 
     def checkbusarrival(self, busstop):
-        with open('apikey.json')  as fp:
+        with open('apikey.json') as fp:
             keys = json.load(fp)
         key = keys['lta_accountkey']
         h = {'AccountKey': self.AccountKey, 'accept': 'application/json'}
-        url = 'http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=' \
-                + busstop
+        url = 'http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=' + busstop
         s = requests.Session()
-        r = s.get(url, headers = h)
+        r = s.get(url, headers=h)
         d = json.loads(r.text)['Services']
-        with open('busschedule.json', 'w') as fp:
-            json.dump(d, fp)
+#         with open('busschedule.json', 'w') as fp:
+#            json.dump(d, fp)
         return d
+
 
 class Local:
     DistanceMrtBusstation = 150
@@ -146,10 +148,10 @@ class Local:
         bchn = self.readbuschn()
         planarea = self.readareainfo()
         bstop = {}
-        i =0 
+        i = 0 
         for abusstop in busStops:
             i = i+1
-            if i>100 and i%100==0:
+            if i > 100 and i % 100 == 0:
                 print(i)
             code = abusstop['BusStopCode']
             busstoplat = abusstop['Latitude']
@@ -158,14 +160,14 @@ class Local:
             roadname = abusstop['RoadName']
             areaname = self.checkArea(busstoplat, busstoplong, planarea)
             chn = ''
-            if code in [*bchn]:
+            if code in [bchn]:
                 chn = bchn[code]
             mrts = []
             for amrtno, amrt in Mrt.items():
                 mrtlat = amrt[1]
                 mrtlong = amrt[2]
-                if self.checkdistance(busstoplat, busstoplong, mrtlat, mrtlong, \
-                    self.DistanceMrtBusstation):
+                if self.checkdistance(busstoplat, busstoplong, mrtlat, mrtlong,
+                                     self.DistanceMrtBusstation):
                     mrts.append(amrtno)
             buses = []
             for abusroute in busRoutes:
@@ -238,14 +240,14 @@ class Local:
             # print(fname)
             # with open(fname, 'w') as fp:
             #     json.dump(route[aline], fp)
-        with open('data/busroute.json', 'w')  as fp:
+        with open('data/busroute.json', 'w') as fp:
             json.dump(route, fp)
         return route
 
     def checkdistance(self, lat1, long1, lat2, long2, condition):
-        p1 = (lat1,long1)
-        p2 = (lat2,long2)
-        return  vincenty(p1,p2).m < condition
+        p1 = (float(lat1), float(long1))
+        p2 = (float(lat2), float(long2))
+        return vincenty(p1, p2).m < condition
 
     def atoi(self, text):
         try:
@@ -266,8 +268,9 @@ class Local:
 
     def readMrtStations(self):
         # read MRT station information from excel file
-        fname = dataFile.mrtStationFile
-        xl_workbook = xlrd.open_workbook(os.path.expanduser(fname))
+        planarea = self.readareainfo()
+        # fname = dataFile.mrtStationFile
+        xl_workbook = xlrd.open_workbook('inputdata/MRT.xlsx')
         xl_sheet = xl_workbook.sheet_by_index(0)
         num_cols = xl_sheet.ncols
         mrt = []
@@ -284,22 +287,44 @@ class Local:
             mrtname_chn = amrt[2]
             mrtlatitude = float(amrt[3])
             mrtlongitude = float(amrt[4])
+            areaname = self.checkArea(mrtlatitude, mrtlongitude, planarea)
             mrtdict[mrtnumber] = [mrtname,
                                   mrtlatitude,
                                   mrtlongitude,
-                                  mrtname_chn]
+                                  mrtname_chn, areaname]
         return mrtdict
 
-print("start processing...")
-# Local().processBusStops()
-t = Lta().checkbusarrival("22009")
-# with codecs.open("data/busstop.json", "r", "utf-8") as fp:
-#     a = json.load(fp)
-# bus = 0
-# busstopno = ''
-# for key, value in bs.items():
-#     if len(value[8]) > bus:
-#         bus = len(value[8])
-#         busstopno = key
-# print(busstopno, bus)
-print('process completed.')
+    def processMrtStations(self):
+        with open("data/busstop.json") as fp:
+            busstop = json.load(fp)
+        with open("data/mrt.json") as fp:
+            mrt = json.load(fp)
+        mrtBus = {}
+        for mrtnumber, mrtstation in mrt.items():
+            # buses = []
+            mrtbusstop = {}
+            p1 = (mrtstation[0][1], mrtstation[0][2])
+            for busstopnumber, busstation in busstop.items():
+                p2 = (busstation[2], busstation[3])
+                mrtbusstop[busstopnumber] = vincenty(p1, p2).m
+                # if vincenty(p1, p2).m < 500:
+                #     mrtbusstop.append(busstopnumber)
+                    # for abus in busstation[8]:
+                    #     buses.append(abus.split('_')[0])
+            # if len(buses) > 0:
+            #     buses = sorted(list(set(buses)), key=str.lower)
+            sortedmrtbusstop = sorted(mrtbusstop.items(), key=lambda x: x[1])
+            top3 = []
+            for abusstop in sortedmrtbusstop[0:3]:
+                top3.append(abusstop[0])
+            mrtBus[mrtnumber] = [mrtstation[0], top3]
+        return mrtBus
+
+if __name__ == '__main__':
+    print("start processing...")
+    taxi = Lta().readTaxiFromlta()
+    # Local().processBusLines()
+    # p = Local().readareainfo()
+    # a = Lta().readBusRouteFromlta()
+    # mrt = Local().processMrtStations()
+    print('process completed.')
