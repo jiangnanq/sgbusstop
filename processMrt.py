@@ -23,7 +23,8 @@ for row_idx in range(1, xl_sheet.nrows):
     mrt[key] = [name, namec, lat, long, mapChnX,
                 mapChnY, mapStatusX, mapStatusY]
 
-# with open('mrt.json', 'w') as fp:
-#    json.dump(mrt, fp)
-# fp.close()
-print ('process complete')
+if __name__ == '__main__':
+    # with open('mrt.json', 'w') as fp:
+    #    json.dump(mrt, fp)
+    # fp.close()
+    print ('process complete')

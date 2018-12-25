@@ -74,7 +74,7 @@ class Lta:
         busroutedata = self.readDataFromLTA('BusRoutes?$skip=')
         with open('data/ltabusroute.json', 'w') as fp:
             json.dump(busroutedata, fp)
-
+ 
     def readBusStopFromlta(self):
         busstopdata = self.readDataFromLTA('BusStops?$skip=')
         with open('data/ltabusstop.json', 'w') as fp:
