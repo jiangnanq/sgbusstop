@@ -12,6 +12,10 @@ class Lta_Taxi:
     url = 'http://datamall2.mytransport.sg/' + \
         'ltaodataservice/Taxi-Availability?$skip='
 
+    def test(self):
+        r = requests.get(self.url+'0', headers=self.headers)
+        return r
+
     def checkTaxi(self):
         taxi = []
         i = 0
@@ -41,7 +45,7 @@ class Lta_Taxi:
                 a[taxiarea] = a[taxiarea] + 1
         t = [(k, a[k]) for k in sorted(a, key=a.get, reverse=True)]
         s = reduce((lambda x, y: x+y), list(map(lambda x: x[1], t)))
-        return list(map(lambda x: (x[0], x[1] / s * 100.0), t))
+        return list(map(lambda x: (x[0], x[1] / s * 100.0), t)), s
 
 if __name__ == '__main__':
     print('start process')

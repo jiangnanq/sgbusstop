@@ -10,10 +10,6 @@ class BusstopVolume:
     busstopvolumes = []
     mrtstopvolumes = []
 
-    def __init__(self):
-        self.busstopvolumes = self.filterData(self.readVolume('bus09.csv'))
-        self.mrtstopvolumes = self.filterData(self.readVolume('train09.csv'))
-
     def filterData(self, volumedata):
         n = str(datetime.datetime.now().hour)
         wd = ''
@@ -48,6 +44,8 @@ class BusstopVolume:
         return volume
 
     def countVolume(self):
+        self.busstopvolumes = self.filterData(self.readVolume('bus09.csv'))
+        self.mrtstopvolumes = self.filterData(self.readVolume('train09.csv'))
         busstops = {}
         mrts = {}
         with open('data/busstop.json') as fp:
@@ -77,7 +75,7 @@ class BusstopVolume:
         v1 = list(map(lambda x: x[1], volume))
         s = reduce((lambda x, y: x+y), v1)
         volume = list(map(lambda x: (x[0], x[1] / s * 100.0), volume))
-        return volume
+        return volume, s
 
     def compare(self, passenger, taxi):
         c = {}
@@ -89,13 +87,47 @@ class BusstopVolume:
                 c[areaname] = p-t
         return sorted(c.items(), key=operator.itemgetter(1))
 
+    def top_area(self):
+        t, s1 = Lta_Taxi().checkAreaTaxi()
+        v, s2 = self.countVolume()
+        c = self.compare(v, t)
+        result = []
+        for onearea in c:
+            areaname = onearea[0]
+            diff = '%.2f' % onearea[1]
+            taxi = '%.2f' % list(filter(lambda x: x[0] == areaname, t))[0][1]
+            passenger = '%.2f' % list(filter(
+                lambda x: x[0] == areaname, v))[0][1]
+            result.append((areaname, taxi, passenger, diff))
+        return sorted(result, key=lambda x: float(x[3]), reverse=True)
+
+    def check_area_volumn(self, areaname):
+        busvolume = self.readVolume('bus09.csv')
+        with open('data/busstop.json') as fp:
+            busstops = json.load(fp)
+        busstop_in_area = []
+        for abusstop, value in busstops.items():
+            if value[5] == areaname:
+                busstop_in_area.append(abusstop)
+        weekday = {}
+        weekend = {}
+        for i in range(0, 24):
+            weekday[str(i)] = 0
+            weekend[str(i)] = 0
+        for onerow in list(filter(lambda x: x['PT_CODE'] in busstop_in_area,
+                                  busvolume)):
+            if onerow['DAY_TYPE'] == 'WEEKDAY':
+                weekday[onerow['TIME_PER_HOUR']] += int(
+                    onerow['TOTAL_TAP_IN_VOLUME'])
+            else:
+                weekend[onerow['TIME_PER_HOUR']] += int(
+                    onerow['TOTAL_TAP_IN_VOLUME'])
+        return list(weekday.values()), list(weekend.values())
+
 __author__ = 'Nanqing'
 if __name__ == '__main__':
     print('Start processing...')
-    b = BusstopVolume()
-    t = Lta_Taxi().checkAreaTaxi()
-    v = b.countVolume()
-    c = b.compare(v, t)
-    with open('data/taxivolume.json', 'w') as fp:
-        json.dump(c, fp)
+#   weekday, weekend = BusstopVolume().check_area_volumn('JURONG WEST')
+    b = BusstopVolume().top_area()
+    print(b)
     print('Completed.')
