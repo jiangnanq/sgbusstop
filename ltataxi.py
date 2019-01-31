@@ -23,7 +23,7 @@ class Lta_Taxi:
             u = self.url + str(i * 500)
             print(u)
             r = requests.get(u, headers=self.headers)
-            a = json.loads(r.content)['value']
+            a = json.loads(r.content.decode('utf-8'))['value']
             taxi = taxi + a
             if len(a) < 500:
                 break

@@ -1,10 +1,6 @@
-*.json
-*.csv
-/data
-/busservice
-/inputdata
-apikey.json
-*.pyc
-/busstoppy
-*.swp
 /venv
+/data
+/inputdata
+*.json
+*.pyc
+!*.py
