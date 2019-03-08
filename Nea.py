@@ -1,4 +1,3 @@
-import json
 from bs4 import BeautifulSoup
 import requests
 
@@ -13,6 +12,7 @@ def checkWeather():
     r = s.get(url)
     soup = BeautifulSoup(r.text, "html.parser")
     w = soup.find_all('area')
+    print(w)
     weather = []
     for item in w:
         forecast = item.get('forecast')
