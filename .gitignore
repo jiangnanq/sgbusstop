@@ -1,2 +1,9 @@
-./*
-!*.py
+./ltadata
+./venv
+./data
+./busservice
+./__pycache__
+./inputdata
+*.json
+*.pyc
+

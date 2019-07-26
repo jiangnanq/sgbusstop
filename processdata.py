@@ -150,8 +150,9 @@ class Local:
     def atoi(self, text):
         try:
             return int(text)
-        except:
-            return text
+        except ImportError:
+            return 0
+        return text
 
     def natural_keys(self, text):
         return [self.atoi(c) for c in re.split('([0-9]+)', text)]
@@ -164,8 +165,9 @@ class Local:
                 busstopchn[a[0].zfill(5)] = a[3]
         return busstopchn
 
+
 if __name__ == '__main__':
     print("start processing...")
-#    Local().processBusStops()
-    Local().processBusLines()
+    Local().processBusStops()
+#    Local().processBusLines()
     print('process completed.')

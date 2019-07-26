@@ -113,5 +113,5 @@ if __name__ == '__main__':
     print("start processing...")
     a = Lta()
 #    a.readBusStopFromlta()
-#    a.readBusRouteFromlta()
+    a.readBusRouteFromlta()
     print('process completed.')

@@ -4,6 +4,7 @@ import json
 
 class Hot_busstop:
     def __init__(self):
+        self.mrt_busstop = self.get_mrt_busstop()
         self.volume = self.readVolume()
 
     def readVolume(self):
@@ -12,6 +13,8 @@ class Hot_busstop:
             reader = csv.reader(fp)
             for onerow in reader:
                 busstop_number = onerow[4]
+                if busstop_number in self.mrt_busstop:
+                    continue
                 tap_out = onerow[6]
                 hour = onerow[2]
                 day_type = onerow[1]
@@ -34,18 +37,19 @@ class Hot_busstop:
                 continue
             busstops.append((k, int(tap_out)))
         busstops.sort(key=lambda x: x[1], reverse=True)
-        return busstops[0:100]
+        top_busstops = list(map(lambda x: x[0], busstops[0:1000]))
+        return top_busstops
 
     def get_mrt_busstop(self):
         with open('data/mrt.json') as fp:
             mrt = json.load(fp)
-        mrtbusstops = []
+        mrtbusstop = []
         for k, v in mrt.items():
             mrtnumber = ''.join([i for i in k if not i.isdigit()])
             if mrtnumber in ['EW', 'CC', 'NS', 'DT', 'NE']:
-                mrtbusstops += v[1]
-        mrtbusstops = list(set(mrtbusstops))
-        return mrtbusstops
+                mrtbusstop += v[1]
+        mrtbusstop = list(set(mrtbusstop))
+        return mrtbusstop
 
     def get_busstop(self):
         with open('data/busstop.json') as fp:
@@ -55,31 +59,33 @@ class Hot_busstop:
     def get_hot_busstop(self):
         weekday = {}
         weekend = {}
-        hot_stop = []
         for i in range(0, 24):
             k = 'weekday_{0:0=2d}'.format(i)
             print(k)
             weekday[str(i)] = self.sort_busstop(True, str(i))
             weekend[str(i)] = self.sort_busstop(False, str(i))
-        for k, v in weekday.items():
-            for onestop in v:
-                hot_stop.append(onestop[0])
-        for k, v in weekend.items():
-            for onestop in v:
-                hot_stop.append(onestop[0])
-        h = list(set(hot_stop) - set(self.get_mrt_busstop()))
-        b = self.get_busstop()
-        result = {}
-        for onestop in h:
-            if onestop in b:
-                result[onestop] = b[onestop][0]
-        return weekday, weekend, result
+        # Get hot busstop number for translate purpose
+#        for k, v in weekday.items():
+#            for onestop in v:
+#                hot_stop.append(onestop[0])
+#        for k, v in weekend.items():
+#            for onestop in v:
+#                hot_stop.append(onestop[0])
+#        h = list(set(hot_stop))
+#        b = self.get_busstop()
+#        result = {}
+#        for onestop in h:
+#            if onestop in b:
+#                result[onestop] = b[onestop][0]
+        return weekday, weekend
 
 
 if __name__ == '__main__':
     print('Start to process...')
     h = Hot_busstop()
-    wd, wk, bustop = h.get_hot_busstop()
-#    with open('data/hotbusstop.json', 'w') as fp:
-#        json.dump(h.get_hot_busstop(), fp)
+    wd, wk = h.get_hot_busstop()
+    with open('data/hotstop_weekday.json', 'w') as fp:
+        json.dump(wd, fp)
+    with open('data/hotstop_weekend.json', 'w') as fp:
+        json.dump(wk, fp)
     print('process completed.')

@@ -34,6 +34,13 @@ sql_create_table3 = '''CREATE TABLE busstop(
                       area TEXT NOT NULL,
                       buscount integer NOT NULL,
                       mrtstation TEXT);'''
+sql_create_table4 = '''CREATE TABLE busline(
+                       id integer PRIMARY KEY AUTOINCREMENT,
+                       number TEXT NOT NULL,
+                       busstop TEXT NOT NULL,
+                       direction TEXT NOT NULL,
+                       distance real NOT NULL,
+                       seq integer NOT NULL);'''
 sql_insert_records1 = '''INSERT INTO busstopvolume( busstopnumber,
                                                    hour,
                                                    day,
@@ -62,6 +69,12 @@ sql_insert_records3 = '''INSERT INTO busstop (number,
                                               mrtstation)
                                               VALUES(?, ?, ?, ?, ?, ?, ?, ?,
                                               ?)'''
+sql_insert_record4 = '''INSERT INTO busline (number,
+                                             busstop,
+                                             direction,
+                                             distance,
+                                             seq)
+                                             VALUES(?, ?, ?, ?, ?)'''
 sql_query_stop = '''SELECT * FROM busstopvolume WHERE
                     busstopnumber=?
                     AND hour=?'''
@@ -145,6 +158,20 @@ class busstopdb:
             busstopinfo.append(onestop)
         return busstopinfo
 
+    def readbusline(self):
+        with open('data/busroute.json') as fp:
+            busline = json.load(fp)
+        buslineinfo = []
+        for k, v in busline.items():
+            number = k
+            for onestop in v:
+                busstop = onestop[0]
+                direction = onestop[1]
+                dis = float(onestop[2])
+                seq = int(onestop[3])
+                buslineinfo.append((number, busstop, direction, dis, seq))
+        return buslineinfo
+
     def addrecord(self, sql, records):
         self.curr.executemany(sql, records)
         self.conn.commit()
@@ -158,9 +185,9 @@ class busstopdb:
 if __name__ == '__main__':
     print('Start to process {}'.format(datetime.now().strftime('%H:%M:%S')))
     a = busstopdb()
-    b = a.readbusstop()
-    a.addrecord(sql_insert_records3, b)
-#    a.creattalbe(sql_create_table3)
+    b = a.readbusline()
+    a.addrecord(sql_insert_record4, b)
+#    a.creattalbe(sql_create_table4)
 #    b = a.querystop('22009', '10')
 #    a.addrecord(a.readdata())
     print('Process completd {}'.format(datetime.now().strftime('%H:%M:%S')))

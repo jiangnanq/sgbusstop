@@ -1,0 +1,48 @@
+timestamp:23:13:16
+Ang Mo Kio, SH
+Bedok, TL
+Bishan, SH
+Boon Lay, RA
+Bukit Batok, CL
+Bukit Merah, TL
+Bukit Panjang, CL
+Bukit Timah, SH
+Central Water Catchment, SH
+Changi, TL
+Choa Chu Kang, CL
+Clementi, RA
+City, TL
+Geylang, TL
+Hougang, TL
+Jalan Bahar, CL
+Jurong East, RA
+Jurong Island, RA
+Jurong West, RA
+Kallang, TL
+Lim Chu Kang, CL
+Mandai, CL
+Marine Parade, TL
+Novena, TL
+Pasir Ris, TL
+Paya Lebar, TL
+Pioneer, RA
+Pulau Tekong, CL
+Pulau Ubin, CL
+Punggol, TL
+Queenstown, RA
+Seletar, SH
+Sembawang, CL
+Sengkang, TL
+Sentosa, TL
+Serangoon, TL
+Southern Islands, TL
+Sungei Kadut, CL
+Tampines, TL
+Tanglin, TL
+Tengah, CL
+Toa Payoh, TL
+Tuas, RA
+Western Islands, RA
+Western Water Catchment, CL
+Woodlands, CL
+Yishun, SH
