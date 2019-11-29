@@ -50,7 +50,7 @@ class Lta:
         return jsonObj
 
     def readDataFromLTA(self, path):
-        # Read LTA data base on the class type
+        # Read LTA data base on the class type.
         ltadata = []
         i = 0
         while True:
@@ -108,6 +108,7 @@ class Lta:
         for oneurl in url:
             u = self.url + 'PV/' + oneurl + '?Date=' + month_to_check
             print(check(u))
+
 
 if __name__ == '__main__':
     print("start processing...")

@@ -124,6 +124,7 @@ class BusstopVolume:
                     onerow['TOTAL_TAP_IN_VOLUME'])
         return list(weekday.values()), list(weekend.values())
 
+
 __author__ = 'Nanqing'
 if __name__ == '__main__':
     print('Start processing...')

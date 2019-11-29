@@ -6,4 +6,5 @@
 ./inputdata
 *.json
 *.pyc
-
+*.swp
+*.db

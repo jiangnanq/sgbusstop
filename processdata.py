@@ -168,6 +168,6 @@ class Local:
 
 if __name__ == '__main__':
     print("start processing...")
-    Local().processBusStops()
-#    Local().processBusLines()
+#    Local().processBusStops()
+    Local().processBusLines()
     print('process completed.')
